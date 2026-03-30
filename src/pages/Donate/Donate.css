@@ -1,0 +1,88 @@
+.donate-page {
+  background: #e7f3ee;
+}
+
+.donate-paypro {
+  padding: 56px 0 24px;
+}
+
+.paypro-top-card {
+  max-width: 320px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 14px;
+  border: 1px solid rgba(15, 52, 96, 0.07);
+  box-shadow: 0 16px 36px rgba(15, 52, 96, 0.1);
+  text-align: center;
+  padding: 22px 20px;
+}
+
+.paypro-logo {
+  width: 120px;
+  height: 34px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 18px;
+}
+
+.paypro-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 11px 24px;
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.donate-bank-transfer {
+  padding: 32px 0 38px;
+}
+
+.bank-grid {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.bank-card {
+  background: #fff;
+  border: 1px solid rgba(15, 52, 96, 0.06);
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(15, 52, 96, 0.08);
+  padding: 22px 18px;
+  text-align: center;
+}
+
+.bank-logo {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  margin: 0 auto 12px;
+}
+
+.bank-card h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
+  color: #0b7d76;
+  margin-bottom: 10px;
+}
+
+.acc-title {
+  color: #2bbf64;
+  font-weight: 700;
+}
+
+.bank-card p {
+  margin-bottom: 6px;
+  color: #344054;
+}
+
+@media (max-width: 768px) {
+  .bank-grid {
+    grid-template-columns: 1fr;
+  }
+}

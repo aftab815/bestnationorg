@@ -1,0 +1,111 @@
+.header {
+  background: #fff;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s;
+  width: 100%;
+}
+.header.scrolled { box-shadow: 0 4px 20px rgba(0,0,0,0.12); }
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  max-width: 100%;
+  margin: 0;
+  padding-left: 15px;
+}
+.logo { display: flex; align-items: center; }
+.logo-image {
+  height: 50px;
+  width: auto;
+  display: block;
+  margin-right: 12px;
+}
+.logo-icon {
+  width: 50px; height: 50px;
+  background: linear-gradient(135deg, #e94560, #0f3460);
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 22px; font-weight: 800;
+  margin-right: 12px; font-family: 'Montserrat', sans-serif;
+}
+.logo-text h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px; font-weight: 800; color: #0f3460; line-height: 1.1;
+}
+.logo-text span {
+  font-size: 11px; color: #777; font-weight: 400;
+  letter-spacing: 1px; text-transform: uppercase;
+}
+.nav-menu {
+  display: flex; align-items: center; gap: 5px;
+}
+.nav-menu > li > a {
+  padding: 10px 16px; font-size: 14px; font-weight: 600;
+  color: #333; border-radius: 6px; transition: all 0.3s;
+  font-family: 'Montserrat', sans-serif;
+  display: flex; align-items: center; gap: 5px;
+}
+.nav-menu > li > a:hover,
+.nav-menu > li > a.active {
+  background: #e94560; color: #fff;
+}
+.dropdown-arrow { font-size: 10px !important; }
+.dropdown { position: relative; }
+.dropdown-content {
+  display: none; position: absolute; top: 100%; left: 0;
+  background: #fff; min-width: 220px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+  border-radius: 8px; overflow: hidden; z-index: 100;
+}
+.dropdown:hover .dropdown-content { display: block; }
+.dropdown-content a {
+  display: block; padding: 12px 20px; font-size: 13px;
+  font-weight: 500; color: #333; border-bottom: 1px solid #f0f0f0;
+  transition: all 0.3s; font-family: 'Montserrat', sans-serif;
+}
+.dropdown-content a:hover { background: #e94560; color: #fff; }
+.hamburger {
+  display: none; font-size: 24px; cursor: pointer;
+  color: #0f3460; background: none; border: none;
+}
+.donate-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #e94560, #ff7a18);
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 8px 20px rgba(233, 69, 96, 0.28);
+  margin-left: 12px;
+}
+.donate-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(233, 69, 96, 0.36);
+}
+@media (max-width: 768px) {
+  .hamburger { display: block; }
+  .donate-btn { display: none; }
+  .nav-menu {
+    display: none; position: absolute; top: 100%; left: 0;
+    width: 100%; background: #fff; flex-direction: column;
+    padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    align-items: stretch;
+  }
+  .nav-menu.active { display: flex; }
+  .nav-menu > li > a { padding: 12px 15px; width: 100%; }
+  .dropdown-content {
+    position: static; box-shadow: none; display: none; padding-left: 15px;
+  }
+  .dropdown:hover .dropdown-content { display: none; }
+  .dropdown.open .dropdown-content { display: block; }
+}
