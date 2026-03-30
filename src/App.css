@@ -109,7 +109,10 @@ img {
 }
 
 @media (max-width: 768px) {
+  .container { padding: 0 16px; }
   .section-title h2 {
     font-size: 28px;
   }
+  .section-title { margin-bottom: 34px; }
+  .section-title p { font-size: 15px; }
 }

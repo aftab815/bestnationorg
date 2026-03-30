@@ -21,12 +21,26 @@ const Navbar = () => {
     setOpenDropdown(null);
   }, [location]);
 
+  useEffect(() => {
+    if (!menuOpen) return;
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [menuOpen]);
+
   const toggleDropdown = (index) => {
     setOpenDropdown(openDropdown === index ? null : index);
   };
 
   return (
     <header className={"header " + (scrolled ? "scrolled" : "")}>
+      <div
+        className={"nav-backdrop " + (menuOpen ? "active" : "")}
+        onClick={() => setMenuOpen(false)}
+        aria-hidden={!menuOpen}
+      />
       <div className="container">
         <Link to="/" className="logo">
           <img src={logo} alt="BNWO Logo" className="logo-image" />
@@ -68,12 +82,22 @@ const Navbar = () => {
                 )}
               </li>
             ))}
+            <li className="mobile-only">
+              <Link to="/donate" className={"mobile-donate " + (location.pathname === '/donate' ? 'active' : '')}>
+                Donate
+              </Link>
+            </li>
           </ul>
         </nav>
         <Link to="/donate" className="donate-btn">
           Donate
         </Link>
-        <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
+        <button
+          className="hamburger"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+          aria-expanded={menuOpen}
+        >
           <i className={menuOpen ? 'fas fa-times' : 'fas fa-bars'}></i>
         </button>
       </div>
