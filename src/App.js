@@ -12,6 +12,7 @@ import News from './pages/News/News';
 import Events from './pages/Events/Events';
 import Contact from './pages/Contact/Contact';
 import Donate from './pages/Donate/Donate';
+import NewsletterAdmin from './pages/NewsletterAdmin/NewsletterAdmin';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -35,6 +36,7 @@ function App() {
         <Route path="/events" element={<Events />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/donate" element={<Donate />} />
+        <Route path="/newsletter-admin" element={<NewsletterAdmin />} />
       </Routes>
       <Footer />
       <ScrollToTopBtn />
