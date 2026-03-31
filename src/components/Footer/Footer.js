@@ -7,13 +7,20 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="container">
+        <div className="footer-cta glass-card">
+          <div>
+            <p className="footer-cta-kicker">Support the Mission</p>
+            <h3>Together, we can create lasting change for families across Pakistan.</h3>
+          </div>
+          <Link to="/donate" className="btn-primary">Donate to BNWO</Link>
+        </div>
         <div className="footer-grid">
           <div className="footer-col footer-about">
             <h3>About BNWO</h3>
-            <p>At BNWO, our mission is to enable communities, promote social welfare, and alleviate poverty through holistic and sustainable interventions. Through our various programs and initiatives, we aim to address the root causes of inequality and injustice, while nurturing a culture of empathy, compassion, and solidarity. </p>
+            <p>BNWO works with communities, volunteers, and partners to deliver education, health support, emergency response, and livelihood pathways for underserved families.</p>
             <div className="footer-social">
               {socialLinks.map((link, index) => (
-                <a key={index} href={link.url} aria-label={link.label}><i className={link.icon}></i></a>
+                <a key={index} href={link.url} aria-label={link.label} target="_blank" rel="noreferrer"><i className={link.icon}></i></a>
               ))}
             </div>
           </div>
@@ -29,12 +36,12 @@ const Footer = () => {
             </ul>
           </div>
           <div className="footer-col">
-            <h3>Support</h3>
+            <h3>Get Involved</h3>
             <ul className="footer-links">
               <li><Link to="/donate"><i className="fas fa-chevron-right"></i> Donate</Link></li>
               <li><Link to="/contact"><i className="fas fa-chevron-right"></i> Contact Us</Link></li>
-              <li><Link to="/contact"><i className="fas fa-chevron-right"></i> FAQs</Link></li>
-              <li><Link to="/contact"><i className="fas fa-chevron-right"></i> Support</Link></li>
+              <li><Link to="/events"><i className="fas fa-chevron-right"></i> Community Events</Link></li>
+              <li><Link to="/what-we-do"><i className="fas fa-chevron-right"></i> Ongoing Projects</Link></li>
             </ul>
           </div>
           <div className="footer-col">
@@ -48,7 +55,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-          <div className="footer-bottom">
+      <div className="footer-bottom">
         <div className="container">
           <p>&copy; {new Date().getFullYear()} BNWO - Best Nation Welfare Organization. All Rights Reserved. | <Link to="/">Privacy Policy</Link> | <Link to="/">Terms of Use</Link></p>
         </div>

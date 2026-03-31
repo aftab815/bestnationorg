@@ -1,19 +1,29 @@
 .cta {
-  padding: 80px 0;
-  background: linear-gradient(135deg, rgba(233,69,96,0.9), rgba(15,52,96,0.9)),
+  padding: 84px 0;
+  background:
+    radial-gradient(circle at top right, rgba(143, 198, 255, 0.22), transparent 40%),
+    linear-gradient(135deg, rgba(8, 38, 72, 0.94), rgba(16, 74, 142, 0.9)),
     url('../../assets/about-hero.jpeg') center/cover fixed;
-  color: #fff; text-align: center;
+  color: #fff;
+  text-align: center;
 }
 .cta h2 {
-  font-family: 'Montserrat', sans-serif; font-size: 40px;
-  font-weight: 800; margin-bottom: 18px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 800;
+  margin-bottom: 14px;
 }
 .cta p {
-  font-size: 18px; opacity: 0.9; max-width: 600px;
-  margin: 0 auto 30px; line-height: 1.7;
+  font-size: 17px;
+  opacity: 0.94;
+  max-width: 680px;
+  margin: 0 auto 28px;
+  line-height: 1.75;
 }
 .cta-buttons { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
 @media (max-width: 768px) {
+  .cta { padding: 68px 0; }
   .cta h2 { font-size: 28px; }
   .cta p { font-size: 15px; }
+  .cta-buttons { gap: 10px; }
 }

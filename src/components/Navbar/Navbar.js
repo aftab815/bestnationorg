@@ -92,14 +92,19 @@ const Navbar = () => {
         <Link to="/donate" className="donate-btn">
           Donate
         </Link>
-        <button
-          className="hamburger"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
-          aria-expanded={menuOpen}
-        >
-          <i className={menuOpen ? 'fas fa-times' : 'fas fa-bars'}></i>
-        </button>
+        <div className="mobile-top-actions">
+          <Link to="/donate" className="mobile-header-donate">
+            Donate
+          </Link>
+          <button
+            className="hamburger"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+            aria-expanded={menuOpen}
+          >
+            <i className={menuOpen ? 'fas fa-times' : 'fas fa-bars'}></i>
+          </button>
+        </div>
       </div>
     </header>
   );

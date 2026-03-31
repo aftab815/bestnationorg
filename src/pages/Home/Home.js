@@ -5,7 +5,9 @@ import ServiceCard from '../../components/ServiceCard/ServiceCard';
 import Stats from '../../components/Stats/Stats';
 import CTA from '../../components/CTA/CTA';
 import Newsletter from '../../components/Newsletter/Newsletter';
-import { services, eventsData } from '../../data/siteData';
+import NewsCard from '../../components/NewsCard/NewsCard';
+import Partners from '../../components/Partners/Partners';
+import { services, eventsData, newsData } from '../../data/siteData';
 import './Home.css';
 
 const chamberEvent =
@@ -61,6 +63,11 @@ const Home = () => {
             <div className="underline"></div>
             <p>Stay informed about our latest activities and community events</p>
           </div>
+          <div className="home-news-grid">
+            {newsData.slice(0, 3).map((news) => (
+              <NewsCard key={news.id} news={news} />
+            ))}
+          </div>
           <article className="home-event-feature">
             <div className="home-event-feature-image">
               <img src={chamberEvent.image} alt={chamberEvent.title} />
@@ -80,6 +87,7 @@ const Home = () => {
           </article>
         </div>
       </section>
+      <Partners />
       <CTA />
       <Newsletter />
     </div>

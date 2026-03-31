@@ -1,34 +1,58 @@
 .top-bar {
-  background: #1a1a2e;
-  color: #fff;
-  padding: 16px 0; /* increased vertical padding */
-  font-size: 14px; /* slightly larger text */
-  font-weight: 600; /* make text a bit bolder */
+  background: linear-gradient(90deg, #082546, #0f3f79);
+  color: #dfe8f6;
+  font-size: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 .top-bar .container {
-  display: block; /* use block so inner groups can be positioned at corners */
-  position: relative;
-  width: 100%;
-  max-width: 100%;
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
 }
-.top-bar-left { display: flex; gap: 10px; align-items: center; position: absolute; left: 12px; top: 50%; transform: translateY(-50%); }
-.top-bar-right { display: flex; gap: 12px; align-items: center; position: absolute; right: 12px; top: 50%; transform: translateY(-50%); }
-.top-bar-left a {
-  color: #ccc;
-  transition: color 0.3s;
-  margin: 0; /* spacing handled by gap */
+.top-bar-left,
+.top-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
 }
-.top-bar-left a:hover { color: #e94560; }
-.top-bar-left i { margin-right: 8px; color: #e94560; font-size: 16px; }
-.top-bar-right .social-links { display: flex; gap: 12px; align-items: center; }
-.top-bar-right .social-links a {
-  color: #fff;
-  font-size: 16px; /* larger social icons */
-  transition: color 0.3s;
-  margin: 0; /* spacing handled by gap */
+.top-bar-left a,
+.top-bar-right a {
+  color: inherit;
+  transition: color 220ms ease;
+}
+.top-bar-left a:hover,
+.top-bar-right a:hover { color: #ffffff; }
+.top-bar i { color: #8fc6ff; margin-right: 6px; }
+.top-pill,
+.top-volunteer {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #f1f6ff;
   font-weight: 600;
 }
-.top-bar-right .social-links a:hover { color: #e94560; }
+.social-links {
+  display: inline-flex;
+  gap: 4px;
+}
+.social-links a {
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+.social-links a:hover { background: rgba(255, 255, 255, 0.1); }
+
+@media (max-width: 992px) {
+  .top-pill,
+  .top-volunteer { display: none; }
+}
 @media (max-width: 768px) {
   .top-bar { display: none; }
 }
