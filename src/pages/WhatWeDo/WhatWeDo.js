@@ -175,7 +175,19 @@ const WhatWeDo = () => {
                       <span key={stat}>{stat}</span>
                     ))}
                   </div>
-                  <button type="button" className="wwd-btn">Learn More</button>
+                  <div className="wwd-actions">
+                    <button type="button" className="wwd-btn">Learn More</button>
+                    {project.id === 1 && (
+                      <a
+                        href="https://docs.google.com/forms/d/e/1FAIpQLScTCOHr6lbZqFPfnY826H8ecU0mJ14d12FFlVG-Q6PuLCisjQ/viewform?usp=header"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="wwd-btn wwd-btn-apply"
+                      >
+                        Apply Now <i className="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                      </a>
+                    )}
+                  </div>
                 </div>
               </article>
             ))}

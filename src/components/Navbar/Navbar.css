@@ -124,6 +124,7 @@
   transform: translateY(-2px);
   box-shadow: 0 12px 24px rgba(233, 69, 96, 0.36);
 }
+.mobile-top-donate { display: none; }
 @media (max-width: 768px) {
   .header {
     background: rgba(255, 255, 255, 0.94);

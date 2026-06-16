@@ -6,6 +6,7 @@ import './Events.css';
 
 const Events = () => {
   const [filter, setFilter] = useState('all');
+  const [selectedEvent, setSelectedEvent] = useState(null);
   const filtered = filter === 'all' ? eventsData : eventsData.filter((e) => e.status === filter);
 
   return (
@@ -33,6 +34,7 @@ const Events = () => {
                     <div className="event-detail"><i className="fas fa-map-marker-alt"></i><span>{e.location}</span></div>
                   </div>
                   <p>{e.description}</p>
+                  <button className="btn-primary event-view-btn" onClick={() => setSelectedEvent(e)}>View Details</button>
                   {e.status === 'upcoming' && <button className="btn-primary">Register Now</button>}
                 </div>
               </div>
@@ -40,6 +42,29 @@ const Events = () => {
           </div>
         </div>
       </section>
+      {selectedEvent && (
+        <div className="event-modal-overlay" onClick={() => setSelectedEvent(null)}>
+          <div className="event-modal" onClick={(evt) => evt.stopPropagation()}>
+            <button className="event-modal-close" onClick={() => setSelectedEvent(null)} aria-label="Close event details">
+              <i className="fas fa-times"></i>
+            </button>
+            <h3>{selectedEvent.title}</h3>
+            <div className="event-details modal-details">
+              <div className="event-detail"><i className="fas fa-calendar-alt"></i><span>{selectedEvent.date}</span></div>
+              <div className="event-detail"><i className="fas fa-clock"></i><span>{selectedEvent.time}</span></div>
+              <div className="event-detail"><i className="fas fa-map-marker-alt"></i><span>{selectedEvent.location}</span></div>
+            </div>
+            <p>{selectedEvent.fullDescription || selectedEvent.description}</p>
+            {selectedEvent.gallery && selectedEvent.gallery.length > 0 && (
+              <div className="event-gallery">
+                {selectedEvent.gallery.map((img, idx) => (
+                  <img key={idx} src={img} alt={selectedEvent.title + " " + (idx + 1)} />
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      )}
       <CTA />
       <Newsletter />
     </div>

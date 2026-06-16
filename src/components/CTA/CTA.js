@@ -9,7 +9,14 @@ const CTA = () => {
         <h2>Ready to Make a Difference?</h2>
         <p>Join our community of advocates and help shape the future of healthcare policy and treatment access across the pk.</p>
         <div className="cta-buttons">
-          <Link to="/contact" className="hero-btn">Join Best Nation Today</Link>
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSeXi85A_I_uNrSSjnpusCfGi0A0qpGcsZYkm2bIXQ8I1zvxEA/viewform?usp=header"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cta-volunteer-btn"
+          >
+            Apply as Volunteer
+          </a>
           <Link to="/contact" className="hero-btn outline">Contact Us</Link>
         </div>
       </div>
