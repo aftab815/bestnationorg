@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.d19fd0d9.css",
-    "main.js": "/static/js/main.e34a775c.js",
+    "main.css": "/static/css/main.1b6656f8.css",
+    "main.js": "/static/js/main.10ae6f87.js",
     "static/media/vlcsnap-2023-07-12-01h08m52s495.png": "/static/media/vlcsnap-2023-07-12-01h08m52s495.c346da7ac21d5a70059c.png",
     "static/media/vlcsnap-2023-07-12-01h08m34s080.png": "/static/media/vlcsnap-2023-07-12-01h08m34s080.a317d10423ea83b61deb.png",
     "static/media/3.png": "/static/media/3.d504b545d2457b2be43a.png",
@@ -158,10 +158,12 @@
     "static/media/amana mall 12.JPG": "/static/media/amana mall 12.7c3c07f1faf577c0efcb.JPG",
     "static/media/IMG_6908.JPG": "/static/media/IMG_6908.7aae78ebb7d0be7d9afe.JPG",
     "static/media/logo.png": "/static/media/logo.6c738fafbacb0a652712.png",
-    "index.html": "/index.html"
+    "index.html": "/index.html",
+    "main.1b6656f8.css.map": "/static/css/main.1b6656f8.css.map",
+    "main.10ae6f87.js.map": "/static/js/main.10ae6f87.js.map"
   },
   "entrypoints": [
-    "static/css/main.d19fd0d9.css",
-    "static/js/main.e34a775c.js"
+    "static/css/main.1b6656f8.css",
+    "static/js/main.10ae6f87.js"
   ]
 }

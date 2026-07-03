@@ -41,7 +41,7 @@ const Navbar = () => {
         onClick={() => setMenuOpen(false)}
         aria-hidden={!menuOpen}
       />
-      <div className="container">
+      <div className="nav-container">
         <Link to="/" className="logo">
           <img src={logo} alt="BNWO Logo" className="logo-image" />
           <div className="logo-text">
@@ -49,7 +49,7 @@ const Navbar = () => {
             <span>Best Nation Welfare Organization</span>
           </div>
         </Link>
-        <nav>
+        <nav className="nav-center">
           <ul className={"nav-menu " + (menuOpen ? "active" : "")}>
             {navLinks.map((link, index) => (
               <li key={index} className={link.dropdown ? "dropdown " + (openDropdown === index ? "open" : "") : ""}>
@@ -89,21 +89,23 @@ const Navbar = () => {
             </li>
           </ul>
         </nav>
-        <Link to="/donate" className="donate-btn">
-          Donate
-        </Link>
-        <div className="mobile-top-actions">
-          <Link to="/donate" className="mobile-header-donate">
+        <div className="nav-actions">
+          <Link to="/donate" className="donate-btn">
             Donate
           </Link>
-          <button
-            className="hamburger"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle menu"
-            aria-expanded={menuOpen}
-          >
-            <i className={menuOpen ? 'fas fa-times' : 'fas fa-bars'}></i>
-          </button>
+          <div className="mobile-top-actions">
+            <Link to="/donate" className="mobile-header-donate">
+              Donate
+            </Link>
+            <button
+              className="hamburger"
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-label="Toggle menu"
+              aria-expanded={menuOpen}
+            >
+              <i className={menuOpen ? 'fas fa-times' : 'fas fa-bars'}></i>
+            </button>
+          </div>
         </div>
       </div>
     </header>
