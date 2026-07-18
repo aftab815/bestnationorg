@@ -1,0 +1,74 @@
+.newsletter-admin-page {
+  padding: 80px 0;
+  background: #f6f9ff;
+}
+
+.newsletter-admin-card {
+  max-width: 760px;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid rgba(15, 52, 96, 0.1);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 12px 34px rgba(15, 52, 96, 0.1);
+}
+
+.newsletter-admin-card h1 {
+  font-family: 'Montserrat', sans-serif;
+  color: #0f3460;
+  margin-bottom: 8px;
+}
+
+.admin-subtitle {
+  color: #5f6c85;
+  margin-bottom: 6px;
+}
+
+.admin-count {
+  font-weight: 700;
+  color: #0f3460;
+  margin-bottom: 18px;
+}
+
+.newsletter-admin-form {
+  display: grid;
+  gap: 8px;
+}
+
+.newsletter-admin-form label {
+  font-weight: 700;
+  color: #0f3460;
+}
+
+.newsletter-admin-form input,
+.newsletter-admin-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #d5dfef;
+  background: #f8fbff;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.newsletter-admin-form textarea {
+  resize: vertical;
+}
+
+.newsletter-admin-form input:focus,
+.newsletter-admin-form textarea:focus {
+  outline: 2px solid rgba(15, 52, 96, 0.2);
+}
+
+.admin-status {
+  margin-top: 14px;
+  font-weight: 700;
+}
+
+.admin-status.success { color: #166534; }
+.admin-status.error { color: #b91c1c; }
+
+@media (max-width: 768px) {
+  .newsletter-admin-page { padding: 60px 0; }
+  .newsletter-admin-card { padding: 20px 16px; }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "ukcab-website",
+  "version": "1.0.0",
+  "private": true,
+  "proxy": "http://localhost:5000",
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "express": "^4.21.2",
+    "nodemailer": "^8.0.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.20.0",
+    "react-scripts": "5.0.1"
+  },
+  "scripts": {
+    "start": "concurrently \"npm run client\" \"npm run api\"",
+    "start:dev": "concurrently \"npm run client\" \"npm run api\"",
+    "client": "react-scripts start",
+    "api": "node server.js",
+    "build": "react-scripts build",
+    "serve-build": "node server.js"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

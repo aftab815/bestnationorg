@@ -1,0 +1,50 @@
+.cta {
+  padding: 84px 0;
+  background:
+    radial-gradient(circle at top right, rgba(143, 198, 255, 0.22), transparent 40%),
+    linear-gradient(135deg, rgba(8, 38, 72, 0.94), rgba(16, 74, 142, 0.9)),
+    url('../../assets/about-hero.jpeg') center/cover fixed;
+  color: #fff;
+  text-align: center;
+}
+.cta h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+.cta p {
+  font-size: 17px;
+  opacity: 0.94;
+  max-width: 680px;
+  margin: 0 auto 28px;
+  line-height: 1.75;
+}
+.cta-buttons { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+.cta-volunteer-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ffffff, #f7f8fb);
+  color: #0f3460;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.cta-volunteer-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.22);
+}
+@media (max-width: 768px) {
+  .cta { padding: 68px 0; }
+  .cta h2 { font-size: 28px; }
+  .cta p { font-size: 15px; }
+  .cta-buttons { gap: 10px; }
+  .cta-volunteer-btn { width: 100%; padding: 14px 18px; }
+}
