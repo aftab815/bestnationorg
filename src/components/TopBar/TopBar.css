@@ -1,77 +1,178 @@
+/* ── PRISTINE LUXURY LIGHT TOPBAR ─────────────── */
 .top-bar {
-  background: linear-gradient(90deg, #082546, #0f3f79);
-  color: #dfe8f6;
-  font-size: 12px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  width: 100%;
-}
-.top-bar-inner {
+  background: var(--dark-slate);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.82rem;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   position: relative;
+  z-index: 1001;
+}
+
+.top-bar-inner {
   width: 100%;
-  min-height: 42px;
+  max-width: 1280px;
+  margin: 0 auto;
   padding: 0 24px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  gap: 20px;
 }
-.top-bar-left,
+
+.top-bar-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.topbar-contact-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  transition: var(--transition-fast);
+}
+
+.topbar-contact-btn:hover {
+  color: var(--primary-light);
+}
+
+.topbar-contact-btn i {
+  color: var(--primary-light);
+  font-size: 0.85rem;
+}
+
+.top-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 12px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-full);
+  color: #FFFFFF;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.top-pill i {
+  color: var(--primary-light);
+}
+
+.top-bar-center {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 16px;
+  background: var(--grad-primary);
+  color: #FFFFFF;
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 800;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.35);
+}
+
+.top-bar-center i {
+  font-size: 0.85rem;
+}
+
 .top-bar-right {
   display: flex;
   align-items: center;
-  gap: 14px;
-  z-index: 2;
+  gap: 16px;
 }
-.top-bar-left {
-  flex-shrink: 0;
-}
-.top-bar-center {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-}
-.top-bar-right {
-  flex-shrink: 0;
-  margin-left: auto;
-}
-.top-bar-left a,
-.top-bar-right a {
-  color: inherit;
-  transition: color 220ms ease;
-}
-.top-bar-left a:hover,
-.top-bar-right a:hover { color: #ffffff; }
-.top-bar i { color: #8fc6ff; margin-right: 6px; }
-.top-pill,
-.top-volunteer {
-  display: inline-flex;
-  align-items: center;
-  padding: 6px 10px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.08);
-  color: #f1f6ff;
-  font-weight: 600;
-  white-space: nowrap;
-}
+
 .social-links {
-  display: inline-flex;
-  gap: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
+
 .social-links a {
-  width: 28px;
-  height: 28px;
-  display: inline-flex;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.85rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 8px;
+  transition: var(--transition-bounce);
 }
-.social-links a:hover { background: rgba(255, 255, 255, 0.1); }
 
-@media (max-width: 992px) {
-  .top-bar-center,
-  .top-pill { display: none; }
+.social-links a:hover {
+  color: #FFFFFF;
+  background: var(--primary);
+  border-color: var(--primary);
+  transform: translateY(-2px) scale(1.1);
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.4);
 }
-@media (max-width: 768px) {
-  .top-bar { display: none; }
+
+/* Single Line Mobile TopBar Masterpiece */
+@media (max-width: 900px) {
+  .top-bar {
+    padding: 6px 0;
+    font-size: 0.75rem;
+  }
+
+  .top-bar-inner {
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .topbar-label,
+  .top-pill,
+  .top-bar-center {
+    display: none !important;
+  }
+
+  .top-bar-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .topbar-contact-btn {
+    gap: 0;
+  }
+
+  .topbar-contact-btn i {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #38BDF8;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .top-bar-right {
+    display: flex;
+    align-items: center;
+  }
+
+  .social-links {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .social-links a {
+    width: 28px;
+    height: 28px;
+    font-size: 0.76rem;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
 }

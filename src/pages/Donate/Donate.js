@@ -3,6 +3,7 @@ import Newsletter from '../../components/Newsletter/Newsletter';
 import payproLogo from '../../assets/paypro.jpg';
 import faysalBankLogo from '../../assets/faysal bank.png';
 import uBankLogo from '../../assets/u bank.jpg';
+import donateHero from '../../assets/jhang rashan distribution/1.jpg';
 import './Donate.css';
 
 const bankAccounts = [
@@ -29,6 +30,26 @@ const bankAccounts = [
 const Donate = () => {
   return (
     <div className="donate-page">
+      {/* ── Modern Hero Banner ───────────────── */}
+      <section className="parl-hero">
+        <div className="about-hero-bg">
+          <img src={donateHero} alt="BNWO charity and donation support" />
+          <div className="about-hero-overlay"></div>
+        </div>
+        <div className="container">
+          <div className="parl-hero-content">
+            <span className="about-hero-badge">
+              <i className="fas fa-heart"></i> Make a Difference Today
+            </span>
+            <h1>Support BNWO Initiatives</h1>
+            <p>
+              Your generous contributions directly fund grassroots education, healthcare facilities,
+              and human rights welfare programs across Pakistan.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="donate-paypro">
         <div className="container">
           <div className="paypro-top-card">

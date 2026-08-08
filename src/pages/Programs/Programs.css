@@ -1,0 +1,383 @@
+/* ── PRISTINE LUXURY CORE PROGRAMS MASTERPIECE ──── */
+
+/* Stats Ribbon Bar */
+.prog-stats-bar {
+  padding: 36px 0;
+  background: #FFFFFF;
+  border-bottom: 1px solid var(--border-light);
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.03);
+}
+
+.prog-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  text-align: center;
+}
+
+.prog-stat-item strong {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--primary);
+  display: block;
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+.prog-stat-item span {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Category Filter Pills Bar */
+.prog-filter-sec {
+  padding: 40px 0 10px;
+  background: #FAFAFA;
+}
+
+.prog-filter-pills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.prog-filter-btn {
+  padding: 12px 24px;
+  border-radius: 9999px;
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 800;
+  background: #FFFFFF;
+  border: 1px solid var(--border-light);
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.04);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.prog-filter-btn:hover,
+.prog-filter-btn.active {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(2, 132, 199, 0.22);
+}
+
+.prog-filter-btn.active {
+  background: var(--primary);
+  color: #FFFFFF;
+  border-color: var(--primary);
+}
+
+/* Category Section */
+.prog-category {
+  padding: 90px 0;
+  background: #FAFAFA;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.prog-category:nth-child(even) {
+  background: #FFFFFF;
+}
+
+.prog-cat-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 12px;
+  margin-bottom: 48px;
+}
+
+.prog-cat-icon {
+  width: 62px;
+  height: 62px;
+  min-width: 62px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.12);
+  margin: 0 auto;
+  transition: var(--transition);
+}
+
+.prog-cat-icon i {
+  font-size: 1.45rem;
+  color: #FFFFFF;
+}
+
+.prog-cat-header h2 {
+  font-family: var(--font-heading);
+  font-size: 1.85rem;
+  font-weight: 900;
+  color: var(--text-dark);
+  text-align: center;
+  margin: 0;
+}
+
+.prog-cat-pill {
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  font-weight: 800;
+  padding: 4px 16px;
+  border-radius: 9999px;
+  border: 1px solid transparent;
+  letter-spacing: 0.5px;
+}
+
+/* Flex Grid with Centered Items */
+.prog-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 28px;
+}
+
+/* Photo Program Card */
+.prog-card {
+  position: relative;
+  height: 320px;
+  width: calc(50% - 14px);
+  min-width: 310px;
+  max-width: 580px;
+  border-radius: 28px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 12px 32px -5px rgba(15, 23, 42, 0.09);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.prog-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 55px -10px rgba(15, 23, 42, 0.25);
+}
+
+/* Category Overlay Tint */
+.prog-card__overlay {
+  position: absolute;
+  inset: 0;
+  transition: all 0.4s ease;
+}
+
+.prog-card:hover .prog-card__overlay {
+  filter: brightness(1.08);
+}
+
+/* Centered Content Wrapper */
+.prog-card__content {
+  position: relative;
+  z-index: 10;
+  padding: 28px 24px;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.prog-card__top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.prog-number {
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 900;
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 3px 14px;
+  border-radius: 9999px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  text-transform: uppercase;
+}
+
+.prog-badge-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+  transition: var(--transition);
+  margin: 0 auto;
+}
+
+.prog-card:hover .prog-badge-icon {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.prog-badge-icon i {
+  color: #FFFFFF;
+  font-size: 1.25rem;
+}
+
+.prog-card__body {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.prog-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.28rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 8px;
+  line-height: 1.35;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.75);
+}
+
+.prog-card p {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.94);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.prog-card__footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.prog-action-link {
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 6px 18px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: 0.5px;
+  transition: var(--transition);
+}
+
+.prog-card:hover .prog-action-link {
+  background: #FFFFFF;
+  color: #0F172A;
+  border-color: #FFFFFF;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Delivery Framework Section */
+.prog-framework {
+  padding: 110px 0;
+  background: #FFFFFF;
+  border-top: 1px solid var(--border-light);
+}
+
+.framework-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.framework-card {
+  padding: 38px 28px;
+  background: #FFFFFF;
+  border-radius: 24px;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.05);
+  text-align: center;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.framework-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 22px 45px -10px rgba(2, 132, 199, 0.18);
+  border-color: var(--border-primary);
+}
+
+.framework-icon {
+  width: 58px;
+  height: 58px;
+  background: var(--primary-surface);
+  border: 1px solid var(--border-primary);
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: var(--transition);
+}
+
+.framework-card:hover .framework-icon {
+  background: var(--grad-primary);
+  border-color: transparent;
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(2, 132, 199, 0.3);
+}
+
+.framework-icon i {
+  font-size: 1.3rem;
+  color: var(--primary);
+  transition: var(--transition);
+}
+
+.framework-card:hover .framework-icon i {
+  color: #FFFFFF;
+}
+
+.framework-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+
+.framework-card p {
+  font-size: 0.92rem;
+  color: var(--text-body);
+  line-height: 1.6;
+}
+
+@media (max-width: 992px) {
+  .prog-stats-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .framework-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .prog-category { padding: 60px 0; }
+  .prog-card { width: 100%; height: auto; min-height: 310px; }
+}

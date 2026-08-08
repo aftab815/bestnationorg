@@ -1,32 +1,129 @@
+/* ── ULTRA-MODERN PHOTO PROGRAM CARD (TOP ICON & CENTERED CONTENT) ── */
 .service-card {
-  height: 100%;
-  background: #fff;
-  border: 1px solid rgba(16, 74, 142, 0.1);
-  border-radius: 18px;
-  padding: 30px 24px;
-  text-align: left;
-  transition: transform 220ms ease, box-shadow 220ms ease;
-  box-shadow: var(--shadow-sm);
+  position: relative;
+  height: 400px;
+  border-radius: 24px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.08);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
 .service-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-md);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px -10px rgba(2, 132, 199, 0.25);
+  border-color: rgba(2, 132, 199, 0.4);
 }
+
+/* Elegant Dark Gradient Overlay for High Text Legibility */
+.service-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(15, 23, 42, 0.45) 0%,
+    rgba(15, 23, 42, 0.78) 50%,
+    rgba(15, 23, 42, 0.95) 100%
+  );
+  transition: background 0.4s ease;
+}
+
+.service-card:hover .service-card__overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(2, 132, 199, 0.4) 0%,
+    rgba(15, 23, 42, 0.82) 50%,
+    rgba(15, 23, 42, 0.96) 100%
+  );
+}
+
+/* Glass Content Wrapper - Centered Alignment */
+.service-card__content {
+  position: relative;
+  z-index: 10;
+  padding: 30px 24px;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  justify-content: space-between;
+}
+
+/* Top Center Icon Container */
 .service-icon {
-  width: 64px;
-  height: 64px;
-  border-radius: 16px;
-  display: grid;
-  place-items: center;
-  margin-bottom: 18px;
-  background: linear-gradient(135deg, rgba(16, 74, 142, 0.1), rgba(239, 71, 111, 0.15));
-  color: var(--primary);
-  font-size: 28px;
+  width: 56px;
+  height: 56px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
+
+.service-card:hover .service-icon {
+  background: var(--grad-primary);
+  border-color: transparent;
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgba(2, 132, 199, 0.5);
+}
+
+.service-icon i {
+  color: #FFFFFF;
+  font-size: 1.3rem;
+}
+
 .service-card h3 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 22px;
-  color: var(--primary-deep);
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #FFFFFF;
   margin-bottom: 10px;
+  line-height: 1.3;
+  text-align: center;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
 }
-.service-card p { color: var(--text-soft); line-height: 1.75; }
+
+.service-card p {
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.55;
+  text-align: center;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  margin-bottom: 20px;
+}
+
+.service-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.service-card__link {
+  font-family: var(--font-heading);
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: #38BDF8;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .service-card__link {
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}

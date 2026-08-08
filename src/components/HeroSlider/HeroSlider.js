@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { heroSlides } from '../../data/siteData';
-import flettisImage from '../../assets/flettis/3.jpg';
 import './HeroSlider.css';
 
 const HeroSlider = () => {
@@ -43,51 +42,9 @@ const HeroSlider = () => {
                 <Link to={slide.btn2.link} className="hero-btn outline">{slide.btn2.text}</Link>
               </div>
             </div>
-
-            <aside className="hero-panel">
-              <div className="hero-panel__image-wrapper">
-                <img src={flettisImage} alt="BNWO Event" className="hero-panel__image" />
-              </div>
-              <div className="hero-panel__label">BNWO Impact</div>
-              <div className="hero-panel__headline">Trusted support with measurable progress.</div>
-              <ul className="hero-panel__list">
-                <li>
-                  <strong>150+</strong>
-                  <span>Community initiatives</span>
-                </li>
-                <li>
-                  <strong>2,800+</strong>
-                  <span>Families reached</span>
-                </li>
-                <li>
-                  <strong>40+</strong>
-                  <span>Partner organizations</span>
-                </li>
-              </ul>
-            </aside>
           </div>
         </div>
       ))}
-
-      <div className="hero-controls">
-        <button className="hero-arrow hero-arrow--prev" onClick={() => changeSlide(currentSlide - 1)} aria-label="Previous slide">
-          <span>&#10094;</span>
-        </button>
-        <div className="hero-dots">
-          {heroSlides.map((_, index) => (
-            <button
-              key={index}
-              type="button"
-              className={"dot " + (index === currentSlide ? 'active' : '')}
-              onClick={() => changeSlide(index)}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
-        </div>
-        <button className="hero-arrow hero-arrow--next" onClick={() => changeSlide(currentSlide + 1)} aria-label="Next slide">
-          <span>&#10095;</span>
-        </button>
-      </div>
     </section>
   );
 };

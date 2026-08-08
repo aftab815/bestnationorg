@@ -4,6 +4,8 @@ import hero3 from '../assets/hero3.jpeg';
 import hero4 from '../assets/hero4.jpeg';
 import hero5 from '../assets/hero5.jpeg';
 import jhangRation from '../assets/hero 3.jpg';
+
+/* Amanah Mall Existing Images */
 import amanah1 from '../assets/amanah mall/amana mal 1.JPG';
 import amanah2 from '../assets/amanah mall/amana mall 2.JPG';
 import amanah3 from '../assets/amanah mall/amana mall 3.JPG';
@@ -11,54 +13,36 @@ import amanah4 from '../assets/amanah mall/amana mall 4.JPG';
 import amanah5 from '../assets/amanah mall/amana mall 5.JPG';
 import amanah6 from '../assets/amanah mall/amana mall 6.JPG';
 import amanah7 from '../assets/amanah mall/amana mall 7.JPG';
-import amanah8 from '../assets/amanah mall/amana mall 8.JPG';
-import amanah9 from '../assets/amanah mall/amana mall 9.JPG';
-import amanah10 from '../assets/amanah mall/amana mall 10.JPG';
-import amanah11 from '../assets/amanah mall/amana mall 11.JPG';
-import amanah12 from '../assets/amanah mall/amana mall 12.JPG';
 import amanah13 from '../assets/amanah mall/amana mall 13.JPG';
 import amanah14 from '../assets/amanah mall/amana mall 14.JPG';
 import amanah15 from '../assets/amanah mall/amana mall 15.JPG';
-import flettis2 from '../assets/flettis/2.jpg';
+
+/* Flettis Existing Images */
 import flettis3 from '../assets/flettis/3.jpg';
-import flettis4 from '../assets/flettis/4.jpg';
-import flettis5 from '../assets/flettis/5.jpg';
 import flettis6 from '../assets/flettis/6.jpg';
-import flettis7 from '../assets/flettis/7.jpg';
 import flettis8 from '../assets/flettis/8.jpg';
 import flettis9 from '../assets/flettis/IMG-20240312-WA0048.jpg';
 import flettis10 from '../assets/flettis/IMG-20240312-WA0049.jpg';
 import flettis11 from '../assets/flettis/IMG-20240312-WA0051.jpg';
 import flettis14 from '../assets/flettis/IMG-20240312-WA0063.jpg';
 import flettis15 from '../assets/flettis/IMG-20240312-WA0064.jpg';
-import flettis16 from '../assets/flettis/IMG-20240312-WA0065.jpg';
-import flettis17 from '../assets/flettis/IMG-20240312-WA0069.jpg';
 import flettis18 from '../assets/flettis/IMG-20240312-WA0070.jpg';
 import flettis19 from '../assets/flettis/IMG-20240312-WA0071.jpg';
 import flettis20 from '../assets/flettis/IMG-20240312-WA0083.jpg';
 import flettis21 from '../assets/flettis/IMG-20240312-WA0177.jpg';
 import flettis22 from '../assets/flettis/IMG-20240312-WA0182.jpg';
 import flettis23 from '../assets/flettis/IMG-20240312-WA0184.jpg';
-import flettis24 from '../assets/flettis/IMG-20240312-WA0185.jpg';
-import chamber1 from '../assets/chamber of commerce 1/IMG_8317.JPG';
-import chamber1_2 from '../assets/chamber of commerce 1/IMG_8318.jpg';
-import chamber1_3 from '../assets/chamber of commerce 1/IMG_8326.jpg';
-import chamber1_4 from '../assets/chamber of commerce 1/IMG_8327.jpg';
-import chamber1_5 from '../assets/chamber of commerce 1/IMG_8340.jpg';
-import chamber1_6 from '../assets/chamber of commerce 1/IMG_8343.jpg';
-import chamber1_7 from '../assets/chamber of commerce 1/IMG_8350.jpg';
-import chamber1_8 from '../assets/chamber of commerce 1/IMG_8360.jpg';
-import chamber1_9 from '../assets/chamber of commerce 1/IMG_8364.jpg';
-import chamber1_10 from '../assets/chamber of commerce 1/IMG_8425.jpg';
-import chamber1_11 from '../assets/chamber of commerce 1/IMG_8484.jpg';
+
+/* Chamber of Commerce 1 Existing Images */
 import chamber1_12 from '../assets/chamber of commerce 1/IMG_8550.jpg';
 import chamber1_13 from '../assets/chamber of commerce 1/IMG_8551.jpg';
 import chamber1_14 from '../assets/chamber of commerce 1/IMG_8574.jpg';
 import chamber1_15 from '../assets/chamber of commerce 1/IMG_8601.jpg';
 import chamber1_16 from '../assets/chamber of commerce 1/IMG_8603.jpg';
-import chamber1_17 from '../assets/chamber of commerce 1/IMG_8639.jpg';
 import chamber1_18 from '../assets/chamber of commerce 1/IMG_8646.jpg';
-import chamber2 from '../assets/chamber of commerce 2/IMG_9007.JPG';
+
+/* Chamber of Commerce 2 Existing Images */
+import chamber2_1 from '../assets/chamber of commerce 2/IMG_9007.JPG';
 import chamber2_2 from '../assets/chamber of commerce 2/IMG_9015.JPG';
 import chamber2_3 from '../assets/chamber of commerce 2/IMG_9019.JPG';
 import chamber2_4 from '../assets/chamber of commerce 2/IMG_9021.JPG';
@@ -72,6 +56,8 @@ import chamber2_11 from '../assets/chamber of commerce 2/IMG_9071.JPG';
 import chamber2_12 from '../assets/chamber of commerce 2/IMG_9133.JPG';
 import chamber2_13 from '../assets/chamber of commerce 2/IMG_9134.JPG';
 import chamber2_14 from '../assets/chamber of commerce 2/IMG_9135.JPG';
+
+/* Jhang Ration Existing Images */
 import ration4_1 from '../assets/jhang rashan distribution/1.jpg';
 import ration4_2 from '../assets/jhang rashan distribution/11.jpg';
 import ration4_3 from '../assets/jhang rashan distribution/12.jpg';
@@ -84,259 +70,493 @@ import ration4_9 from '../assets/jhang rashan distribution/6.jpg';
 import ration4_10 from '../assets/jhang rashan distribution/7.jpg';
 import ration4_11 from '../assets/jhang rashan distribution/8.jpg';
 import ration4_12 from '../assets/jhang rashan distribution/9.jpg';
-import chamber3 from '../assets/chamber of commerce 3/IMG_6829.JPG';
-import chamber3_2 from '../assets/chamber of commerce 3/IMG_6832.JPG';
-import chamber3_3 from '../assets/chamber of commerce 3/IMG_6837.JPG';
-import chamber3_4 from '../assets/chamber of commerce 3/IMG_6840.JPG';
-import chamber3_5 from '../assets/chamber of commerce 3/IMG_6842.JPG';
-import chamber3_6 from '../assets/chamber of commerce 3/IMG_6843.JPG';
-import chamber3_7 from '../assets/chamber of commerce 3/IMG_6849.JPG';
-import chamber3_8 from '../assets/chamber of commerce 3/IMG_6852.JPG';
-import chamber3_9 from '../assets/chamber of commerce 3/IMG_6853.JPG';
-import chamber3_10 from '../assets/chamber of commerce 3/IMG_6855.JPG';
-import chamber3_11 from '../assets/chamber of commerce 3/IMG_6857.JPG';
-import chamber3_12 from '../assets/chamber of commerce 3/IMG_6859.JPG';
-import chamber3_13 from '../assets/chamber of commerce 3/IMG_6864.JPG';
-import chamber3_14 from '../assets/chamber of commerce 3/IMG_6865.JPG';
-import chamber3_15 from '../assets/chamber of commerce 3/IMG_6869.JPG';
-import chamber3_16 from '../assets/chamber of commerce 3/IMG_6873.JPG';
-import chamber3_17 from '../assets/chamber of commerce 3/IMG_6874.JPG';
-import chamber3_18 from '../assets/chamber of commerce 3/IMG_6876.JPG';
-import chamber3_19 from '../assets/chamber of commerce 3/IMG_6882.JPG';
-import chamber3_20 from '../assets/chamber of commerce 3/IMG_6889.JPG';
-import chamber3_21 from '../assets/chamber of commerce 3/IMG_6890.JPG';
-import chamber3_22 from '../assets/chamber of commerce 3/IMG_6892.JPG';
-import chamber3_23 from '../assets/chamber of commerce 3/IMG_6893.JPG';
-import chamber3_24 from '../assets/chamber of commerce 3/IMG_6896.JPG';
-import chamber3_25 from '../assets/chamber of commerce 3/IMG_6899.JPG';
-import chamber3_26 from '../assets/chamber of commerce 3/IMG_6902.JPG';
-import chamber3_27 from '../assets/chamber of commerce 3/IMG_6904.JPG';
-import chamber3_28 from '../assets/chamber of commerce 3/IMG_6908.JPG';
-import chamber3_29 from '../assets/chamber of commerce 3/IMG_6912.JPG';
-import chamber3_30 from '../assets/chamber of commerce 3/IMG_6913.JPG';
-import chamber3_31 from '../assets/chamber of commerce 3/IMG_6919.JPG';
-import chamber3_32 from '../assets/chamber of commerce 3/IMG_6923.JPG';
-import chamber3_33 from '../assets/chamber of commerce 3/IMG_6926.JPG';
-import chamber3_34 from '../assets/chamber of commerce 3/IMG_6927.JPG';
-import chamber3_35 from '../assets/chamber of commerce 3/IMG_6930.JPG';
-import chamber3_36 from '../assets/chamber of commerce 3/IMG_6947.JPG';
-import chamber3_37 from '../assets/chamber of commerce 3/IMG_7004.JPG';
-import chamber3_38 from '../assets/chamber of commerce 3/IMG_7007.JPG';
-import chamber3_39 from '../assets/chamber of commerce 3/IMG_7035.JPG';
-import chamber3_40 from '../assets/chamber of commerce 3/IMG_7081.JPG';
-import chamber3_41 from '../assets/chamber of commerce 3/IMG_7095.JPG';
-import chamber3_42 from '../assets/chamber of commerce 3/IMG_7182.JPG';
-import chamber3_43 from '../assets/chamber of commerce 3/IMG_7212.JPG';
-import chamber3_44 from '../assets/chamber of commerce 3/IMG_7230.JPG';
-import chamber3_45 from '../assets/chamber of commerce 3/IMG_7234.JPG';
-import chamber3_46 from '../assets/chamber of commerce 3/IMG_7243.JPG';
-import chamber3_47 from '../assets/chamber of commerce 3/IMG_7246.JPG';
-import chamber3_48 from '../assets/chamber of commerce 3/IMG_7250.JPG';
-import chamber3_49 from '../assets/chamber of commerce 3/IMG_7251.JPG';
-import chamber3_50 from '../assets/chamber of commerce 3/IMG_7252.JPG';
-import chamber3_51 from '../assets/chamber of commerce 3/IMG_7257.JPG';
-import chamber3_52 from '../assets/chamber of commerce 3/IMG_7258.JPG';
-import chamber3_53 from '../assets/chamber of commerce 3/IMG_7263.JPG';
-import chamber3_54 from '../assets/chamber of commerce 3/IMG_7270.JPG';
-import chamber3_55 from '../assets/chamber of commerce 3/IMG_7271.JPG';
-import final1 from '../assets/sialkot/1.jpg';
-import final2 from '../assets/sialkot/2.jpg';
-import final3 from '../assets/sialkot/3.png';
-import final4 from '../assets/sialkot/4.jpg';
-import final5 from '../assets/sialkot/5.jpg';
-import final6 from '../assets/sialkot/IMG_0509.jpg';
-import final7 from '../assets/sialkot/IMG_0519.JPG';
-import final8 from '../assets/sialkot/IMG_0521.JPG';
-import final9 from '../assets/sialkot/IMG_0541.jpg';
-import final10 from '../assets/sialkot/IMG_0545.jpg';
-import final11 from '../assets/sialkot/IMG_0548.jpg';
-import final12 from '../assets/sialkot/IMG_0550.JPG';
-import final13 from '../assets/sialkot/IMG_0552.jpg';
-import final14 from '../assets/sialkot/IMG_0554.jpg';
-import final15 from '../assets/sialkot/IMG_0558.jpg';
-import final16 from '../assets/sialkot/IMG_0561.jpg';
-import final17 from '../assets/sialkot/IMG_0566.jpg';
-import final18 from '../assets/sialkot/IMG_0571.jpg';
-import final19 from '../assets/sialkot/IMG_0575.jpg';
-import final20 from '../assets/sialkot/IMG_0577.jpg';
-import final21 from '../assets/sialkot/IMG_0581.jpg';
-import final22 from '../assets/sialkot/IMG_0583.jpg';
-import final23 from '../assets/sialkot/vlcsnap-2023-07-12-01h08m34s080.png';
-import final24 from '../assets/sialkot/vlcsnap-2023-07-12-01h08m52s495.png';
 
+/* Sialkot Existing Images */
+import sialkot1 from '../assets/sialkot/2.jpg';
+import sialkot2 from '../assets/sialkot/3.png';
+import sialkot3 from '../assets/sialkot/4.jpg';
+import sialkot4 from '../assets/sialkot/5.jpg';
+import sialkot5 from '../assets/sialkot/IMG_0509.jpg';
+import sialkot6 from '../assets/sialkot/IMG_0541.jpg';
+import sialkot7 from '../assets/sialkot/IMG_0545.jpg';
+import sialkot8 from '../assets/sialkot/IMG_0548.jpg';
+import sialkot9 from '../assets/sialkot/IMG_0550.JPG';
+import sialkot10 from '../assets/sialkot/IMG_0552.jpg';
+import sialkot11 from '../assets/sialkot/IMG_0554.jpg';
+import sialkot12 from '../assets/sialkot/IMG_0558.jpg';
+import sialkot13 from '../assets/sialkot/IMG_0561.jpg';
+import sialkot14 from '../assets/sialkot/IMG_0566.jpg';
+import sialkot15 from '../assets/sialkot/IMG_0571.jpg';
+import sialkot16 from '../assets/sialkot/IMG_0575.jpg';
+import sialkot17 from '../assets/sialkot/IMG_0577.jpg';
+import sialkot18 from '../assets/sialkot/IMG_0581.jpg';
+import sialkot19 from '../assets/sialkot/IMG_0583.jpg';
+
+/* Chamber of Commerce 3 Existing Images */
+import chamber3_1 from '../assets/chamber of commerce 3/IMG_6829.JPG';
+import chamber3_2 from '../assets/chamber of commerce 3/IMG_6832.JPG';
+import chamber3_3 from '../assets/chamber of commerce 3/IMG_6840.JPG';
+import chamber3_4 from '../assets/chamber of commerce 3/IMG_6869.JPG';
+import chamber3_5 from '../assets/chamber of commerce 3/IMG_6874.JPG';
+import chamber3_6 from '../assets/chamber of commerce 3/IMG_6899.JPG';
+import chamber3_7 from '../assets/chamber of commerce 3/IMG_6902.JPG';
+import chamber3_8 from '../assets/chamber of commerce 3/IMG_6904.JPG';
+import chamber3_9 from '../assets/chamber of commerce 3/IMG_6919.JPG';
+import chamber3_10 from '../assets/chamber of commerce 3/IMG_6923.JPG';
+import chamber3_11 from '../assets/chamber of commerce 3/IMG_6927.JPG';
+import chamber3_12 from '../assets/chamber of commerce 3/IMG_6930.JPG';
+import chamber3_13 from '../assets/chamber of commerce 3/IMG_7004.JPG';
+import chamber3_14 from '../assets/chamber of commerce 3/IMG_7007.JPG';
+import chamber3_15 from '../assets/chamber of commerce 3/IMG_7212.JPG';
+import chamber3_16 from '../assets/chamber of commerce 3/IMG_7250.JPG';
+import chamber3_17 from '../assets/chamber of commerce 3/IMG_7257.JPG';
+import chamber3_18 from '../assets/chamber of commerce 3/IMG_7263.JPG';
+
+/* ──────────────────────────────────────────────
+   ORGANIZATIONAL METADATA
+   ────────────────────────────────────────────── */
 export const siteInfo = {
-  name: "BNWO",
-  fullName: "Best Nation Welfare Organization",
-  email: "info@bestnationorg.com",
-  phone: "0321-7777011",
-  address: "BNWO GECHS, Block B street no 5 Faisal Town Lahore",
-  hours: "Everyday: 9:00 AM - 5:00 PM",
+  name: "Best Nation Welfare Organisation",
+  acronym: "BNWO",
+  established: 2020,
+  headquarters: "Lahore, Pakistan",
+  tagline: "Let's Pay Back to Pakistan",
+  taglineUrdu: "بہترین قوم کی تشکیل",
+  address: "60-A, Street No. 5, Model Town Link Road, G.E.C.H.S. Phase 2, Lahore",
+  phone: "0321-4190008, 0321-7777011",
+  email: "bestnationofficial@gmail.com",
+  registration: "Established under relevant Pakistan NGO/Welfare laws",
+  hours: "Mon - Sat: 9:00 AM - 6:00 PM",
 };
 
+export const visionStatement =
+  "To build a compassionate, inclusive Pakistan where every individual—regardless of background or circumstance—has equal access to the best education, healthcare, dignity, and opportunity, creating generational change through empowered families and resilient grassroots communities.";
+
+export const missionStatement =
+  "BNWO exists to translate individual compassion into collective national uplift — organizing volunteers, professionals, and community leaders into a structured network that identifies local needs, delivers targeted welfare programs, and builds accountable governance down to the Union Council level.";
+
+export const aboutOrganization =
+  "Best Nation Welfare Organisation (BNWO) Pakistan is a registered Non-Profit Organisation dedicated to human welfare, social development, and grassroots community empowerment. Established in 2020 in Lahore, BNWO operates across Pakistan through structured governance and volunteer networks.";
+
+export const motto = "Let's Pay Back to Pakistan";
+
 export const socialLinks = [
-    { icon: "fab fa-facebook-f", url: "https://www.facebook.com/share/1Hm6EVW6BM/", label: "Facebook" },
-  { icon: "fab fa-twitter", url: "https://x.com/Bestnation_bnwo", label: "Twitter" },
-    { icon: "fab fa-instagram", url: "https://www.instagram.com/bestnation_bnwo/", label: "Instagram" },
-  { icon: "fab fa-linkedin-in", url: "#", label: "LinkedIn" },
-    { icon: "fab fa-youtube", url: "https://youtube.com/@bestnationofficial?si=9s4fkJBHiJvACujn", label: "YouTube" },
+  { platform: "Facebook", icon: "fab fa-facebook-f", url: "https://facebook.com", label: "Facebook" },
+  { platform: "Instagram", icon: "fab fa-instagram", url: "https://instagram.com", label: "Instagram" },
+  { platform: "Twitter", icon: "fab fa-twitter", url: "https://twitter.com", label: "Twitter" },
+  { platform: "YouTube", icon: "fab fa-youtube", url: "https://youtube.com", label: "YouTube" },
+  { platform: "WhatsApp", icon: "fab fa-whatsapp", url: "https://wa.me/923214190008", label: "WhatsApp" },
+];
+
+export const focusAreas = [
+  {
+    id: 1,
+    icon: "fas fa-graduation-cap",
+    title: "Training & Education",
+    description: "Capacity-building for parents, teachers, and community leaders along with literacy, skills, and Quranic/character-based development.",
+  },
+  {
+    id: 2,
+    icon: "fas fa-heartbeat",
+    title: "Health Awareness & Facilities",
+    description: "Preventive care, emergency services, clean water provision, and specialized treatment access for underserved communities.",
+  },
+  {
+    id: 3,
+    icon: "fas fa-briefcase",
+    title: "Skills & Opportunities",
+    description: "Livelihoods, empowerment, and legal protection for all segments of society through entrepreneurship and vocational training.",
+  },
 ];
 
 export const heroSlides = [
   {
     id: 1,
-    title: "Empowering Communities Through Skills and Opportunity",
-    description: "BNWO equips youth and families with education, digital skills, and practical support so they can build stable and dignified futures.",
-    btn1: { text: "Join the Mission", link: "/contact" },
+    title: "Let's Pay Back to Pakistan",
+    description: "BNWO exists to translate individual compassion into collective national uplift — organizing volunteers, professionals, and community leaders into a structured network for social transformation.",
+    btn1: { text: "Join the Mission", link: "/membership" },
     btn2: { text: "About BNWO", link: "/about" },
     bg: hero1,
   },
   {
     id: 2,
-    title: "Compassion in Action Across Pakistan",
-    description: "From health awareness to emergency response and family assistance, our teams work directly where communities need support most.",
-    btn1: { text: "Our Work", link: "/what-we-do" },
-    btn2: { text: "Volunteer", link: "/contact" },
+    title: "Empowering Communities Through Education & Health",
+    description: "Delivering targeted welfare programs across 12 flagship sectors — from IT skills & literacy to dialysis centers, clean water, and orphan care.",
+    btn1: { text: "Explore 12 Programs", link: "/programs" },
+    btn2: { text: "7-Tier Governance", link: "/parliament" },
     bg: hero2,
   },
   {
     id: 3,
-    title: "Sustainable Projects. Measurable Impact.",
-    description: "Support our long-term projects in education, health care, women empowerment, and social welfare to create change that lasts.",
-    btn1: { text: "Explore Projects", link: "/what-we-do" },
-    btn2: { text: "Donate Now", link: "/donate" },
-    bg: hero3
+    title: "Structured Grassroots Governance Across Pakistan",
+    description: "Operating through a 7-tier parliamentary leadership model and 24 specialized project committees to ensure transparent execution and local accountability.",
+    btn1: { text: "View Parliaments", link: "/parliament" },
+    btn2: { text: "24 Project Committees", link: "/committees" },
+    bg: hero3,
   },
   {
     id: 4,
-    title: "Serving Families with Dignity",
-    description: "From ration drives to emergency support, we stand with vulnerable families and deliver help where it is needed most.",
-    btn1: { text: "See Events", link: "/events" },
-    btn2: { text: "Support Us", link: "/donate" },
+    title: "Transparent Welfare, Real Grassroots Impact",
+    description: "Every donation and program is executed through vetted community leaders, audit-backed allocation, and direct field coordination.",
+    btn1: { text: "Donate Now", link: "/donate" },
+    btn2: { text: "Contact Team", link: "/contact" },
     bg: hero4,
   },
   {
     id: 5,
-    title: "Building Hope Through Collective Action",
-    description: "Together with volunteers and partners, we create sustainable impact through education, outreach, and welfare programs.",
-    btn1: { text: "Our Programs", link: "/what-we-do" },
+    title: "Building Generational Transformation Together",
+    description: "Together with volunteers and partners, we create sustainable impact through 12 core welfare programs and 24 thematic project committees.",
+    btn1: { text: "View Committees", link: "/committees" },
     btn2: { text: "Contact Team", link: "/contact" },
     bg: hero5,
   },
 ];
 
-export const services = [
+/* ──────────────────────────────────────────────
+   12 CORE WELFARE PROGRAMS (from Concept Note)
+   ────────────────────────────────────────────── */
+export const corePrograms = {
+  trainingEducation: [
+    {
+      id: 1,
+      icon: "fas fa-laptop-code",
+      title: "IT & Skill Institutes and Universities",
+      description: "Establishing technical, vocational, and IT training institutes to equip youth with market-ready digital and technical skills.",
+      bgImage: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      id: 2,
+      icon: "fas fa-book-open",
+      title: "Taaleem Dost Literacy Program",
+      description: "Community-based literacy drives to reduce illiteracy and enable out-of-school children and adults to access basic education.",
+      bgImage: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      id: 3,
+      icon: "fas fa-quran",
+      title: "Quran-o-Sunnat Awareness & Spiritual Healing",
+      description: "Faith-based character-building and spiritual counselling rooted in Quranic teachings and Sunnah for moral and social development.",
+      bgImage: "https://images.unsplash.com/photo-1609599006353-e629aaabfeae?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      id: 4,
+      icon: "fas fa-chalkboard-teacher",
+      title: "Parenting & Teachers Training Program",
+      description: "Capacity-building workshops for parents and teachers to strengthen child-rearing practices and classroom effectiveness.",
+      bgImage: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80",
+    },
+  ],
+  healthFacilities: [
+    {
+      id: 5,
+      icon: "fas fa-hand-holding-water",
+      title: "Health Awareness & Clean Water Program",
+      description: "Community health education, emergency ambulance response, and clean drinking water provision in underserved areas.",
+      bgImage: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      id: 6,
+      icon: "fas fa-leaf",
+      title: "Clean & Green Pakistan Program",
+      description: "Environmental clean-up and green Pakistan tree-plantation drives and awareness campaigns.",
+      bgImage: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      id: 7,
+      icon: "fas fa-procedures",
+      title: "Dialysis Centers, Blood Banks & Ambulance Services",
+      description: "Establishing and supporting dialysis units, blood banks, and thalassemia care centers for chronic-illness patients.",
+      bgImage: "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      id: 8,
+      icon: "fas fa-futbol",
+      title: "Best Nation Sports & Cultural Program",
+      description: "Sports and cultural activities that promote physical wellbeing, healthy competition, and positive youth engagement.",
+      bgImage: "https://images.unsplash.com/photo-1517649763962-0c623266010b?auto=format&fit=crop&w=800&q=80",
+    },
+  ],
+  humanRights: [
+    {
+      id: 9,
+      icon: "fas fa-home",
+      title: "Best Nation Dar-ul-Rehmat for Orphans",
+      description: "Residential and support facilities providing shelter, care, education, and upbringing for orphaned children with the addition of professional training after their matriculation.",
+      bgImage: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      id: 10,
+      icon: "fas fa-tractor",
+      title: "Kisan Dost Program for Livestock & Agriculture",
+      description: "Awareness campaigns and training sessions for farmers on modern livestock management and agricultural best practices to improve productivity and rural livelihoods.",
+      bgImage: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      id: 11,
+      icon: "fas fa-fist-raised",
+      title: "Youth Empowerment & Drug-Free Pakistan",
+      description: "Skills development, entrepreneurship support, and anti-narcotics awareness campaigns that equip young people with productive opportunities and protect them from drug abuse.",
+      bgImage: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      id: 12,
+      icon: "fas fa-balance-scale",
+      title: "Human Rights, Legal Support & Nikah Falah",
+      description: "Free legal aid, human-rights advocacy, and facilitation of simple, affordable marriages (Nikah Falah) to reduce social and financial barriers.",
+      bgImage: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80",
+    },
+  ],
+};
+
+export const allPrograms = [
+  ...corePrograms.trainingEducation,
+  ...corePrograms.healthFacilities,
+  ...corePrograms.humanRights,
+];
+
+export const services = allPrograms.slice(0, 6).map((p) => ({
+  id: p.id,
+  icon: p.icon,
+  title: p.title,
+  description: p.description,
+  fullDescription: p.description,
+  bgImage: p.bgImage,
+}));
+
+/* ──────────────────────────────────────────────
+   7-TIER PARLIAMENT STRUCTURE
+   ────────────────────────────────────────────── */
+export const parliamentTiers = {
+  international: [
+    {
+      id: 1,
+      name: "Best Nation World Parliament",
+      level: "International / National",
+      minMembers: 120,
+      term: "1 Year",
+      mandateType: "Strategic",
+      mandate: "National strategy, policy direction, international MOUs & flagship fundraising",
+    },
+    {
+      id: 2,
+      name: "Best Nation World States Parliament",
+      level: "State / Province",
+      minMembers: 120,
+      term: "1 Year",
+      mandateType: "Strategic",
+      mandate: "Provincial resource mobilization, strategic alignment, donor & government liaison",
+    },
+    {
+      id: 3,
+      name: "Best Nation World Cities Parliament",
+      level: "City / Metropolitan",
+      minMembers: 120,
+      term: "1 Year",
+      mandateType: "Strategic",
+      mandate: "City-level fundraising, corporate partnerships, media & public visibility",
+    },
+  ],
+  national: [
+    {
+      id: 4,
+      name: "Best Nation Divisional Parliament",
+      level: "Divisional",
+      minMembers: 240,
+      term: "1 Year",
+      mandateType: "Execution",
+      mandate: "Divisional oversight of program execution and inter-district coordination",
+    },
+    {
+      id: 5,
+      name: "Best Nation District Parliament",
+      level: "District",
+      minMembers: 240,
+      term: "1 Year",
+      mandateType: "Execution",
+      mandate: "District-level project execution, monitoring, and committee supervision",
+    },
+    {
+      id: 6,
+      name: "Best Nation Tehsil Parliament",
+      level: "Tehsil",
+      minMembers: 240,
+      term: "1 Year",
+      mandateType: "Execution",
+      mandate: "Tehsil-level project delivery and local partnership building",
+    },
+    {
+      id: 7,
+      name: "Best Nation Union Council Parliament",
+      level: "Union Council",
+      minMembers: 240,
+      term: "1 Year",
+      mandateType: "Execution",
+      mandate: "Grassroots project execution, beneficiary identification, and community mobilization",
+    },
+  ],
+};
+
+export const allParliamentTiers = [
+  ...parliamentTiers.international,
+  ...parliamentTiers.national,
+];
+
+export const officeBearers = [
+  { title: "Chairman / President", icon: "fas fa-crown", description: "Overall leadership and external representation" },
+  { title: "Vice Chairman", icon: "fas fa-user-tie", description: "Deputizes for the Chairman and oversees internal coordination" },
+  { title: "General Secretary", icon: "fas fa-file-alt", description: "Administration, records, and correspondence" },
+  { title: "Finance Secretary", icon: "fas fa-coins", description: "Fund management, budgeting, and financial reporting" },
+  { title: "Coordination Secretary", icon: "fas fa-network-wired", description: "Liaison with the next tier up and down the structure" },
+  { title: "Committee Convenors", icon: "fas fa-users-cog", description: "Heads of the relevant thematic Project Committees" },
+];
+
+export const eligibilityCriteria = [
+  "Minimum age of 25 years and a record of good moral character",
+  "Demonstrated commitment to voluntary community service or relevant professional expertise",
+  "No conflict of interest with BNWO's objectives or affiliated bodies",
+  "Willingness to serve the full term and attend mandatory Parliament sessions and reporting cycles",
+];
+
+/* ──────────────────────────────────────────────
+   24 THEMATIC PROJECT COMMITTEES
+   ────────────────────────────────────────────── */
+export const projectCommittees = [
+  {
+    category: "Faith, Education & Skills",
+    icon: "fas fa-mosque",
+    color: "#0284C7",
+    committees: [
+      { id: 1, name: "Quran Sunnah Agahi Committee", bgImage: "https://images.unsplash.com/photo-1609599006353-e629aaabfeae?auto=format&fit=crop&w=800&q=80" },
+      { id: 2, name: "IT & Skills Experts Committee", bgImage: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80" },
+      { id: 3, name: "Literacy Experts Committee", bgImage: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80" },
+      { id: 4, name: "Parents Empowerment Committee", bgImage: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80" },
+      { id: 5, name: "Teachers Empowerment Committee", bgImage: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80" },
+    ],
+  },
+  {
+    category: "Health & Public Welfare",
+    icon: "fas fa-heartbeat",
+    color: "#EC4899",
+    committees: [
+      { id: 6, name: "Health Awareness Experts Committee", bgImage: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=800&q=80" },
+      { id: 7, name: "Doctors Empowerment Committee", bgImage: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80" },
+      { id: 8, name: "Clean Water Program Committee", bgImage: "https://images.unsplash.com/photo-1541252260730-0412e8e2108e?auto=format&fit=crop&w=800&q=80" },
+      { id: 9, name: "Ambulance & Blood Bank Committee", bgImage: "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=800&q=80" },
+      { id: 10, name: "Dar-ul-Rehmat Program Committee", bgImage: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=800&q=80" },
+    ],
+  },
+  {
+    category: "Environment, Sports & Culture",
+    icon: "fas fa-tree",
+    color: "#10B981",
+    committees: [
+      { id: 11, name: "Tree Plantation Committee", bgImage: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80" },
+      { id: 12, name: "Environment Protection Committee", bgImage: "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=80" },
+      { id: 13, name: "Clean Pakistan Committee", bgImage: "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=800&q=80" },
+      { id: 14, name: "Sports Experts Committee", bgImage: "https://images.unsplash.com/photo-1517649763962-0c623266010b?auto=format&fit=crop&w=800&q=80" },
+      { id: 15, name: "Culture Experts Committee", bgImage: "https://images.unsplash.com/photo-1469488865564-c2de10f69f96?auto=format&fit=crop&w=800&q=80" },
+    ],
+  },
+  {
+    category: "Rights, Agriculture & Business",
+    icon: "fas fa-balance-scale",
+    color: "#F59E0B",
+    committees: [
+      { id: 16, name: "Human Rights Committee", bgImage: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80" },
+      { id: 17, name: "Legal Experts Committee", bgImage: "https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?auto=format&fit=crop&w=800&q=80" },
+      { id: 18, name: "Nikah Falah Program Committee", bgImage: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" },
+      { id: 19, name: "Anti-Narcotics Action Committee", bgImage: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80" },
+      { id: 20, name: "Kisan Support Committee", bgImage: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=800&q=80" },
+      { id: 21, name: "Livestock Experts Committee", bgImage: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=800&q=80" },
+      { id: 22, name: "Youth Skills & Livelihood Committee", bgImage: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" },
+      { id: 23, name: "Businessmen Advisory Committee", bgImage: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" },
+      { id: 24, name: "Women Empowerment Committee", bgImage: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" },
+    ],
+  },
+];
+
+export const allCommitteesList = projectCommittees.flatMap((c) =>
+  c.committees.map((item) => ({ ...item, category: c.category, icon: c.icon }))
+);
+
+export const membershipTiers = [
   {
     id: 1,
-    icon: "fas fa-hands-helping",
-    title: "Relief and Humanitarian Support",
-    description: "Delivering direct help through ration drives, emergency support, and community welfare responses for vulnerable families.",
-    fullDescription: "BNWO mobilizes volunteers and partners to deliver timely relief where communities need it most. From food support and emergency response to welfare outreach, our focus is to reduce hardship with dignity and transparency while strengthening local resilience.",
+    tier: "World Parliament",
+    role: "Member",
+    fee: "$300",
+    currency: "USD",
+    contribution: "National strategy, MOUs & flagship fundraising",
+    level: "international",
   },
   {
     id: 2,
-    icon: "fas fa-users",
-    title: "Community Engagement",
-    description: "Building local networks of volunteers, educators, and advocates to lead positive social change.",
-    fullDescription: "We bring together community leaders, youth, and volunteers through awareness drives, workshops, and welfare campaigns. This model helps communities identify priorities, participate in solutions, and sustain progress through collaboration.",
+    tier: "World States Parliament",
+    role: "Member",
+    fee: "$200",
+    currency: "USD",
+    contribution: "Provincial fundraising & strategic alignment",
+    level: "international",
   },
   {
     id: 3,
-    icon: "fas fa-flask",
-    title: "Health and Wellbeing Initiatives",
-    description: "Promoting preventive care through camps, awareness sessions, and support services in underserved areas.",
-    fullDescription: "Our health initiatives include awareness drives, community camps, and practical support that improve access to basic care. We also connect families to trusted resources and encourage healthy habits for long-term wellbeing.",
+    tier: "World Cities Parliament",
+    role: "Member",
+    fee: "$100",
+    currency: "USD",
+    contribution: "City-level fundraising & partnerships",
+    level: "international",
   },
   {
     id: 4,
-    icon: "fas fa-balance-scale",
-    title: "Policy Development",
-    description: "Working with policymakers to shape health policies that reflect the needs and experiences of affected communities.",
-    fullDescription: "Our policy work involves engaging with government departments, health authorities, and international organizations to influence health policy. We provide evidence-based recommendations, participate in consultations, and advocate for policies that improve health outcomes.",
+    tier: "Divisional Parliament",
+    role: "Member",
+    fee: "PKR 12,000",
+    currency: "PKR",
+    contribution: "Divisional execution oversight",
+    level: "national",
   },
   {
     id: 5,
-    icon: "fas fa-graduation-cap",
-    title: "Education & Training",
-    description: "Providing comprehensive education and training programs to build capacity within community organizations and advocates.",
-    fullDescription: "We offer a range of educational programs designed to build the knowledge and skills of community advocates. Our training covers treatment literacy, research understanding, policy analysis, and communication skills.",
+    tier: "District Parliament",
+    role: "Member",
+    fee: "PKR 9,000",
+    currency: "PKR",
+    contribution: "District project execution & monitoring",
+    level: "national",
   },
   {
     id: 6,
-    icon: "fas fa-globe-europe",
-    title: "International Collaboration",
-    description: "Partnering with international organizations to share knowledge, best practices, and advance global health initiatives.",
-    fullDescription: "We collaborate with international organizations, community networks, and research institutions around the world. These partnerships enable us to share best practices, learn from global experiences, and contribute to international health initiatives.",
+    tier: "Tehsil Parliament",
+    role: "Member",
+    fee: "PKR 6,000",
+    currency: "PKR",
+    contribution: "Tehsil-level project delivery",
+    level: "national",
   },
+  {
+    id: 7,
+    tier: "Union Council Parliament",
+    role: "Member",
+    fee: "PKR 3,000",
+    currency: "PKR",
+    contribution: "Grassroots execution & beneficiary outreach",
+    level: "national",
+  },
+];
+
+export const accountabilityChain = [
+  { step: 1, title: "International Parliaments", subtitle: "Strategy & Fundraising", icon: "fas fa-globe" },
+  { step: 2, title: "Local Parliaments", subtitle: "Oversight & Coordination", icon: "fas fa-landmark" },
+  { step: 3, title: "Project Committees", subtitle: "Day-to-Day Execution", icon: "fas fa-tasks" },
+  { step: 4, title: "Communities & Beneficiaries", subtitle: "Impact & Outreach", icon: "fas fa-users" },
 ];
 
 export const stats = [
   { id: "stat1", icon: "fas fa-users", target: 12000, label: "Lives Reached" },
-  { id: "stat2", icon: "fas fa-project-diagram", target: 160, label: "Active and Delivered Projects" },
-  { id: "stat3", icon: "fas fa-calendar-check", target: 320, label: "Community Drives and Sessions" },
-  { id: "stat4", icon: "fas fa-handshake", target: 95, label: "Partners and Volunteer Teams" },
-];
-
-export const newsData = [
-  {
-    id: 1,
-    title: "BNWO Expands Youth IT Training Batches in Lahore",
-    excerpt: "New training cohorts are helping students build employable digital skills through practical labs and mentorship.",
-    content: "BNWO has expanded its IT and skill training initiative with new batches focused on digital literacy, office productivity tools, and career readiness. The program combines practical classes with mentorship so youth can move toward internships and employment pathways.",
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500",
-    date: "Jan 15, 2026",
-    author: "Admin",
-    category: "Guidelines",
-  },
-  {
-    id: 2,
-    title: "Ration Distribution Drive Supports Families in Jhang",
-    excerpt: "BNWO volunteers completed a coordinated ration campaign to support deserving households during rising inflation.",
-    content: "Our field team and volunteers organized a large-scale ration distribution in Jhang with transparent beneficiary registration and on-ground coordination. The campaign provided essential food support to families facing financial pressure and highlighted the strength of community-led welfare.",
-    image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=500",
-    date: "Jan 10, 2026",
-    author: "Admin",
-    category: "Events",
-  },
-  {
-    id: 3,
-    title: "Health Awareness and Clean Water Outreach Launched",
-    excerpt: "A combined campaign is improving awareness about hygiene, safe water, and preventive health practices.",
-    content: "BNWO has launched an integrated outreach model combining health awareness sessions with clean water guidance in underserved neighborhoods. The initiative engages families, youth, and community leaders to promote preventive care and safer daily practices.",
-    image: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=500",
-    date: "Jan 05, 2026",
-    author: "Admin",
-    category: "Partnership",
-  },
-  {
-    id: 4,
-    title: "Women Empowerment Workshops Reach New Districts",
-    excerpt: "Training sessions on vocational skills and confidence building are now active in additional communities.",
-    content: "BNWO has scaled women empowerment workshops to new districts with modules on practical skills, entrepreneurship basics, and confidence building. The sessions create safer pathways for women to contribute economically and socially in their communities.",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=500",
-    date: "Dec 28, 2025",
-    author: "Admin",
-    category: "Training",
-  },
-  {
-    id: 5,
-    title: "Dialysis and Blood Support Coordination Strengthened",
-    excerpt: "Improved referrals and awareness are helping patients connect faster to ongoing care and donation support.",
-    content: "BNWO continues to strengthen community coordination for dialysis and blood support through improved referrals and awareness campaigns. This effort helps vulnerable patients and families navigate care options more efficiently with dignity and guidance.",
-    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=500",
-    date: "Dec 20, 2025",
-    author: "Admin",
-    category: "Policy",
-  },
-  {
-    id: 6,
-    title: "Volunteer Recognition: Local Heroes of BNWO",
-    excerpt: "We celebrated dedicated volunteers whose consistency and compassion made large-scale outreach possible.",
-    content: "BNWO hosted a volunteer recognition segment to honor individuals and teams that consistently supported welfare activities, field events, and emergency response. Their commitment continues to power our mission and inspire others to serve.",
-    image: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=500",
-    date: "Dec 15, 2025",
-    author: "Admin",
-    category: "Community",
-  },
+  { id: "stat2", icon: "fas fa-project-diagram", target: 12, label: "Core Welfare Programs" },
+  { id: "stat3", icon: "fas fa-landmark", target: 7, label: "Parliament Tiers" },
+  { id: "stat4", icon: "fas fa-tasks", target: 24, label: "Project Committees" },
 ];
 
 export const eventsData = [
@@ -348,25 +568,13 @@ export const eventsData = [
     location: "Lahore Chamber of Commerce & Industry, Lahore",
     description:
       "BNWO joined leaders and members at the Lahore Chamber of Commerce for dialogue on community welfare, partnerships, and how the business community can support outreach and social impact initiatives.",
-    image: chamber1,
+    image: chamber1_12,
     gallery: [
-      chamber1,
-      chamber1_2,
-      chamber1_3,
-      chamber1_4,
-      chamber1_5,
-      chamber1_6,
-      chamber1_7,
-      chamber1_8,
-      chamber1_9,
-      chamber1_10,
-      chamber1_11,
       chamber1_12,
       chamber1_13,
       chamber1_14,
       chamber1_15,
       chamber1_16,
-      chamber1_17,
       chamber1_18,
     ],
     status: "past",
@@ -379,9 +587,9 @@ export const eventsData = [
     location: "Chamber of Commerce, Lahore",
     description:
       "BNWO representatives met with Chamber of Commerce members to discuss corporate social responsibility, community welfare partnerships, and opportunities for businesses to support outreach and training programs.",
-    image: chamber2,
+    image: chamber2_1,
     gallery: [
-      chamber2,
+      chamber2_1,
       chamber2_2,
       chamber2_3,
       chamber2_4,
@@ -406,9 +614,9 @@ export const eventsData = [
     location: "Chamber of Commerce, Lahore",
     description:
       "A follow-up Chamber of Commerce forum focused on long-term collaboration between BNWO and the business community, with plans for joint welfare drives, skills initiatives, and sustained support for underserved families.",
-    image: chamber3,
+    image: chamber3_1,
     gallery: [
-      chamber3,
+      chamber3_1,
       chamber3_2,
       chamber3_3,
       chamber3_4,
@@ -426,43 +634,6 @@ export const eventsData = [
       chamber3_16,
       chamber3_17,
       chamber3_18,
-      chamber3_19,
-      chamber3_20,
-      chamber3_21,
-      chamber3_22,
-      chamber3_23,
-      chamber3_24,
-      chamber3_25,
-      chamber3_26,
-      chamber3_27,
-      chamber3_28,
-      chamber3_29,
-      chamber3_30,
-      chamber3_31,
-      chamber3_32,
-      chamber3_33,
-      chamber3_34,
-      chamber3_35,
-      chamber3_36,
-      chamber3_37,
-      chamber3_38,
-      chamber3_39,
-      chamber3_40,
-      chamber3_41,
-      chamber3_42,
-      chamber3_43,
-      chamber3_44,
-      chamber3_45,
-      chamber3_46,
-      chamber3_47,
-      chamber3_48,
-      chamber3_49,
-      chamber3_50,
-      chamber3_51,
-      chamber3_52,
-      chamber3_53,
-      chamber3_54,
-      chamber3_55,
     ],
     status: "past",
   },
@@ -477,9 +648,6 @@ export const eventsData = [
     image: jhangRation,
     gallery: [
       ration4_1,
-      ration4_2,
-      ration4_3,
-      ration4_4,
       ration4_5,
       ration4_6,
       ration4_7,
@@ -488,6 +656,9 @@ export const eventsData = [
       ration4_10,
       ration4_11,
       ration4_12,
+      ration4_2,
+      ration4_3,
+      ration4_4,
     ],
     status: "past",
   },
@@ -499,29 +670,22 @@ export const eventsData = [
     location: "Flattis, Lahore",
     description:
       "BNWO organized a welfare and networking event at Flattis Lahore, highlighting community development goals, volunteer engagement, and partnerships to expand education and social support services.",
-    image: flettis2,
+    image: flettis3,
     gallery: [
-      flettis2,
       flettis3,
-      flettis4,
-      flettis5,
       flettis6,
-      flettis7,
       flettis8,
       flettis9,
       flettis10,
       flettis11,
       flettis14,
       flettis15,
-      flettis16,
-      flettis17,
       flettis18,
       flettis19,
       flettis20,
       flettis21,
       flettis22,
       flettis23,
-      flettis24,
     ],
     status: "past",
   },
@@ -533,32 +697,27 @@ export const eventsData = [
     location: "Sialkot, Punjab",
     description:
       "A community gathering in Sialkot brought together local supporters, volunteers, and partners to celebrate BNWO's welfare work and strengthen collaboration for skills training and family support programs.",
-    image: final1,
+    image: sialkot1,
     gallery: [
-      final1,
-      final2,
-      final3,
-      final4,
-      final5,
-      final6,
-      final7,
-      final8,
-      final9,
-      final10,
-      final11,
-      final12,
-      final13,
-      final14,
-      final15,
-      final16,
-      final17,
-      final18,
-      final19,
-      final20,
-      final21,
-      final22,
-      final23,
-      final24,
+      sialkot1,
+      sialkot2,
+      sialkot3,
+      sialkot4,
+      sialkot5,
+      sialkot6,
+      sialkot7,
+      sialkot8,
+      sialkot9,
+      sialkot10,
+      sialkot11,
+      sialkot12,
+      sialkot13,
+      sialkot14,
+      sialkot15,
+      sialkot16,
+      sialkot17,
+      sialkot18,
+      sialkot19,
     ],
     status: "past",
   },
@@ -581,11 +740,6 @@ export const eventsData = [
       amanah5,
       amanah6,
       amanah7,
-      amanah8,
-      amanah9,
-      amanah10,
-      amanah11,
-      amanah12,
       amanah13,
       amanah14,
       amanah15,
@@ -601,13 +755,4 @@ export const partners = [
   { id: 4, name: "JazzCash", logo: "JazzCash" },
   { id: 5, name: "EasyPaisa", logo: "EasyPaisa" },
   { id: 6, name: "NayaPay", logo: "NayaPay" },
-];
-
-export const navLinks = [
-  { name: "Home", path: "/" },
-  { name: "About Us", path: "/about" },
-  { name: "What We Do", path: "/what-we-do" },
-  { name: "News", path: "/news" },
-  { name: "Events", path: "/events" },
-  { name: "Contact", path: "/contact" },
 ];

@@ -8,10 +8,13 @@ import ScrollToTopBtn from './components/ScrollToTop/ScrollToTop';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import WhatWeDo from './pages/WhatWeDo/WhatWeDo';
-import News from './pages/News/News';
 import Events from './pages/Events/Events';
 import Contact from './pages/Contact/Contact';
 import Donate from './pages/Donate/Donate';
+import Parliament from './pages/Parliament/Parliament';
+import Programs from './pages/Programs/Programs';
+import Committees from './pages/Committees/Committees';
+import Membership from './pages/Membership/Membership';
 import NewsletterAdmin from './pages/NewsletterAdmin/NewsletterAdmin';
 
 function ScrollToTop() {
@@ -32,7 +35,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/what-we-do" element={<WhatWeDo />} />
-        <Route path="/news" element={<News />} />
+        <Route path="/programs" element={<Programs />} />
+        <Route path="/parliament" element={<Parliament />} />
+        <Route path="/committees" element={<Committees />} />
+        <Route path="/membership" element={<Membership />} />
         <Route path="/events" element={<Events />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/donate" element={<Donate />} />

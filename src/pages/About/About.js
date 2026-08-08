@@ -1,76 +1,252 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Stats from '../../components/Stats/Stats';
 import CTA from '../../components/CTA/CTA';
 import Newsletter from '../../components/Newsletter/Newsletter';
+import {
+  visionStatement,
+  missionStatement,
+  aboutOrganization,
+  focusAreas,
+} from '../../data/siteData';
+import aboutHero from '../../assets/about-hero.png';
 import './About.css';
 
 const About = () => {
-
-
   return (
     <div className="about-page">
-      <section className="about-intro" id="about">
+      {/* ── Modern Hero Banner ─────────────────── */}
+      <section className="about-hero">
+        <div className="about-hero-bg">
+          <img src={aboutHero} alt="BNWO Team" />
+          <div className="about-hero-overlay"></div>
+        </div>
         <div className="container">
-          <div className="about-intro-content">
-            <span className="about-intro-kicker">Best Nation Welfare Organization</span>
-            <h1>About Us</h1>
-            <div className="underline-left about-intro-title-line" />
-            <div className="about-intro-highlights">
-              <span><i className="fas fa-hands-helping" aria-hidden="true"></i> Community-led</span>
-              <span><i className="fas fa-bullhorn" aria-hidden="true"></i> Advocacy</span>
-              <span><i className="fas fa-map-marked-alt" aria-hidden="true"></i> Pakistan-wide reach</span>
-            </div>
+          <div className="about-hero-content">
+            <span className="about-hero-badge">
+              <i className="fas fa-shield-alt"></i> Registered NPO with SECP • Est. 2020
+            </span>
+            <h1>Empowering Communities Across Pakistan</h1>
             <p>
-              Welcome to Best Nation Welfare Organisation (BNWO), where compassion meets action to create positive change
-              in communities across Pakistan and beyond. With a steadfast commitment to serve humanity, BNWO is dedicated to uplift
-              the underprivileged, providing essential services, and fostering sustainable development.
-            </p>
-            <p>
-              Through education, collaboration, and strategic engagement, we build informed communities that drive better
-              health outcomes, influence policy, and create sustainable impact.
+              Best Nation Welfare Organisation (BNWO) is dedicated to translating
+              compassion into structured, sustainable grassroots transformation.
             </p>
           </div>
         </div>
       </section>
-      <section className="about-vision">
+
+      {/* ── Modern Organization Overview ──────────── */}
+      <section className="about-org">
         <div className="container">
-          <div className="vision-grid">
-            <div className="vision-card"><i className="fas fa-eye"></i><h3>Our Vision</h3><p>Our vision at BNWO is to create a society where every individual has access to the education, healthcare, and livelihood opportunities, regardless of their background or circumstances. We envision a future where compassion.</p></div>
-            <div className="vision-card"><i className="fas fa-bullseye"></i><h3>Our Goals</h3><p>To build a strong network of informed community advocates and to influence health policy at all levels.</p></div>
-            <div className="vision-card"><i className="fas fa-chart-line"></i><h3>Our Impact</h3><p>Over 20 years of advocacy, influencing treatment guidelines and empowering thousands of advocates.</p></div>
-          </div>
-        </div>
-      </section>
-      <section className="about-mission" id="mission">
-        <div className="container">
-          <div className="mission-grid">
-            <div className="mission-text">
-              <h2>Our Mission</h2>
+          <div className="about-org-grid">
+            <div className="about-org-text">
+              <span className="section-kicker">Who We Are</span>
+              <h2>About the Organisation</h2>
               <div className="underline-left"></div>
-              <p>At BNWO, our mission is to enable communities, promote social welfare, and alleviate poverty through holistic and sustainable interventions. Through our various programs and initiatives, we aim to address the root causes of inequality and injustice, while nurturing a culture of empathy, compassion, and solidarity. By enabling individuals and communities to become agents of change, we strive to create a ripple effect of positive transformation that extends far beyond our immediate reach, touching the lives of countless individuals and families...</p>
-              <div className="mission-values">
-                <div className="value-item"><i className="fas fa-heart"></i><h4>Compassion</h4><p>We put people first</p></div>
-                <div className="value-item"><i className="fas fa-shield-alt"></i><h4>Integrity</h4><p>Honesty and transparency</p></div>
-                <div className="value-item"><i className="fas fa-hands-helping"></i><h4>Collaboration</h4><p>Working together</p></div>
-                <div className="value-item"><i className="fas fa-lightbulb"></i><h4>Innovation</h4><p>Creative solutions</p></div>
+              <p className="org-lead">{aboutOrganization}</p>
+              <p className="org-body">
+                Our initiatives operate across four key pillars:{' '}
+                <strong style={{ color: 'var(--primary-dark)' }}>
+                  Training, Education, Health Facilities & Awareness,
+                </strong>{' '}
+                and <strong style={{ color: 'var(--primary-dark)' }}>Skills & Opportunities for All</strong>.
+              </p>
+              <div className="org-highlights">
+                <div className="org-highlight-pill">
+                  <i className="fas fa-check-circle"></i> 100% Transparent Governance
+                </div>
+                <div className="org-highlight-pill">
+                  <i className="fas fa-check-circle"></i> 7-Tier Parliament Model
+                </div>
+                <div className="org-highlight-pill">
+                  <i className="fas fa-check-circle"></i> 24 Specialized Committees
+                </div>
+              </div>
+            </div>
+
+            <div className="about-org-features">
+              {focusAreas.map((area) => (
+                <div key={area.id} className="org-feature-card">
+                  <div className="org-feature-icon">
+                    <i className={area.icon}></i>
+                  </div>
+                  <div className="org-feature-content">
+                    <h3>{area.title}</h3>
+                    <p>{area.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Modern Vision & Mission ───────────── */}
+      <section className="about-vm">
+        <div className="container">
+          <div className="vm-grid">
+            <div className="vm-card vm-card--vision">
+              <div className="vm-card-aura"></div>
+              <div className="vm-card-icon">
+                <i className="fas fa-eye"></i>
+              </div>
+              <span className="vm-card-tag">Our Future Outlook</span>
+              <h3>Our Vision</h3>
+              <p>{visionStatement}</p>
+            </div>
+
+            <div className="vm-card vm-card--mission">
+              <div className="vm-card-icon">
+                <i className="fas fa-bullseye"></i>
+              </div>
+              <span className="vm-card-tag">Our Daily Commitment</span>
+              <h3>Our Mission</h3>
+              <p>{missionStatement}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Modern Core Values ────────────────── */}
+      <section className="about-values">
+        <div className="container">
+          <div className="section-title">
+            <span className="section-kicker">Guiding Principles</span>
+            <h2>Our Core Values</h2>
+            <div className="underline"></div>
+            <p>The foundational ethics driving every decision and community engagement</p>
+          </div>
+          <div className="values-grid">
+            <div className="value-card">
+              <div className="value-card-bar"></div>
+              <div className="value-icon">
+                <i className="fas fa-heart"></i>
+              </div>
+              <h3>Compassion</h3>
+              <p>Putting human dignity and empathy at the center of all outreach programs.</p>
+            </div>
+            <div className="value-card">
+              <div className="value-card-bar"></div>
+              <div className="value-icon">
+                <i className="fas fa-shield-alt"></i>
+              </div>
+              <h3>Integrity</h3>
+              <p>Complete financial transparency, audit backing, and ethical accountability.</p>
+            </div>
+            <div className="value-card">
+              <div className="value-card-bar"></div>
+              <div className="value-icon">
+                <i className="fas fa-hands-helping"></i>
+              </div>
+              <h3>Collaboration</h3>
+              <p>Uniting volunteers, institutions, and community leaders for shared impact.</p>
+            </div>
+            <div className="value-card">
+              <div className="value-card-bar"></div>
+              <div className="value-icon">
+                <i className="fas fa-globe-asia"></i>
+              </div>
+              <h3>Responsibility</h3>
+              <p>Dedicated to long-term generational uplift across underserved regions.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Stats />
+
+      {/* ── Modern Timeline / Journey ───────────────────── */}
+      <section className="about-history" id="history">
+        <div className="container">
+          <div className="section-title">
+            <span className="section-kicker">Growth & Milestones</span>
+            <h2>Our Journey</h2>
+            <div className="underline"></div>
+            <p>Key achievements defining BNWO's evolution since establishment</p>
+          </div>
+          <div className="timeline">
+            <div className="timeline-item">
+              <div className="timeline-dot"></div>
+              <div className="timeline-content">
+                <span className="timeline-year">2020</span>
+                <h4>BNWO Founded & SECP Registered</h4>
+                <p>
+                  Established in Lahore as a faith-inspired welfare platform and
+                  formally registered with SECP as a non-profit organisation.
+                </p>
+              </div>
+            </div>
+            <div className="timeline-item">
+              <div className="timeline-dot"></div>
+              <div className="timeline-content">
+                <span className="timeline-year">2021</span>
+                <h4>Grassroots Welfare Drives Launched</h4>
+                <p>
+                  Initiated initial food support, literacy drives, and community health
+                  awareness campaigns across Punjab districts.
+                </p>
+              </div>
+            </div>
+            <div className="timeline-item">
+              <div className="timeline-dot"></div>
+              <div className="timeline-content">
+                <span className="timeline-year">2023</span>
+                <h4>7-Tier Parliament Model Chartered</h4>
+                <p>
+                  Formed the structured leadership model — Best Nation Parliaments —
+                  extending governance from international to Union Council tiers.
+                </p>
+              </div>
+            </div>
+            <div className="timeline-item">
+              <div className="timeline-dot"></div>
+              <div className="timeline-content">
+                <span className="timeline-year">2024</span>
+                <h4>24 Project Committees Activated</h4>
+                <p>
+                  All 24 thematic project committees deployed to oversee execution
+                  and technical delivery of 12 core welfare programs.
+                </p>
+              </div>
+            </div>
+            <div className="timeline-item">
+              <div className="timeline-dot"></div>
+              <div className="timeline-content">
+                <span className="timeline-year">2025–26</span>
+                <h4>Nationwide Alliances & Institutional Growth</h4>
+                <p>
+                  Forged Lahore Chamber of Commerce partnerships, expanded divisional
+                  parliaments, and crossed 12,000+ direct beneficiary lives.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <Stats />
-      <section className="about-history" id="history">
+
+      {/* ── Modern Governance Banner CTA ─────── */}
+      <section className="about-parliament-cta">
         <div className="container">
-          <div className="section-title"><h2>Our History</h2><div className="underline"></div><p>Key milestones in our journey</p></div>
-          <div className="timeline">
-            <div className="timeline-item"><div className="timeline-dot"></div><div className="timeline-content"><h3>2019</h3><h4>BNWO Founded</h4><p>Established to give communities a voice in HIV treatment decisions.</p></div></div>
-            <div className="timeline-item"><div className="timeline-dot"></div><div className="timeline-content"><h3>2020</h3><h4>First National Conference</h4><p>Over 200 community advocates from across the PK.</p></div></div>
-            <div className="timeline-item"><div className="timeline-dot"></div><div className="timeline-content"><h3>2022</h3><h4>Policy Influence</h4><p>Successfully influenced national treatment guidelines.</p></div></div>
-            <div className="timeline-item"><div className="timeline-dot"></div><div className="timeline-content"><h3>2023</h3><h4>International Partnership</h4><p>Partnerships with international organizations.</p></div></div>
-            <div className="timeline-item"><div className="timeline-dot"></div><div className="timeline-content"><h3>2025</h3><h4>Continuing the Mission</h4><p>Over 5,000 members nationwide.</p></div></div>
+          <div className="parliament-cta-inner">
+            <div className="parliament-cta-text">
+              <h2>Explore Our Governance & Committee Network</h2>
+              <p>
+                Discover how BNWO operates through transparent 7-tier Parliaments
+                and 24 thematic Project Committees to ensure local accountability.
+              </p>
+            </div>
+            <div className="parliament-cta-actions">
+              <Link to="/parliament" className="btn-primary">
+                Explore Parliaments <i className="fas fa-arrow-right"></i>
+              </Link>
+              <Link to="/committees" className="btn-outline">
+                24 Committees <i className="fas fa-arrow-right"></i>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
+
       <CTA />
       <Newsletter />
     </div>

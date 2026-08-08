@@ -1,38 +1,122 @@
-.donate-page { background: #f6f9ff; }
-.donate-paypro { padding: 84px 0 24px; }
-.paypro-top-card {
-  max-width: 460px;
-  margin: 0 auto;
-  background: #fff;
-  border: 1px solid rgba(16,74,142,0.1);
-  border-radius: 18px;
-  box-shadow: var(--shadow-md);
-  text-align: center;
-  padding: 26px 22px;
+/* ── LUXURY LIGHT DONATE PAGE MASTERPIECE ───── */
+.donate-paypro {
+  padding: 100px 0;
+  background: var(--bg-surface);
 }
-.paypro-logo { width: 130px; height: 38px; object-fit: contain; margin: 0 auto 16px; }
+
+.paypro-top-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  padding: 56px;
+  background: var(--bg-main);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-md);
+}
+
+.paypro-logo {
+  width: 180px;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+}
+
 .paypro-btn {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  border-radius: 999px;
-  padding: 12px 22px;
-  background: linear-gradient(135deg, #16a34a, #22c55e);
-  color: #fff;
+  gap: 12px;
+  padding: 18px 44px;
+  background: var(--grad-gold);
+  color: var(--bg-surface);
+  font-family: var(--font-heading);
   font-weight: 800;
+  font-size: 1.15rem;
+  border-radius: var(--radius-full);
+  transition: var(--transition-bounce);
+  box-shadow: 0 10px 30px -5px rgba(217, 119, 6, 0.45);
 }
-.donate-bank-transfer { padding: 40px 0 80px; }
-.bank-grid { margin-top: 20px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+
+.paypro-btn:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 15px 40px -5px rgba(217, 119, 6, 0.6);
+}
+
+.donate-bank-transfer {
+  padding: 100px 0;
+  background: var(--bg-main);
+  border-top: 1px solid var(--border-light);
+}
+
+.bank-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+}
+
 .bank-card {
-  background: #fff;
-  border: 1px solid rgba(16,74,142,0.1);
-  border-radius: 16px;
+  padding: 36px 30px;
+  background: var(--bg-surface);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-light);
   box-shadow: var(--shadow-sm);
-  padding: 20px 16px;
-  text-align: center;
+  transition: var(--transition);
 }
-.bank-logo { width: 72px; height: 72px; object-fit: contain; margin: 0 auto 10px; }
-.bank-card h3 { font-family: 'Montserrat', sans-serif; font-size: 22px; color: var(--primary-deep); margin-bottom: 8px; }
-.acc-title { color: #0f6a7a; font-weight: 700; margin-bottom: 6px; }
-.bank-card p { color: var(--text-soft); margin-bottom: 5px; }
-@media (max-width: 768px) { .donate-paypro { padding-top: 66px; } .bank-grid { grid-template-columns: 1fr; } }
+
+.bank-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--border-emerald);
+}
+
+.bank-logo {
+  height: 52px;
+  object-fit: contain;
+  margin-bottom: 20px;
+  border-radius: var(--radius-sm);
+}
+
+.bank-card h3 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin-bottom: 14px;
+  color: var(--text-dark);
+}
+
+.bank-card p {
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+  color: var(--text-body);
+}
+
+.bank-card .acc-title {
+  font-weight: 700;
+  color: var(--emerald-deep);
+}
+
+@media (max-width: 768px) {
+  .donate-paypro { padding: 60px 0; }
+  .paypro-top-card {
+    flex-direction: column;
+    padding: 32px 20px;
+    gap: 28px;
+    text-align: center;
+    border-radius: 20px;
+  }
+  .paypro-logo { width: 140px; margin: 0 auto; }
+  .paypro-top-card h2 { font-size: 1.5rem; }
+  .paypro-top-card p { font-size: 0.92rem; }
+  .paypro-btn { padding: 14px 32px; font-size: 1rem; width: 100%; justify-content: center; }
+
+  .donate-bank-transfer { padding: 60px 0; }
+  .bank-grid { grid-template-columns: 1fr; gap: 16px; }
+  .bank-card { padding: 28px 22px; border-radius: 20px; text-align: center; }
+  .bank-logo { margin: 0 auto 16px; display: block; }
+  .bank-card h3 { font-size: 1.1rem; }
+  .bank-card p { font-size: 0.9rem; }
+}
+
+@media (max-width: 600px) {
+  .paypro-top-card { padding: 24px 16px; }
+  .paypro-btn { padding: 12px 24px; font-size: 0.92rem; }
+}

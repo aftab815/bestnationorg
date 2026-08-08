@@ -1,18 +1,74 @@
+/* ── PROFESSIONAL HIGH-CONTRAST STATS SECTION ── */
 .stats {
-  padding: 76px 0;
-  background: radial-gradient(circle at 20% 20%, rgba(143, 198, 255, 0.2), transparent 35%), linear-gradient(125deg, #0b376b, #081f3a);
-  color: #fff;
+  padding: 90px 0;
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+  position: relative;
 }
-.stats-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
 .stat-item {
   text-align: center;
-  border-radius: 16px;
-  padding: 24px 14px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 38px 24px;
+  background: var(--bg-main);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
 }
-.stat-item i { font-size: 28px; color: #9dd6ff; margin-bottom: 10px; }
-.stat-item h3 { font-family: 'Montserrat', sans-serif; font-size: 40px; margin-bottom: 4px; }
-.stat-item p { font-size: 13px; opacity: 0.88; letter-spacing: 0.06em; text-transform: uppercase; }
-@media (max-width: 992px) { .stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 600px) { .stats-grid { grid-template-columns: 1fr; } }
+
+.stat-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--grad-primary);
+  transition: var(--transition);
+}
+
+.stat-item:hover {
+  transform: translateY(-8px);
+  background: #FFFFFF;
+  border-color: var(--border-primary);
+  box-shadow: var(--shadow-lg);
+}
+
+.stat-item i {
+  font-size: 2.2rem;
+  margin-bottom: 16px;
+  display: inline-block;
+  color: var(--primary);
+}
+
+.stat-item h3 {
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 3vw, 2.75rem);
+  font-weight: 800;
+  color: var(--dark-slate);
+  margin-bottom: 6px;
+  letter-spacing: -1px;
+}
+
+.stat-item p {
+  font-size: 0.95rem;
+  color: var(--text-body);
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .stats { padding: 70px 0; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+}
+
+@media (max-width: 480px) {
+  .stats-grid { grid-template-columns: 1fr; }
+}

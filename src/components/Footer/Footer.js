@@ -31,7 +31,6 @@ const Footer = () => {
               <li><Link to="/about"><i className="fas fa-chevron-right"></i> About Us</Link></li>
               <li><Link to="/what-we-do"><i className="fas fa-chevron-right"></i> What We Do</Link></li>
               <li><Link to="/donate"><i className="fas fa-chevron-right"></i> Donate</Link></li>
-              <li><Link to="/news"><i className="fas fa-chevron-right"></i> News</Link></li>
               <li><Link to="/events"><i className="fas fa-chevron-right"></i> Events</Link></li>
             </ul>
           </div>

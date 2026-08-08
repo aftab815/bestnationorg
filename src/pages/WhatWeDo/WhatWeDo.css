@@ -1,67 +1,206 @@
-.wwd-intro, .wwd-projects, .wwd-approach { padding: 84px 0; }
-.wwd-intro { background: #f6f9ff; }
-.wwd-projects { background: #fff; }
-.wwd-approach { background: #eef4ff; }
+/* ── LUXURY LIGHT WHAT WE DO PAGE MASTERPIECE ─ */
 
-.wwd-focus-grid, .wwd-project-grid, .approach-grid { display: grid; gap: 18px; }
-.wwd-focus-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 28px; }
+.wwd-intro { padding: 110px 0; background: var(--bg-surface); }
+
+.wwd-focus-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
 .wwd-focus-card {
-  border-radius: 18px;
-  padding: 28px 22px;
-  color: #fff;
+  text-align: center;
+  padding: 44px 30px;
+  background: var(--bg-main);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.wwd-focus-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--border-emerald);
+  background: var(--bg-surface);
+}
+
+.wwd-focus-icon {
+  width: 72px;
+  height: 72px;
+  background: var(--emerald-surface);
+  border: 1px solid var(--border-emerald);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  transition: var(--transition);
+}
+
+.wwd-focus-card:hover .wwd-focus-icon {
+  background: var(--emerald-deep);
+}
+
+.wwd-focus-icon i { font-size: 1.8rem; color: var(--emerald-deep); transition: var(--transition); }
+.wwd-focus-card:hover .wwd-focus-icon i { color: var(--bg-surface); }
+
+.wwd-focus-card h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+.wwd-focus-card p { font-size: 0.95rem; color: var(--text-body); line-height: 1.65; }
+
+/* Projects Section */
+.wwd-projects {
+  padding: 110px 0;
+  background: var(--emerald-deep);
+  color: var(--bg-surface);
+}
+
+.wwd-projects .section-title h2 { color: var(--bg-surface); }
+.wwd-projects .section-title p { color: rgba(255, 255, 255, 0.85); }
+
+.wwd-project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.wwd-project-card {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  padding: 28px 24px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-xl);
+  transition: var(--transition);
+}
+
+.wwd-project-card:hover {
+  background: rgba(255, 255, 255, 0.16);
+  transform: translateY(-5px);
+}
+
+.wwd-project-icon {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  background: var(--gold-primary);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wwd-project-icon i { font-size: 1.2rem; color: var(--bg-surface); }
+
+.wwd-project-content h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--bg-surface);
+  margin-bottom: 6px;
+  line-height: 1.35;
+}
+
+.wwd-project-content p {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.55;
+}
+
+/* Approach */
+.wwd-approach {
+  padding: 110px 0;
+  background: var(--bg-main);
+  border-top: 1px solid var(--border-light);
+}
+
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.approach-card {
+  text-align: center;
+  padding: 40px 24px;
+  background: var(--bg-surface);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.approach-card:hover {
+  transform: translateY(-6px);
   box-shadow: var(--shadow-md);
+  border-color: var(--border-emerald);
 }
-.wwd-focus-card--1 { background: linear-gradient(150deg, #0f4a8d, #1f78bc); }
-.wwd-focus-card--2 { background: linear-gradient(150deg, #0f6a7a, #1f9ca8); }
-.wwd-focus-card--3 { background: linear-gradient(150deg, #8a4d14, #d07a2a); }
-.wwd-focus-card i { font-size: 30px; margin-bottom: 10px; }
-.wwd-focus-card h3 { font-family: 'Montserrat', sans-serif; font-size: 24px; margin-bottom: 8px; }
-.wwd-focus-card p { opacity: 0.95; }
 
-.wwd-project-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 28px; }
-.wwd-project-card { background: #fff; border: 1px solid rgba(16,74,142,0.1); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-sm); }
-.wwd-project-image { width: 100%; height: 210px; object-fit: cover; }
-.wwd-badge { position: absolute; right: 10px; top: 10px; padding: 6px 10px; border-radius: 999px; background: rgba(8,32,63,0.85); color: #fff; font-size: 11px; }
-.wwd-project-image-wrap { position: relative; }
-.wwd-project-content { padding: 18px; }
-.wwd-project-content h3 { font-family: 'Montserrat', sans-serif; color: var(--primary-deep); font-size: 22px; margin-bottom: 8px; }
-.wwd-project-content p { color: var(--text-soft); margin-bottom: 10px; }
-.wwd-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
-.wwd-tags span { font-size: 14px; font-weight: 600; color: #0f8578; background: #eaf7f4; border-radius: 999px; padding: 6px 10px; }
-.wwd-btn { border: none; background: #39d56a; color: #fff; font-size: 14px; font-weight: 700; border-radius: 999px; padding: 10px 16px; cursor: pointer; }
-.wwd-btn:hover { background: #2cc15b; }
-
-.wwd-actions { display: flex; gap: 10px; flex-wrap: wrap; }
-.wwd-btn-apply { display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; background: linear-gradient(135deg, #0f3460, #1f6fb2); }
-.wwd-btn-apply i { font-size: 12px; }
-.wwd-btn-apply:hover { background: linear-gradient(135deg, #0d2c52, #185a90); }
-
-.wwd-approach { padding: 80px 0; background: #f7f9fd; }
-
-.approach-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px; }
-
-.approach-card { background: #fff; padding: 30px 22px; border-radius: 15px; text-align: center; box-shadow: 0 10px 28px rgba(15, 52, 96, 0.08); }
-
-.approach-step { width: 56px; height: 56px; background: linear-gradient(135deg, #1f8f79, #10b981); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-family: 'Montserrat', sans-serif; font-size: 22px; font-weight: 800; color: #fff; }
-
-.approach-card h3 { font-family: 'Montserrat', sans-serif; color: #0f3460; margin-bottom: 10px; }
-.approach-card p { color: #667084; line-height: 1.75; }
-
-@media (max-width: 1100px) {
-  .wwd-focus-grid, .wwd-project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .approach-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.approach-step {
+  width: 52px;
+  height: 52px;
+  background: var(--emerald-deep);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 900;
+  color: var(--bg-surface);
+  font-size: 1.25rem;
+  margin: 0 auto 20px;
 }
+
+.approach-card h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.approach-card p { font-size: 0.9rem; color: var(--text-body); }
+
+@media (max-width: 900px) {
+  .wwd-intro, .wwd-projects, .wwd-approach { padding: 70px 0; }
+  .wwd-focus-grid, .wwd-project-grid { grid-template-columns: 1fr; }
+  .approach-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
 @media (max-width: 768px) {
-  .wwd-focus-grid,
-  .wwd-project-grid,
-  .approach-grid {
-    grid-template-columns: 1fr;
-  }
+  .wwd-intro, .wwd-projects, .wwd-approach { padding: 50px 0; }
 
-  .wwd-project-content h3 {
-    font-size: 22px;
-  }
-  .wwd-actions .wwd-btn {
-    width: 100%;
-  }
+  /* Focus Cards */
+  .wwd-focus-grid { gap: 16px; }
+  .wwd-focus-card { padding: 30px 22px; border-radius: 20px; }
+  .wwd-focus-icon { width: 58px; height: 58px; margin: 0 auto 18px; }
+  .wwd-focus-icon i { font-size: 1.5rem; }
+  .wwd-focus-card h3 { font-size: 1.15rem; }
+  .wwd-focus-card p { font-size: 0.9rem; }
+
+  /* Project Cards */
+  .wwd-project-grid { gap: 14px; }
+  .wwd-project-card { padding: 22px 18px; flex-direction: column; align-items: center; text-align: center; gap: 14px; border-radius: 18px; }
+  .wwd-project-icon { width: 44px; height: 44px; min-width: 44px; }
+  .wwd-project-icon i { font-size: 1.05rem; }
+  .wwd-project-content h3 { font-size: 0.98rem; }
+  .wwd-project-content p { font-size: 0.84rem; }
+
+  /* Approach Cards */
+  .approach-grid { grid-template-columns: 1fr; gap: 14px; }
+  .approach-card { padding: 28px 20px; border-radius: 18px; }
+  .approach-step { width: 44px; height: 44px; font-size: 1.1rem; }
+  .approach-card h3 { font-size: 1.05rem; }
+  .approach-card p { font-size: 0.85rem; }
+}
+
+@media (max-width: 600px) {
+  .approach-grid { grid-template-columns: 1fr; }
+  .wwd-focus-card h3 { font-size: 1.05rem; }
 }

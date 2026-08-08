@@ -17,7 +17,7 @@ const setFavicon = (href) => {
     // ignore
   }
 };
-setFavicon('/favicon.ico');
+setFavicon('/favicon.png');
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

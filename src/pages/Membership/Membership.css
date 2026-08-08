@@ -1,0 +1,201 @@
+/* ── LUXURY LIGHT MEMBERSHIP PAGE MASTERPIECE ─ */
+.mem-section { padding: 110px 0; background: var(--bg-surface); }
+.mem-section--alt { background: var(--bg-main); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light); }
+
+.mem-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+.mem-grid--intl {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.mem-card {
+  padding: 40px 32px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  text-align: center;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.mem-card--local {
+  border-top: 4px solid var(--emerald-primary);
+}
+
+.mem-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--border-emerald);
+}
+
+/* Featured Card (Royal Gold Highlight) */
+.mem-card--featured {
+  background: var(--emerald-deep);
+  color: var(--bg-surface);
+  border-color: transparent;
+  box-shadow: var(--shadow-xl);
+  transform: scale(1.04);
+}
+
+.mem-card--featured:hover {
+  transform: scale(1.04) translateY(-8px);
+}
+
+.mem-card--featured .mem-card-header h3,
+.mem-card--featured .mem-price-amount,
+.mem-card--featured .mem-contribution {
+  color: var(--bg-surface);
+}
+
+.mem-card--featured .mem-role,
+.mem-card--featured .mem-price-period {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.mem-featured-badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 6px;
+  background: var(--grad-gold);
+  color: var(--bg-surface);
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.mem-card--featured .mem-card-header {
+  margin-top: 20px;
+}
+
+.mem-card-header {
+  margin-bottom: 24px;
+}
+
+.mem-card-header h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: 4px;
+  color: var(--text-dark);
+}
+
+.mem-role {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.mem-price {
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.mem-card--featured .mem-price {
+  border-bottom-color: rgba(255, 255, 255, 0.15);
+}
+
+.mem-price-amount {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: var(--emerald-deep);
+  line-height: 1.2;
+}
+
+.mem-price-period {
+  font-size: 0.82rem;
+  color: var(--text-light);
+}
+
+.mem-contribution {
+  font-size: 0.92rem;
+  color: var(--text-body);
+  line-height: 1.65;
+  flex: 1;
+  margin-bottom: 28px;
+}
+
+.mem-card .btn-primary,
+.mem-card .btn-outline {
+  width: 100%;
+  justify-content: center;
+}
+
+/* Notes */
+.mem-notes { padding: 90px 0; background: var(--bg-surface); }
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.note-card {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  padding: 28px;
+  background: var(--bg-main);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.note-card i {
+  font-size: 1.4rem;
+  color: var(--emerald-deep);
+  margin-top: 2px;
+}
+
+.note-card p {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .mem-section { padding: 70px 0; }
+  .mem-grid--intl { grid-template-columns: 1fr; }
+  .mem-card--featured { transform: none; }
+  .mem-card--featured:hover { transform: translateY(-8px); }
+  .notes-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .mem-section { padding: 50px 0; }
+  .mem-notes { padding: 50px 0; }
+  .mem-grid { gap: 16px; }
+  .mem-card { padding: 28px 22px; border-radius: 20px; }
+  .mem-card-header h3 { font-size: 1.15rem; }
+  .mem-role { font-size: 0.82rem; }
+  .mem-price-amount { font-size: 2rem; }
+  .mem-price-period { font-size: 0.78rem; }
+  .mem-contribution { font-size: 0.88rem; }
+  .mem-card .btn-primary,
+  .mem-card .btn-outline { font-size: 0.88rem; padding: 12px; }
+
+  .notes-grid { gap: 12px; }
+  .note-card { padding: 20px; border-radius: 14px; }
+  .note-card i { font-size: 1.2rem; }
+  .note-card p { font-size: 0.88rem; }
+}
+
+@media (max-width: 600px) {
+  .mem-card { padding: 24px 18px; }
+  .mem-price-amount { font-size: 1.8rem; }
+}

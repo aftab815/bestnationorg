@@ -7,11 +7,13 @@ const TopBar = () => {
     <div className="top-bar">
       <div className="top-bar-inner">
         <div className="top-bar-left">
-          <a href={"mailto:" + siteInfo.email}>
-            <i className="fas fa-envelope"></i> {siteInfo.email}
+          <a href={"mailto:" + siteInfo.email} title={siteInfo.email} className="topbar-contact-btn">
+            <i className="fas fa-envelope"></i>
+            <span className="topbar-label">{siteInfo.email}</span>
           </a>
-          <a href={"tel:" + siteInfo.phone}>
-            <i className="fas fa-phone"></i> {siteInfo.phone}
+          <a href={"tel:" + siteInfo.phone} title={siteInfo.phone} className="topbar-contact-btn">
+            <i className="fas fa-phone-alt"></i>
+            <span className="topbar-label">{siteInfo.phone}</span>
           </a>
           <span className="top-pill">
             <i className="fas fa-map-marker-alt"></i> Lahore, Pakistan

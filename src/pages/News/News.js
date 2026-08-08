@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Newsletter from '../../components/Newsletter/Newsletter';
 import { newsData } from '../../data/siteData';
+import newsHero from '../../assets/hero4.jpeg';
 import './News.css';
 
 const News = () => {
@@ -31,6 +32,23 @@ const News = () => {
 
   return (
     <div className="news-page">
+      {/* ── Modern Hero Banner ───────────────── */}
+      <section className="parl-hero">
+        <div className="about-hero-bg">
+          <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1600&q=80" alt="BNWO News & Updates" />
+          <div className="about-hero-overlay"></div>
+        </div>
+        <div className="container">
+          <div className="parl-hero-content">
+            <span className="about-hero-badge">
+              <i className="fas fa-newspaper"></i> Media & Press Releases
+            </span>
+            <h1>Latest News & Updates</h1>
+            <p>Stay informed about BNWO's latest activities, parliamentary launches, and field initiatives.</p>
+          </div>
+        </div>
+      </section>
+
       <section className="news-section">
         <div className="container">
           <div className="section-title"><h2>Latest News</h2><div className="underline"></div><p>Stay informed about our latest activities</p></div>
