@@ -65,10 +65,16 @@
 }
 
 @media (max-width: 900px) {
-  .stats { padding: 70px 0; }
-  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .stats { padding: 60px 0; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .stat-item { padding: 24px 14px; border-radius: 18px; }
+  .stat-item i { font-size: 1.8rem; margin-bottom: 10px; }
+  .stat-item h3 { font-size: 1.8rem; }
+  .stat-item p { font-size: 0.82rem; }
 }
 
 @media (max-width: 480px) {
-  .stats-grid { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .stat-item { padding: 20px 10px; }
+  .stat-item h3 { font-size: 1.6rem; }
 }

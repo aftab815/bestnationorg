@@ -460,8 +460,8 @@
 
 @media (max-width: 1024px) {
   .navbar-header {
-    width: 95%;
-    margin: 8px auto;
+    width: 92%;
+    margin: 10px auto;
     border-radius: 24px;
   }
   .nav-menu {
@@ -475,78 +475,78 @@
   }
   .logo-title {
     display: block;
-    font-size: 0.8rem;
+    font-size: 0.95rem;
     font-weight: 900;
     line-height: 1.1;
   }
   .logo-subtitle {
     display: block;
-    font-size: 0.52rem;
+    font-size: 0.58rem;
     font-weight: 800;
     line-height: 1.1;
-    margin-top: 1px;
+    margin-top: 2px;
   }
   .nav-donate-btn {
     display: inline-flex !important;
-    padding: 4px 10px !important;
-    font-size: 0.68rem !important;
-    height: 28px !important;
-    min-height: 28px !important;
-    max-height: 28px !important;
-    gap: 4px !important;
+    padding: 6px 14px !important;
+    font-size: 0.75rem !important;
+    height: 32px !important;
+    min-height: 32px !important;
+    max-height: 32px !important;
+    gap: 6px !important;
     background: linear-gradient(135deg, #0284C7 0%, #0369A1 100%) !important;
     color: #FFFFFF !important;
     font-weight: 800 !important;
     border-radius: 9999px !important;
-    box-shadow: 0 3px 10px rgba(2, 132, 199, 0.35) !important;
+    box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35) !important;
     white-space: nowrap !important;
   }
   .nav-donate-btn i {
-    font-size: 0.62rem !important;
+    font-size: 0.7rem !important;
   }
   .mobile-menu-btn {
     display: flex;
   }
   .navbar {
-    padding: 8px 14px;
+    padding: 10px 18px;
     justify-content: space-between;
   }
   .navbar-actions {
-    gap: 8px;
+    gap: 10px;
     align-items: center;
   }
 }
 
 @media (max-width: 600px) {
   .navbar-header {
-    width: 95%;
-    margin: 6px auto;
+    width: 92%;
+    margin: 8px auto;
   }
   .navbar-logo {
-    gap: 6px;
+    gap: 8px;
   }
   .logo-title {
-    font-size: 0.76rem;
+    font-size: 0.88rem;
   }
   .logo-subtitle {
-    font-size: 0.48rem;
+    font-size: 0.52rem;
   }
   .logo-img-wrapper img {
-    height: 30px;
+    height: 36px;
   }
   .nav-donate-btn {
-    padding: 3px 8px !important;
-    font-size: 0.62rem !important;
-    height: 24px !important;
-    min-height: 24px !important;
-    max-height: 24px !important;
-    gap: 3px !important;
+    padding: 5px 12px !important;
+    font-size: 0.7rem !important;
+    height: 30px !important;
+    min-height: 30px !important;
+    max-height: 30px !important;
+    gap: 4px !important;
   }
   .nav-donate-btn i {
-    font-size: 0.58rem !important;
+    font-size: 0.65rem !important;
   }
   .mobile-menu-btn {
-    width: 32px;
-    height: 32px;
+    width: 36px;
+    height: 36px;
   }
 }
