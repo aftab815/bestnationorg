@@ -1,10 +1,10 @@
-/* ── PRISTINE LUXURY LIGHT TOPBAR ─────────────── */
+/* ── PRISTINE LIGHT TOPBAR ─────────────── */
 .top-bar {
-  background: var(--dark-slate);
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 0.82rem;
+  background: #F0F9FF;
+  color: #1E293B;
+  font-size: 0.84rem;
   padding: 8px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(14, 165, 233, 0.15);
   position: relative;
   z-index: 1001;
 }
@@ -30,17 +30,17 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  color: rgba(255, 255, 255, 0.9);
-  font-weight: 500;
+  color: #1E293B;
+  font-weight: 600;
   transition: var(--transition-fast);
 }
 
 .topbar-contact-btn:hover {
-  color: var(--primary-light);
+  color: #0EA5E9;
 }
 
 .topbar-contact-btn i {
-  color: var(--primary-light);
+  color: #0EA5E9;
   font-size: 0.85rem;
 }
 
@@ -49,15 +49,16 @@
   align-items: center;
   gap: 6px;
   padding: 3px 12px;
-  background: rgba(255, 255, 255, 0.12);
+  background: #FFFFFF;
+  border: 1px solid rgba(14, 165, 233, 0.2);
   border-radius: var(--radius-full);
-  color: #FFFFFF;
+  color: #0EA5E9;
   font-size: 0.78rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .top-pill i {
-  color: var(--primary-light);
+  color: #F97316;
 }
 
 .top-bar-center {
@@ -65,19 +66,20 @@
   align-items: center;
   gap: 8px;
   padding: 4px 16px;
-  background: var(--grad-primary);
-  color: #FFFFFF;
+  background: #FEF3C7;
+  color: #92400E;
   font-family: var(--font-heading);
   font-size: 0.78rem;
   font-weight: 800;
   border-radius: var(--radius-full);
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.35);
+  border: 1px solid rgba(245, 158, 11, 0.3);
 }
 
 .top-bar-center i {
   font-size: 0.85rem;
+  color: #F59E0B;
 }
 
 .top-bar-right {
@@ -93,13 +95,13 @@
 }
 
 .social-links a {
-  color: rgba(255, 255, 255, 0.88);
+  color: #64748B;
   font-size: 0.85rem;
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -108,10 +110,10 @@
 
 .social-links a:hover {
   color: #FFFFFF;
-  background: var(--primary);
-  border-color: var(--primary);
+  background: #0EA5E9;
+  border-color: #0EA5E9;
   transform: translateY(-2px) scale(1.1);
-  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.4);
+  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
 }
 
 /* Single Line Mobile TopBar Masterpiece */

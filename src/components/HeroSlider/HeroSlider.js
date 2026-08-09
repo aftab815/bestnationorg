@@ -43,6 +43,9 @@ const HeroSlider = () => {
               </div>
             </div>
           </div>
+          <div className="hero-scroll-indicator">
+            <span></span>
+          </div>
         </div>
       ))}
     </section>

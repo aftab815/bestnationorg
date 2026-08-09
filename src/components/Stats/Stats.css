@@ -1,7 +1,7 @@
-/* ── PROFESSIONAL HIGH-CONTRAST STATS SECTION ── */
+/* ── HIGH-PROFILE LIGHT IMPACT STATS SECTION ── */
 .stats {
-  padding: 90px 0;
-  background: var(--bg-surface);
+  padding: 80px 0;
+  background: #FAFAFA;
   border-top: 1px solid var(--border-light);
   border-bottom: 1px solid var(--border-light);
   position: relative;
@@ -10,67 +10,69 @@
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 28px;
+  gap: 24px;
 }
 
 .stat-item {
   text-align: center;
-  padding: 38px 24px;
-  background: var(--bg-main);
+  padding: 36px 20px;
+  background: #FFFFFF;
   border: 1px solid var(--border-light);
-  border-radius: var(--radius-xl);
+  border-radius: 24px;
   transition: var(--transition);
   position: relative;
   overflow: hidden;
+  box-shadow: 0 10px 25px -5px rgba(30, 41, 59, 0.04);
 }
 
-.stat-item::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: var(--grad-primary);
-  transition: var(--transition);
-}
+/* 4-Color Card Rotations */
+.stat-item:nth-child(1) { border-top: 4px solid #0EA5E9; }
+.stat-item:nth-child(1) i { color: #0EA5E9; background: #F0F9FF; }
+
+.stat-item:nth-child(2) { border-top: 4px solid #F97316; }
+.stat-item:nth-child(2) i { color: #F97316; background: #FFF7ED; }
+
+.stat-item:nth-child(3) { border-top: 4px solid #22C55E; }
+.stat-item:nth-child(3) i { color: #22C55E; background: #F0FDF4; }
+
+.stat-item:nth-child(4) { border-top: 4px solid #FACC15; }
+.stat-item:nth-child(4) i { color: #D97706; background: #FEF3C7; }
 
 .stat-item:hover {
   transform: translateY(-8px);
-  background: #FFFFFF;
-  border-color: var(--border-primary);
   box-shadow: var(--shadow-lg);
 }
 
 .stat-item i {
-  font-size: 2.2rem;
-  margin-bottom: 16px;
-  display: inline-block;
-  color: var(--primary);
+  font-size: 1.5rem;
+  width: 58px;
+  height: 58px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
 }
 
 .stat-item h3 {
   font-family: var(--font-heading);
-  font-size: clamp(2.2rem, 3vw, 2.75rem);
-  font-weight: 800;
-  color: var(--dark-slate);
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  font-weight: 900;
+  color: #1E293B;
   margin-bottom: 6px;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
 }
 
 .stat-item p {
   font-size: 0.95rem;
-  color: var(--text-body);
-  font-weight: 600;
+  color: #64748B;
+  font-weight: 700;
 }
 
 @media (max-width: 900px) {
   .stats { padding: 60px 0; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
   .stat-item { padding: 24px 14px; border-radius: 18px; }
-  .stat-item i { font-size: 1.8rem; margin-bottom: 10px; }
-  .stat-item h3 { font-size: 1.8rem; }
-  .stat-item p { font-size: 0.82rem; }
 }
 
 @media (max-width: 480px) {

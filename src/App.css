@@ -2,56 +2,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap');
 
 /* ── PRISTINE LUXURY LIGHT DESIGN SYSTEM ─────── */
+/* ── HIGH-PROFILE GLOBAL LIGHT DESIGN SYSTEM ─────── */
 :root {
   /* Primary Brand Colors */
-  --primary: #0284C7;          /* Ocean Sky Blue */
+  --primary: #0EA5E9;          /* Sky Blue (Trust & Branding) */
   --primary-light: #38BDF8;    /* Glowing Cyan */
-  --primary-dark: #0369A1;     /* Deep Navy Blue */
+  --primary-dark: #0284C7;     /* Deep Sky Blue */
   --primary-surface: #F0F9FF;   /* Soft Sky Wash */
 
-  --secondary: #10B981;        /* Vibrant Emerald */
-  --secondary-light: #34D399;  /* Mint Green */
-  --secondary-surface: #ECFDF5;/* Soft Mint Wash */
-
-  --accent-gold: #F59E0B;      /* Warm Gold */
-  --accent-coral: #F43F5E;     /* Coral Red */
+  /* Accent Colors */
+  --accent-orange: #F97316;    /* Warm Orange for CTAs & Highlights */
+  --accent-orange-hover: #EA580C;
+  --accent-yellow: #FACC15;    /* Vibrant Yellow for Badges & Energy */
+  --secondary-green: #22C55E;  /* Emerald Green for Impact & Success */
+  --secondary-surface: #F0FDF4;/* Soft Green Wash */
 
   /* Pristine Light Surfaces */
   --bg-main: #FAFAFA;          /* Ultra Crisp Off-White */
   --bg-surface: #FFFFFF;       /* Pure White Card */
-  --bg-subtle: #F1F5F9;        /* Soft Slate Wash */
-  --border-light: #E2E8F0;     /* Border Light */
-  --border-primary: rgba(2, 132, 199, 0.25);
+  --bg-subtle: #F8FAFC;        /* Soft Slate Wash */
+  --border-light: #E2E8F0;     /* Light Border */
+  --border-primary: rgba(14, 165, 233, 0.2);
 
-  /* Deep Luxury Neutrals for High Text Contrast */
-  --dark-slate: #0F172A;      /* Midnight Dark */
-  --text-dark: #0F172A;        /* Primary Text */
+  /* High Contrast Dark Slate Text (Never pure black) */
+  --dark-slate: #1E293B;       /* Dark Slate Gray */
+  --text-dark: #1E293B;        /* Primary Headings */
   --text-body: #334155;        /* Deep Body Text */
   --text-muted: #64748B;       /* Muted Text */
-  --text-light: #94A3B8;       /* Light Slate */
+  --text-light: #64748B;       /* Secondary Text */
 
-  /* Pristine Gradients */
-  --grad-primary: linear-gradient(135deg, #0284C7 0%, #38BDF8 100%);
-  --grad-emerald: linear-gradient(135deg, #059669 0%, #10B981 100%);
-  --grad-gold: linear-gradient(135deg, #D97706 0%, #F59E0B 100%);
-  --grad-dark: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+  /* Light Gradients */
+  --grad-primary: linear-gradient(135deg, #0EA5E9 0%, #38BDF8 100%);
+  --grad-orange: linear-gradient(135deg, #F97316 0%, #FB923C 100%);
+  --grad-emerald: linear-gradient(135deg, #16A34A 0%, #22C55E 100%);
+  --grad-gold: linear-gradient(135deg, #EAB308 0%, #FACC15 100%);
+  --grad-light-hero: linear-gradient(135deg, #F0F9FF 0%, #FAFAFA 50%, #FFF7ED 100%);
 
   /* Typography */
   --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
 
   /* Luxury Light Shadows */
-  --shadow-sm: 0 4px 12px rgba(15, 23, 42, 0.03);
-  --shadow-md: 0 10px 25px -5px rgba(15, 23, 42, 0.07), 0 4px 10px -4px rgba(15, 23, 42, 0.03);
-  --shadow-lg: 0 20px 40px -12px rgba(2, 132, 199, 0.12), 0 8px 16px -6px rgba(15, 23, 42, 0.04);
-  --shadow-xl: 0 30px 60px -15px rgba(15, 23, 42, 0.18);
-  --shadow-glow: 0 0 30px rgba(56, 189, 248, 0.3);
+  --shadow-sm: 0 4px 12px rgba(30, 41, 59, 0.03);
+  --shadow-md: 0 10px 25px -5px rgba(30, 41, 59, 0.06), 0 4px 10px -4px rgba(30, 41, 59, 0.02);
+  --shadow-lg: 0 20px 40px -12px rgba(14, 165, 233, 0.12), 0 8px 16px -6px rgba(30, 41, 59, 0.04);
+  --shadow-orange: 0 10px 25px rgba(249, 115, 22, 0.3);
+  --shadow-xl: 0 30px 60px -15px rgba(30, 41, 59, 0.1);
 
   /* Radii */
   --radius-sm: 8px;
   --radius-md: 14px;
   --radius-lg: 20px;
-  --radius-xl: 30px;
+  --radius-xl: 28px;
   --radius-full: 9999px;
 
   /* Transitions */
@@ -183,21 +185,22 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   gap: 10px;
   padding: 14px 32px;
-  background: var(--grad-primary);
+  background: var(--grad-orange);
   color: #FFFFFF;
   font-family: var(--font-heading);
-  font-weight: 700;
+  font-weight: 800;
   font-size: 0.95rem;
   border-radius: var(--radius-full);
   border: none;
   cursor: pointer;
-  box-shadow: 0 10px 25px -5px rgba(2, 132, 199, 0.4);
+  box-shadow: var(--shadow-orange);
   transition: var(--transition-bounce);
 }
 
 .btn-primary:hover {
   transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 15px 30px -5px rgba(2, 132, 199, 0.55);
+  box-shadow: 0 15px 35px rgba(249, 115, 22, 0.45);
+  color: #FFFFFF;
 }
 
 .btn-outline {
@@ -206,10 +209,10 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   gap: 10px;
   padding: 13px 30px;
-  background: var(--bg-surface);
+  background: #FFFFFF;
   color: var(--primary-dark);
   font-family: var(--font-heading);
-  font-weight: 700;
+  font-weight: 800;
   font-size: 0.95rem;
   border-radius: var(--radius-full);
   border: 2px solid var(--primary);
@@ -226,39 +229,45 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: var(--shadow-md);
 }
 
-/* ── PAGE BANNER UTILITY ─────────────────────── */
-.page-banner {
-  position: relative;
-  padding: 160px 0 90px;
-  background: var(--dark-slate);
-  background-image: 
-    radial-gradient(circle at 10% 20%, rgba(56, 189, 248, 0.2) 0%, transparent 40%),
-    radial-gradient(circle at 90% 80%, rgba(139, 92, 246, 0.2) 0%, transparent 40%);
-  text-align: center;
-  overflow: hidden;
+/* ── GLOBAL PAGE HERO BANNER BOTTOM ALIGNMENT ── */
+.page-banner,
+.parl-hero,
+.about-hero {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-end !important;
+  align-items: center !important;
+  min-height: 380px;
+  padding-bottom: 36px !important;
 }
 
-.page-banner::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.4), transparent);
+.page-banner-content,
+.parl-hero-content,
+.about-hero-content {
+  margin-top: auto !important;
+  margin-bottom: 0 !important;
+}
+
+.page-banner {
+  position: relative;
+  padding: 100px 0 40px;
+  background: linear-gradient(135deg, #F0F9FF 0%, #FFFFFF 50%, #FFF7ED 100%);
+  text-align: center;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-light);
 }
 
 .page-banner h1 {
-  color: #FFFFFF;
-  font-size: clamp(2.5rem, 5vw, 3.75rem);
-  font-weight: 800;
+  color: var(--text-dark);
+  font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+  font-weight: 900;
   margin-bottom: 16px;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
 }
 
 .page-banner p {
-  color: var(--text-light);
-  font-size: 1.15rem;
+  color: var(--text-muted);
+  font-size: 1.1rem;
   max-width: 680px;
   margin: 0 auto;
 }
@@ -365,17 +374,17 @@ h1, h2, h3, h4, h5, h6 {
     margin: 12px auto 16px !important;
   }
 
-  /* PREMIUM RESIZABLE MOBILE HERO BANNER (REPLACED CRAMPED 270px WITH SPACIOUS 380px) */
+  /* BOTTOM ALIGNED MOBILE HERO BANNERS (MATCHES HERO SLIDER LAYOUT EXACTLY) */
   .page-banner,
   .parl-hero,
   .about-hero {
-    height: 380px !important;
-    min-height: 380px !important;
-    max-height: 420px !important;
-    padding: 40px 20px !important;
+    height: 70vh !important;
+    min-height: 480px !important;
+    max-height: 560px !important;
+    padding: 0 20px 36px !important;
     display: flex !important;
     flex-direction: column !important;
-    justify-content: center !important;
+    justify-content: flex-end !important;
     align-items: center !important;
     text-align: center !important;
     overflow: hidden !important;
@@ -384,7 +393,7 @@ h1, h2, h3, h4, h5, h6 {
   .about-hero-content,
   .parl-hero-content {
     padding: 0 !important;
-    margin: 0 auto !important;
+    margin: 0 auto 28px !important;
     z-index: 10 !important;
   }
   .about-hero-badge,

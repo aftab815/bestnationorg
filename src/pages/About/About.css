@@ -3,9 +3,11 @@
 /* Hero Banner */
 .about-hero {
   position: relative;
-  min-height: 380px;
+  min-height: 450px;
+  height: 65vh;
+  max-height: 580px;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   text-align: center;
   overflow: hidden;
@@ -28,9 +30,10 @@
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    135deg,
-    rgba(15, 23, 42, 0.88) 0%,
-    rgba(2, 132, 199, 0.78) 100%
+    180deg,
+    rgba(15, 23, 42, 0.2) 0%,
+    rgba(15, 23, 42, 0.65) 40%,
+    rgba(15, 23, 42, 0.92) 100%
   );
 }
 
@@ -38,8 +41,8 @@
   position: relative;
   z-index: 10;
   max-width: 800px;
-  margin: 0 auto;
-  padding: 60px 20px;
+  margin: 0 auto 36px;
+  padding: 0 20px;
 }
 
 .about-hero-badge {
@@ -579,57 +582,57 @@
 
 @media (max-width: 768px) {
   /* Hero */
-  .about-hero { min-height: 320px; }
+  .about-hero { min-height: 360px; }
   .about-hero-content { padding: 40px 16px; }
-  .about-hero-content h1 { font-size: 1.6rem; }
+  .about-hero-content h1 { font-size: 1.7rem; }
   .about-hero-content p { font-size: 0.95rem; }
-  .about-hero-badge { font-size: 0.72rem; padding: 6px 14px; }
+  .about-hero-badge { font-size: 0.75rem; padding: 6px 16px; }
 
   /* About Org Section */
   .about-org { padding: 60px 0; }
-  .about-org-grid { gap: 28px; }
+  .about-org-grid { gap: 32px; }
   .about-org-text { text-align: center; }
-  .about-org-text h2 { font-size: 1.7rem; }
+  .about-org-text h2 { font-size: 1.8rem; }
   .org-lead { font-size: 0.98rem; }
   .org-body { font-size: 0.92rem; }
   .org-highlights { align-items: center; }
-  .org-highlight-pill { font-size: 0.82rem; padding: 10px 16px; }
-  .org-feature-card { padding: 20px; gap: 14px; flex-direction: column; align-items: center; text-align: center; }
-  .org-feature-icon { width: 46px; height: 46px; min-width: 46px; }
-  .org-feature-content h3 { font-size: 1.05rem; }
+  .org-highlight-pill { font-size: 0.84rem; padding: 12px 18px; }
+  .org-feature-card { padding: 20px; gap: 16px; flex-direction: row; align-items: flex-start; text-align: left; border-radius: 16px; }
+  .org-feature-icon { width: 48px; height: 48px; min-width: 48px; border-radius: 14px; }
+  .org-feature-content h3 { font-size: 1.08rem; }
   .org-feature-content p { font-size: 0.88rem; }
 
   /* Vision & Mission */
   .about-vm { padding: 60px 0; }
   .vm-grid { gap: 20px; }
-  .vm-card { padding: 32px 24px; border-radius: 20px; text-align: center; }
+  .vm-card { padding: 36px 24px; border-radius: 24px; text-align: center; }
   .vm-card-icon { margin: 0 auto 18px; }
-  .vm-card h3 { font-size: 1.35rem; }
-  .vm-card p { font-size: 0.92rem; }
+  .vm-card h3 { font-size: 1.45rem; }
+  .vm-card p { font-size: 0.94rem; }
 
   /* Values Grid */
   .about-values { padding: 60px 0; }
-  .values-grid { grid-template-columns: 1fr; gap: 16px; }
-  .value-card { padding: 28px 18px 24px; border-radius: 18px; }
-  .value-icon { width: 54px; height: 54px; border-radius: 16px; }
-  .value-card h3 { font-size: 1.08rem; }
-  .value-card p { font-size: 0.88rem; }
+  .values-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .value-card { padding: 24px 16px; border-radius: 18px; }
+  .value-icon { width: 50px; height: 50px; border-radius: 14px; margin-bottom: 14px; }
+  .value-card h3 { font-size: 1.05rem; }
+  .value-card p { font-size: 0.84rem; }
 
   /* Timeline */
   .about-history { padding: 60px 0; }
-  .timeline { padding-left: 30px; }
-  .timeline-dot { left: -23px; width: 18px; height: 18px; }
-  .timeline-content { padding: 20px; border-radius: 16px; }
+  .timeline { padding-left: 32px; }
+  .timeline-dot { left: -22px; width: 18px; height: 18px; }
+  .timeline-content { padding: 22px 20px; border-radius: 18px; }
   .timeline-content:hover { transform: none; }
-  .timeline-content h4 { font-size: 1.1rem; }
-  .timeline-content p { font-size: 0.88rem; }
+  .timeline-content h4 { font-size: 1.15rem; }
+  .timeline-content p { font-size: 0.9rem; }
 
   /* CTA Banner */
-  .about-parliament-cta { padding: 50px 0; }
+  .about-parliament-cta { padding: 60px 0; }
   .parliament-cta-inner { text-align: center; }
-  .parliament-cta-text h2 { font-size: 1.5rem; }
-  .parliament-cta-text p { font-size: 0.92rem; }
-  .parliament-cta-actions { flex-direction: column; width: 100%; max-width: 280px; margin: 0 auto; }
+  .parliament-cta-text h2 { font-size: 1.6rem; }
+  .parliament-cta-text p { font-size: 0.94rem; }
+  .parliament-cta-actions { flex-direction: column; width: 100%; max-width: 300px; margin: 0 auto; gap: 12px; }
   .parliament-cta-actions .btn-primary,
   .parliament-cta-actions .btn-outline { width: 100%; justify-content: center; }
 }
