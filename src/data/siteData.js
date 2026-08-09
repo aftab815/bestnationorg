@@ -5,6 +5,18 @@ import hero4 from '../assets/hero4.jpeg';
 import hero5 from '../assets/hero5.jpeg';
 import jhangRation from '../assets/hero 3.jpg';
 
+/* Parliament Tier Logos */
+import worldParliamentLogo from '../assets/world parliament.png';
+import worldStatesLogo from '../assets/world states.png';
+import worldCitiesLogo from '../assets/world_cities.png';
+import divisionalLogo from '../assets/divisional.png';
+import districtLogo from '../assets/district.png';
+import tehsilLogo from '../assets/tehsil.png';
+import ucLogo from '../assets/uc.png';
+
+/* Registration Form PDF */
+import registrationFormPDF from '../assets/Registerartion Form.pdf';
+
 /* Amanah Mall Existing Images */
 import amanah1 from '../assets/amanah mall/amana mal 1.JPG';
 import amanah2 from '../assets/amanah mall/amana mall 2.JPG';
@@ -336,6 +348,7 @@ export const parliamentTiers = {
       term: "1 Year",
       mandateType: "Strategic",
       mandate: "National strategy, policy direction, international MOUs & flagship fundraising",
+      logo: worldParliamentLogo,
     },
     {
       id: 2,
@@ -345,6 +358,7 @@ export const parliamentTiers = {
       term: "1 Year",
       mandateType: "Strategic",
       mandate: "Provincial resource mobilization, strategic alignment, donor & government liaison",
+      logo: worldStatesLogo,
     },
     {
       id: 3,
@@ -354,6 +368,7 @@ export const parliamentTiers = {
       term: "1 Year",
       mandateType: "Strategic",
       mandate: "City-level fundraising, corporate partnerships, media & public visibility",
+      logo: worldCitiesLogo,
     },
   ],
   national: [
@@ -365,6 +380,7 @@ export const parliamentTiers = {
       term: "1 Year",
       mandateType: "Execution",
       mandate: "Divisional oversight of program execution and inter-district coordination",
+      logo: divisionalLogo,
     },
     {
       id: 5,
@@ -374,6 +390,7 @@ export const parliamentTiers = {
       term: "1 Year",
       mandateType: "Execution",
       mandate: "District-level project execution, monitoring, and committee supervision",
+      logo: districtLogo,
     },
     {
       id: 6,
@@ -383,6 +400,7 @@ export const parliamentTiers = {
       term: "1 Year",
       mandateType: "Execution",
       mandate: "Tehsil-level project delivery and local partnership building",
+      logo: tehsilLogo,
     },
     {
       id: 7,
@@ -392,9 +410,12 @@ export const parliamentTiers = {
       term: "1 Year",
       mandateType: "Execution",
       mandate: "Grassroots project execution, beneficiary identification, and community mobilization",
+      logo: ucLogo,
     },
   ],
 };
+
+export const registrationFormUrl = registrationFormPDF;
 
 export const allParliamentTiers = [
   ...parliamentTiers.international,

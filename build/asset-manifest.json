@@ -1,11 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.90d71967.css",
-    "main.js": "/static/js/main.8d299110.js",
+    "main.css": "/static/css/main.8e9886d0.css",
+    "main.js": "/static/js/main.ddc31deb.js",
     "static/media/about-hero.png": "/static/media/about-hero.3b49c468a0b843b0c47e.png",
     "static/media/logo.png": "/static/media/logo.3b5e37cc32b1b6e6c4a9.png",
     "static/media/3.png": "/static/media/3.d504b545d2457b2be43a.png",
+    "static/media/district.png": "/static/media/district.d707cc1d51ccc65b3e2b.png",
+    "static/media/divisional.png": "/static/media/divisional.6046662fb3cae69b562e.png",
+    "static/media/tehsil.png": "/static/media/tehsil.f9dddd37bc2d7c0fad89.png",
+    "static/media/uc.png": "/static/media/uc.fb5f62e7cfafa536408e.png",
     "static/media/parliaments.png": "/static/media/parliaments.17271e066cc5a515303c.png",
+    "static/media/world states.png": "/static/media/world states.c873eee20b5fcb24e6a5.png",
+    "static/media/world parliament.png": "/static/media/world parliament.9d6306bf7889f2290fb0.png",
+    "static/media/world_cities.png": "/static/media/world_cities.dc03653e74b586cc4801.png",
+    "static/media/Registerartion Form.pdf": "/static/media/Registerartion Form.30f28cdd41e0d2294f91.pdf",
     "static/media/5.jpg": "/static/media/5.18b27d07d273dd63ec8e.jpg",
     "static/media/IMG_9135.JPG": "/static/media/IMG_9135.07cb4bb35e8ced61c5fe.JPG",
     "static/media/IMG_8574.jpg": "/static/media/IMG_8574.c481adf8bd95c2481875.jpg",
@@ -99,11 +107,11 @@
     "static/media/IMG-20240312-WA0184.jpg": "/static/media/IMG-20240312-WA0184.43e77f5876b30c3660db.jpg",
     "static/media/IMG_6899.JPG": "/static/media/IMG_6899.f10f7a462ef113b6fb25.JPG",
     "index.html": "/index.html",
-    "main.90d71967.css.map": "/static/css/main.90d71967.css.map",
-    "main.8d299110.js.map": "/static/js/main.8d299110.js.map"
+    "main.8e9886d0.css.map": "/static/css/main.8e9886d0.css.map",
+    "main.ddc31deb.js.map": "/static/js/main.ddc31deb.js.map"
   },
   "entrypoints": [
-    "static/css/main.90d71967.css",
-    "static/js/main.8d299110.js"
+    "static/css/main.8e9886d0.css",
+    "static/js/main.ddc31deb.js"
   ]
 }

@@ -31,7 +31,7 @@ const Home = () => {
         <div className="container">
           <div className="motto-inner">
             <i className="fas fa-quote-left"></i>
-            <p>{motto}</p>
+            <p>Training and Education, Health Awareness/Facilities, Skills &amp; Opportunities for All</p>
             <i className="fas fa-quote-right"></i>
           </div>
         </div>

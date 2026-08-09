@@ -6,6 +6,7 @@ import {
   parliamentTiers,
   eligibilityCriteria,
   accountabilityChain,
+  registrationFormUrl,
 } from '../../data/siteData';
 import bnwoParlimentImage from '../../assets/parliaments.png';
 import parlHeroImg from '../../assets/hero1.jpeg';
@@ -49,7 +50,7 @@ const Parliament = () => {
               <div key={tier.id} className="parl-tier-card parl-tier-card--strategic">
                 <div className="parl-card-header">
                   <div className="parl-card-logo">
-                    <img src={bnwoParlimentImage} alt={`${tier.name} Emblem`} />
+                    <img src={tier.logo} alt={`${tier.name} Emblem`} />
                   </div>
                   <span className="parl-tier-badge">{tier.mandateType}</span>
                 </div>
@@ -88,7 +89,7 @@ const Parliament = () => {
               <div key={tier.id} className="parl-tier-card parl-tier-card--execution">
                 <div className="parl-card-header">
                   <div className="parl-card-logo">
-                    <img src={bnwoParlimentImage} alt={`${tier.name} Emblem`} />
+                    <img src={tier.logo} alt={`${tier.name} Emblem`} />
                   </div>
                   <span className="parl-tier-badge parl-tier-badge--exec">{tier.mandateType}</span>
                 </div>
@@ -163,6 +164,90 @@ const Parliament = () => {
                   <p>{item}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Registration Form Download — Premium Dark Section ─────────── */}
+      <section className="parl-registration">
+        <div className="reg-floating-orb reg-orb-1"></div>
+        <div className="reg-floating-orb reg-orb-2"></div>
+        <div className="reg-floating-orb reg-orb-3"></div>
+        <div className="container">
+          <div className="reg-hero-header">
+            <div className="reg-badge">
+              <i className="fas fa-file-pdf"></i>
+              <span>Official Document</span>
+            </div>
+            <h2>Parliament Membership<br /><span>Registration Form</span></h2>
+            <p>Download, fill, and submit your application to join BNWO's structured governance network</p>
+          </div>
+
+          <div className="reg-steps-row">
+            <div className="reg-step-card">
+              <div className="reg-step-glow"></div>
+              <div className="reg-step-icon">
+                <i className="fas fa-cloud-download-alt"></i>
+              </div>
+              <div className="reg-step-num">Step 01</div>
+              <h4>Download Form</h4>
+              <p>Click below to get the official PDF registration form</p>
+            </div>
+
+            <div className="reg-step-connector">
+              <div className="reg-connector-line"></div>
+              <div className="reg-connector-dot"></div>
+            </div>
+
+            <div className="reg-step-card">
+              <div className="reg-step-glow"></div>
+              <div className="reg-step-icon">
+                <i className="fas fa-pen-fancy"></i>
+              </div>
+              <div className="reg-step-num">Step 02</div>
+              <h4>Fill Your Details</h4>
+              <p>Complete all fields with accurate personal information</p>
+            </div>
+
+            <div className="reg-step-connector">
+              <div className="reg-connector-line"></div>
+              <div className="reg-connector-dot"></div>
+            </div>
+
+            <div className="reg-step-card">
+              <div className="reg-step-glow"></div>
+              <div className="reg-step-icon">
+                <i className="fas fa-building"></i>
+              </div>
+              <div className="reg-step-num">Step 03</div>
+              <h4>Submit at Headquarter</h4>
+              <p>Bring your completed form to BNWO Headquarter, Lahore</p>
+            </div>
+          </div>
+
+          <div className="reg-download-area">
+            <a
+              href={registrationFormUrl}
+              download="BNWO_Registration_Form.pdf"
+              className="reg-download-btn"
+            >
+              <span className="reg-btn-shimmer"></span>
+              <i className="fas fa-download"></i>
+              <span>Download Registration Form</span>
+              <span className="reg-btn-tag">PDF</span>
+            </a>
+          </div>
+
+          <div className="reg-hq-strip">
+            <div className="reg-hq-item">
+              <i className="fas fa-map-marker-alt"></i>
+              <span>60-A, Street No. 5, Model Town Link Road, G.E.C.H.S. Phase 2, Lahore</span>
+            </div>
+            <div className="reg-hq-divider"></div>
+            <div className="reg-hq-item">
+              <i className="fas fa-phone-alt"></i>
+              <span>0321-4190008 &nbsp;|&nbsp; 0321-7777011</span>
             </div>
           </div>
         </div>
