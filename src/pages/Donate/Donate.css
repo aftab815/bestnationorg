@@ -1,122 +1,226 @@
-/* ── LUXURY LIGHT DONATE PAGE MASTERPIECE ───── */
-.donate-paypro {
-  padding: 100px 0;
-  background: var(--bg-surface);
-}
-
-.paypro-top-card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 48px;
-  padding: 56px;
+/* ── BRIGHT NGO DONATE ──────────────────── */
+.donate-page {
   background: var(--bg-main);
-  border-radius: var(--radius-xl);
-  border: 1px solid var(--border-light);
-  box-shadow: var(--shadow-md);
 }
 
-.paypro-logo {
-  width: 180px;
-  object-fit: contain;
-  border-radius: var(--radius-md);
+.donate-hero {
+  padding: 100px 0 64px;
+  background: var(--primary);
+  color: #FFFFFF;
+  text-align: center;
 }
 
-.paypro-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  padding: 18px 44px;
-  background: var(--grad-gold);
-  color: var(--bg-surface);
-  font-family: var(--font-heading);
+.donate-hero h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 800;
-  font-size: 1.15rem;
-  border-radius: var(--radius-full);
-  transition: var(--transition-bounce);
-  box-shadow: 0 10px 30px -5px rgba(217, 119, 6, 0.45);
+  margin-bottom: 16px;
+  color: #FFFFFF;
 }
 
-.paypro-btn:hover {
-  transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 15px 40px -5px rgba(217, 119, 6, 0.6);
+.donate-hero p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.donate-bank-transfer {
-  padding: 100px 0;
+.donate-content {
+  padding: 64px 0 100px;
   background: var(--bg-main);
-  border-top: 1px solid var(--border-light);
 }
 
-.bank-grid {
+.donate-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 28px;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 64px;
+  align-items: start;
 }
 
 .bank-card {
-  padding: 36px 30px;
-  background: var(--bg-surface);
+  background: #FFFFFF;
   border-radius: var(--radius-xl);
-  border: 1px solid var(--border-light);
-  box-shadow: var(--shadow-sm);
-  transition: var(--transition);
-}
-
-.bank-card:hover {
-  transform: translateY(-6px);
+  padding: 40px;
   box-shadow: var(--shadow-lg);
-  border-color: var(--border-emerald);
+  border: 1px solid var(--border-light);
+  margin-bottom: 32px;
 }
 
-.bank-logo {
-  height: 52px;
-  object-fit: contain;
-  margin-bottom: 20px;
-  border-radius: var(--radius-sm);
+.bank-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border-light);
 }
 
-.bank-card h3 {
+.bank-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--primary-surface);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.bank-header h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.bank-details {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.detail-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.detail-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.detail-value {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background: var(--bg-subtle);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+}
+
+.copy-btn {
+  background: transparent;
+  border: none;
+  color: var(--primary);
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 4px;
+  transition: var(--transition-fast);
+}
+
+.copy-btn:hover {
+  color: var(--primary-dark);
+  transform: scale(1.1);
+}
+
+.donate-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.impact-card {
+  background: var(--primary);
+  color: #FFFFFF;
+  border-radius: var(--radius-xl);
+  padding: 40px;
+  box-shadow: var(--shadow-lg);
+}
+
+.impact-card h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  color: #FFFFFF;
+}
+
+.impact-card p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.impact-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.impact-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.impact-list i {
+  color: #FFFFFF;
+  font-size: 1rem;
+  margin-top: 4px;
+}
+
+.help-card {
+  background: #FFFFFF;
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  border: 1px solid var(--border-light);
+  text-align: center;
+}
+
+.help-card i {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+.help-card h4 {
   font-size: 1.2rem;
   font-weight: 800;
-  margin-bottom: 14px;
-  color: var(--text-dark);
+  margin-bottom: 8px;
 }
 
-.bank-card p {
+.help-card p {
   font-size: 0.95rem;
-  margin-bottom: 10px;
-  color: var(--text-body);
+  color: var(--text-muted);
+  margin-bottom: 16px;
 }
 
-.bank-card .acc-title {
+.help-card a {
   font-weight: 700;
-  color: var(--emerald-deep);
+  color: var(--primary);
+}
+
+@media (max-width: 992px) {
+  .donate-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 768px) {
-  .donate-paypro { padding: 60px 0; }
-  .paypro-top-card {
-    flex-direction: column;
-    padding: 32px 20px;
-    gap: 28px;
-    text-align: center;
-    border-radius: 20px;
+  .donate-hero {
+    padding: 80px 0 48px;
   }
-  .paypro-logo { width: 140px; margin: 0 auto; }
-  .paypro-top-card h2 { font-size: 1.5rem; }
-  .paypro-top-card p { font-size: 0.92rem; }
-  .paypro-btn { padding: 14px 32px; font-size: 1rem; width: 100%; justify-content: center; }
 
-  .donate-bank-transfer { padding: 60px 0; }
-  .bank-grid { grid-template-columns: 1fr; gap: 16px; }
-  .bank-card { padding: 28px 22px; border-radius: 20px; text-align: center; }
-  .bank-logo { margin: 0 auto 16px; display: block; }
-  .bank-card h3 { font-size: 1.1rem; }
-  .bank-card p { font-size: 0.9rem; }
-}
+  .donate-content {
+    padding: 48px 0 60px;
+  }
 
-@media (max-width: 600px) {
-  .paypro-top-card { padding: 24px 16px; }
-  .paypro-btn { padding: 12px 24px; font-size: 0.92rem; }
+  .bank-card {
+    padding: 32px 20px;
+  }
+
+  .impact-card {
+    padding: 32px 20px;
+  }
 }

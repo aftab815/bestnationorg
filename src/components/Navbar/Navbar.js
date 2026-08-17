@@ -158,6 +158,7 @@ const Navbar = () => {
               className={`mobile-menu-btn ${mobileMenuOpen ? 'open' : ''}`}
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle navigation menu"
+              aria-expanded={mobileMenuOpen}
             >
               <span></span>
               <span></span>
@@ -168,8 +169,11 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Drawer */}
-      <div className={`mobile-drawer ${mobileMenuOpen ? 'open' : ''}`}>
-        <div className="mobile-drawer-content">
+      <div
+        className={`mobile-drawer ${mobileMenuOpen ? 'open' : ''}`}
+        onClick={() => setMobileMenuOpen(false)}
+      >
+        <div className="mobile-drawer-content" onClick={(e) => e.stopPropagation()}>
           <ul className="mobile-nav-list">
             <li>
               <Link to="/" className={isActive('/') ? 'active' : ''}>

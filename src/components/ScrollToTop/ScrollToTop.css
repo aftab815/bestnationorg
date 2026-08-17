@@ -1,12 +1,12 @@
-/* ── Scroll To Top Button ──────────────────── */
+/* ── BRIGHT NGO SCROLL TO TOP ──────────────── */
 .scroll-top-btn {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 48px;
-  height: 48px;
-  background: var(--gradient-primary);
-  color: var(--white);
+  bottom: 32px;
+  right: 32px;
+  width: 52px;
+  height: 52px;
+  background: var(--primary);
+  color: #FFFFFF;
   border: none;
   border-radius: 50%;
   font-size: 1.1rem;
@@ -16,7 +16,7 @@
   visibility: hidden;
   transform: translateY(20px);
   transition: var(--transition);
-  box-shadow: 0 4px 20px rgba(14,165,233,0.4);
+  box-shadow: 0 4px 16px rgba(0, 117, 255, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,5 +30,6 @@
 
 .scroll-top-btn:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 30px rgba(14,165,233,0.5);
+  background: var(--primary-dark);
+  box-shadow: 0 6px 24px rgba(0, 117, 255, 0.5);
 }

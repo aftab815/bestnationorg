@@ -1,82 +1,10 @@
-/* ── HIGH-PROFILE LIGHT IMPACT STATS SECTION ── */
-.stats {
-  padding: 80px 0;
-  background: #FAFAFA;
-  border-top: 1px solid var(--border-light);
-  border-bottom: 1px solid var(--border-light);
-  position: relative;
-}
-
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-}
-
-.stat-item {
-  text-align: center;
-  padding: 36px 20px;
-  background: #FFFFFF;
-  border: 1px solid var(--border-light);
-  border-radius: 24px;
-  transition: var(--transition);
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 10px 25px -5px rgba(30, 41, 59, 0.04);
-}
-
-/* 4-Color Card Rotations */
-.stat-item:nth-child(1) { border-top: 4px solid #0EA5E9; }
-.stat-item:nth-child(1) i { color: #0EA5E9; background: #F0F9FF; }
-
-.stat-item:nth-child(2) { border-top: 4px solid #F97316; }
-.stat-item:nth-child(2) i { color: #F97316; background: #FFF7ED; }
-
-.stat-item:nth-child(3) { border-top: 4px solid #22C55E; }
-.stat-item:nth-child(3) i { color: #22C55E; background: #F0FDF4; }
-
-.stat-item:nth-child(4) { border-top: 4px solid #FACC15; }
-.stat-item:nth-child(4) i { color: #D97706; background: #FEF3C7; }
-
-.stat-item:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-lg);
-}
-
-.stat-item i {
-  font-size: 1.5rem;
-  width: 58px;
-  height: 58px;
-  border-radius: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 16px;
-}
-
-.stat-item h3 {
-  font-family: var(--font-heading);
-  font-size: clamp(2rem, 3vw, 2.6rem);
-  font-weight: 900;
-  color: #1E293B;
-  margin-bottom: 6px;
-  letter-spacing: -0.5px;
-}
-
-.stat-item p {
-  font-size: 0.95rem;
-  color: #64748B;
-  font-weight: 700;
-}
-
-@media (max-width: 900px) {
-  .stats { padding: 60px 0; }
-  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
-  .stat-item { padding: 24px 14px; border-radius: 18px; }
-}
-
-@media (max-width: 480px) {
-  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-  .stat-item { padding: 20px 10px; }
-  .stat-item h3 { font-size: 1.6rem; }
-}
+.stats-section { position: relative; padding: 0; background: #fff; border-bottom: 1px solid var(--border-light); }
+.stats-matrix-card { padding: 24px 0 18px; background: transparent; border: 0; border-radius: 0; box-shadow: none; }
+.stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
+.stat-item { position: relative; display: flex; align-items: center; gap: 14px; padding: 10px 28px; }.stat-item:first-child { padding-left: 0; }.stat-item:last-child { padding-right: 0; }
+.stat-item:not(:last-child)::after { content: ''; position: absolute; top: 10px; right: 0; width: 1px; height: calc(100% - 20px); background: var(--border-light); }
+.stat-icon-wrapper { display: grid; flex: 0 0 40px; width: 40px; height: 40px; place-items: center; border-radius: 0; background: var(--primary-surface); color: var(--primary); font-size: 1.03rem; }
+.stat-content { display: flex; flex-direction: column; }.stat-number { color: var(--navy-950); font-family: var(--font-heading); font-size: 2rem; font-weight: 600; letter-spacing: -.04em; line-height: 1; }.stat-label { margin-top: 4px; color: var(--slate-500); font-size: .64rem; font-weight: 800; letter-spacing: .09em; line-height: 1.3; text-transform: uppercase; }
+.stats-footer-trust { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 20px; padding-top: 15px; border-top: 1px solid var(--border-subtle); }.trust-item { color: var(--slate-600); font-size: .74rem; font-weight: 700; }.trust-item i { margin-right: 5px; color: var(--secondary); }.trust-dot { color: var(--slate-300); }
+@media (max-width: 900px) { .stats-grid { grid-template-columns: repeat(2, 1fr); }.stat-item { padding: 13px 18px; }.stat-item:nth-child(2)::after { display: none; }.stat-item:nth-child(3) { padding-left: 0; } }
+@media (max-width: 580px) { .stats-matrix-card { padding: 18px 0; }.stats-grid { grid-template-columns: 1fr; }.stat-item, .stat-item:first-child, .stat-item:last-child { padding: 13px 0; }.stat-item:not(:last-child)::after { top: auto; right: auto; bottom: 0; left: 0; width: 100%; height: 1px; }.stats-footer-trust { flex-direction: column; align-items: center; gap: 5px; }.trust-dot { display: none; } }

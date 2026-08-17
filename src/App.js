@@ -16,34 +16,92 @@ import Programs from './pages/Programs/Programs';
 import Committees from './pages/Committees/Committees';
 import Membership from './pages/Membership/Membership';
 import NewsletterAdmin from './pages/NewsletterAdmin/NewsletterAdmin';
+import News from './pages/News/News';
 
-function ScrollToTop() {
+function ScrollManager() {
   const { pathname } = useLocation();
+  
   useEffect(() => {
+    // Scroll to top on route change
     window.scrollTo(0, 0);
+
+    // Apply data-animate attribute to common components that should animate
+    const animateSelectors = [
+      '.section-title',
+      '.hero-content',
+      '.about-feature-item',
+      '.service-card',
+      '.stat-item',
+      '.news-page-card',
+      '.prog-card',
+      '.cmte-card',
+      '.mem-card',
+      '.parl-tier-card',
+      '.involved-card',
+      '.wwd-focus-card',
+      '.wwd-project-card',
+      '.approach-card',
+      '.timeline-item',
+      '.value-card',
+      '.contact-info-card',
+      '.newsletter-box'
+    ];
+
+    const elementsToAnimate = document.querySelectorAll(animateSelectors.join(', '));
+    elementsToAnimate.forEach(el => {
+      if (!el.hasAttribute('data-animate')) {
+        el.setAttribute('data-animate', 'fade-up');
+      }
+    });
+
+    // Intersection Observer for scroll reveal
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+
+    const animatedElements = document.querySelectorAll('[data-animate]');
+    animatedElements.forEach((el) => {
+      el.classList.remove('is-visible');
+      observer.observe(el);
+    });
+
+    return () => observer.disconnect();
   }, [pathname]);
+
   return null;
 }
 
 function App() {
   return (
     <div className="App">
-      <ScrollToTop />
+      <a href="#main-content" className="skip-link">Skip to content</a>
+      <ScrollManager />
       <TopBar />
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/what-we-do" element={<WhatWeDo />} />
-        <Route path="/programs" element={<Programs />} />
-        <Route path="/parliament" element={<Parliament />} />
-        <Route path="/committees" element={<Committees />} />
-        <Route path="/membership" element={<Membership />} />
-        <Route path="/events" element={<Events />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/donate" element={<Donate />} />
-        <Route path="/newsletter-admin" element={<NewsletterAdmin />} />
-      </Routes>
+      <main id="main-content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/what-we-do" element={<WhatWeDo />} />
+          <Route path="/programs" element={<Programs />} />
+          <Route path="/parliament" element={<Parliament />} />
+          <Route path="/committees" element={<Committees />} />
+          <Route path="/membership" element={<Membership />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/donate" element={<Donate />} />
+          <Route path="/newsletter-admin" element={<NewsletterAdmin />} />
+        </Routes>
+      </main>
       <Footer />
       <ScrollToTopBtn />
     </div>

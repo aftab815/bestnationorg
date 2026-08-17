@@ -1,8 +1,16 @@
 import React, { useState } from 'react';
 import Newsletter from '../../components/Newsletter/Newsletter';
-import { newsData } from '../../data/siteData';
+import { eventsData } from '../../data/siteData';
 import newsHero from '../../assets/hero4.jpeg';
 import './News.css';
+
+const newsData = eventsData.map((event, index) => ({
+  ...event,
+  author: 'BNWO Communications',
+  category: index % 2 === 0 ? 'Field Update' : 'Community News',
+  excerpt: event.description,
+  content: event.description,
+}));
 
 const News = () => {
   const [selectedNews, setSelectedNews] = useState(null);

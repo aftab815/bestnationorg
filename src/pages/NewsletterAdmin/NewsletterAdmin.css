@@ -1,74 +1,113 @@
+/* ── BRIGHT NGO NEWSLETTER ADMIN ─────── */
 .newsletter-admin-page {
-  padding: 80px 0;
-  background: #f6f9ff;
+  padding: 100px 0;
+  background: var(--bg-main);
 }
 
 .newsletter-admin-card {
-  max-width: 760px;
+  max-width: 640px;
   margin: 0 auto;
-  background: #fff;
-  border: 1px solid rgba(15, 52, 96, 0.1);
-  border-radius: 18px;
-  padding: 28px;
-  box-shadow: 0 12px 34px rgba(15, 52, 96, 0.1);
+  background: #FFFFFF;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  padding: 48px;
+  box-shadow: var(--shadow-lg);
 }
 
 .newsletter-admin-card h1 {
-  font-family: 'Montserrat', sans-serif;
-  color: #0f3460;
+  font-family: var(--font-heading);
+  color: var(--text-dark);
+  font-size: 1.8rem;
   margin-bottom: 8px;
+  font-weight: 800;
 }
 
 .admin-subtitle {
-  color: #5f6c85;
-  margin-bottom: 6px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 12px;
 }
 
 .admin-count {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-weight: 700;
-  color: #0f3460;
-  margin-bottom: 18px;
+  color: var(--primary);
+  background: var(--primary-surface);
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  margin-bottom: 32px;
+  font-size: 0.9rem;
 }
 
 .newsletter-admin-form {
-  display: grid;
-  gap: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .newsletter-admin-form label {
   font-weight: 700;
-  color: #0f3460;
+  color: var(--text-dark);
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  display: block;
 }
 
 .newsletter-admin-form input,
 .newsletter-admin-form textarea {
   width: 100%;
-  padding: 12px 14px;
-  border-radius: 12px;
-  border: 1px solid #d5dfef;
-  background: #f8fbff;
-  margin-bottom: 8px;
-  font-size: 14px;
+  padding: 14px 20px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+  background: var(--bg-main);
+  font-size: 0.95rem;
+  font-family: var(--font-body);
+  transition: var(--transition-fast);
+  outline: none;
 }
 
 .newsletter-admin-form textarea {
   resize: vertical;
+  min-height: 160px;
 }
 
 .newsletter-admin-form input:focus,
 .newsletter-admin-form textarea:focus {
-  outline: 2px solid rgba(15, 52, 96, 0.2);
+  border-color: var(--primary);
+  background: #FFFFFF;
+  box-shadow: 0 0 0 4px rgba(0, 117, 255, 0.1);
 }
 
 .admin-status {
-  margin-top: 14px;
+  margin-top: 24px;
   font-weight: 700;
+  font-size: 0.95rem;
+  padding: 16px;
+  border-radius: var(--radius-md);
+  text-align: center;
 }
 
-.admin-status.success { color: #166534; }
-.admin-status.error { color: #b91c1c; }
+.admin-status.success {
+  background: var(--secondary-surface);
+  color: var(--secondary);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.admin-status.error {
+  background: #FFF4F0;
+  color: #E53E3E;
+  border: 1px solid rgba(229, 62, 62, 0.2);
+}
 
 @media (max-width: 768px) {
-  .newsletter-admin-page { padding: 60px 0; }
-  .newsletter-admin-card { padding: 20px 16px; }
+  .newsletter-admin-page {
+    padding: 60px 0;
+  }
+
+  .newsletter-admin-card {
+    padding: 32px 24px;
+    border-radius: var(--radius-lg);
+  }
 }

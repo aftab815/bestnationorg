@@ -1,211 +1,154 @@
-/* ── PRISTINE LUXURY COMMITTEES PAGE MASTERPIECE ─ */
-
-.cmte-groups {
-  padding: 110px 0;
-  background: #FAFAFA;
+/* ── BRIGHT NGO COMMITTEES ──────────────── */
+.committees-page {
+  background: var(--bg-main);
 }
 
-.cmte-group {
-  margin-bottom: 70px;
+.cmte-section {
+  padding: 80px 0;
 }
 
-.cmte-group:last-child {
-  margin-bottom: 0;
-}
-
-.cmte-group-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: 12px;
-  margin-bottom: 36px;
-}
-
-.cmte-group-icon {
-  width: 60px;
-  height: 60px;
-  min-width: 60px;
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.12);
-  margin: 0 auto;
-  transition: var(--transition);
-}
-
-.cmte-group-icon i {
-  font-size: 1.4rem;
-  color: #FFFFFF;
-}
-
-.cmte-group-header h3 {
-  font-family: var(--font-heading);
-  font-size: 1.6rem;
-  font-weight: 900;
-  color: var(--text-dark);
-  text-align: center;
-  margin: 0;
-}
-
-.cmte-count {
-  font-family: var(--font-heading);
-  font-size: 0.85rem;
-  font-weight: 800;
-  padding: 6px 18px;
-  border-radius: 9999px;
-  border: 1px solid transparent;
-  letter-spacing: 0.5px;
-  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
-}
-
-/* Photo Cards Grid - Center Aligned Bottom Items */
-.cmte-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 24px;
-}
-
-/* Photo Committee Card */
+.cmte-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 32px;
 .cmte-card {
-  position: relative;
-  height: 220px;
-  width: calc(33.333% - 16px);
-  min-width: 290px;
-  max-width: 380px;
-  border-radius: 24px;
-  overflow: hidden;
-  background-size: cover;
-  background-position: center;
-  border: 1px solid rgba(226, 232, 240, 0.8);
-  box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.08);
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  background: #FFFFFF;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light);
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  text-align: center;
 }
 
 .cmte-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 22px 45px -10px rgba(15, 23, 42, 0.22);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
 }
 
-/* Category Color Tint Overlay */
+.cmte-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--primary-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  font-size: 1.8rem;
+  color: var(--primary);
+}
+
+.cmte-card h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+.cmte-card p {
+  font-size: 0.95rem;
+  color: var(--text-body);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .cmte-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cmte-section {
+    padding: 56px 0;
+  }
+}
+}
+
+.cmte-card {
+  position: relative;
+  height: 190px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-light);
+  transition: var(--transition);
+}
+
+.cmte-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
 .cmte-card__overlay {
   position: absolute;
   inset: 0;
-  transition: all 0.4s ease;
+  transition: opacity 0.3s ease;
 }
 
-.cmte-card:hover .cmte-card__overlay {
-  filter: brightness(1.1);
-}
-
-/* Glass Content Wrapper - Centered Alignment */
 .cmte-card__content {
   position: relative;
   z-index: 10;
-  padding: 26px 20px;
-  color: #FFFFFF;
+  height: 100%;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
   justify-content: space-between;
-  height: 100%;
+  color: #FFFFFF;
 }
 
 .cmte-card__top {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
-  width: 100%;
 }
 
 .cmte-number {
   font-family: var(--font-heading);
-  font-size: 0.78rem;
-  font-weight: 900;
-  color: #FFFFFF;
-  background: rgba(255, 255, 255, 0.22);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  padding: 3px 12px;
-  border-radius: 9999px;
-  letter-spacing: 0.5px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-size: 0.74rem;
+  font-weight: 800;
+  background: rgba(11, 19, 43, 0.7);
+  backdrop-filter: blur(4px);
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.06em;
 }
 
 .cmte-badge-icon {
-  width: 50px;
-  height: 50px;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.22);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
-  transition: var(--transition);
-  margin: 0 auto;
-}
-
-.cmte-card:hover .cmte-badge-icon {
-  transform: scale(1.1);
-  background: rgba(255, 255, 255, 0.35);
-}
-
-.cmte-badge-icon i {
-  color: #FFFFFF;
-  font-size: 1.2rem;
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .cmte-name {
   font-family: var(--font-heading);
-  font-size: 1.18rem;
+  font-size: 1.12rem;
   font-weight: 800;
   color: #FFFFFF;
-  margin: 0 auto;
-  text-align: center;
-  line-height: 1.35;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.75);
+  line-height: 1.3;
+  margin: 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
-/* Formation Info / Operational Model */
+/* Operational Model / Formation Section */
 .cmte-formation {
-  padding: 110px 0;
-  background: #FFFFFF;
+  padding: 88px 0;
+  background: var(--slate-50);
   border-top: 1px solid var(--border-light);
   border-bottom: 1px solid var(--border-light);
 }
 
 .formation-grid {
   display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
+  grid-template-columns: 0.95fr 1.05fr;
   gap: 60px;
-  align-items: start;
-}
-
-.formation-text h2 {
-  font-size: 2.3rem;
-  font-weight: 900;
-  color: var(--text-dark);
-  margin-bottom: 12px;
+  align-items: center;
 }
 
 .formation-text p {
-  font-size: 1.05rem;
-  color: var(--text-body);
-  line-height: 1.7;
-  margin-bottom: 24px;
+  font-size: 1.08rem;
+  line-height: 1.75;
+  color: var(--slate-700);
+  margin-bottom: 28px;
 }
 
 .formation-highlights {
@@ -219,46 +162,40 @@
   align-items: center;
   gap: 10px;
   padding: 12px 20px;
-  border-radius: 14px;
-  background: #FAFAFA;
+  background: #FFFFFF;
   border: 1px solid var(--border-light);
-  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
-  font-family: var(--font-heading);
-  font-size: 0.9rem;
+  border-radius: var(--radius-lg);
+  font-size: 0.92rem;
   font-weight: 700;
-  color: var(--text-dark);
-  transition: var(--transition);
-}
-
-.formation-pill:hover {
-  transform: translateX(6px);
-  border-color: var(--border-primary);
-  box-shadow: 0 6px 18px rgba(2, 132, 199, 0.12);
+  color: var(--navy-950);
+  box-shadow: var(--shadow-xs);
 }
 
 .formation-pill i {
-  color: var(--primary);
-  font-size: 1rem;
+  color: var(--secondary);
 }
 
 .formation-cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 24px;
+  gap: 18px;
 }
 
 .formation-card {
-  position: relative;
-  padding: 32px 26px;
   background: #FFFFFF;
-  border-radius: 24px;
   border: 1px solid var(--border-light);
-  box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.05);
+  border-radius: var(--radius-xl);
+  padding: 26px 20px;
+  position: relative;
   overflow: hidden;
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  box-shadow: var(--shadow-xs);
+  transition: var(--transition);
+}
+
+.formation-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
 }
 
 .formation-card-bar {
@@ -267,120 +204,72 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: var(--grad-primary);
-}
-
-.formation-card:hover {
-  box-shadow: 0 22px 45px -10px rgba(2, 132, 199, 0.2);
-  transform: translateY(-6px);
-  border-color: rgba(2, 132, 199, 0.35);
+  background: var(--primary);
 }
 
 .formation-card-head {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  margin-bottom: 18px;
+  align-items: center;
+  margin-bottom: 14px;
 }
 
 .formation-step {
-  display: inline-block;
   font-family: var(--font-heading);
   font-size: 0.76rem;
   font-weight: 800;
   color: var(--primary);
-  background: var(--primary-surface);
-  border: 1px solid var(--border-primary);
-  padding: 4px 14px;
-  border-radius: 9999px;
-  letter-spacing: 0.5px;
   text-transform: uppercase;
 }
 
 .formation-icon {
-  width: 46px;
-  height: 46px;
-  border-radius: 14px;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
   background: var(--primary-surface);
-  border: 1px solid var(--border-primary);
+  color: var(--primary);
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: var(--transition);
-}
-
-.formation-card:hover .formation-icon {
-  background: var(--grad-primary);
-  border-color: transparent;
-  transform: scale(1.1);
-  box-shadow: 0 6px 16px rgba(2, 132, 199, 0.3);
-}
-
-.formation-icon i {
-  color: var(--primary);
-  font-size: 1.15rem;
-  transition: var(--transition);
-}
-
-.formation-card:hover .formation-icon i {
-  color: #FFFFFF;
+  font-size: 1rem;
 }
 
 .formation-card h3 {
-  font-family: var(--font-heading);
-  font-size: 1.18rem;
+  font-size: 1.05rem;
   font-weight: 800;
-  color: var(--text-dark);
+  color: var(--navy-950);
   margin-bottom: 8px;
-  line-height: 1.35;
 }
 
 .formation-card p {
-  font-size: 0.92rem;
-  line-height: 1.6;
-  color: var(--text-body);
+  font-size: 0.88rem;
+  color: var(--slate-600);
+  line-height: 1.55;
+  margin: 0;
 }
 
-/* Responsive */
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
+  .cmte-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .formation-grid {
     grid-template-columns: 1fr;
     gap: 40px;
   }
 }
 
-@media (max-width: 768px) {
-  /* Groups Section */
-  .cmte-groups { padding: 60px 0; }
-  .cmte-group { margin-bottom: 40px; }
-  .cmte-group-header h3 { font-size: 1.3rem; }
-  .cmte-group-icon { width: 50px; height: 50px; min-width: 50px; border-radius: 16px; }
-  .cmte-count { font-size: 0.78rem; padding: 5px 14px; }
+@media (max-width: 640px) {
+  .cmte-list {
+    grid-template-columns: 1fr;
+  }
 
-  /* Committee Cards */
-  .cmte-card { width: 100%; min-width: unset; max-width: 100%; height: 200px; border-radius: 18px; }
-  .cmte-card__content { padding: 20px 16px; }
-  .cmte-name { font-size: 1.05rem; }
-  .cmte-badge-icon { width: 42px; height: 42px; border-radius: 14px; }
-  .cmte-badge-icon i { font-size: 1.05rem; }
-  .cmte-number { font-size: 0.72rem; padding: 2px 10px; }
+  .formation-cards {
+    grid-template-columns: 1fr;
+  }
 
-  /* Formation */
-  .cmte-formation { padding: 60px 0; }
-  .formation-text { text-align: center; }
-  .formation-text h2 { font-size: 1.7rem; }
-  .formation-text p { font-size: 0.95rem; }
-  .formation-highlights { align-items: center; }
-  .formation-pill { font-size: 0.82rem; padding: 10px 16px; }
-  .formation-cards { grid-template-columns: 1fr; gap: 16px; }
-  .formation-card { padding: 24px 20px; border-radius: 18px; text-align: center; }
-  .formation-card-head { justify-content: center; gap: 12px; }
-  .formation-icon { width: 40px; height: 40px; border-radius: 12px; }
-  .formation-card h3 { font-size: 1.05rem; }
-  .formation-card p { font-size: 0.88rem; }
-}
-
-@media (max-width: 600px) {
-  .cmte-card { height: 180px; }
-  .formation-text h2 { font-size: 1.45rem; }
+  .cmte-groups,
+  .cmte-formation {
+    padding: 56px 0;
+  }
 }

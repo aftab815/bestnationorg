@@ -8,7 +8,6 @@ import {
   accountabilityChain,
   registrationFormUrl,
 } from '../../data/siteData';
-import bnwoParlimentImage from '../../assets/parliaments.png';
 import parlHeroImg from '../../assets/hero1.jpeg';
 import './Parliament.css';
 
@@ -18,15 +17,12 @@ const Parliament = () => {
       {/* ── Modern Hero Banner ─────────────────────── */}
       <section className="parl-hero">
         <div className="about-hero-bg">
-          <img src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1600&q=80" alt="Best Nation Parliaments" />
+          <img src="https://i.tribune.com.pk/media/images/521840-islamabadnationalassemblyinterior-1363464536/521840-islamabadnationalassemblyinterior-1363464536.jpg" alt="Best Nation Parliaments" />
           <div className="about-hero-overlay"></div>
         </div>
         <div className="container">
           <div className="parl-hero-content">
-            <div className="parl-hero-badge">
-              <img src={bnwoParlimentImage} alt="BNWO Emblem" className="hero-emblem-img" />
-              <span>Structured Governance Model</span>
-            </div>
+            <span className="about-hero-badge">Structured Governance Model</span>
             <h1>Best Nation Parliaments</h1>
             <p>
               A 7-tier governance framework empowering grassroots communities, ensuring

@@ -1,38 +1,112 @@
+/* ── BRIGHT NGO PAGE BANNER ─────────── */
 .page-banner {
-  background:
-    linear-gradient(130deg, rgba(8, 32, 63, 0.9), rgba(16, 74, 142, 0.78)),
-    url('../../assets/about-hero.jpeg') center/cover;
-  padding: 84px 0;
-  color: #fff;
+  position: relative;
+  padding: 110px 0 64px;
+  background: linear-gradient(180deg, var(--bg-surface) 0%, #f8fbff 100%);
   text-align: center;
+  overflow: hidden;
 }
+
+.page-banner::before {
+  content: "";
+  position: absolute;
+  inset: -20% -10% auto auto;
+  width: 560px;
+  height: 560px;
+  background: radial-gradient(circle at 30% 30%, rgba(74, 157, 255, 0.06), transparent 40%);
+  filter: blur(32px);
+  transform: translateY(-20px);
+  pointer-events: none;
+}
+
 .page-banner h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: clamp(32px, 5vw, 52px);
+  font-size: clamp(2rem, 4vw, 3.2rem);
   font-weight: 800;
-  margin-bottom: 10px;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+  letter-spacing: -0.6px;
+  line-height: 1.08;
 }
-.banner-inner { display:flex; align-items:center; justify-content:space-between; gap:20px; }
-.banner-left { display:flex; align-items:center; gap:16px; }
+
+.banner-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.banner-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
 .page-banner-logo {
-  width: 52px;
-  height: 52px;
+  width: 64px;
+  height: 64px;
   object-fit: contain;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.24);
-  background: rgba(255, 255, 255, 0.14);
-  padding: 6px;
+  border-radius: 12px;
+  background: var(--bg-subtle);
+  padding: 10px;
+  box-shadow: var(--shadow-sm);
 }
+
 .breadcrumb {
-  display: flex; justify-content: center; align-items: center;
-  gap: 10px; font-size: 14px; opacity: 0.9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.95rem;
+  color: var(--text-muted);
 }
-.breadcrumb a { color: #e94560; transition: color 0.3s; }
-.breadcrumb a:hover { color: #fff; }
-.breadcrumb i { font-size: 10px; }
+
+.breadcrumb a {
+  color: var(--primary);
+  font-weight: 600;
+  transition: color 0.18s ease;
+}
+
+.breadcrumb a:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+.breadcrumb i {
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
 @media (max-width: 768px) {
-  .banner-inner { flex-direction: column; text-align: center; }
-  .banner-left { flex-direction: column; gap: 10px; }
-  .page-banner { padding: 60px 0; }
-  .page-banner h1 { font-size: 30px; }
+  .banner-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .banner-left {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .page-banner {
+    padding: 80px 0 48px;
+  }
+
+  .page-banner h1 {
+    font-size: 2rem;
+  }
+}
+
+.banner-left {
+  flex-direction: column;
+  gap: 10px;
+}
+
+.page-banner {
+  padding: 72px 0 56px;
+}
+
+@media (max-width: 768px) {
+  .page-banner {
+    padding: 56px 0 44px;
+  }
 }

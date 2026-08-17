@@ -3,15 +3,16 @@ import { stats } from '../../data/siteData';
 import './Stats.css';
 
 const Stats = () => {
+  const visibleStats = stats.filter(s => s.id !== 'stat1');
   const [animated, setAnimated] = useState(false);
-  const [counts, setCounts] = useState(stats.map(() => 0));
+  const [counts, setCounts] = useState(visibleStats.map(() => 0));
   const sectionRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       if (entries[0].isIntersecting && !animated) {
         setAnimated(true);
-        stats.forEach((stat, index) => {
+        visibleStats.forEach((stat, index) => {
           let start = 0;
           const step = stat.target / 100;
           const interval = setInterval(() => {
@@ -32,10 +33,10 @@ const Stats = () => {
     <section className="stats" ref={sectionRef}>
       <div className="container">
         <div className="stats-grid">
-          {stats.map((stat, index) => (
+          {visibleStats.map((stat, index) => (
             <div key={stat.id} className="stat-item">
               <i className={stat.icon}></i>
-              <h3>{counts[index]}+</h3>
+              <h3>{(counts[index] || 0).toLocaleString()}</h3>
               <p>{stat.label}</p>
             </div>
           ))}

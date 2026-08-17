@@ -1,122 +1,151 @@
-/* ── LUXURY LIGHT WHAT WE DO PAGE MASTERPIECE ─ */
+/* ── BRIGHT NGO WHAT WE DO ─────────────── */
+.wwd-intro {
+  padding: 100px 0;
+  background: var(--bg-surface);
+}
 
-.wwd-intro { padding: 110px 0; background: var(--bg-surface); }
+.wwd-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.wwd-intro-text p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-body);
+  margin-bottom: 24px;
+}
+
+.wwd-intro-image img {
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+}
+
+.wwd-focus {
+  padding: 100px 0;
+  background: var(--bg-main);
+  border-top: 1px solid var(--border-light);
+}
 
 .wwd-focus-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
+  gap: 32px;
 }
 
 .wwd-focus-card {
+  background: #FFFFFF;
+  border-radius: var(--radius-lg);
+  padding: 40px 32px;
   text-align: center;
-  padding: 44px 30px;
-  background: var(--bg-main);
-  border-radius: var(--radius-xl);
-  border: 1px solid var(--border-light);
   box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-light);
   transition: var(--transition);
 }
 
 .wwd-focus-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--border-emerald);
-  background: var(--bg-surface);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
 }
 
 .wwd-focus-icon {
   width: 72px;
   height: 72px;
-  background: var(--emerald-surface);
-  border: 1px solid var(--border-emerald);
-  border-radius: var(--radius-lg);
+  border-radius: 50%;
+  background: var(--primary-surface);
+  color: var(--primary);
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 1.8rem;
   margin: 0 auto 24px;
-  transition: var(--transition);
 }
-
-.wwd-focus-card:hover .wwd-focus-icon {
-  background: var(--emerald-deep);
-}
-
-.wwd-focus-icon i { font-size: 1.8rem; color: var(--emerald-deep); transition: var(--transition); }
-.wwd-focus-card:hover .wwd-focus-icon i { color: var(--bg-surface); }
 
 .wwd-focus-card h3 {
   font-size: 1.3rem;
   font-weight: 800;
-  color: var(--text-dark);
   margin-bottom: 12px;
+  color: var(--text-dark);
 }
 
-.wwd-focus-card p { font-size: 0.95rem; color: var(--text-body); line-height: 1.65; }
+.wwd-focus-card p {
+  font-size: 0.95rem;
+  color: var(--text-body);
+  line-height: 1.6;
+}
 
-/* Projects Section */
 .wwd-projects {
-  padding: 110px 0;
-  background: var(--emerald-deep);
-  color: var(--bg-surface);
+  padding: 100px 0;
+  background: var(--bg-surface);
 }
 
-.wwd-projects .section-title h2 { color: var(--bg-surface); }
-.wwd-projects .section-title p { color: rgba(255, 255, 255, 0.85); }
-
-.wwd-project-grid {
+.wwd-projects-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
 }
 
 .wwd-project-card {
   display: flex;
-  gap: 18px;
-  align-items: flex-start;
-  padding: 28px 24px;
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  align-items: stretch;
+  background: #FFFFFF;
   border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-light);
   transition: var(--transition);
 }
 
 .wwd-project-card:hover {
-  background: rgba(255, 255, 255, 0.16);
-  transform: translateY(-5px);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
 }
 
-.wwd-project-icon {
-  width: 50px;
-  height: 50px;
-  min-width: 50px;
-  background: var(--gold-primary);
-  border-radius: var(--radius-md);
+.wwd-project-img {
+  width: 40%;
+}
+
+.wwd-project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wwd-project-content {
+  width: 60%;
+  padding: 32px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
 }
 
-.wwd-project-icon i { font-size: 1.2rem; color: var(--bg-surface); }
-
 .wwd-project-content h3 {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--bg-surface);
-  margin-bottom: 6px;
-  line-height: 1.35;
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: var(--text-dark);
 }
 
 .wwd-project-content p {
-  font-size: 0.88rem;
-  color: rgba(255, 255, 255, 0.78);
-  line-height: 1.55;
+  font-size: 0.95rem;
+  color: var(--text-body);
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
-/* Approach */
+.wwd-project-content a {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
 .wwd-approach {
-  padding: 110px 0;
+  padding: 100px 0;
   background: var(--bg-main);
   border-top: 1px solid var(--border-light);
 }
@@ -128,79 +157,86 @@
 }
 
 .approach-card {
+  background: #FFFFFF;
+  padding: 32px 24px;
+  border-radius: var(--radius-lg);
   text-align: center;
-  padding: 40px 24px;
-  background: var(--bg-surface);
-  border-radius: var(--radius-xl);
-  border: 1px solid var(--border-light);
   box-shadow: var(--shadow-sm);
-  transition: var(--transition);
+  border: 1px solid var(--border-light);
 }
 
-.approach-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--border-emerald);
-}
-
-.approach-step {
-  width: 52px;
-  height: 52px;
-  background: var(--emerald-deep);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.approach-num {
   font-family: var(--font-heading);
-  font-weight: 900;
-  color: var(--bg-surface);
-  font-size: 1.25rem;
-  margin: 0 auto 20px;
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--primary-surface);
+  margin-bottom: -16px;
+  position: relative;
+  z-index: 1;
 }
 
-.approach-card h3 {
+.approach-card h4 {
   font-size: 1.15rem;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--text-dark);
-  margin-bottom: 8px;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 12px;
 }
 
-.approach-card p { font-size: 0.9rem; color: var(--text-body); }
+.approach-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
 
-@media (max-width: 900px) {
-  .wwd-intro, .wwd-projects, .wwd-approach { padding: 70px 0; }
-  .wwd-focus-grid, .wwd-project-grid { grid-template-columns: 1fr; }
-  .approach-grid { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 1024px) {
+  .wwd-intro-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wwd-focus-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .wwd-projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .approach-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
 }
 
 @media (max-width: 768px) {
-  .wwd-intro, .wwd-projects, .wwd-approach { padding: 50px 0; }
 
-  /* Focus Cards */
-  .wwd-focus-grid { gap: 16px; }
-  .wwd-focus-card { padding: 30px 22px; border-radius: 20px; }
-  .wwd-focus-icon { width: 58px; height: 58px; margin: 0 auto 18px; }
-  .wwd-focus-icon i { font-size: 1.5rem; }
-  .wwd-focus-card h3 { font-size: 1.15rem; }
-  .wwd-focus-card p { font-size: 0.9rem; }
+  .wwd-intro,
+  .wwd-focus,
+  .wwd-projects,
+  .wwd-approach {
+    padding: 60px 0;
+  }
 
-  /* Project Cards */
-  .wwd-project-grid { gap: 14px; }
-  .wwd-project-card { padding: 22px 18px; flex-direction: column; align-items: center; text-align: center; gap: 14px; border-radius: 18px; }
-  .wwd-project-icon { width: 44px; height: 44px; min-width: 44px; }
-  .wwd-project-icon i { font-size: 1.05rem; }
-  .wwd-project-content h3 { font-size: 0.98rem; }
-  .wwd-project-content p { font-size: 0.84rem; }
+  .wwd-focus-grid {
+    grid-template-columns: 1fr;
+  }
 
-  /* Approach Cards */
-  .approach-grid { grid-template-columns: 1fr; gap: 14px; }
-  .approach-card { padding: 28px 20px; border-radius: 18px; }
-  .approach-step { width: 44px; height: 44px; font-size: 1.1rem; }
-  .approach-card h3 { font-size: 1.05rem; }
-  .approach-card p { font-size: 0.85rem; }
-}
+  .wwd-project-card {
+    flex-direction: column;
+  }
 
-@media (max-width: 600px) {
-  .approach-grid { grid-template-columns: 1fr; }
-  .wwd-focus-card h3 { font-size: 1.05rem; }
+  .wwd-project-img {
+    width: 100%;
+    height: 200px;
+  }
+
+  .wwd-project-content {
+    width: 100%;
+    padding: 24px;
+  }
+
+  .approach-grid {
+    grid-template-columns: 1fr;
+  }
 }

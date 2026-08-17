@@ -174,7 +174,7 @@ const Home = () => {
               </span>
               <h2>Where Your Donations Go</h2>
               <p>We take full accountability for every rupee donated. Here is how your support creates direct impact in Pakistan.</p>
-              
+
               <div className="allocation-bars">
                 <div className="alloc-item">
                   <div className="alloc-head">

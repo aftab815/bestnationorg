@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import './App.css';
+import './Professional.css';
 // Ensure browser uses the ICO favicon from public/ (do not override with bundled image)
 const setFavicon = (href) => {
   try {
