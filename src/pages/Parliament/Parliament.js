@@ -9,25 +9,211 @@ import {
   registrationFormUrl,
 } from '../../data/siteData';
 import parlHeroImg from '../../assets/hero1.jpeg';
+import worldParliamentImg from '../../assets/world parliament.png';
+import divisionalImg from '../../assets/divisional.png';
+import districtImg from '../../assets/district.png';
+import tehsilImg from '../../assets/tehsil.png';
 import './Parliament.css';
 
 const Parliament = () => {
   return (
     <div className="parliament-page">
-      {/* ── Modern Hero Banner ─────────────────────── */}
-      <section className="parl-hero">
-        <div className="about-hero-bg">
+      {/* ── Bespoke Modern Parliament Hero ───────────── */}
+      <section className="parl-hero-modern">
+        <div className="parl-hero-bg">
           <img src="https://i.tribune.com.pk/media/images/521840-islamabadnationalassemblyinterior-1363464536/521840-islamabadnationalassemblyinterior-1363464536.jpg" alt="Best Nation Parliaments" />
-          <div className="about-hero-overlay"></div>
+          <div className="parl-hero-overlay"></div>
         </div>
         <div className="container">
           <div className="parl-hero-content">
-            <span className="about-hero-badge">Structured Governance Model</span>
+            <div className="parl-hero-badge">
+              <span className="live-pulse-dot"></span>
+              <span>Constitutional 7-Tier Governance System</span>
+            </div>
             <h1>Best Nation Parliaments</h1>
             <p>
-              A 7-tier governance framework empowering grassroots communities, ensuring
-              transparent program delivery from international leadership down to Union Councils.
+              A structured, multi-tier democratic welfare governance model extending from the global Pakistani diaspora
+              down to grassroots Union Councils across all provinces.
             </p>
+            <div className="parl-hero-tier-pills">
+              <span className="tier-pill">World</span>
+              <i className="fas fa-chevron-right"></i>
+              <span className="tier-pill">States</span>
+              <i className="fas fa-chevron-right"></i>
+              <span className="tier-pill">Cities</span>
+              <i className="fas fa-chevron-right"></i>
+              <span className="tier-pill">Divisional</span>
+              <i className="fas fa-chevron-right"></i>
+              <span className="tier-pill">District</span>
+              <i className="fas fa-chevron-right"></i>
+              <span className="tier-pill">Tehsil</span>
+              <i className="fas fa-chevron-right"></i>
+              <span className="tier-pill">Union Council</span>
+            </div>
+            <div className="parl-hero-actions">
+              <a href="#formation-composition" className="btn-donate">
+                Formation &amp; Composition <i className="fas fa-sitemap"></i>
+              </a>
+              <a href="#office-bearers" className="btn-glass">
+                Bearer Structure <i className="fas fa-user-tie"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Two-Tier Formation Architecture Section ───── */}
+      <section className="parl-formation-sec" id="formation-composition">
+        <div className="container">
+          <div className="section-title">
+            <span className="section-kicker">Core Governance Structure</span>
+            <h2>Two-Tier Formation Architecture</h2>
+            <div className="underline"></div>
+            <p className="formation-lead-desc">
+              BNWO&rsquo;s governance architecture is built on a clear division of purpose between its international and local tiers:
+            </p>
+          </div>
+
+          <div className="formation-cards-grid">
+            {/* International-Level Parliaments with World Parliament Emblem */}
+            <div className="formation-pillar-card formation-card--international">
+              <div className="formation-card-header">
+                <div className="formation-icon-wrap formation-icon-wrap--logo">
+                  <img src={worldParliamentImg} alt="World Parliament Emblem" className="formation-tier-logo-img" />
+                </div>
+                <div>
+                  <span className="formation-tier-tag">Top-Tier Governance</span>
+                  <h3>International-Level Parliaments</h3>
+                </div>
+              </div>
+              <p className="formation-subhead">
+                World Parliament &bull; World States Parliament &bull; World Cities Parliament
+              </p>
+              <div className="formation-body-text">
+                <p>
+                  Constituted for <strong>strategic decision-making, policy direction, national/international partnerships</strong>,
+                  and large-scale fundraising that finances BNWO&rsquo;s twelve core programs.
+                </p>
+              </div>
+              <div className="formation-features">
+                <div className="formation-feat-item"><i className="fas fa-check"></i> Strategic Vision &amp; Policy Direction</div>
+                <div className="formation-feat-item"><i className="fas fa-check"></i> Global Partnerships &amp; Institutional MOUs</div>
+                <div className="formation-feat-item"><i className="fas fa-check"></i> Flagship Financing for 12 Core Programs</div>
+              </div>
+            </div>
+
+            {/* Local-Level Parliaments with Divisional, District & Tehsil Logos */}
+            <div className="formation-pillar-card formation-card--local">
+              <div className="formation-card-header">
+                <div className="formation-icon-wrap formation-icon-wrap--local-group">
+                  <img src={divisionalImg} alt="Divisional Parliament" title="Divisional Parliament" className="formation-local-logo" />
+                  <img src={districtImg} alt="District Parliament" title="District Parliament" className="formation-local-logo" />
+                  <img src={tehsilImg} alt="Tehsil Parliament" title="Tehsil Parliament" className="formation-local-logo" />
+                </div>
+                <div>
+                  <span className="formation-tier-tag">Grassroots Execution</span>
+                  <h3>Local-Level Parliaments</h3>
+                </div>
+              </div>
+              <p className="formation-subhead">
+                Divisional &bull; District &bull; Tehsil Parliaments
+              </p>
+              <div className="formation-body-text">
+                <p>
+                  Constituted alongside affiliated Project Committees for <strong>direct project execution</strong> &mdash;
+                  translating strategy and funding into on-the-ground delivery, community mobilization, and beneficiary support.
+                </p>
+              </div>
+              <div className="formation-features">
+                <div className="formation-feat-item"><i className="fas fa-check"></i> Field-Level Program Delivery &amp; Execution</div>
+                <div className="formation-feat-item"><i className="fas fa-check"></i> Community Mobilization &amp; Need Assessment</div>
+                <div className="formation-feat-item"><i className="fas fa-check"></i> Direct Beneficiary Support &amp; Local Verification</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="formation-strategic-callout">
+            <i className="fas fa-info-circle"></i>
+            <p>
+              <strong>Division of Responsibility:</strong> This division ensures that strategic leadership is not burdened with day-to-day
+              implementation, while execution-level bodies remain focused, accountable, and close to the communities they serve.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Core Office-Bearers Structure Section ──────── */}
+      <section className="parl-bearers-sec" id="office-bearers">
+        <div className="container">
+          <div className="section-title">
+            <span className="section-kicker">Leadership Hierarchy</span>
+            <h2>Core Office-Bearers Structure</h2>
+            <div className="underline"></div>
+            <p>
+              Every Parliament, regardless of tier, is composed of the following core office-bearers, supplemented by tier-specific portfolios:
+            </p>
+          </div>
+
+          <div className="bearers-grid">
+            <div className="bearer-card">
+              <div className="bearer-icon-box">
+                <i className="fas fa-user-shield"></i>
+              </div>
+              <div className="bearer-content">
+                <h3>Chairman / President</h3>
+                <p>Overall leadership, institutional policy, and external organizational representation.</p>
+              </div>
+            </div>
+
+            <div className="bearer-card">
+              <div className="bearer-icon-box">
+                <i className="fas fa-user-tie"></i>
+              </div>
+              <div className="bearer-content">
+                <h3>Vice Chairman</h3>
+                <p>Deputizes for the Chairman and oversees internal coordination across all functioning tiers.</p>
+              </div>
+            </div>
+
+            <div className="bearer-card">
+              <div className="bearer-icon-box">
+                <i className="fas fa-file-signature"></i>
+              </div>
+              <div className="bearer-content">
+                <h3>General Secretary</h3>
+                <p>Administration, institutional records, formal communications, and correspondence.</p>
+              </div>
+            </div>
+
+            <div className="bearer-card">
+              <div className="bearer-icon-box">
+                <i className="fas fa-coins"></i>
+              </div>
+              <div className="bearer-content">
+                <h3>Finance Secretary</h3>
+                <p>Fund management, annual budgeting, audit adherence, and transparent financial reporting.</p>
+              </div>
+            </div>
+
+            <div className="bearer-card">
+              <div className="bearer-icon-box">
+                <i className="fas fa-network-wired"></i>
+              </div>
+              <div className="bearer-content">
+                <h3>Coordination Secretary</h3>
+                <p>Liaison and systematic communication with the next tier up and down the structure.</p>
+              </div>
+            </div>
+
+            <div className="bearer-card">
+              <div className="bearer-icon-box">
+                <i className="fas fa-users-cog"></i>
+              </div>
+              <div className="bearer-content">
+                <h3>Committee Convenors</h3>
+                <p>Heads of the relevant thematic Project Committees operating actively under that Parliament.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -125,7 +311,17 @@ const Parliament = () => {
                 <div className="chain-flow-item">
                   <div className="chain-step-badge">Step 0{item.step}</div>
                   <div className="chain-flow-icon">
-                    <i className={item.icon}></i>
+                    {item.logos && item.logos.length === 1 ? (
+                      <img src={item.logos[0]} alt={item.title} className="chain-flow-logo" />
+                    ) : item.logos && item.logos.length > 1 ? (
+                      <div className="chain-flow-logo-group">
+                        {item.logos.map((logo, lIdx) => (
+                          <img key={lIdx} src={logo} alt={item.title} className="chain-flow-logo-sub" />
+                        ))}
+                      </div>
+                    ) : (
+                      <i className={item.icon}></i>
+                    )}
                   </div>
                   <h3>{item.title}</h3>
                   <p>{item.subtitle}</p>

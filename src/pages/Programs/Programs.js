@@ -21,22 +21,51 @@ const Programs = () => {
 
   return (
     <div className="programs-page">
-      {/* ── Modern Luxury Hero Banner ───────────────── */}
-      <section className="parl-hero">
-        <div className="about-hero-bg">
+      {/* ── Bespoke Modern Programs Hero ───────────── */}
+      <section className="prog-hero-modern">
+        <div className="prog-hero-bg">
           <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1600&q=80" alt="BNWO Programs" />
-          <div className="about-hero-overlay"></div>
+          <div className="prog-hero-overlay"></div>
         </div>
         <div className="container">
-          <div className="parl-hero-content">
-            <span className="about-hero-badge">
-              <i className="fas fa-hand-holding-heart"></i> 12 Flagship Welfare Programs
-            </span>
+          <div className="prog-hero-content">
+            <div className="prog-hero-badge">
+              <span className="live-pulse-dot"></span>
+              <span>12 Flagship Welfare Programs &bull; Nationwide Impact</span>
+            </div>
             <h1>BNWO Core Welfare Programs</h1>
             <p>
-              Delivering sustainable social transformation through twelve flagship welfare programs,
-              replicated across all Divisional, District, Tehsil, and Union Council Parliaments in Pakistan.
+              Delivering structured, sustainable social transformation across Education, Healthcare,
+              and Human Rights &mdash; executed locally through our 24 Project Committees.
             </p>
+
+            {/* Quick Hero Interactive Filter Tabs */}
+            <div className="prog-hero-tabs">
+              <button
+                className={`prog-hero-tab ${activeTab === 'all' ? 'active' : ''}`}
+                onClick={() => setActiveTab('all')}
+              >
+                <i className="fas fa-th-large"></i> All Programs (12)
+              </button>
+              <button
+                className={`prog-hero-tab ${activeTab === 'trainingEducation' ? 'active' : ''}`}
+                onClick={() => setActiveTab('trainingEducation')}
+              >
+                <i className="fas fa-graduation-cap"></i> Education &amp; Skills (4)
+              </button>
+              <button
+                className={`prog-hero-tab ${activeTab === 'healthFacilities' ? 'active' : ''}`}
+                onClick={() => setActiveTab('healthFacilities')}
+              >
+                <i className="fas fa-heartbeat"></i> Health &amp; Medical (4)
+              </button>
+              <button
+                className={`prog-hero-tab ${activeTab === 'humanRights' ? 'active' : ''}`}
+                onClick={() => setActiveTab('humanRights')}
+              >
+                <i className="fas fa-balance-scale"></i> Human Rights (4)
+              </button>
+            </div>
           </div>
         </div>
       </section>

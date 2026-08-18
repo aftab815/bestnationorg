@@ -1,3 +1,262 @@
-.partners-section { padding: 86px 0; border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light); background: #fff; }.partners-gateway-grid { display: grid; grid-template-columns: repeat(6,1fr); gap: 0; border: 1px solid var(--border-light); }.partner-gateway-card { display: flex; flex-direction: column; align-items: center; min-height: 174px; padding: 25px 14px 20px; border: 0; border-right: 1px solid var(--border-light); border-radius: 0; background: #fff; text-align: center; transition: background var(--transition-fast); }.partner-gateway-card:last-child { border-right: 0; }.partner-gateway-card:hover { border-color: var(--border-light); background: var(--slate-50); box-shadow: none; transform: none; }.gateway-icon-box { display: grid; width: 42px; height: 42px; place-items: center; margin-bottom: 13px; border: 0; border-radius: 0; background: var(--primary-surface); color: var(--primary); font-size: 1.06rem; }.gateway-info strong { display: block; color: var(--navy-950); font-size: .79rem; font-weight: 800; }.gateway-info span { display: block; margin-top: 3px; color: var(--slate-500); font-size: .6rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }.gateway-arrow { margin-top: auto; padding-top: 12px; color: var(--accent); font-size: .75rem; opacity: 0; transform: translateX(-4px); transition: opacity var(--transition-fast), transform var(--transition-fast); }.partner-gateway-card:hover .gateway-arrow { opacity: 1; transform: translateX(0); }
-@media (max-width: 1024px) { .partners-gateway-grid { grid-template-columns: repeat(3,1fr); }.partner-gateway-card:nth-child(3) { border-right: 0; }.partner-gateway-card:nth-child(-n + 3) { border-bottom: 1px solid var(--border-light); } }
-@media (max-width: 600px) { .partners-section { padding: 62px 0; }.partners-gateway-grid { grid-template-columns: repeat(2,1fr); }.partner-gateway-card { min-height: 155px; }.partner-gateway-card:nth-child(odd) { border-right: 1px solid var(--border-light); }.partner-gateway-card:nth-child(even) { border-right: 0; }.partner-gateway-card:nth-child(-n + 4) { border-bottom: 1px solid var(--border-light); } }
+/* ── PARTNERS LOGO MARQUEE (RIGHT TO LEFT) ── */
+.partners-ticker-section {
+  padding: 80px 0 90px;
+  background: #ffffff;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+  overflow: hidden;
+}
+
+.partners-header {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 48px;
+}
+
+.partners-header h2 {
+  font-size: clamp(2rem, 3.2vw, 2.6rem);
+  color: var(--navy-950);
+  margin-bottom: 12px;
+}
+
+.partners-header p {
+  color: var(--slate-600);
+  font-size: 0.96rem;
+  margin-top: 12px;
+}
+
+.partners-marquee-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Gradient edge fades */
+.partners-marquee-wrapper::before,
+.partners-marquee-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.partners-marquee-wrapper::before {
+  left: 0;
+  background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.partners-marquee-wrapper::after {
+  right: 0;
+  background: linear-gradient(270deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.partners-marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  white-space: nowrap;
+  animation: partnerMarquee 36s linear infinite;
+  will-change: transform;
+}
+
+.partners-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes partnerMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.partner-marquee-card {
+  flex: 0 0 auto;
+  width: 260px;
+  background: var(--bg-main);
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  padding: 22px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+.partner-marquee-card:hover {
+  background: #ffffff;
+  border-color: var(--primary-border);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.partner-logo-box {
+  width: 68px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  display: grid;
+  place-items: center;
+  padding: 4px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.partner-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.partner-text-info {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.partner-text-info h4 {
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: var(--navy-950);
+  margin: 0 0 2px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.partner-text-info span {
+  font-size: 0.72rem;
+  color: var(--slate-500);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.partner-hover-arrow {
+  margin-left: auto;
+  color: var(--accent);
+  font-size: 0.82rem;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: all var(--transition-fast);
+}
+
+.partner-marquee-card:hover .partner-hover-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ── CUSTOM BRAND BADGES ───────────────── */
+.custom-brand-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 100%;
+  height: 100%;
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.brand--jazzcash {
+  color: #dc2626;
+}
+
+.brand--jazzcash .brand-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #dc2626;
+}
+
+.brand--jazzcash .brand-accent {
+  color: #eab308;
+}
+
+.brand--easypaisa {
+  color: #059669;
+}
+
+.brand--easypaisa i {
+  font-size: 0.85rem;
+  color: #059669;
+}
+
+.brand--easypaisa .brand-accent {
+  color: #10b981;
+}
+
+.brand--nayapay {
+  color: #ea580c;
+}
+
+.brand--nayapay i {
+  font-size: 0.85rem;
+}
+
+.brand--nayapay .brand-accent {
+  color: #f97316;
+}
+
+.brand--raast {
+  color: #0e6e5a;
+}
+
+.brand--raast i {
+  color: #10b981;
+  font-size: 0.85rem;
+}
+
+.brand--raast span {
+  font-size: 0.6rem;
+  background: #0e6e5a;
+  color: #ffffff;
+  padding: 1px 4px;
+  border-radius: 2px;
+  margin-left: 2px;
+}
+
+.brand--cards {
+  font-size: 1.2rem;
+  color: #1e3a8a;
+  gap: 6px;
+}
+
+.brand--cards .fa-cc-mastercard {
+  color: #ea580c;
+}
+
+@media (max-width: 768px) {
+  .partners-ticker-section {
+    padding: 60px 0;
+  }
+  .partner-marquee-card {
+    width: 220px;
+    padding: 16px 14px;
+  }
+  .partner-logo-box {
+    width: 54px;
+    height: 44px;
+  }
+  .partner-text-info h4 {
+    font-size: 0.84rem;
+  }
+  .partners-marquee-track {
+    animation-duration: 28s;
+  }
+}

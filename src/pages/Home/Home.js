@@ -94,7 +94,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ── 12 Core Programs Preview ───────────── */}
+      {/* ── 12 Core Programs Marquee Preview ───────────── */}
       <section className="home-services">
         <div className="container">
           <div className="section-title">
@@ -103,17 +103,25 @@ const Home = () => {
             <div className="underline"></div>
             <p>12 structured welfare programs delivering real, grassroots impact across Pakistan</p>
           </div>
-          <div className="services-grid">
-            {allPrograms.slice(0, 6).map((p) => (
-              <ServiceCard
-                key={p.id}
-                icon={p.icon}
-                title={p.title}
-                description={p.description}
-                bgImage={p.bgImage}
-              />
+        </div>
+
+        <div className="home-programs-marquee-wrap">
+          <div className="home-programs-marquee-track">
+            {/* Double mapped for seamless continuous right-to-left loop */}
+            {[...allPrograms, ...allPrograms].map((p, idx) => (
+              <Link to="/programs" key={idx} className="home-program-marquee-card">
+                <ServiceCard
+                  icon={p.icon}
+                  title={p.title}
+                  description={p.description}
+                  bgImage={p.bgImage}
+                />
+              </Link>
             ))}
           </div>
+        </div>
+
+        <div className="container">
           <div className="services-cta">
             <Link to="/programs" className="btn-outline">
               Explore All 12 Programs <i className="fas fa-arrow-right"></i>
@@ -141,10 +149,22 @@ const Home = () => {
               <div className="parliament-chain">
                 {accountabilityChain.map((item) => (
                   <div key={item.step} className="chain-step">
-                    <div className="chain-icon">
-                      <i className={item.icon}></i>
+                    <div className="chain-icon-wrap">
+                      {item.logos && item.logos.length === 1 ? (
+                        <img src={item.logos[0]} alt={item.title} className="chain-logo-single" />
+                      ) : item.logos && item.logos.length > 1 ? (
+                        <div className="chain-logo-cluster">
+                          {item.logos.map((logo, lIdx) => (
+                            <img key={lIdx} src={logo} alt={item.title} className="chain-logo-multi" />
+                          ))}
+                        </div>
+                      ) : (
+                        <div className="chain-icon">
+                          <i className={item.icon}></i>
+                        </div>
+                      )}
                     </div>
-                    <div>
+                    <div className="chain-info-col">
                       <strong>{item.title}</strong>
                       <span>{item.subtitle}</span>
                     </div>

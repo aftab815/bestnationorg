@@ -40,19 +40,23 @@ const News = () => {
 
   return (
     <div className="news-page">
-      {/* ── Modern Hero Banner ───────────────── */}
-      <section className="parl-hero">
-        <div className="about-hero-bg">
+      {/* ── Bespoke Modern News Hero ──────────────── */}
+      <section className="news-hero-modern">
+        <div className="news-hero-bg">
           <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1600&q=80" alt="BNWO News & Updates" />
-          <div className="about-hero-overlay"></div>
+          <div className="news-hero-overlay"></div>
         </div>
         <div className="container">
-          <div className="parl-hero-content">
-            <span className="about-hero-badge">
-              <i className="fas fa-newspaper"></i> Media & Press Releases
-            </span>
-            <h1>Latest News & Updates</h1>
-            <p>Stay informed about BNWO's latest activities, parliamentary launches, and field initiatives.</p>
+          <div className="news-hero-content">
+            <div className="news-hero-badge">
+              <span className="live-pulse-dot"></span>
+              <span>Official Media Desk &bull; Press Releases &bull; Field Updates</span>
+            </div>
+            <h1>Latest News &amp; Updates</h1>
+            <p>
+              Stay informed with official dispatches, MoU signings, parliamentary activations,
+              and community uplift dispatches from across Pakistan.
+            </p>
           </div>
         </div>
       </section>

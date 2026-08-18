@@ -16,19 +16,31 @@ const allProjects = [
 const WhatWeDo = () => {
   return (
     <div className="whatwedo-page">
-      {/* ── Modern Hero Banner ───────────────── */}
-      <section className="parl-hero">
-        <div className="about-hero-bg">
+      {/* ── Bespoke Modern WhatWeDo Hero ───────────── */}
+      <section className="wwd-hero-modern">
+        <div className="wwd-hero-bg">
           <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=1600&q=80" alt="BNWO What We Do" />
-          <div className="about-hero-overlay"></div>
+          <div className="wwd-hero-overlay"></div>
         </div>
         <div className="container">
-          <div className="parl-hero-content">
-            <span className="about-hero-badge">
-              <i className="fas fa-hands-helping"></i> Community Empowerment
-            </span>
-            <h1>Our Work & Impact</h1>
-            <p>BNWO delivers 12 core welfare programs through 24 project committees across Pakistan.</p>
+          <div className="wwd-hero-content">
+            <div className="wwd-hero-badge">
+              <span className="live-pulse-dot"></span>
+              <span>Strategic Uplift &bull; 4 Pillars of Welfare</span>
+            </div>
+            <h1>Our Work &amp; National Impact</h1>
+            <p>
+              BNWO delivers 12 core welfare programs through 24 specialized project committees,
+              building resilient communities, emergency medical care, and poverty-alleviation channels across Pakistan.
+            </p>
+            <div className="wwd-hero-actions">
+              <a href="#focus-areas" className="btn-donate">
+                Explore Focus Areas <i className="fas fa-arrow-down"></i>
+              </a>
+              <Link to="/programs" className="btn-glass">
+                12 Core Programs <i className="fas fa-hand-holding-heart"></i>
+              </Link>
+            </div>
           </div>
         </div>
       </section>

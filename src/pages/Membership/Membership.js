@@ -11,19 +11,27 @@ const Membership = () => {
 
   return (
     <div className="membership-page">
-      {/* ── Modern Hero Banner ───────────────── */}
-      <section className="parl-hero">
-        <div className="about-hero-bg">
+      {/* ── Bespoke Modern Membership Hero ─────────── */}
+      <section className="mem-hero-modern">
+        <div className="mem-hero-bg">
           <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&w=1600&q=80" alt="BNWO Membership" />
-          <div className="about-hero-overlay"></div>
+          <div className="mem-hero-overlay"></div>
         </div>
         <div className="container">
-          <div className="parl-hero-content">
-            <span className="about-hero-badge">
-              <i className="fas fa-id-card"></i> Join BNWO Network
-            </span>
-            <h1>Membership & Fee Structure</h1>
-            <p>Contribute your expertise, time, and resources to BNWO's mission across 7 parliament tiers.</p>
+          <div className="mem-hero-content">
+            <div className="mem-hero-badge">
+              <span className="live-pulse-dot"></span>
+              <span>Prestigious Civic Leadership &bull; 7 Parliament Tiers</span>
+            </div>
+            <h1>Membership &amp; Fee Structure</h1>
+            <p>
+              Join a nationwide community of visionary leaders, professionals, and change-makers.
+              Contribute your expertise and resources across International and National tiers.
+            </p>
+            <div className="mem-hero-currency-chips">
+              <span className="currency-chip"><i className="fas fa-globe-americas"></i> International: USD ($) Tiers</span>
+              <span className="currency-chip"><i className="fas fa-flag"></i> National: PKR (Rs) Tiers</span>
+            </div>
           </div>
         </div>
       </section>

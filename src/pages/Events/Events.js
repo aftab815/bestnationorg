@@ -15,22 +15,43 @@ const Events = () => {
 
   return (
     <div className="events-page">
-      {/* ── Modern Hero Banner ───────────────── */}
-      <section className="parl-hero">
-        <div className="about-hero-bg">
+      {/* ── Bespoke Modern Events Hero ────────────── */}
+      <section className="events-hero-modern">
+        <div className="events-hero-bg">
           <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1600&q=80" alt="BNWO Events & Seminars" />
-          <div className="about-hero-overlay"></div>
+          <div className="events-hero-overlay"></div>
         </div>
         <div className="container">
-          <div className="parl-hero-content">
-            <span className="about-hero-badge">
-              <i className="fas fa-calendar-alt"></i> Field Outreach & Gatherings
-            </span>
-            <h1>BNWO Events & Seminars</h1>
+          <div className="events-hero-content">
+            <div className="events-hero-badge">
+              <span className="live-pulse-dot"></span>
+              <span>Field Outreach &bull; Seminars &bull; Community Drives</span>
+            </div>
+            <h1>BNWO Events &amp; Seminars</h1>
             <p>
-              Explore our past and upcoming community welfare drives, corporate partnerships,
-              and parliamentary coordination sessions across Pakistan.
+              Explore our past and upcoming community welfare drives, institutional partnerships,
+              and parliamentary coordination assemblies across Pakistan.
             </p>
+            <div className="events-hero-filter-tabs">
+              <button
+                className={`event-hero-tab ${filter === 'all' ? 'active' : ''}`}
+                onClick={() => setFilter('all')}
+              >
+                All Gatherings ({eventsData.length})
+              </button>
+              <button
+                className={`event-hero-tab ${filter === 'upcoming' ? 'active' : ''}`}
+                onClick={() => setFilter('upcoming')}
+              >
+                Upcoming
+              </button>
+              <button
+                className={`event-hero-tab ${filter === 'past' ? 'active' : ''}`}
+                onClick={() => setFilter('past')}
+              >
+                Completed &amp; Highlights
+              </button>
+            </div>
           </div>
         </div>
       </section>

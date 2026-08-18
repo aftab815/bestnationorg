@@ -3,6 +3,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import TopBar from './components/TopBar/TopBar';
 import Navbar from './components/Navbar/Navbar';
+import NewsTicker from './components/NewsTicker/NewsTicker';
 import Footer from './components/Footer/Footer';
 import ScrollToTopBtn from './components/ScrollToTop/ScrollToTop';
 import Home from './pages/Home/Home';
@@ -16,7 +17,6 @@ import Programs from './pages/Programs/Programs';
 import Committees from './pages/Committees/Committees';
 import Membership from './pages/Membership/Membership';
 import NewsletterAdmin from './pages/NewsletterAdmin/NewsletterAdmin';
-import News from './pages/News/News';
 
 function ScrollManager() {
   const { pathname } = useLocation();
@@ -86,6 +86,7 @@ function App() {
       <ScrollManager />
       <TopBar />
       <Navbar />
+      <NewsTicker />
       <main id="main-content">
         <Routes>
           <Route path="/" element={<Home />} />
@@ -96,7 +97,6 @@ function App() {
           <Route path="/committees" element={<Committees />} />
           <Route path="/membership" element={<Membership />} />
           <Route path="/events" element={<Events />} />
-          <Route path="/news" element={<News />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/donate" element={<Donate />} />
           <Route path="/newsletter-admin" element={<NewsletterAdmin />} />

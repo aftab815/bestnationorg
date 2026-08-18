@@ -13,6 +13,7 @@ import divisionalLogo from '../assets/divisional.png';
 import districtLogo from '../assets/district.png';
 import tehsilLogo from '../assets/tehsil.png';
 import ucLogo from '../assets/uc.png';
+import siteLogo from '../assets/logo.png';
 
 /* Registration Form PDF */
 import registrationFormPDF from '../assets/Registerartion Form.pdf';
@@ -136,7 +137,7 @@ export const siteInfo = {
   taglineUrdu: "بہترین قوم کی تشکیل",
   address: "60-A, Street No. 5, Model Town Link Road, G.E.C.H.S. Phase 2, Lahore",
   phone: "0321-4190008, 0321-7777011",
-  email: "bestnationofficial@gmail.com",
+  email: "info@bestnationorg.com",
   registration: "Established under relevant Pakistan NGO/Welfare laws",
   hours: "Mon - Sat: 9:00 AM - 6:00 PM",
 };
@@ -211,7 +212,7 @@ export const heroSlides = [
     title: "Donate with Confidence, See Real Results",
     description: "Every fund is managed by audited field teams and delivered directly to families, clinics, and schools.",
     btn1: { text: "Donate Now", link: "/donate" },
-    btn2: { text: "Track Impact", link: "/news" },
+    btn2: { text: "Track Impact", link: "/programs" },
     bg: hero4,
   },
   {
@@ -246,7 +247,7 @@ export const corePrograms = {
     {
       id: 3,
       icon: "fas fa-quran",
-      title: "Quran-o-Sunnat Awareness & Spiritual Healing",
+      title: "Quran-o-Sunnat Awareness & Spiritual Healing Program",
       description: "Faith-based character-building and spiritual counselling rooted in Quranic teachings and Sunnah for moral and social development.",
       bgImage: "https://images.unsplash.com/photo-1609599006353-e629aaabfeae?auto=format&fit=crop&w=800&q=80",
     },
@@ -299,21 +300,21 @@ export const corePrograms = {
     {
       id: 10,
       icon: "fas fa-tractor",
-      title: "Kisan Dost Program for Livestock & Agriculture",
+      title: "Kisan Dost Program for Livestock & Agriculture Development",
       description: "Awareness campaigns and training sessions for farmers on modern livestock management and agricultural best practices to improve productivity and rural livelihoods.",
       bgImage: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=800&q=80",
     },
     {
       id: 11,
       icon: "fas fa-fist-raised",
-      title: "Youth Empowerment & Drug-Free Pakistan",
+      title: "Youth Empowerment and Drug-free Pakistan",
       description: "Skills development, entrepreneurship support, and anti-narcotics awareness campaigns that equip young people with productive opportunities and protect them from drug abuse.",
       bgImage: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80",
     },
     {
       id: 12,
       icon: "fas fa-balance-scale",
-      title: "Human Rights, Legal Support & Nikah Falah",
+      title: "Human Rights, Legal Support & Nikah Falah Program",
       description: "Free legal aid, human-rights advocacy, and facilitation of simple, affordable marriages (Nikah Falah) to reduce social and financial barriers.",
       bgImage: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80",
     },
@@ -402,16 +403,6 @@ export const parliamentTiers = {
       mandate: "Tehsil-level project delivery and local partnership building",
       logo: tehsilLogo,
     },
-    {
-      id: 7,
-      name: "Best Nation Union Council Parliament",
-      level: "Union Council",
-      minMembers: 240,
-      term: "1 Year",
-      mandateType: "Execution",
-      mandate: "Grassroots project execution, beneficiary identification, and community mobilization",
-      logo: ucLogo,
-    },
   ],
 };
 
@@ -439,12 +430,12 @@ export const eligibilityCriteria = [
 ];
 
 /* ──────────────────────────────────────────────
-   24 THEMATIC PROJECT COMMITTEES
+   24 THEMATIC WELFARE PROJECT COMMITTEES
    ────────────────────────────────────────────── */
 export const projectCommittees = [
   {
-    category: "Faith, Education & Skills",
-    icon: "fas fa-mosque",
+    category: "Faith, Education & Training",
+    icon: "fas fa-graduation-cap",
     color: "#0284C7",
     committees: [
       { id: 1, name: "Quran Sunnah Agahi Committee", bgImage: "https://images.unsplash.com/photo-1609599006353-e629aaabfeae?auto=format&fit=crop&w=800&q=80" },
@@ -471,27 +462,34 @@ export const projectCommittees = [
     icon: "fas fa-tree",
     color: "#10B981",
     committees: [
-      { id: 11, name: "Tree Plantation Committee", bgImage: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80" },
-      { id: 12, name: "Environment Protection Committee", bgImage: "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=80" },
-      { id: 13, name: "Clean Pakistan Committee", bgImage: "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=800&q=80" },
-      { id: 14, name: "Sports Experts Committee", bgImage: "https://images.unsplash.com/photo-1517649763962-0c623266010b?auto=format&fit=crop&w=800&q=80" },
-      { id: 15, name: "Culture Experts Committee", bgImage: "https://images.unsplash.com/photo-1469488865564-c2de10f69f96?auto=format&fit=crop&w=800&q=80" },
+      { id: 11, name: "Drug-Free Pakistan Committee", bgImage: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80" },
+      { id: 12, name: "Clean Green Pakistan Committee", bgImage: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80" },
+      { id: 13, name: "Sports Activities Committee", bgImage: "https://images.unsplash.com/photo-1517649763962-0c623266010b?auto=format&fit=crop&w=800&q=80" },
+      { id: 14, name: "Cultural Activities Committee", bgImage: "https://images.unsplash.com/photo-1469488865564-c2de10f69f96?auto=format&fit=crop&w=800&q=80" },
     ],
   },
   {
-    category: "Rights, Agriculture & Business",
-    icon: "fas fa-balance-scale",
+    category: "Economic & Livelihood Empowerment",
+    icon: "fas fa-briefcase",
     color: "#F59E0B",
     committees: [
-      { id: 16, name: "Human Rights Committee", bgImage: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80" },
-      { id: 17, name: "Legal Experts Committee", bgImage: "https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?auto=format&fit=crop&w=800&q=80" },
-      { id: 18, name: "Nikah Falah Program Committee", bgImage: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" },
-      { id: 19, name: "Anti-Narcotics Action Committee", bgImage: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80" },
-      { id: 20, name: "Kisan Support Committee", bgImage: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=800&q=80" },
-      { id: 21, name: "Livestock Experts Committee", bgImage: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=800&q=80" },
-      { id: 22, name: "Youth Skills & Livelihood Committee", bgImage: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" },
-      { id: 23, name: "Businessmen Advisory Committee", bgImage: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" },
-      { id: 24, name: "Women Empowerment Committee", bgImage: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" },
+      { id: 15, name: "Kisan Dost / Agricultural Experts Committee", bgImage: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=800&q=80" },
+      { id: 16, name: "SME Programs Committee", bgImage: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" },
+      { id: 17, name: "Traders Empowerment Committee", bgImage: "https://images.unsplash.com/photo-1556742049-0a67c5574f73?auto=format&fit=crop&w=800&q=80" },
+      { id: 18, name: "Industrialist Empowerment Committee", bgImage: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80" },
+      { id: 19, name: "Youth Empowerment Committee", bgImage: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" },
+      { id: 20, name: "Women Empowerment Committee", bgImage: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" },
+    ],
+  },
+  {
+    category: "Legal, Rights & Public Services",
+    icon: "fas fa-balance-scale",
+    color: "#8B5CF6",
+    committees: [
+      { id: 21, name: "Nikah Falah Program Committee", bgImage: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" },
+      { id: 22, name: "Rules of Law Implementation Committee", bgImage: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80" },
+      { id: 23, name: "Lawyers Legal Support Committee", bgImage: "https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?auto=format&fit=crop&w=800&q=80" },
+      { id: 24, name: "Public Basic Needs Relief Committee", bgImage: "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=800&q=80" },
     ],
   },
 ];
@@ -532,7 +530,7 @@ export const membershipTiers = [
     id: 4,
     tier: "Divisional Parliament",
     role: "Member",
-    fee: "PKR 12,000",
+    fee: "PKR 5,000",
     currency: "PKR",
     contribution: "Divisional execution oversight",
     level: "national",
@@ -541,7 +539,7 @@ export const membershipTiers = [
     id: 5,
     tier: "District Parliament",
     role: "Member",
-    fee: "PKR 9,000",
+    fee: "PKR 5,000",
     currency: "PKR",
     contribution: "District project execution & monitoring",
     level: "national",
@@ -550,27 +548,41 @@ export const membershipTiers = [
     id: 6,
     tier: "Tehsil Parliament",
     role: "Member",
-    fee: "PKR 6,000",
+    fee: "PKR 5,000",
     currency: "PKR",
     contribution: "Tehsil-level project delivery",
-    level: "national",
-  },
-  {
-    id: 7,
-    tier: "Union Council Parliament",
-    role: "Member",
-    fee: "PKR 3,000",
-    currency: "PKR",
-    contribution: "Grassroots execution & beneficiary outreach",
     level: "national",
   },
 ];
 
 export const accountabilityChain = [
-  { step: 1, title: "International Parliaments", subtitle: "Strategy & Fundraising", icon: "fas fa-globe" },
-  { step: 2, title: "Local Parliaments", subtitle: "Oversight & Coordination", icon: "fas fa-landmark" },
-  { step: 3, title: "Project Committees", subtitle: "Day-to-Day Execution", icon: "fas fa-tasks" },
-  { step: 4, title: "Communities & Beneficiaries", subtitle: "Impact & Outreach", icon: "fas fa-users" },
+  {
+    step: 1,
+    title: "International Parliaments",
+    subtitle: "Strategy & Fundraising",
+    logos: [worldParliamentLogo],
+    icon: "fas fa-globe",
+  },
+  {
+    step: 2,
+    title: "Local Parliaments",
+    subtitle: "Oversight & Coordination",
+    logos: [divisionalLogo, districtLogo, tehsilLogo],
+    icon: "fas fa-landmark",
+  },
+  {
+    step: 3,
+    title: "Project Committees",
+    subtitle: "Day-to-Day Execution",
+    logos: [siteLogo],
+    icon: "fas fa-tasks",
+  },
+  {
+    step: 4,
+    title: "Communities & Beneficiaries",
+    subtitle: "Impact & Outreach",
+    icon: "fas fa-users",
+  },
 ];
 
 export const stats = [

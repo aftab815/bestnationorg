@@ -30,22 +30,28 @@ const bankAccounts = [
 const Donate = () => {
   return (
     <div className="donate-page">
-      {/* ── Modern Hero Banner ───────────────── */}
-      <section className="parl-hero">
-        <div className="about-hero-bg">
+      {/* ── Bespoke Modern Donate Hero ─────────────── */}
+      <section className="donate-hero-modern">
+        <div className="donate-hero-bg">
           <img src={donateHero} alt="BNWO charity and donation support" />
-          <div className="about-hero-overlay"></div>
+          <div className="donate-hero-overlay"></div>
         </div>
         <div className="container">
-          <div className="parl-hero-content">
-            <span className="about-hero-badge">
-              <i className="fas fa-heart"></i> Make a Difference Today
-            </span>
+          <div className="donate-hero-content">
+            <div className="donate-hero-badge">
+              <span className="live-pulse-dot"></span>
+              <span>100% Donation Policy &bull; Shariah Verified &bull; SECP Registered</span>
+            </div>
             <h1>Support BNWO Initiatives</h1>
             <p>
-              Your generous contributions directly fund grassroots education, healthcare facilities,
-              and human rights welfare programs across Pakistan.
+              Your generous Zakat, Sadaqah, and contributions directly power grassroots education,
+              emergency healthcare, and poverty alleviation across Pakistan with 100% audit accountability.
             </p>
+            <div className="donate-hero-trust-chips">
+              <span className="trust-chip"><i className="fas fa-check-shield"></i> 100% Tax Exempt</span>
+              <span className="trust-chip"><i className="fas fa-hand-holding-heart"></i> Zakat &amp; Sadaqah Eligible</span>
+              <span className="trust-chip"><i className="fas fa-university"></i> Verified Corporate Accounts</span>
+            </div>
           </div>
         </div>
       </section>

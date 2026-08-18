@@ -15,22 +15,134 @@ import './About.css';
 const About = () => {
   return (
     <div className="about-page">
-      {/* ── Modern Hero Banner ─────────────────── */}
-      <section className="about-hero">
+      {/* ── Bespoke Modern About Hero ───────────────── */}
+      <section className="about-hero-modern">
         <div className="about-hero-bg">
-          <img src={aboutHero} alt="BNWO Team" />
+          <img src={aboutHero} alt="BNWO Leadership & Team" />
           <div className="about-hero-overlay"></div>
         </div>
         <div className="container">
-          <div className="about-hero-content">
-            <span className="about-hero-badge">
-              <i className="fas fa-shield-alt"></i> Registered NPO with SECP • Est. 2020
-            </span>
-            <h1>Empowering Communities Across Pakistan</h1>
-            <p>
-              Best Nation Welfare Organisation (BNWO) is dedicated to translating
-              compassion into structured, sustainable grassroots transformation.
-            </p>
+          <div className="about-hero-split">
+            <div className="about-hero-text">
+              <div className="about-hero-badge">
+                <span className="live-pulse-dot"></span>
+                <span>SECP Registered NPO &bull; Est. 2020 &bull; Lahore, Pakistan</span>
+              </div>
+              <h1>Translating Compassion into National Uplift</h1>
+              <p>
+                Best Nation Welfare Organisation (BNWO) is a faith-inspired civic-empowerment
+                platform delivering structured welfare, education, healthcare, and human-rights
+                support to underserved communities across Pakistan.
+              </p>
+              <div className="about-hero-actions">
+                <a href="#executive-summary" className="btn-donate">
+                  Executive Summary <i className="fas fa-file-alt"></i>
+                </a>
+                <Link to="/parliament" className="btn-glass">
+                  7-Tier Parliament <i className="fas fa-landmark"></i>
+                </Link>
+              </div>
+            </div>
+
+            <div className="about-hero-card-side">
+              <div className="about-hero-metric-card">
+                <div className="metric-header">
+                  <i className="fas fa-award"></i>
+                  <span>Nationwide Framework</span>
+                </div>
+                <div className="metric-grid-mini">
+                  <div className="metric-mini-item">
+                    <strong>7</strong>
+                    <small>Parliament Tiers</small>
+                  </div>
+                  <div className="metric-mini-item">
+                    <strong>12</strong>
+                    <small>Core Programs</small>
+                  </div>
+                  <div className="metric-mini-item">
+                    <strong>24</strong>
+                    <small>Project Committees</small>
+                  </div>
+                  <div className="metric-mini-item">
+                    <strong>100%</strong>
+                    <small>Audit Accountability</small>
+                  </div>
+                </div>
+                <div className="metric-card-footer">
+                  <i className="fas fa-check-circle"></i>
+                  <span>Serving All Provinces of Pakistan</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Executive Summary Section ──────────────── */}
+      <section className="about-exec-summary" id="executive-summary">
+        <div className="container">
+          <div className="exec-summary-card">
+            <div className="exec-summary-header">
+              <div className="exec-badge-wrap">
+                <span className="section-kicker accent">Concept Note &amp; Governance Charter</span>
+              </div>
+              <h2>Executive Summary</h2>
+              <div className="underline-left"></div>
+            </div>
+            
+            <div className="exec-summary-content">
+              <div className="exec-quote-bar"></div>
+              <div className="exec-paragraphs">
+                <p className="exec-lead-para">
+                  <strong>Best Nation Welfare Organization (BNWO)</strong> is a Pakistan-based, faith-inspired
+                  welfare and civic-empowerment platform established in 2020 and headquartered in Lahore.
+                  BNWO exists to translate individual compassion into collective national uplift &mdash;
+                  organizing volunteers, professionals, and community leaders into a structured,
+                  multi-tier network that delivers education, health, livelihood, and human-rights support
+                  to underprivileged families across Pakistan.
+                </p>
+                <p className="exec-sub-para">
+                  The organization operates through a nationwide governance structure of selected and
+                  appointed leadership bodies (&ldquo;Parliaments&rdquo;) at the International, divisional,
+                  district, tehsil, and union council levels, supported by twelve core welfare programs
+                  and a network of twenty-four thematic welfare project committees. This concept note
+                  presents BNWO&rsquo;s vision, mission, governance architecture, and program portfolio
+                  in a consolidated, professional format for use with partners, donors, and government
+                  stakeholders.
+                </p>
+              </div>
+            </div>
+
+            <div className="exec-pillars-grid">
+              <div className="exec-pillar-item">
+                <div className="exec-pillar-icon"><i className="fas fa-map-marker-alt"></i></div>
+                <div>
+                  <strong>Headquarters</strong>
+                  <span>Lahore, Pakistan</span>
+                </div>
+              </div>
+              <div className="exec-pillar-item">
+                <div className="exec-pillar-icon"><i className="fas fa-sitemap"></i></div>
+                <div>
+                  <strong>Governance</strong>
+                  <span>7 Parliament Tiers</span>
+                </div>
+              </div>
+              <div className="exec-pillar-item">
+                <div className="exec-pillar-icon"><i className="fas fa-hands-helping"></i></div>
+                <div>
+                  <strong>Welfare Delivery</strong>
+                  <span>12 Core Programs</span>
+                </div>
+              </div>
+              <div className="exec-pillar-item">
+                <div className="exec-pillar-icon"><i className="fas fa-users-cog"></i></div>
+                <div>
+                  <strong>Implementation</strong>
+                  <span>24 Project Committees</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -155,74 +267,7 @@ const About = () => {
 
       <Stats />
 
-      {/* ── Modern Timeline / Journey ───────────────────── */}
-      <section className="about-history" id="history">
-        <div className="container">
-          <div className="section-title">
-            <span className="section-kicker">Growth & Milestones</span>
-            <h2>Our Journey</h2>
-            <div className="underline"></div>
-            <p>Key achievements defining BNWO's evolution since establishment</p>
-          </div>
-          <div className="timeline">
-            <div className="timeline-item">
-              <div className="timeline-dot"></div>
-              <div className="timeline-content">
-                <span className="timeline-year">2020</span>
-                <h4>BNWO Founded & SECP Registered</h4>
-                <p>
-                  Established in Lahore as a faith-inspired welfare platform and
-                  formally registered with SECP as a non-profit organisation.
-                </p>
-              </div>
-            </div>
-            <div className="timeline-item">
-              <div className="timeline-dot"></div>
-              <div className="timeline-content">
-                <span className="timeline-year">2021</span>
-                <h4>Grassroots Welfare Drives Launched</h4>
-                <p>
-                  Initiated initial food support, literacy drives, and community health
-                  awareness campaigns across Punjab districts.
-                </p>
-              </div>
-            </div>
-            <div className="timeline-item">
-              <div className="timeline-dot"></div>
-              <div className="timeline-content">
-                <span className="timeline-year">2023</span>
-                <h4>7-Tier Parliament Model Chartered</h4>
-                <p>
-                  Formed the structured leadership model — Best Nation Parliaments —
-                  extending governance from international to Union Council tiers.
-                </p>
-              </div>
-            </div>
-            <div className="timeline-item">
-              <div className="timeline-dot"></div>
-              <div className="timeline-content">
-                <span className="timeline-year">2024</span>
-                <h4>24 Project Committees Activated</h4>
-                <p>
-                  All 24 thematic project committees deployed to oversee execution
-                  and technical delivery of 12 core welfare programs.
-                </p>
-              </div>
-            </div>
-            <div className="timeline-item">
-              <div className="timeline-dot"></div>
-              <div className="timeline-content">
-                <span className="timeline-year">2025–26</span>
-                <h4>Nationwide Alliances & Institutional Growth</h4>
-                <p>
-                  Forged Lahore Chamber of Commerce partnerships, expanded divisional
-                  parliaments, and crossed 12,000+ direct beneficiary lives.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* ── Modern Governance Banner CTA ─────── */}
       <section className="about-parliament-cta">

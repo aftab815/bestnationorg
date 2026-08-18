@@ -1,7 +1,409 @@
-/* ── BRIGHT NGO PARLIAMENT ──────────────── */
+/* ── BESPOKE PARLIAMENT HERO MODERN ──────── */
+.parl-hero-modern {
+  position: relative;
+  min-height: 520px;
+  padding: 100px 0 80px;
+  background: var(--navy-950);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.parl-hero-modern .parl-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.parl-hero-modern .parl-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.8) contrast(1.1);
+  transform: scale(1.03);
+  transition: transform 6s ease;
+}
+
+.parl-hero-modern:hover .parl-hero-bg img {
+  transform: scale(1.06);
+}
+
+.parl-hero-modern .parl-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(6, 27, 22, 0.82) 0%, rgba(8, 38, 31, 0.9) 60%, rgba(6, 24, 20, 0.98) 100%);
+  z-index: 1;
+}
+
+.parl-hero-modern .container {
+  position: relative;
+  z-index: 2;
+}
+
+.parl-hero-modern .parl-hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.parl-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(196, 127, 22, 0.2);
+  border: 1px solid rgba(233, 177, 74, 0.5);
+  backdrop-filter: blur(12px);
+  color: var(--accent-light);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 6px 18px;
+  border-radius: var(--radius-full);
+  margin-bottom: 20px;
+}
+
+.parl-hero-modern h1 {
+  color: #ffffff !important;
+  font-family: var(--font-heading) !important;
+  font-size: clamp(2.5rem, 5vw, 4.4rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.1 !important;
+  margin-bottom: 18px !important;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+.parl-hero-modern p {
+  color: rgba(255, 255, 255, 0.92) !important;
+  font-size: 1.1rem !important;
+  max-width: 740px;
+  line-height: 1.65;
+  margin-bottom: 24px;
+}
+
+.parl-hero-tier-pills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  margin: 0 auto 32px;
+  max-width: 820px;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.tier-pill {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+  font-size: 0.76rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.02em;
+  transition: all var(--transition-fast);
+}
+
+.tier-pill:hover {
+  background: rgba(255, 255, 255, 0.24);
+  border-color: var(--accent-light);
+  color: var(--accent-light);
+  transform: translateY(-2px);
+}
+
+.parl-hero-tier-pills i {
+  color: var(--accent-light);
+  font-size: 0.65rem;
+  opacity: 0.85;
+}
+
+.parl-hero-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* ── FORMATION & COMPOSITION SECTION ──── */
+.parl-formation-sec {
+  padding: 92px 0 60px;
+  background: #ffffff;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.formation-lead-desc {
+  font-size: 1.06rem;
+  color: var(--navy-950);
+  font-weight: 600;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.formation-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  margin-top: 40px;
+}
+
+.formation-pillar-card {
+  background: #ffffff;
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  padding: 40px 36px;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.formation-card--international {
+  border-top: 5px solid var(--primary);
+}
+
+.formation-card--local {
+  border-top: 5px solid var(--accent);
+}
+
+.formation-pillar-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.formation-card-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 16px;
+}
+
+.formation-icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  display: grid;
+  place-items: center;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.formation-card--international .formation-icon-wrap {
+  background: var(--primary-surface);
+  color: var(--primary);
+}
+
+.formation-card--local .formation-icon-wrap {
+  background: var(--accent-surface);
+  color: var(--accent);
+}
+
+.formation-icon-wrap--logo {
+  width: 62px;
+  height: 62px;
+  background: transparent !important;
+  border-radius: 50%;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.12));
+}
+
+.formation-tier-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.formation-icon-wrap--local-group {
+  width: auto;
+  height: auto;
+  background: transparent !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.formation-local-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.12));
+  transition: transform var(--transition-fast);
+}
+
+.formation-local-logo:hover {
+  transform: scale(1.12);
+}
+
+.formation-tier-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--slate-500);
+  margin-bottom: 4px;
+}
+
+.formation-card-header h3 {
+  font-size: 1.35rem;
+  color: var(--navy-950);
+  margin: 0;
+}
+
+.formation-subhead {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.formation-body-text {
+  font-size: 0.96rem;
+  color: var(--slate-700);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.formation-features {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.formation-feat-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--navy-950);
+}
+
+.formation-card--international .formation-feat-item i {
+  color: var(--primary);
+}
+.formation-card--local .formation-feat-item i {
+  color: var(--accent);
+}
+
+.formation-strategic-callout {
+  margin-top: 36px;
+  padding: 24px 30px;
+  background: var(--bg-main);
+  border: 1px solid var(--border-light);
+  border-left: 4px solid var(--primary);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.formation-strategic-callout i {
+  color: var(--primary);
+  font-size: 1.4rem;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.formation-strategic-callout p {
+  color: var(--slate-800);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ── CORE OFFICE-BEARERS STRUCTURE ────── */
+.parl-bearers-sec {
+  padding: 92px 0;
+  background: var(--bg-main);
+}
+
+.bearers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.bearer-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition);
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  position: relative;
+}
+
+.bearer-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary-border);
+  box-shadow: var(--shadow-md);
+}
+
+.bearer-icon-box {
+  width: 50px;
+  height: 50px;
+  border-radius: var(--radius-md);
+  background: var(--primary-surface);
+  color: var(--primary);
+  display: grid;
+  place-items: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.bearer-card:hover .bearer-icon-box {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+.bearer-rank {
+  font-family: var(--font-heading);
+  font-size: 0.76rem;
+  font-weight: 800;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.bearer-content h3 {
+  font-size: 1.15rem;
+  color: var(--navy-950);
+  margin: 4px 0 8px;
+}
+
+.bearer-content p {
+  font-size: 0.88rem;
+  color: var(--slate-600);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── PARLIAMENT TIERS GRIDS ────────────── */
 .parl-tier-section {
-  padding: 100px 0;
-  background: var(--bg-surface);
+  padding: 92px 0;
+  background: #ffffff;
 }
 
 .parl-tier-section--alt {
@@ -16,35 +418,46 @@
 }
 
 .parl-tier-card {
-  background: #FFFFFF;
-  border: 1px solid var(--border-light);
+  background: #ffffff;
+  border: 1.5px solid var(--border-light);
   border-radius: var(--radius-xl);
-  padding: 32px;
+  padding: 36px 30px;
   box-shadow: var(--shadow-sm);
-  transition: var(--transition);
+  transition: all var(--transition);
+  display: flex;
+  flex-direction: column;
 }
 
 .parl-tier-card:hover {
   transform: translateY(-6px);
+  border-color: var(--primary-border);
   box-shadow: var(--shadow-lg);
+}
+
+.parl-tier-card--strategic {
+  border-top: 4px solid var(--primary);
+}
+
+.parl-tier-card--execution {
+  border-top: 4px solid var(--accent);
 }
 
 .parl-card-header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 24px;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .parl-card-logo {
-  width: 64px;
-  height: 64px;
-  background: var(--bg-subtle);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  background: var(--bg-main);
+  border: 1px solid var(--border-light);
+  display: grid;
+  place-items: center;
+  padding: 6px;
 }
 
 .parl-card-logo img {
@@ -54,456 +467,341 @@
 }
 
 .parl-tier-badge {
-  padding: 6px 14px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
   background: var(--primary-surface);
   color: var(--primary);
-  font-size: 0.75rem;
-  font-weight: 700;
-  border-radius: var(--radius-full);
   text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 .parl-tier-badge--exec {
-  background: var(--secondary-surface);
-  color: var(--secondary);
+  background: var(--accent-surface);
+  color: var(--accent);
 }
 
 .parl-tier-card h3 {
   font-size: 1.35rem;
-  font-weight: 800;
-  margin-bottom: 8px;
-  color: var(--text-dark);
+  color: var(--navy-950);
+  margin-bottom: 6px;
 }
 
 .parl-tier-level {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 8px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--primary);
-  margin-bottom: 16px;
+  gap: 6px;
+  font-size: 0.78rem;
+  color: var(--slate-500);
+  font-weight: 700;
   text-transform: uppercase;
-}
-
-.parl-tier-card--execution .parl-tier-level {
-  color: var(--secondary);
+  letter-spacing: 0.05em;
+  margin-bottom: 16px;
 }
 
 .parl-tier-mandate {
-  font-size: 0.95rem;
-  color: var(--text-body);
-  line-height: 1.6;
+  font-size: 0.92rem;
+  color: var(--slate-600);
+  line-height: 1.65;
   margin-bottom: 24px;
+  flex-grow: 1;
 }
 
 .parl-tier-meta {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  padding-top: 24px;
+  gap: 12px;
+  padding-top: 18px;
   border-top: 1px solid var(--border-light);
 }
 
 .meta-box {
-  display: flex;
-  flex-direction: column;
+  background: var(--bg-main);
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  text-align: center;
 }
 
 .meta-box strong {
-  font-size: 1.15rem;
-  font-weight: 800;
-  color: var(--text-dark);
-  line-height: 1.2;
+  display: block;
+  font-size: 1rem;
+  color: var(--navy-950);
 }
 
 .meta-box span {
-  font-size: 0.75rem;
-  color: var(--text-muted);
+  display: block;
+  font-size: 0.68rem;
+  color: var(--slate-500);
   text-transform: uppercase;
-  font-weight: 600;
 }
 
-/* Chain */
+/* ── ACCOUNTABILITY CHAIN ──────────────── */
 .parl-chain {
-  padding: 100px 0;
-  background: var(--bg-surface);
+  padding: 92px 0;
+  background: #ffffff;
+  border-top: 1px solid var(--border-light);
 }
 
-.chain-flow {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.chain-flow-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 24px;
-  flex-wrap: wrap;
-  margin-top: 32px;
 }
 
 .chain-flow-item {
-  flex: 1;
-  min-width: 200px;
-  background: #FFFFFF;
+  background: var(--bg-main);
   border: 1px solid var(--border-light);
   border-radius: var(--radius-lg);
   padding: 32px 24px;
+  box-shadow: var(--shadow-sm);
   text-align: center;
   position: relative;
-  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+}
+
+.chain-flow-item:hover {
+  background: #ffffff;
+  border-color: var(--primary-border);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
 }
 
 .chain-step-badge {
-  position: absolute;
-  top: -14px;
-  left: 50%;
-  transform: translateX(-50%);
+  display: inline-block;
+  padding: 4px 12px;
   background: var(--primary);
-  color: #FFFFFF;
-  font-size: 0.75rem;
-  font-weight: 700;
-  padding: 4px 16px;
+  color: #ffffff;
   border-radius: var(--radius-full);
+  font-size: 0.72rem;
+  font-weight: 800;
+  margin-bottom: 16px;
 }
 
-.chain-flow-icon {
-  width: 64px;
-  height: 64px;
+.chain-flow-icon,
+.chain-icon {
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-  background: var(--primary-surface);
-  color: var(--primary);
+  background: #ffffff;
+  border: 1px solid var(--border-light);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
+  color: var(--primary);
   margin: 0 auto 16px;
+  padding: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
-.chain-flow-item h3 {
-  font-size: 1.15rem;
-  font-weight: 800;
-  margin-bottom: 8px;
+.chain-flow-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
-.chain-flow-item p {
-  font-size: 0.85rem;
-  color: var(--text-body);
+.chain-flow-logo-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  width: 100%;
+  height: 100%;
 }
 
-.chain-flow-arrow {
-  color: var(--border-light);
-  font-size: 1.4rem;
+.chain-flow-logo-sub {
+  width: 33%;
+  height: auto;
+  object-fit: contain;
 }
 
-/* Eligibility */
+.chain-flow-item h4 {
+  font-size: 1.1rem;
+  color: var(--navy-950);
+  margin-bottom: 6px;
+}
+
+.chain-flow-item span {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+/* ── ELIGIBILITY CRITERIA ──────────────── */
 .parl-eligibility {
-  padding: 100px 0;
+  padding: 92px 0;
   background: var(--bg-main);
   border-top: 1px solid var(--border-light);
 }
 
 .eligibility-grid {
   display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
-  gap: 64px;
-  align-items: center;
-}
-
-.eligibility-text p {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: var(--text-body);
-}
-
-.eligibility-list {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
 }
 
 .eligibility-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-  padding: 20px;
-  background: #FFFFFF;
-  border-radius: var(--radius-md);
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 32px 26px;
   box-shadow: var(--shadow-sm);
-  border-left: 4px solid var(--secondary);
+  transition: all var(--transition);
 }
 
-.eligibility-check {
-  color: var(--secondary);
-  font-size: 1.2rem;
-  margin-top: 2px;
+.eligibility-item:hover {
+  border-color: var(--primary-border);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.eligibility-item h3 {
+  font-size: 1.15rem;
+  color: var(--navy-950);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.eligibility-item h3 i {
+  color: var(--primary);
 }
 
 .eligibility-item p {
-  font-size: 0.95rem;
-  color: var(--text-dark);
-  font-weight: 500;
-  margin: 0;
-}
-
-/* Registration */
-.parl-registration {
-  padding: 100px 0;
-  background: var(--primary);
-  color: #FFFFFF;
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-}
-
-.reg-floating-orb {
-  display: none;
-}
-
-.reg-hero-header {
-  margin-bottom: 56px;
-}
-
-.reg-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 16px;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: var(--radius-full);
-  font-size: 0.85rem;
-  font-weight: 700;
-  margin-bottom: 24px;
-}
-
-.reg-hero-header h2 {
-  font-size: clamp(2rem, 4vw, 2.8rem);
-  font-weight: 800;
-  margin-bottom: 16px;
-  color: #FFFFFF;
-}
-
-.reg-hero-header h2 span {
-  color: var(--accent);
-}
-
-.reg-hero-header p {
-  font-size: 1.1rem;
-  max-width: 600px;
-  margin: 0 auto;
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.reg-steps-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 24px;
-  max-width: 900px;
-  margin: 0 auto 48px;
-}
-
-.reg-step-card {
-  flex: 1;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: var(--radius-lg);
-  padding: 32px 24px;
-}
-
-.reg-step-icon {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: #FFFFFF;
-  color: var(--primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.4rem;
-  margin: 0 auto 16px;
-}
-
-.reg-step-num {
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: rgba(255, 255, 255, 0.7);
-  margin-bottom: 8px;
-}
-
-.reg-step-card h4 {
-  font-size: 1.15rem;
-  font-weight: 800;
-  color: #FFFFFF;
-  margin-bottom: 8px;
-}
-
-.reg-step-card p {
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.8);
-  line-height: 1.5;
-  margin: 0;
-}
-
-.reg-step-connector {
-  color: rgba(255, 255, 255, 0.3);
-  font-size: 1.4rem;
-}
-
-.reg-download-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  padding: 16px 40px;
-  background: var(--accent);
-  color: #FFFFFF;
-  font-family: var(--font-heading);
-  font-weight: 800;
-  font-size: 1.1rem;
-  border-radius: var(--radius-full);
-  box-shadow: 0 4px 14px rgba(255, 107, 53, 0.4);
-  transition: var(--transition);
-}
-
-.reg-download-btn:hover {
-  background: var(--accent-hover);
-  transform: translateY(-2px);
-}
-
-.reg-hq-strip {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 32px;
-  margin-top: 48px;
-  flex-wrap: wrap;
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--slate-600);
+  line-height: 1.65;
+  margin: 0;
 }
 
-.reg-hq-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-/* Join */
+/* ── JOIN SECTION ──────────────────────── */
 .parl-join {
-  padding: 100px 0;
-  background: var(--bg-surface);
-  text-align: center;
+  padding: 80px 0;
+  background: var(--navy-950);
+  color: #ffffff;
 }
 
-.parl-join h2 {
-  font-size: 2.2rem;
-  font-weight: 800;
-  margin-bottom: 16px;
-}
-
-.parl-join p {
-  font-size: 1.1rem;
-  color: var(--text-body);
-  max-width: 600px;
-  margin: 0 auto 32px;
-}
-
-.parl-join-actions {
+.join-inner {
   display: flex;
-  justify-content: center;
-  gap: 16px;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
 }
 
-@media (max-width: 992px) {
+.join-text h2 {
+  color: #ffffff !important;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  margin-bottom: 10px;
+}
+
+.join-text p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.02rem;
+  max-width: 680px;
+  margin: 0;
+}
+
+.join-actions {
+  display: flex;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+/* ── RESPONSIVE ────────────────────────── */
+@media (max-width: 1024px) {
+  .formation-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .bearers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .parl-tier-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  .eligibility-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .reg-steps-row {
-    flex-direction: column;
-  }
-
-  .reg-step-connector {
-    display: none;
-  }
-}
-
-@media (max-width: 768px) {
-
-  .parl-tier-section,
-  .parl-chain,
-  .parl-eligibility,
-  .parl-registration,
-  .parl-join {
-    padding: 60px 0;
-  }
-
-  .parl-tier-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .chain-flow {
-    flex-direction: column;
-  }
-
-  .chain-flow-arrow {
-    transform: rotate(90deg);
-    margin: 8px 0;
-  }
-}
-
-@media (max-width: 992px) {
-  .parl-tier-grid {
+  .chain-flow-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
   .eligibility-grid {
     grid-template-columns: 1fr;
-    gap: 36px;
   }
-
-  .reg-steps-row {
+  .join-inner {
     flex-direction: column;
-  }
-
-  .reg-step-connector {
-    display: none;
+    text-align: center;
   }
 }
 
-@media (max-width: 768px) {
-  .parliament-page .parl-hero {
-    min-height: 290px;
+@media (max-width: 640px) {
+  .parl-formation-sec,
+  .parl-bearers-sec,
+  .parl-tiers-sec,
+  .parl-chain-sec,
+  .parl-eligibility-sec,
+  .parl-join-sec {
+    padding: 50px 0;
   }
-
-  .parl-card-logo {
-    width: 64px;
-    height: 64px;
+  .formation-card {
+    padding: 22px 18px;
+    border-radius: var(--radius-lg);
   }
-
-  .parl-tier-section,
-  .parl-chain,
-  .parl-eligibility,
-  .parl-registration,
-  .parl-join {
-    padding: 56px 0;
+  .formation-strategic-callout {
+    padding: 16px 14px;
+    margin-top: 20px;
+    gap: 12px;
   }
-
+  .formation-strategic-callout p {
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
+  .bearers-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .bearer-card {
+    padding: 18px 16px;
+    gap: 14px;
+  }
+  .bearer-icon-wrap {
+    width: 42px;
+    height: 42px;
+    font-size: 1.1rem;
+  }
+  .bearer-content h3 {
+    font-size: 1.05rem;
+  }
+  .bearer-content p {
+    font-size: 0.84rem;
+    line-height: 1.5;
+  }
   .parl-tier-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
-
-  .chain-flow {
+  .parl-tier-card {
+    padding: 20px 18px;
+  }
+  .chain-flow-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .chain-flow-item {
+    padding: 18px 16px;
+  }
+  .eligibility-card {
+    padding: 22px 18px;
+  }
+  .parl-hero-modern {
+    padding: 60px 0 42px;
+  }
+  .parl-hero-tier-pills {
+    padding: 8px 12px;
+    gap: 6px;
+  }
+  .join-actions {
     flex-direction: column;
-  }
-
-  .chain-flow-arrow {
-    transform: rotate(90deg);
-    margin: 6px 0;
+    width: 100%;
   }
 }

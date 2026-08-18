@@ -45,22 +45,114 @@ const Contact = () => {
 
   return (
     <div className="contact-page">
-      {/* ── Modern Hero Banner ───────────────── */}
-      <section className="parl-hero">
-        <div className="about-hero-bg">
+      {/* ── Bespoke Modern Contact Hero ────────────── */}
+      <section className="contact-hero-modern">
+        <div className="contact-hero-bg">
           <img src={contactHero} alt="BNWO contact support and community outreach" />
-          <div className="about-hero-overlay"></div>
+          <div className="contact-hero-overlay"></div>
         </div>
         <div className="container">
-          <div className="parl-hero-content">
-            <span className="about-hero-badge">
-              <i className="fas fa-headset"></i> Direct Support & Inquiries
-            </span>
-            <h1>Get in Touch with BNWO</h1>
-            <p>
-              We’d love to hear from you. Reach out for parliamentary membership inquiries,
-              volunteering, corporate partnerships, or donation support across Pakistan.
-            </p>
+          <div className="contact-hero-split">
+            <div className="contact-hero-text">
+              <div className="contact-hero-badge">
+                <span className="live-pulse-dot"></span>
+                <span>Central Secretariat &bull; Lahore Headquarters</span>
+              </div>
+              <h1>Direct Connect &amp; Inquiry Portal</h1>
+              <p>
+                Reach out to our leadership, provincial secretariats, and project committees for
+                memberships, volunteering, partnerships, or beneficiary support across Pakistan.
+              </p>
+              <div className="contact-quick-chips">
+                <a href="tel:03214190008" className="quick-chip">
+                  <i className="fas fa-phone-alt"></i> 0321-4190008
+                </a>
+                <a href="mailto:info@bestnationorg.com" className="quick-chip">
+                  <i className="fas fa-envelope"></i> info@bestnationorg.com
+                </a>
+                <span className="quick-chip status-chip">
+                  <i className="fas fa-clock"></i> Mon &ndash; Sat: 9AM &ndash; 6PM
+                </span>
+              </div>
+            </div>
+
+            <div className="contact-hero-card-side">
+              <div className="contact-card-glass">
+                <div className="glass-card-header">
+                  <i className="fas fa-landmark"></i>
+                  <span>National Secretariat</span>
+                </div>
+                <h4>Best Nation Welfare Organisation</h4>
+                <p className="glass-card-address">
+                  60-A, Street No. 5, Model Town Link Road, G.E.C.H.S. Phase 2, Lahore, Pakistan
+                </p>
+                <div className="glass-card-meta">
+                  <div>
+                    <strong>100%</strong>
+                    <small>Response Rate</small>
+                  </div>
+                  <div>
+                    <strong>24/7</strong>
+                    <small>Emergency Desk</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Leadership & Governance Section ───────────── */}
+      <section className="contact-leadership-sec">
+        <div className="container">
+          <div className="leadership-card">
+            <div className="leadership-badge-wrap">
+              <span className="section-kicker accent">Executive Direction</span>
+            </div>
+            <h2>Leadership &amp; Governance</h2>
+            <div className="underline-left"></div>
+            
+            <div className="leadership-content-grid">
+              <div className="leadership-lead-box">
+                <p className="leadership-lead-para">
+                  <strong>Best Nation Welfare Organization (BNWO)</strong> is led by a national Chairman
+                  supported by a network of international, divisional, district, tehsil, and union council
+                  leadership across all Parliament tiers. The Chairman’s office holds overall responsibility
+                  for strategic direction, partnerships, and organizational integrity, while committee and
+                  parliament leadership at each level is responsible for local program design, delivery, and
+                  monitoring.
+                </p>
+                <p className="leadership-sub-para">
+                  The organization is committed to transparency, accountability, and excellence in all its
+                  endeavors, upholding the values of compassion, integrity, and responsibility in service to the
+                  deprived communities of Pakistan.
+                </p>
+              </div>
+
+              <div className="leadership-pillars-col">
+                <div className="leadership-pill-item">
+                  <i className="fas fa-user-shield"></i>
+                  <div>
+                    <strong>National Chairman's Office</strong>
+                    <span>Strategic Direction &amp; Global MOUs</span>
+                  </div>
+                </div>
+                <div className="leadership-pill-item">
+                  <i className="fas fa-sitemap"></i>
+                  <div>
+                    <strong>7-Tier Parliament Leadership</strong>
+                    <span>Decentralized Oversight &amp; Audit</span>
+                  </div>
+                </div>
+                <div className="leadership-pill-item">
+                  <i className="fas fa-balance-scale"></i>
+                  <div>
+                    <strong>24 Thematic Committees</strong>
+                    <span>Local Program Design &amp; Delivery</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

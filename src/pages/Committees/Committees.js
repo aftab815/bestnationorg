@@ -9,22 +9,161 @@ import './Committees.css';
 const Committees = () => {
   return (
     <div className="committees-page">
-      {/* ── Modern Hero Banner ───────────────── */}
-      <section className="parl-hero">
-        <div className="about-hero-bg">
+      {/* ── Bespoke Modern Committees Hero ─────────── */}
+      <section className="cmte-hero-modern">
+        <div className="cmte-hero-bg">
           <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80" alt="BNWO Committees" />
-          <div className="about-hero-overlay"></div>
+          <div className="cmte-hero-overlay"></div>
         </div>
         <div className="container">
-          <div className="parl-hero-content">
-            <span className="about-hero-badge">
-              <i className="fas fa-layer-group"></i> 24 Project Committees
-            </span>
+          <div className="cmte-hero-content">
+            <div className="cmte-hero-badge">
+              <span className="live-pulse-dot"></span>
+              <span>24 Specialized Project Committees &bull; Nationwide Deployment</span>
+            </div>
             <h1>Thematic Project Committees</h1>
             <p>
-              The technical execution arm of BNWO — 24 specialized committees
-              replicated across Divisional, District, Tehsil, and Union Council Parliaments.
+              The direct execution and technical delivery arm of BNWO &mdash; specialized committees
+              replicated across Divisional, District, and Tehsil Parliaments.
             </p>
+            <div className="cmte-hero-actions">
+              <a href="#formation-composition" className="btn-donate">
+                Formation &amp; Rules <i className="fas fa-tasks"></i>
+              </a>
+              <a href="#accountability-chain" className="btn-glass">
+                8.3 Reporting Chain <i className="fas fa-project-diagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Committees Formation & Composition Section ─ */}
+      <section className="cmte-formation-sec" id="formation-composition">
+        <div className="container">
+          <div className="section-title">
+            <span className="section-kicker accent">Operational Charter</span>
+            <h2>Committees Formation &amp; Composition</h2>
+            <div className="underline"></div>
+            <p>The operational framework governing every thematic committee across all local Parliament tiers</p>
+          </div>
+
+          <div className="cmte-rules-grid">
+            <div className="cmte-rule-card">
+              <div className="cmte-rule-num">01</div>
+              <div className="cmte-rule-icon"><i className="fas fa-sitemap"></i></div>
+              <h3>Local Tier Subordination</h3>
+              <p>
+                Each Committee is formed under, and reports directly to, the <strong>Divisional, District,
+                or Tehsil Parliament</strong> of its area &mdash; the same committee structure is systematically
+                replicated at every local tier.
+              </p>
+            </div>
+
+            <div className="cmte-rule-card">
+              <div className="cmte-rule-num">02</div>
+              <div className="cmte-rule-icon"><i className="fas fa-user-md"></i></div>
+              <h3>Professional Convenorship</h3>
+              <p>
+                Committees are chaired by a <strong>Convenor appointed by the respective Parliament&rsquo;s Chairman</strong>,
+                typically a subject-matter volunteer or professional (e.g. a doctor for Doctors Empowerment, an
+                Ulema scholar for Quran Sunnah Agahi, a lawyer for Legal Support).
+              </p>
+            </div>
+
+            <div className="cmte-rule-card">
+              <div className="cmte-rule-num">03</div>
+              <div className="cmte-rule-icon"><i className="fas fa-users"></i></div>
+              <h3>5&ndash;11 Member Quorum</h3>
+              <p>
+                Each Committee is composed of <strong>5&ndash;11 active members</strong>, combining dedicated local volunteers
+                with relevant technical, professional, or grassroots community expertise.
+              </p>
+            </div>
+
+            <div className="cmte-rule-card">
+              <div className="cmte-rule-num">04</div>
+              <div className="cmte-rule-icon"><i className="fas fa-check-double"></i></div>
+              <h3>Formal Parliament Endorsement</h3>
+              <p>
+                A Committee becomes officially active once its <strong>Convenor and at least five members</strong> are
+                confirmed, vetted, and formally endorsed by the respective local Parliament.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 8.3 Reporting & Accountability Chain Section ── */}
+      <section className="cmte-reporting-sec" id="accountability-chain">
+        <div className="container">
+          <div className="reporting-card-wrap">
+            <div className="section-title text-left">
+              <span className="section-kicker">Section 8.3 Charter</span>
+              <h2>8.3 Reporting &amp; Accountability</h2>
+              <div className="underline-left"></div>
+              <p className="reporting-lead-text">
+                Committees submit progress reports to their local Parliament on a <strong>monthly basis</strong>, which are
+                consolidated and escalated <strong>quarterly</strong> to the Divisional and, where relevant, World Cities/States
+                Parliament for strategic visibility and donor reporting. This creates a single accountability chain:
+              </p>
+            </div>
+
+            {/* Visual 4-Stage Single Accountability Chain */}
+            <div className="single-chain-grid">
+              <div className="single-chain-step">
+                <div className="chain-badge-tag">Stage 1</div>
+                <div className="chain-step-icon"><i className="fas fa-globe"></i></div>
+                <h4>International Parliaments</h4>
+                <span className="chain-step-role">Strategy &amp; Fundraising</span>
+                <p>Strategic decision-making, global MOUs, and flagship financing.</p>
+              </div>
+
+              <div className="chain-arrow-divider">
+                <i className="fas fa-arrow-right"></i>
+              </div>
+
+              <div className="single-chain-step">
+                <div className="chain-badge-tag">Stage 2</div>
+                <div className="chain-step-icon"><i className="fas fa-landmark"></i></div>
+                <h4>Regional &amp; Local Parliaments</h4>
+                <span className="chain-step-role">Governance &amp; Oversight</span>
+                <p>Divisional, District, Tehsil &amp; UC Parliaments monitoring progress.</p>
+              </div>
+
+              <div className="chain-arrow-divider">
+                <i className="fas fa-arrow-right"></i>
+              </div>
+
+              <div className="single-chain-step">
+                <div className="chain-badge-tag">Stage 3</div>
+                <div className="chain-step-icon"><i className="fas fa-cogs"></i></div>
+                <h4>Thematic Project Committees</h4>
+                <span className="chain-step-role">Field Execution</span>
+                <p>24 Committees delivering core programs on ground.</p>
+              </div>
+
+              <div className="chain-arrow-divider">
+                <i className="fas fa-arrow-right"></i>
+              </div>
+
+              <div className="single-chain-step highlight">
+                <div className="chain-badge-tag accent">Stage 4</div>
+                <div className="chain-step-icon"><i className="fas fa-hands-helping"></i></div>
+                <h4>Communities &amp; Beneficiaries</h4>
+                <span className="chain-step-role">Direct Impact</span>
+                <p>Deserving families receiving sustainable welfare support.</p>
+              </div>
+            </div>
+
+            <div className="reporting-footer-box">
+              <i className="fas fa-shield-alt"></i>
+              <p>
+                <strong>Accountability Guarantee:</strong> This structure keeps strategic decision-making and fundraising
+                concentrated at the international level, while ensuring every rupee raised is translated into monitored,
+                locally accountable action through the Parliament-Committee chain.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -167,7 +306,17 @@ const Committees = () => {
                 <div className="chain-flow-item">
                   <div className="chain-step-badge">Step 0{item.step}</div>
                   <div className="chain-flow-icon">
-                    <i className={item.icon}></i>
+                    {item.logos && item.logos.length === 1 ? (
+                      <img src={item.logos[0]} alt={item.title} className="chain-flow-logo" />
+                    ) : item.logos && item.logos.length > 1 ? (
+                      <div className="chain-flow-logo-group">
+                        {item.logos.map((logo, lIdx) => (
+                          <img key={lIdx} src={logo} alt={item.title} className="chain-flow-logo-sub" />
+                        ))}
+                      </div>
+                    ) : (
+                      <i className={item.icon}></i>
+                    )}
                   </div>
                   <h3>{item.title}</h3>
                   <p>{item.subtitle}</p>
