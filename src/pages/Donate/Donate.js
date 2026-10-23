@@ -1,5 +1,6 @@
 import React from 'react';
 import Newsletter from '../../components/Newsletter/Newsletter';
+import PayProDonationForm from '../../components/PayProDonation/PayProDonationForm';
 import payproLogo from '../../assets/paypro.jpg';
 import faysalBankLogo from '../../assets/faysal bank.png';
 import uBankLogo from '../../assets/u bank.jpg';
@@ -56,17 +57,31 @@ const Donate = () => {
         </div>
       </section>
 
-      <section className="donate-paypro">
+      {/* ── Direct PayPro Online Donation Section ── */}
+      <section className="donate-paypro-section" id="paypro-section">
         <div className="container">
-          <div className="paypro-top-card">
-            <img src={payproLogo} alt="PayPro" className="paypro-logo" />
+          <div className="section-title text-center">
+            <h2>Online Fast Donation</h2>
+            <div className="underline"></div>
+            <p className="section-subtitle">
+              Instant direct contribution via PayPro Pakistan gateway. Pay with JazzCash, EasyPaisa,
+              1Link 1Bill, or Debit / Credit Cards.
+            </p>
+          </div>
+
+          <PayProDonationForm />
+
+          {/* Quick fallback option */}
+          <div className="paypro-portal-alternative">
+            <img src={payproLogo} alt="PayPro Gateway" className="paypro-alt-logo" />
+            <span>Prefer the official PayPro hosted portal directly?</span>
             <a
               href="https://billing.paypro.com.pk/donation/best-nation-welfare-organization/"
               target="_blank"
               rel="noreferrer"
-              className="paypro-btn"
+              className="paypro-alt-link"
             >
-              Donate Now
+              Open BNWO PayPro Portal <i className="fas fa-external-link-alt"></i>
             </a>
           </div>
         </div>

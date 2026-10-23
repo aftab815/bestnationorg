@@ -17,7 +17,8 @@ bnwo-cpanel-deploy.zip
 .env
 .env.*
 
-# Logs
+# Local data & logs
+data/
 */logs
 *.log
 

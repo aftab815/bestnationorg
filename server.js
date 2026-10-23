@@ -5,12 +5,13 @@ const fs = require("fs");
 const nodemailer = require("nodemailer");
 
 const app = express();
-const port = Number(process.env.PORT) || 5000;
 const isProduction = process.env.NODE_ENV === "production";
+const port = Number(process.env.API_PORT || (isProduction ? process.env.PORT : 5000)) || 5000;
 
 const buildDir = path.join(__dirname, "build");
 const dataDir = path.join(__dirname, "data");
 const subscribersFile = path.join(dataDir, "newsletter-subscribers.json");
+const donationsFile = path.join(dataDir, "paypro-donations.json");
 
 app.use(express.json());
 
@@ -39,6 +40,95 @@ function readSubscribers() {
 function writeSubscribers(list) {
   ensureSubscribersStore();
   fs.writeFileSync(subscribersFile, JSON.stringify(list, null, 2), "utf8");
+}
+
+function ensureDonationsStore() {
+  if (!fs.existsSync(dataDir)) {
+    fs.mkdirSync(dataDir, { recursive: true });
+  }
+  if (!fs.existsSync(donationsFile)) {
+    fs.writeFileSync(donationsFile, "[]", "utf8");
+  }
+}
+
+function readDonations() {
+  ensureDonationsStore();
+  const raw = fs.readFileSync(donationsFile, "utf8");
+  try {
+    const parsed = JSON.parse(raw);
+    return Array.isArray(parsed) ? parsed : [];
+  } catch (err) {
+    return [];
+  }
+}
+
+function saveDonation(record) {
+  const donations = readDonations();
+  donations.unshift(record);
+  // Keep last 500 donations
+  const trimmed = donations.slice(0, 500);
+  ensureDonationsStore();
+  fs.writeFileSync(donationsFile, JSON.stringify(trimmed, null, 2), "utf8");
+}
+
+function getPayProConfig() {
+  const value = (input) => String(input || "").trim();
+  const rawBase = value(process.env.PAYPRO_BASE_URL) || "https://api.paypro.com.pk";
+  const baseUrl = rawBase.replace(/\/+$/, "");
+  const clientId = value(process.env.PAYPRO_CLIENT_ID);
+  const clientSecret = value(process.env.PAYPRO_CLIENT_SECRET);
+  const merchantId = value(process.env.PAYPRO_MERCHANT_ID);
+  const fallbackUrl =
+    value(process.env.PAYPRO_HOSTED_URL) ||
+    "https://billing.paypro.com.pk/donation/best-nation-welfare-organization/";
+
+  const isConfigured = Boolean(clientId && clientSecret && merchantId);
+
+  return {
+    baseUrl,
+    clientId,
+    clientSecret,
+    merchantId,
+    fallbackUrl,
+    isConfigured,
+  };
+}
+
+async function fetchPayProAuthToken(config) {
+  const authUrl = `${config.baseUrl}/v2/ppro/auth`;
+  const response = await fetch(authUrl, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      clientid: config.clientId,
+      clientsecret: config.clientSecret,
+    },
+    body: JSON.stringify({
+      clientid: config.clientId,
+      clientsecret: config.clientSecret,
+    }),
+  });
+
+  const headerToken = response.headers.get("token") || response.headers.get("Token");
+  let bodyJson = null;
+  try {
+    bodyJson = await response.json();
+  } catch (e) {
+    // Body may be empty or non-JSON
+  }
+
+  const bodyToken = Array.isArray(bodyJson)
+    ? bodyJson[0]?.token || bodyJson[0]?.Token
+    : bodyJson?.token || bodyJson?.Token;
+
+  const token = headerToken || bodyToken;
+
+  if (!token) {
+    const detail = bodyJson ? JSON.stringify(bodyJson) : `HTTP ${response.status} ${response.statusText}`;
+    throw new Error(`PayPro authentication failed: ${detail}`);
+  }
+
+  return token;
 }
 
 function getMailerConfig() {
@@ -181,6 +271,273 @@ app.post("/api/newsletter/broadcast", async (req, res) => {
       message: "SMTP connection failed. Verify host/port/security/user/pass and cPanel outbound mail settings.",
     });
   }
+});
+
+// ── PAYPRO INTEGRATION API ───────────────────────────────────────────────────
+
+// 1. Check PayPro status & configuration (safe public metadata)
+app.get("/api/paypro/status", (req, res) => {
+  const config = getPayProConfig();
+  return res.json({
+    configured: config.isConfigured,
+    hasClientId: Boolean(config.clientId),
+    hasClientSecret: Boolean(config.clientSecret),
+    hasMerchantId: Boolean(config.merchantId),
+    baseUrl: config.baseUrl,
+    fallbackUrl: config.fallbackUrl,
+  });
+});
+
+// 2. Direct PayPro Order Creation & Token Fetching
+app.post("/api/paypro/create-order", async (req, res) => {
+  try {
+    const config = getPayProConfig();
+
+    const amountNum = Number(req.body?.amount);
+    const donorName = String(req.body?.donorName || req.body?.name || "").trim();
+    const donorEmail = String(req.body?.donorEmail || req.body?.email || "").trim().toLowerCase();
+    const donorMobile = String(req.body?.donorMobile || req.body?.mobile || req.body?.phone || "").trim();
+    const donorAddress = String(req.body?.donorAddress || req.body?.address || req.body?.city || "").trim();
+    const cause = String(req.body?.cause || "General Donation").trim();
+    const isAnonymous = Boolean(req.body?.isAnonymous);
+    const notes = String(req.body?.notes || "").trim();
+
+    // Validation
+    if (!amountNum || isNaN(amountNum) || amountNum < 50) {
+      return res.status(400).json({
+        ok: false,
+        message: "Please enter a valid donation amount (minimum PKR 50).",
+      });
+    }
+
+    if (!donorName) {
+      return res.status(400).json({
+        ok: false,
+        message: "Donor name is required.",
+      });
+    }
+
+    const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(donorEmail);
+    if (!isEmailValid) {
+      return res.status(400).json({
+        ok: false,
+        message: "A valid email address is required for payment confirmation.",
+      });
+    }
+
+    // Check if credentials are ready
+    if (!config.isConfigured) {
+      return res.status(200).json({
+        ok: false,
+        configured: false,
+        message:
+          "PayPro credentials (PAYPRO_CLIENT_ID, PAYPRO_CLIENT_SECRET, PAYPRO_MERCHANT_ID) are not configured in .env yet.",
+        fallbackUrl: config.fallbackUrl,
+      });
+    }
+
+    // 1. Authenticate with PayPro to obtain Bearer/Auth Token
+    let token;
+    try {
+      token = await fetchPayProAuthToken(config);
+    } catch (authErr) {
+      console.error("PayPro auth error:", authErr.message);
+      return res.status(502).json({
+        ok: false,
+        message: `PayPro gateway authentication failed: ${authErr.message}`,
+        fallbackUrl: config.fallbackUrl,
+      });
+    }
+
+    // 2. Format Order Details
+    const uniqueOrderNumber = `BNWO-${Date.now().toString().slice(-7)}-${Math.floor(1000 + Math.random() * 9000)}`;
+
+    const now = new Date();
+    const pad = (n) => String(n).padStart(2, "0");
+    const formatDate = (d) => `${d.getFullYear()}/${pad(d.getMonth() + 1)}/${pad(d.getDate())}`;
+    const issueDate = formatDate(now);
+    const dueDate = formatDate(new Date(now.getTime() + 14 * 24 * 60 * 60 * 1000)); // 14 days validity
+
+    const cleanMobile = donorMobile.replace(/[^0-9]/g, "") || "03000000000";
+
+    const payload = [
+      {
+        MerchantId: config.merchantId,
+        AutoRedirect: "1",
+      },
+      {
+        OrderNumber: uniqueOrderNumber,
+        OrderAmount: String(Math.round(amountNum)),
+        OrderDueDate: dueDate,
+        OrderType: "Service",
+        IssueDate: issueDate,
+        OrderExpireAfterSeconds: "0",
+        CustomerName: isAnonymous ? "Anonymous Donor" : donorName,
+        CustomerMobile: cleanMobile,
+        CustomerEmail: donorEmail,
+        CustomerAddress: donorAddress || (cause ? `Donation for ${cause}` : "Pakistan"),
+      },
+    ];
+
+    // 3. Send Create Order request to PayPro
+    const coUrl = `${config.baseUrl}/v2/ppro/co`;
+    const coResponse = await fetch(coUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        token: token,
+      },
+      body: JSON.stringify(payload),
+    });
+
+    const coRaw = await coResponse.text();
+    let coData;
+    try {
+      coData = JSON.parse(coRaw);
+    } catch (parseErr) {
+      console.error("PayPro CO returned non-JSON:", coRaw);
+      return res.status(502).json({
+        ok: false,
+        message: "PayPro returned an unexpected response format.",
+        raw: coRaw.slice(0, 300),
+        fallbackUrl: config.fallbackUrl,
+      });
+    }
+
+    // PayPro v2 response structure:
+    // [ { Status: "00" }, { Click2Pay: "...", short_Click2Pay: "...", PayProId: "...", ConnectPayId: "..." } ]
+    const statusObj = Array.isArray(coData) ? coData[0] : coData;
+    const detailsObj = Array.isArray(coData) && coData.length > 1 ? coData[1] : statusObj;
+
+    const status = String(statusObj?.Status || detailsObj?.Status || "");
+    const description = statusObj?.Description || detailsObj?.Description || "Order processed";
+    const paymentUrl =
+      detailsObj?.Click2Pay ||
+      detailsObj?.short_Click2Pay ||
+      detailsObj?.ConnectPayUrl ||
+      detailsObj?.IframeClick2Pay ||
+      statusObj?.Click2Pay ||
+      null;
+    const connectPayId =
+      detailsObj?.ConnectPayId ||
+      detailsObj?.PayProId ||
+      statusObj?.ConnectPayId ||
+      null;
+    const invoiceId = detailsObj?.InvoiceId || detailsObj?.PayProId || connectPayId;
+    const billUrl = detailsObj?.short_BillUrl || detailsObj?.BillUrl || null;
+
+    const isSuccess =
+      status === "00" ||
+      status.toLowerCase() === "success" ||
+      Boolean(paymentUrl);
+
+    // Save transaction draft
+    const donationRecord = {
+      orderNumber: uniqueOrderNumber,
+      amount: Math.round(amountNum),
+      donorName: isAnonymous ? "Anonymous Donor" : donorName,
+      donorEmail,
+      donorMobile: cleanMobile,
+      cause,
+      notes,
+      invoiceId,
+      connectPayId,
+      billUrl,
+      status: isSuccess ? "PENDING_PAYMENT" : `FAILED_${status}`,
+      payproStatus: status,
+      paymentUrl,
+      createdAt: new Date().toISOString(),
+    };
+    saveDonation(donationRecord);
+
+    if (isSuccess && paymentUrl) {
+      return res.status(200).json({
+        ok: true,
+        orderNumber: uniqueOrderNumber,
+        paymentUrl,
+        invoiceId,
+        connectPayId,
+        billUrl,
+        amount: Math.round(amountNum),
+        cause,
+        donorName: isAnonymous ? "Anonymous Donor" : donorName,
+        message: "PayPro payment session created successfully.",
+      });
+    }
+
+    // If order was created but no direct Click2Pay link was returned
+    if (isSuccess) {
+      return res.status(200).json({
+        ok: true,
+        orderNumber: uniqueOrderNumber,
+        paymentUrl: config.fallbackUrl,
+        invoiceId,
+        connectPayId,
+        billUrl,
+        amount: Math.round(amountNum),
+        cause,
+        message: "PayPro invoice generated with 1Bill reference.",
+      });
+    }
+
+    return res.status(400).json({
+      ok: false,
+      status,
+      description,
+      message: `PayPro gateway error: ${description || status}`,
+      fallbackUrl: config.fallbackUrl,
+      raw: item,
+    });
+  } catch (error) {
+    console.error("PayPro create-order error:", error);
+    const config = getPayProConfig();
+    return res.status(500).json({
+      ok: false,
+      message: error.message || "Internal server error while communicating with PayPro gateway.",
+      fallbackUrl: config.fallbackUrl,
+    });
+  }
+});
+
+// 3. PayPro Webhook / IPN Callback
+app.post(["/api/paypro/webhook", "/api/paypro/callback"], (req, res) => {
+  try {
+    const body = req.body;
+    console.log("PayPro IPN Received:", JSON.stringify(body));
+
+    const orderNumber = body?.OrderNumber || body?.orderNumber || body?.order_number;
+    const status = body?.Status || body?.status || "PAID";
+
+    if (orderNumber) {
+      const donations = readDonations();
+      const match = donations.find((d) => d.orderNumber === orderNumber);
+      if (match) {
+        match.status = status;
+        match.paidAt = new Date().toISOString();
+        match.webhookData = body;
+        ensureDonationsStore();
+        fs.writeFileSync(donationsFile, JSON.stringify(donations, null, 2), "utf8");
+      }
+    }
+
+    return res.json({ status: "ACKNOWLEDGED", timestamp: new Date().toISOString() });
+  } catch (err) {
+    console.error("Webhook processing error:", err);
+    return res.status(200).json({ status: "PROCESSED_WITH_WARNING" });
+  }
+});
+
+// 4. Recent donation records (for admin verification)
+app.get("/api/paypro/recent", (req, res) => {
+  const adminKey = String(req.query?.adminKey || "");
+  const expectedKey = String(process.env.NEWSLETTER_ADMIN_KEY || "");
+
+  if (expectedKey && adminKey !== expectedKey) {
+    return res.status(401).json({ message: "Unauthorized" });
+  }
+
+  const donations = readDonations();
+  return res.json({ count: donations.length, donations: donations.slice(0, 50) });
 });
 
 if (isProduction) {

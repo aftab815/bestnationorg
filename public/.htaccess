@@ -1,0 +1,21 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Route direct PayPro API requests to PHP if Node.js server is not active
+  RewriteRule ^api/paypro/create-order/?$ api/paypro/create-order.php [L,QSA]
+  RewriteRule ^api/paypro/status/?$ api/paypro/status.php [L,QSA]
+
+  # Allow direct access to existing files & directories
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Fallback to index.html for React Router SPA routes
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+# Enable gzip / deflate compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+</IfModule>

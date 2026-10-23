@@ -115,51 +115,64 @@
   background: var(--bg-main);
 }
 
-.donate-paypro {
-  padding: 60px 0 40px;
+/* ── PAYPRO CARD & FORM SECTION ───────────────────────── */
+.donate-page {
+  background: var(--bg-main);
 }
 
-.paypro-top-card {
+.donate-paypro-section {
+  padding: 70px 0 50px;
+}
+
+.section-subtitle {
+  max-width: 620px;
+  margin: 14px auto 36px;
+  font-size: 1.05rem;
+  color: var(--text-body);
+  line-height: 1.6;
+  text-align: center;
+}
+
+.paypro-portal-alternative {
+  margin-top: 32px;
+  padding: 16px 24px;
   background: #ffffff;
-  border: 1.5px solid var(--border-light);
-  border-radius: var(--radius-xl);
-  padding: 36px 48px;
-  box-shadow: var(--shadow-md);
+  border: 1.5px dashed var(--border-light);
+  border-radius: var(--radius-md);
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 24px;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  text-align: center;
 }
 
-.paypro-logo {
-  height: 60px;
+.paypro-alt-logo {
+  height: 28px;
   width: auto;
   object-fit: contain;
 }
 
-.paypro-btn {
+.paypro-portal-alternative span {
+  font-size: 0.92rem;
+  color: var(--text-body);
+  font-weight: 500;
+}
+
+.paypro-alt-link {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--accent);
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 14px 36px;
-  background: var(--accent);
-  color: #ffffff;
-  font-family: var(--font-body);
-  font-size: 0.88rem;
-  font-weight: 800;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  border-radius: var(--radius-md);
-  box-shadow: 0 6px 18px rgba(196, 127, 22, 0.35);
+  gap: 6px;
   transition: all var(--transition-fast);
 }
 
-.paypro-btn:hover {
-  background: var(--accent-hover);
-  color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(196, 127, 22, 0.45);
+.paypro-alt-link:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+  transform: translateX(2px);
 }
 
 /* ── BANK TRANSFER ─────────────────────── */
