@@ -15,12 +15,25 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit();
 }
 
-// PayPro Credentials (Default from configuration)
-$clientId = getenv("PAYPRO_CLIENT_ID") ?: "ClbWdIcE5bfvgKX";
-$clientSecret = getenv("PAYPRO_CLIENT_SECRET") ?: "RVQU2zlPto8fz9I";
-$merchantId = getenv("PAYPRO_MERCHANT_ID") ?: "Best_Welfare";
+// PayPro Credentials — loaded from environment only (no hardcoded secrets)
+$clientId = getenv("PAYPRO_CLIENT_ID") ?: "";
+$clientSecret = getenv("PAYPRO_CLIENT_SECRET") ?: "";
+$merchantId = getenv("PAYPRO_MERCHANT_ID") ?: "";
 $baseUrl = rtrim(getenv("PAYPRO_BASE_URL") ?: "https://api.paypro.com.pk", "/");
 $fallbackUrl = getenv("PAYPRO_HOSTED_URL") ?: "https://billing.paypro.com.pk/donation/best-nation-welfare-organization/";
+
+// Check if credentials are configured
+if (empty($clientId) || empty($clientSecret) || empty($merchantId)) {
+    http_response_code(200);
+    echo json_encode([
+        "ok" => false,
+        "configured" => false,
+        "missingCredentials" => true,
+        "message" => "PayPro credentials are not configured on this server. Please use the direct PayPro portal.",
+        "fallbackUrl" => $fallbackUrl
+    ]);
+    exit();
+}
 
 // Read incoming JSON body
 $rawInput = file_get_contents("php://input");
@@ -77,6 +90,19 @@ curl_setopt($ch, CURLOPT_TIMEOUT, 20);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
 
 $authResponse = curl_exec($ch);
+
+if (curl_errno($ch)) {
+    $curlError = curl_error($ch);
+    curl_close($ch);
+    http_response_code(502);
+    echo json_encode([
+        "ok" => false,
+        "message" => "Could not connect to PayPro gateway: " . $curlError,
+        "fallbackUrl" => $fallbackUrl
+    ]);
+    exit();
+}
+
 $headerSize = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
 $authHeaders = substr($authResponse, 0, $headerSize);
 $authBody = substr($authResponse, $headerSize);
@@ -95,6 +121,10 @@ if (empty($token)) {
         $token = $bodyJson[0]['token'];
     } elseif (is_array($bodyJson) && isset($bodyJson['token'])) {
         $token = $bodyJson['token'];
+    } elseif (is_array($bodyJson) && isset($bodyJson[0]['Token'])) {
+        $token = $bodyJson[0]['Token'];
+    } elseif (is_array($bodyJson) && isset($bodyJson['Token'])) {
+        $token = $bodyJson['Token'];
     }
 }
 
@@ -102,7 +132,7 @@ if (empty($token)) {
     http_response_code(502);
     echo json_encode([
         "ok" => false,
-        "message" => "PayPro gateway authentication failed.",
+        "message" => "PayPro gateway authentication failed. Please try the direct portal.",
         "fallbackUrl" => $fallbackUrl
     ]);
     exit();
@@ -149,6 +179,19 @@ curl_setopt($ch2, CURLOPT_TIMEOUT, 25);
 curl_setopt($ch2, CURLOPT_SSL_VERIFYPEER, true);
 
 $coResponse = curl_exec($ch2);
+
+if (curl_errno($ch2)) {
+    $curlError = curl_error($ch2);
+    curl_close($ch2);
+    http_response_code(502);
+    echo json_encode([
+        "ok" => false,
+        "message" => "PayPro order creation request failed: " . $curlError,
+        "fallbackUrl" => $fallbackUrl
+    ]);
+    exit();
+}
+
 $coHttpCode = curl_getinfo($ch2, CURLINFO_HTTP_CODE);
 curl_close($ch2);
 
@@ -169,8 +212,16 @@ $detailsObj = isset($coData[1]) ? $coData[1] : $statusObj;
 
 $status = $statusObj['Status'] ?? $detailsObj['Status'] ?? '';
 $description = $statusObj['Description'] ?? $detailsObj['Description'] ?? 'Order processed';
-$paymentUrl = $detailsObj['Click2Pay'] ?? $detailsObj['short_Click2Pay'] ?? $detailsObj['ConnectPayUrl'] ?? null;
-$connectPayId = $detailsObj['ConnectPayId'] ?? $detailsObj['PayProId'] ?? null;
+
+// Extract all possible payment URL variants from PayPro response
+$paymentUrl = $detailsObj['Click2Pay']
+    ?? $detailsObj['short_Click2Pay']
+    ?? $detailsObj['ConnectPayUrl']
+    ?? $detailsObj['IframeClick2Pay']
+    ?? $statusObj['Click2Pay']
+    ?? $statusObj['ConnectPayUrl']
+    ?? null;
+$connectPayId = $detailsObj['ConnectPayId'] ?? $detailsObj['PayProId'] ?? $statusObj['ConnectPayId'] ?? null;
 $invoiceId = $detailsObj['InvoiceId'] ?? $detailsObj['PayProId'] ?? $connectPayId;
 $billUrl = $detailsObj['short_BillUrl'] ?? $detailsObj['BillUrl'] ?? null;
 
@@ -188,6 +239,23 @@ if ($isSuccess && !empty($paymentUrl)) {
         "cause" => $cause,
         "donorName" => $isAnonymous ? "Anonymous Donor" : $donorName,
         "message" => "PayPro payment session created successfully."
+    ]);
+    exit();
+}
+
+// Order created but no Click2Pay URL — use fallback
+if ($isSuccess) {
+    echo json_encode([
+        "ok" => true,
+        "orderNumber" => $uniqueOrderNumber,
+        "paymentUrl" => $fallbackUrl,
+        "invoiceId" => $invoiceId,
+        "connectPayId" => $connectPayId,
+        "billUrl" => $billUrl,
+        "amount" => round($amount),
+        "cause" => $cause,
+        "donorName" => $isAnonymous ? "Anonymous Donor" : $donorName,
+        "message" => "PayPro invoice created. Redirecting to payment portal."
     ]);
     exit();
 }

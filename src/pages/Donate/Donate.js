@@ -49,7 +49,7 @@ const Donate = () => {
               emergency healthcare, and poverty alleviation across Pakistan with 100% audit accountability.
             </p>
             <div className="donate-hero-trust-chips">
-              <span className="trust-chip"><i className="fas fa-check-shield"></i> 100% Tax Exempt</span>
+              <span className="trust-chip"><i className="fas fa-shield-alt"></i> 100% Tax Exempt</span>
               <span className="trust-chip"><i className="fas fa-hand-holding-heart"></i> Zakat &amp; Sadaqah Eligible</span>
               <span className="trust-chip"><i className="fas fa-university"></i> Verified Corporate Accounts</span>
             </div>
@@ -76,7 +76,7 @@ const Donate = () => {
             <img src={payproLogo} alt="PayPro Gateway" className="paypro-alt-logo" />
             <span>Prefer the official PayPro hosted portal directly?</span>
             <a
-              href="https://billing.paypro.com.pk/donation/best-nation-welfare-organization/"
+              href="https://donate.bestnationorg.com"
               target="_blank"
               rel="noreferrer"
               className="paypro-alt-link"

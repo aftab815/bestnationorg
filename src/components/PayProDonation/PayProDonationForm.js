@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import payproLogo from '../../assets/paypro.jpg';
 import './PayProDonationForm.css';
 
@@ -19,6 +19,9 @@ const CAUSES = [
   { id: 'education', name: 'Education & Orphan Support', icon: 'fa-graduation-cap' },
   { id: 'water', name: 'Clean Drinking Water', icon: 'fa-tint' },
 ];
+
+const PAYPRO_FALLBACK_URL =
+  'https://billing.paypro.com.pk/donation/best-nation-welfare-organization/';
 
 const PayProDonationForm = () => {
   const [selectedAmount, setSelectedAmount] = useState(5000);
@@ -56,7 +59,7 @@ const PayProDonationForm = () => {
         if (isMounted) {
           setGatewayStatus({
             configured: false,
-            fallbackUrl: 'https://billing.paypro.com.pk/donation/best-nation-welfare-organization/',
+            fallbackUrl: PAYPRO_FALLBACK_URL,
           });
         }
       });
@@ -70,7 +73,9 @@ const PayProDonationForm = () => {
     if (countdown === null) return;
     if (countdown <= 0) {
       if (orderResult?.paymentUrl) {
-        window.location.href = orderResult.paymentUrl;
+        // Use top-level navigation — NOT iframe — for PayPro checkout
+        // This is required for 3D Secure 2.0 card payment to work properly
+        window.open(orderResult.paymentUrl, '_blank', 'noopener,noreferrer');
       }
       return;
     }
@@ -102,6 +107,16 @@ const PayProDonationForm = () => {
     }));
   };
 
+  // Validate Pakistani mobile number format
+  const validateMobile = (phone) => {
+    const cleanPhone = phone.replace(/[^0-9]/g, '');
+    if (!cleanPhone || cleanPhone.length < 10) return false;
+    // Must start with 03 or 923 or 0092
+    if (/^(03\d{9}|923\d{9}|00923\d{9})$/.test(cleanPhone)) return true;
+    // Also allow general 10+ digit number as fallback
+    return cleanPhone.length >= 10;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setErrorMessage('');
@@ -121,8 +136,7 @@ const PayProDonationForm = () => {
       return;
     }
 
-    const cleanPhone = formData.mobile.replace(/[^0-9]/g, '');
-    if (!cleanPhone || cleanPhone.length < 10) {
+    if (!validateMobile(formData.mobile)) {
       setErrorMessage('Please provide a valid Pakistani mobile number (e.g. 03001234567).');
       return;
     }
@@ -150,7 +164,12 @@ const PayProDonationForm = () => {
         body: JSON.stringify(payload),
       });
 
-      const data = await response.json();
+      let data;
+      try {
+        data = await response.json();
+      } catch (parseErr) {
+        throw new Error('Server returned an invalid response. The backend may be misconfigured.');
+      }
 
       if (!response.ok || !data.ok) {
         // If credentials are not yet set up in .env
@@ -160,9 +179,7 @@ const PayProDonationForm = () => {
               'PayPro direct credentials are being connected. You can donate directly through the official BNWO PayPro portal below.'
           );
           setOrderResult({
-            paymentUrl:
-              data.fallbackUrl ||
-              'https://billing.paypro.com.pk/donation/best-nation-welfare-organization/',
+            paymentUrl: data.fallbackUrl || PAYPRO_FALLBACK_URL,
             isFallback: true,
             amount: activeAmount,
             cause: payload.cause,
@@ -182,38 +199,53 @@ const PayProDonationForm = () => {
         return;
       }
 
-      // Success! Direct order fetched
+      // Success! PayPro order created
       setOrderResult({
         ...data,
         isFallback: false,
       });
       setIsSubmitting(false);
 
-      // Start 5-second countdown to auto-launch checkout
+      // Start 5-second countdown to auto-open checkout in new tab
       if (data.paymentUrl) {
-        setCountdown(4);
+        setCountdown(5);
       }
     } catch (err) {
       console.error('PayPro fetch error:', err);
       setErrorMessage(
-        'Network error while connecting to PayPro gateway. You can use the direct link below.'
+        err.message || 'Network error while connecting to PayPro gateway. You can use the direct link below.'
       );
       setOrderResult({
         paymentUrl:
-          gatewayStatus?.fallbackUrl ||
-          'https://billing.paypro.com.pk/donation/best-nation-welfare-organization/',
+          gatewayStatus?.fallbackUrl || PAYPRO_FALLBACK_URL,
         isFallback: true,
         amount: activeAmount,
+        cause: CAUSES.find((c) => c.id === selectedCause)?.name || 'General Welfare',
       });
       setIsSubmitting(false);
     }
   };
 
-  const resetForm = () => {
+  const resetForm = useCallback(() => {
     setOrderResult(null);
     setCountdown(null);
     setErrorMessage('');
-  };
+    setIsCustom(false);
+    setCustomAmount('');
+    setSelectedAmount(5000);
+    setSelectedCause('general');
+    setFormData({
+      name: '',
+      email: '',
+      mobile: '',
+      city: '',
+      notes: '',
+      isAnonymous: false,
+    });
+  }, []);
+
+  // Determine the best fallback URL
+  const fallbackPortalUrl = gatewayStatus?.fallbackUrl || PAYPRO_FALLBACK_URL;
 
   return (
     <div className="paypro-form-wrapper" id="paypro-donate-section">
@@ -233,11 +265,11 @@ const PayProDonationForm = () => {
           </div>
         </div>
 
-        {/* Success / Fetched Screen */}
+        {/* Success / Result Screen */}
         {orderResult ? (
           <div className="paypro-result-view">
             <div className="result-icon-badge">
-              <i className="fas fa-check-circle"></i>
+              <i className={`fas ${orderResult.isFallback ? 'fa-external-link-alt' : 'fa-check-circle'}`}></i>
             </div>
             <h4>
               {orderResult.isFallback
@@ -247,8 +279,18 @@ const PayProDonationForm = () => {
             <p className="result-subtext">
               {orderResult.isFallback
                 ? 'Click below to complete your secure donation directly via the official BNWO PayPro portal.'
-                : 'Your unique order has been generated with PayPro. You will be redirected to complete your payment.'}
+                : 'Your unique order has been generated with PayPro. Click below or wait for automatic redirect to complete your payment.'}
             </p>
+
+            {/* Error banner if there was an issue */}
+            {errorMessage && (
+              <div className="paypro-alert error result-alert">
+                <i className="fas fa-info-circle"></i>
+                <div className="alert-content">
+                  <p>{errorMessage}</p>
+                </div>
+              </div>
+            )}
 
             <div className="result-details-box">
               <div className="result-detail-row">
@@ -281,14 +323,14 @@ const PayProDonationForm = () => {
               <div className="redirect-countdown">
                 <span className="spinner-border-sm"></span>
                 <span>
-                  Redirecting to PayPro Checkout in <strong>{countdown}s</strong>...
+                  Opening PayPro Checkout in <strong>{countdown}s</strong>...
                 </span>
                 <button
                   type="button"
                   className="cancel-countdown-btn"
                   onClick={() => setCountdown(null)}
                 >
-                  Stay on page
+                  Cancel
                 </button>
               </div>
             )}
@@ -300,7 +342,9 @@ const PayProDonationForm = () => {
                 rel="noreferrer"
                 className="paypro-direct-proceed-btn"
               >
-                <span>Proceed to PayPro Checkout</span>
+                <span>
+                  {orderResult.isFallback ? 'Open PayPro Portal' : 'Proceed to PayPro Checkout'}
+                </span>
                 <i className="fas fa-external-link-alt"></i>
               </a>
               {orderResult.billUrl && (
@@ -318,13 +362,25 @@ const PayProDonationForm = () => {
               </button>
             </div>
 
+            {/* Card payment troubleshooting note */}
+            {!orderResult.isFallback && (
+              <div className="paypro-card-note">
+                <i className="fas fa-credit-card"></i>
+                <p>
+                  <strong>Card Payment:</strong> Click the button above to open PayPro's secure checkout. 
+                  Select <em>"Debit/Credit Card"</em> on the PayPro page to pay with Visa/Mastercard. 
+                  3D Secure authentication is required by your bank.
+                </p>
+              </div>
+            )}
+
             <div className="paypro-result-methods">
               <p>Supported on PayPro checkout:</p>
               <div className="method-tags">
+                <span>Visa / MasterCard</span>
                 <span>1Link 1Bill</span>
                 <span>JazzCash</span>
                 <span>EasyPaisa</span>
-                <span>Visa / MasterCard</span>
                 <span>Raast ID</span>
                 <span>All Bank Apps</span>
               </div>
@@ -338,9 +394,9 @@ const PayProDonationForm = () => {
                 <i className="fas fa-exclamation-circle"></i>
                 <div className="alert-content">
                   <p>{errorMessage}</p>
-                  {gatewayStatus?.fallbackUrl && !gatewayStatus.configured && (
+                  {gatewayStatus && !gatewayStatus.configured && (
                     <a
-                      href={gatewayStatus.fallbackUrl}
+                      href={fallbackPortalUrl}
                       target="_blank"
                       rel="noreferrer"
                       className="alert-link"
@@ -456,7 +512,7 @@ const PayProDonationForm = () => {
                       type="tel"
                       name="mobile"
                       required
-                      placeholder="0300 1234567"
+                      placeholder="03001234567"
                       value={formData.mobile}
                       onChange={handleInputChange}
                     />

@@ -15,7 +15,7 @@ const donationsFile = path.join(dataDir, "paypro-donations.json");
 
 app.use(express.json());
 
-app.use(express.static(buildDir));
+// Static build files served only in production (see bottom of file)
 
 function ensureSubscribersStore() {
   if (!fs.existsSync(dataDir)) {
@@ -486,7 +486,7 @@ app.post("/api/paypro/create-order", async (req, res) => {
       description,
       message: `PayPro gateway error: ${description || status}`,
       fallbackUrl: config.fallbackUrl,
-      raw: item,
+      raw: coRaw ? coRaw.slice(0, 300) : undefined,
     });
   } catch (error) {
     console.error("PayPro create-order error:", error);
