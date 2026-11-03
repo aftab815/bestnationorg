@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import CTA from '../../components/CTA/CTA';
 import Newsletter from '../../components/Newsletter/Newsletter';
 import { membershipTiers } from '../../data/siteData';
@@ -57,14 +58,9 @@ const Membership = () => {
                   <span className="mem-price-period">Registration Fee</span>
                 </div>
                 <p className="mem-contribution">{tier.contribution}</p>
-                <a
-                  href="https://docs.google.com/forms/d/e/1FAIpQLScTCOHr6lbZqFPfnY826H8ecU0mJ14d12FFlVG-Q6PuLCisjQ/viewform?usp=header"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={tier.featured ? 'btn-primary' : 'btn-outline'}
-                >
+                <Link to="/join" className={tier.featured ? 'btn-primary' : 'btn-outline'}>
                   Apply Now <i className="fas fa-arrow-right"></i>
-                </a>
+                </Link>
               </div>
             ))}
           </div>
@@ -91,14 +87,9 @@ const Membership = () => {
                   <span className="mem-price-period">Registration Fee</span>
                 </div>
                 <p className="mem-contribution">{tier.contribution}</p>
-                <a
-                  href="https://docs.google.com/forms/d/e/1FAIpQLScTCOHr6lbZqFPfnY826H8ecU0mJ14d12FFlVG-Q6PuLCisjQ/viewform?usp=header"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-outline"
-                >
+                <Link to="/join" className="btn-outline">
                   Apply Now <i className="fas fa-arrow-right"></i>
-                </a>
+                </Link>
               </div>
             ))}
           </div>

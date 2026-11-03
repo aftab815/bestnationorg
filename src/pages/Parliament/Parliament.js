@@ -454,14 +454,9 @@ const Parliament = () => {
             <Link to="/membership" className="btn-primary">
               View Membership Tiers <i className="fas fa-arrow-right"></i>
             </Link>
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLScTCOHr6lbZqFPfnY826H8ecU0mJ14d12FFlVG-Q6PuLCisjQ/viewform?usp=header"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-outline"
-            >
-              Apply for Leadership <i className="fas fa-external-link-alt"></i>
-            </a>
+            <Link to="/join" className="btn-outline">
+              Apply for Leadership <i className="fas fa-arrow-right"></i>
+            </Link>
           </div>
         </div>
       </section>

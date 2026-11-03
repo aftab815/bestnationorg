@@ -12,6 +12,7 @@ const buildDir = path.join(__dirname, "build");
 const dataDir = path.join(__dirname, "data");
 const subscribersFile = path.join(dataDir, "newsletter-subscribers.json");
 const donationsFile = path.join(dataDir, "paypro-donations.json");
+const registrationsFile = path.join(dataDir, "registrations.json");
 
 app.use(express.json());
 
@@ -70,6 +71,56 @@ function saveDonation(record) {
   ensureDonationsStore();
   fs.writeFileSync(donationsFile, JSON.stringify(trimmed, null, 2), "utf8");
 }
+
+function ensureRegistrationsStore() {
+  if (!fs.existsSync(dataDir)) {
+    fs.mkdirSync(dataDir, { recursive: true });
+  }
+  if (!fs.existsSync(registrationsFile)) {
+    fs.writeFileSync(registrationsFile, "[]", "utf8");
+  }
+}
+
+function readRegistrations() {
+  ensureRegistrationsStore();
+  const raw = fs.readFileSync(registrationsFile, "utf8");
+  try {
+    const parsed = JSON.parse(raw);
+    return Array.isArray(parsed) ? parsed : [];
+  } catch (err) {
+    return [];
+  }
+}
+
+function saveRegistration(record) {
+  const registrations = readRegistrations();
+  registrations.unshift(record);
+  ensureRegistrationsStore();
+  fs.writeFileSync(registrationsFile, JSON.stringify(registrations, null, 2), "utf8");
+}
+
+// In-memory rate limiter for registration endpoint spam protection
+const registrationRateLimitMap = new Map();
+const REGISTRATION_RATE_LIMIT_WINDOW_MS = 15 * 60 * 1000; // 15 minutes
+const REGISTRATION_MAX_REQUESTS_PER_WINDOW = 10; // Max 10 per 15 minutes per IP
+
+function isRegistrationRateLimited(ip) {
+  const now = Date.now();
+  const clientData = registrationRateLimitMap.get(ip) || { count: 0, windowStart: now };
+  if (now - clientData.windowStart > REGISTRATION_RATE_LIMIT_WINDOW_MS) {
+    clientData.count = 1;
+    clientData.windowStart = now;
+    registrationRateLimitMap.set(ip, clientData);
+    return false;
+  }
+  if (clientData.count >= REGISTRATION_MAX_REQUESTS_PER_WINDOW) {
+    return true;
+  }
+  clientData.count += 1;
+  registrationRateLimitMap.set(ip, clientData);
+  return false;
+}
+
 
 function getPayProConfig() {
   const value = (input) => String(input || "").trim();
@@ -142,6 +193,178 @@ function getMailerConfig() {
     from: value(process.env.NEWSLETTER_FROM) || value(process.env.SMTP_USER),
   };
 }
+
+
+/**
+ * TEMPORARY REGISTRATION ENDPOINT
+ * 
+ * TODO: Replace this temporary file-based persistence (data/registrations.json)
+ * with direct CRM backend / database integration when ready.
+ */
+app.post("/api/registrations", (req, res) => {
+  try {
+    // 1. Honeypot check for spam bots
+    if (req.body?.hp_field || req.body?.hp_website || req.body?.bot_field) {
+      return res.status(200).json({
+        success: true,
+        message: "Registration received successfully.",
+        registrationId: `BNWO-MOCK-${Date.now()}`
+      });
+    }
+
+    // 2. Rate limiting check
+    const clientIp = (req.headers["x-forwarded-for"] || req.socket.remoteAddress || "unknown").toString();
+    if (isRegistrationRateLimited(clientIp)) {
+      return res.status(429).json({
+        success: false,
+        error: "Too many registration attempts from this network. Please try again after 15 minutes."
+      });
+    }
+
+    const { person, participations } = req.body || {};
+
+    if (!person || typeof person !== "object") {
+      return res.status(400).json({ success: false, error: "Missing personal information." });
+    }
+
+    // Server-side field extraction & sanitization
+    const name = String(person.name || "").trim();
+    const fatherOrHusbandName = String(person.fatherOrHusbandName || "").trim();
+    const cnic = String(person.cnic || "").trim();
+    const gender = String(person.gender || "").trim();
+    const age = Number(person.age);
+    const religion = String(person.religion || "").trim();
+    const nationality = String(person.nationality || "").trim();
+    const education = String(person.education || "").trim();
+    const maritalStatus = String(person.maritalStatus || "").trim();
+    const professionTypes = Array.isArray(person.professionTypes) ? person.professionTypes : [];
+    const homeAddress = String(person.homeAddress || "").trim();
+    const cell = String(person.cell || "").trim();
+    const email = String(person.email || "").trim().toLowerCase();
+    const location = person.location || {};
+
+    // Validate Step 1 (Personal Info)
+    if (!name) return res.status(400).json({ success: false, error: "Full name is required." });
+    if (!fatherOrHusbandName) return res.status(400).json({ success: false, error: "Father / Husband name is required." });
+    
+    // Validate Pakistani CNIC format (12345-1234567-1)
+    const cnicRegex = /^\d{5}-\d{7}-\d{1}$/;
+    if (!cnicRegex.test(cnic)) {
+      return res.status(400).json({ success: false, error: "CNIC must follow the 13-digit format (12345-1234567-1)." });
+    }
+
+    if (!gender) return res.status(400).json({ success: false, error: "Gender is required." });
+    if (!age || isNaN(age) || age < 1 || age > 120) {
+      return res.status(400).json({ success: false, error: "Valid age between 1 and 120 is required." });
+    }
+    if (!religion) return res.status(400).json({ success: false, error: "Religion is required." });
+    if (!nationality) return res.status(400).json({ success: false, error: "Nationality is required." });
+    if (!education) return res.status(400).json({ success: false, error: "Education qualification is required." });
+    if (!maritalStatus) return res.status(400).json({ success: false, error: "Marital status is required." });
+    if (professionTypes.length === 0) {
+      return res.status(400).json({ success: false, error: "Please select at least one profession type." });
+    }
+    if (!homeAddress) return res.status(400).json({ success: false, error: "Home address is required." });
+
+    // Validate Step 2 (Contact)
+    const cellClean = cell.replace(/[\s-]/g, "");
+    const pakCellRegex = /^(\+92|0092|0)?3[0-9]{9}$/;
+    if (!pakCellRegex.test(cellClean)) {
+      return res.status(400).json({ success: false, error: "A valid Pakistani cell number is required (e.g. 0300-1234567)." });
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return res.status(400).json({ success: false, error: "A valid email address is required." });
+    }
+
+    // Validate Step 3 (Location)
+    if (!location.country) {
+      return res.status(400).json({ success: false, error: "Country is required." });
+    }
+    if (!location.city) {
+      return res.status(400).json({ success: false, error: "City is required." });
+    }
+
+    // Validate Step 4/5 (Participations)
+    if (!Array.isArray(participations) || participations.length === 0) {
+      return res.status(400).json({ success: false, error: "At least one program/project entry must be specified." });
+    }
+
+    for (let i = 0; i < participations.length; i++) {
+      const p = participations[i];
+      if (!p.role) {
+        return res.status(400).json({ success: false, error: `Participation entry #${i + 1} is missing a role.` });
+      }
+      if (!p.programId || !p.projectId) {
+        return res.status(400).json({ success: false, error: `Participation entry #${i + 1} requires both Program and Project.` });
+      }
+    }
+
+    // Construct clean record conforming exactly to the expected payload shape
+    const registrationId = `BNWO-REG-${Date.now()}-${Math.floor(1000 + Math.random() * 9000)}`;
+
+    const cleanRecord = {
+      id: registrationId,
+      submittedAt: new Date().toISOString(),
+      person: {
+        name,
+        fatherOrHusbandName,
+        cnic,
+        gender,
+        age,
+        religion,
+        nationality,
+        bloodGroup: String(person.bloodGroup || "").trim(),
+        education,
+        maritalStatus,
+        professionTypes,
+        homeAddress,
+        officeAddress: String(person.officeAddress || "").trim(),
+        cell,
+        whatsapp: String(person.whatsapp || "").trim(),
+        email,
+        website: String(person.website || "").trim(),
+        referralName: String(person.referralName || "").trim(),
+        referralCell: String(person.referralCell || "").trim(),
+        location: {
+          country: String(location.country || "").trim(),
+          province: String(location.province || "").trim(),
+          division: String(location.division || "").trim(),
+          district: String(location.district || "").trim(),
+          tehsil: String(location.tehsil || "").trim(),
+          uc: String(location.uc || "").trim(),
+          city: String(location.city || "").trim()
+        },
+        areaOfInterest: String(person.areaOfInterest || "").trim(),
+        hobbies: String(person.hobbies || "").trim()
+      },
+      participations: participations.map(p => ({
+        role: String(p.role || "").trim(),
+        programId: String(p.programId || "").trim(),
+        projectId: String(p.projectId || "").trim(),
+        contributionType: String(p.contributionType || "").trim(),
+        amount: String(p.amount || "").trim(),
+        hours: String(p.hours || "").trim(),
+        helpNeeded: String(p.helpNeeded || "").trim(),
+        beneficiaryCount: String(p.beneficiaryCount || "").trim()
+      }))
+    };
+
+    saveRegistration(cleanRecord);
+
+    return res.status(201).json({
+      success: true,
+      message: "Registration submitted successfully.",
+      registrationId
+    });
+  } catch (err) {
+    return res.status(500).json({
+      success: false,
+      error: "Internal server error occurred while processing registration."
+    });
+  }
+});
 
 app.post("/api/newsletter/subscribe", (req, res) => {
   const email = String(req.body?.email || "").trim().toLowerCase();

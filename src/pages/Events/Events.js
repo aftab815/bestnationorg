@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import CTA from '../../components/CTA/CTA';
 import Newsletter from '../../components/Newsletter/Newsletter';
 import { eventsData } from '../../data/siteData';
@@ -116,12 +117,9 @@ const Events = () => {
                       <i className="fas fa-images"></i> View Event Details
                     </button>
                     {e.status === 'upcoming' && (
-                      <a
-                        href="/contact"
-                        className="btn-primary event-reg-btn"
-                      >
+                      <Link to="/join" className="btn-primary event-reg-btn">
                         Register Now <i className="fas fa-arrow-right"></i>
-                      </a>
+                      </Link>
                     )}
                   </div>
                 </div>

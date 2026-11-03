@@ -14,14 +14,9 @@ const CTA = () => {
             families across Pakistan.
           </p>
           <div className="cta-buttons">
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSeXi85A_I_uNrSSjnpusCfGi0A0qpGcsZYkm2bIXQ8I1zvxEA/viewform?usp=header"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cta-volunteer-btn"
-            >
-              Apply as Volunteer <i className="fas fa-hand-holding-heart"></i>
-            </a>
+            <Link to="/join" className="cta-volunteer-btn">
+              Apply as Volunteer / Member <i className="fas fa-hand-holding-heart"></i>
+            </Link>
             <Link to="/contact" className="cta-contact-btn">
               Contact Us <i className="fas fa-arrow-right"></i>
             </Link>

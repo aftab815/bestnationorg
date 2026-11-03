@@ -16,6 +16,7 @@ import Parliament from './pages/Parliament/Parliament';
 import Programs from './pages/Programs/Programs';
 import Committees from './pages/Committees/Committees';
 import Membership from './pages/Membership/Membership';
+import Join from './pages/Join/Join';
 import NewsletterAdmin from './pages/NewsletterAdmin/NewsletterAdmin';
 
 function ScrollManager() {
@@ -96,6 +97,8 @@ function App() {
           <Route path="/parliament" element={<Parliament />} />
           <Route path="/committees" element={<Committees />} />
           <Route path="/membership" element={<Membership />} />
+          <Route path="/join" element={<Join />} />
+          <Route path="/register" element={<Join />} />
           <Route path="/events" element={<Events />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/donate" element={<Donate />} />

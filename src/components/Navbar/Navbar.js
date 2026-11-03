@@ -159,6 +159,9 @@ const Navbar = () => {
 
             {/* Action Buttons */}
             <div className="navbar-actions">
+              <Link to="/join" className="nav-join-btn">
+                <i className="fas fa-user-plus"></i> Join BNWO
+              </Link>
               <Link to="/donate" className="nav-donate-btn">
                 <i className="fas fa-heart"></i> Donate
               </Link>
@@ -340,6 +343,9 @@ const Navbar = () => {
 
           {/* Drawer Footer Actions */}
           <div className="mobile-drawer-actions">
+            <Link to="/join" className="btn-primary mobile-donate-btn" style={{ marginBottom: '10px' }} onClick={closeMobileMenu}>
+              <i className="fas fa-user-plus"></i> Join BNWO / Register
+            </Link>
             <Link to="/donate" className="btn-donate mobile-donate-btn" onClick={closeMobileMenu}>
               <i className="fas fa-heart"></i> Donate Now
             </Link>
