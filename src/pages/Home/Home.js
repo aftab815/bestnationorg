@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import HeroSlider from '../../components/HeroSlider/HeroSlider';
+import HomeHero from '../../components/HomeHero/HomeHero';
 import ServiceCard from '../../components/ServiceCard/ServiceCard';
 import Stats from '../../components/Stats/Stats';
 import CTA from '../../components/CTA/CTA';
 import Newsletter from '../../components/Newsletter/Newsletter';
 import Partners from '../../components/Partners/Partners';
+import { useFormModal } from '../../components/getInvolved/FormModalProvider';
 import {
   visionStatement,
   focusAreas,
@@ -21,9 +22,11 @@ const chamberEvent =
   eventsData.find((e) => e.title.toLowerCase().includes('chamber')) || eventsData[0];
 
 const Home = () => {
+  const { openForm } = useFormModal();
+
   return (
     <div className="home-page">
-      <HeroSlider />
+      <HomeHero />
 
       {/* ── Motto Banner ──────────────────── */}
       <section className="home-motto">
@@ -276,7 +279,7 @@ const Home = () => {
       </section>
 
       {/* ── 3 Get Involved CTA Cards ──────────── */}
-      <section className="home-involved">
+      <section className="home-involved" id="get-involved">
         <div className="container">
           <div className="section-title">
             <span className="section-kicker">Get Involved</span>
@@ -291,8 +294,8 @@ const Home = () => {
               </div>
               <h3>Donate Fund</h3>
               <p>Your contribution directly provides food, medical aid, clean water, and education to deserving families.</p>
-              <Link to="/donate" className="btn-primary">
-                Donate Now <i className="fas fa-heart"></i>
+              <Link to="/donate" className="btn-primary involved-btn">
+                Donate Now <i className="fas fa-heart" aria-hidden="true"></i>
               </Link>
             </div>
 
@@ -302,20 +305,28 @@ const Home = () => {
               </div>
               <h3>Become a Volunteer</h3>
               <p>Join our 24 project committees or local parliament tier to actively serve your community.</p>
-              <Link to="/contact" className="btn-outline">
-                Join Volunteers <i className="fas fa-user-plus"></i>
-              </Link>
+              <button
+                type="button"
+                className="btn-outline involved-btn"
+                onClick={() => openForm('volunteer', 'home-volunteer')}
+              >
+                Join Volunteers <i className="fas fa-user-plus" aria-hidden="true"></i>
+              </button>
             </div>
 
             <div className="involved-card card-partner">
               <div className="involved-icon">
                 <i className="fas fa-handshake"></i>
               </div>
-              <h3>Partner With Us</h3>
-              <p>Corporate organisations and institutions can collaborate with BNWO for CSR initiatives.</p>
-              <Link to="/contact" className="btn-outline">
-                Become a Partner <i className="fas fa-building"></i>
-              </Link>
+              <h3>Beneficiary</h3>
+              <p>If you or your family need food, medical, education, or emergency support, apply and our team will verify your case.</p>
+              <button
+                type="button"
+                className="btn-outline involved-btn"
+                onClick={() => openForm('beneficiary', 'home-beneficiary')}
+              >
+                Apply for Support <i className="fas fa-hands-helping" aria-hidden="true"></i>
+              </button>
             </div>
           </div>
         </div>

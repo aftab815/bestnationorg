@@ -1,11 +1,12 @@
 import React from 'react';
 import CTA from '../../components/CTA/CTA';
 import Newsletter from '../../components/Newsletter/Newsletter';
+import { useFormModal } from '../../components/getInvolved/FormModalProvider';
 import { membershipTiers } from '../../data/siteData';
-import memHero from '../../assets/hero1.jpeg';
 import './Membership.css';
 
 const Membership = () => {
+  const { openForm } = useFormModal();
   const intlTiers = membershipTiers.filter((t) => t.level === 'international');
   const localTiers = membershipTiers.filter((t) => t.level === 'national');
 
@@ -57,14 +58,13 @@ const Membership = () => {
                   <span className="mem-price-period">Registration Fee</span>
                 </div>
                 <p className="mem-contribution">{tier.contribution}</p>
-                <a
-                  href="https://docs.google.com/forms/d/e/1FAIpQLScTCOHr6lbZqFPfnY826H8ecU0mJ14d12FFlVG-Q6PuLCisjQ/viewform?usp=header"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  type="button"
                   className={tier.featured ? 'btn-primary' : 'btn-outline'}
+                  onClick={() => openForm('volunteer', 'membership-international')}
                 >
-                  Apply Now <i className="fas fa-arrow-right"></i>
-                </a>
+                  Apply Now <i className="fas fa-arrow-right" aria-hidden="true"></i>
+                </button>
               </div>
             ))}
           </div>
@@ -91,14 +91,13 @@ const Membership = () => {
                   <span className="mem-price-period">Registration Fee</span>
                 </div>
                 <p className="mem-contribution">{tier.contribution}</p>
-                <a
-                  href="https://docs.google.com/forms/d/e/1FAIpQLScTCOHr6lbZqFPfnY826H8ecU0mJ14d12FFlVG-Q6PuLCisjQ/viewform?usp=header"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  type="button"
                   className="btn-outline"
+                  onClick={() => openForm('volunteer', 'membership-local')}
                 >
-                  Apply Now <i className="fas fa-arrow-right"></i>
-                </a>
+                  Apply Now <i className="fas fa-arrow-right" aria-hidden="true"></i>
+                </button>
               </div>
             ))}
           </div>

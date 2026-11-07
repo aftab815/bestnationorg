@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.bfc966c2.css",
-    "main.js": "/static/js/main.74b51990.js",
+    "main.css": "/static/css/main.ef5f259c.css",
+    "main.js": "/static/js/main.892862b4.js",
     "static/media/about-hero.png": "/static/media/about-hero.3b49c468a0b843b0c47e.png",
     "static/media/logo.png": "/static/media/logo.3b5e37cc32b1b6e6c4a9.png",
     "static/media/3.png": "/static/media/3.d504b545d2457b2be43a.png",
@@ -34,9 +34,7 @@
     "static/media/4.jpg": "/static/media/4.e2601e52d120726e8717.jpg",
     "static/media/IMG_8551.jpg": "/static/media/IMG_8551.ca44f41a84b725b45926.jpg",
     "static/media/amana mall 15.JPG": "/static/media/amana mall 15.2956a480c6acb51e41b0.JPG",
-    "static/media/hero2.jpeg": "/static/media/hero2.3956c9129c534bd55713.jpeg",
     "static/media/IMG_7212.JPG": "/static/media/IMG_7212.e4d39bfdfa2c04ccacd1.JPG",
-    "static/media/hero1.jpeg": "/static/media/hero1.786abbc9f57cb2b0ffbd.jpeg",
     "static/media/IMG_7250.JPG": "/static/media/IMG_7250.d2007dbabb80df59d5ce.JPG",
     "static/media/amana mall 13.JPG": "/static/media/amana mall 13.ec61072097c5e9cd31a9.JPG",
     "static/media/amana mall 14.JPG": "/static/media/amana mall 14.ec61072097c5e9cd31a9.JPG",
@@ -56,11 +54,11 @@
     "static/media/hero 3.jpg": "/static/media/hero 3.314b316385d129750cb2.jpg",
     "static/media/9.jpg": "/static/media/9.783a5ac04b1f478b5dda.jpg",
     "static/media/amana mall 2.JPG": "/static/media/amana mall 2.8dfb83db9cb6c76b7e5f.JPG",
-    "static/media/hero3.jpeg": "/static/media/hero3.75056ad6fcbfaf6ea951.jpeg",
     "static/media/IMG_9019.JPG": "/static/media/IMG_9019.464dffccfbd5263d8e08.JPG",
     "static/media/IMG_9015.JPG": "/static/media/IMG_9015.6475ec4a62ff0278bfee.JPG",
     "static/media/IMG_9027.JPG": "/static/media/IMG_9027.4a87f823c7e4206287d0.JPG",
     "static/media/IMG_6919.JPG": "/static/media/IMG_6919.90f45dbda6d7b5716d78.JPG",
+    "static/media/education-landscape-1920.webp": "/static/media/education-landscape-1920.b3b9eaef0f99f4c9a119.webp",
     "static/media/IMG_0550.JPG": "/static/media/IMG_0550.a2a77a3c29f8e8f386a2.JPG",
     "static/media/IMG_6923.JPG": "/static/media/IMG_6923.849f0541210581304ea6.JPG",
     "static/media/IMG_0571.jpg": "/static/media/IMG_0571.7a797976199a2d892f3b.jpg",
@@ -77,7 +75,6 @@
     "static/media/IMG_9021.JPG": "/static/media/IMG_9021.2c74a0abcc24b5a6bd03.JPG",
     "static/media/IMG_8603.jpg": "/static/media/IMG_8603.fff37e23eb7711ec3649.jpg",
     "static/media/IMG_9007.JPG": "/static/media/IMG_9007.96ecfcfe2b15b4890ed6.JPG",
-    "static/media/hero5.jpeg": "/static/media/hero5.09fee34f03bdcbb681dd.jpeg",
     "static/media/IMG_6832.JPG": "/static/media/IMG_6832.8e80453f58782ea80c40.JPG",
     "static/media/IMG_7257.JPG": "/static/media/IMG_7257.2e74b7487233652f2e3b.JPG",
     "static/media/IMG_0575.jpg": "/static/media/IMG_0575.8ba4f7203947b11c7efc.jpg",
@@ -106,12 +103,20 @@
     "static/media/IMG-20240312-WA0071.jpg": "/static/media/IMG-20240312-WA0071.db96511ce0e122ff4d36.jpg",
     "static/media/IMG-20240312-WA0184.jpg": "/static/media/IMG-20240312-WA0184.43e77f5876b30c3660db.jpg",
     "static/media/IMG_6899.JPG": "/static/media/IMG_6899.f10f7a462ef113b6fb25.JPG",
+    "static/media/education-landscape-1280.webp": "/static/media/education-landscape-1280.29703e0fca1cc9b630f4.webp",
+    "static/media/skills-landscape-1920.webp": "/static/media/skills-landscape-1920.1def5d493edfa1df8330.webp",
+    "static/media/education-portrait-720.webp": "/static/media/education-portrait-720.1dcb8af4c2422d9143ae.webp",
+    "static/media/health-landscape-1920.webp": "/static/media/health-landscape-1920.34697d8d67817fa1b1df.webp",
+    "static/media/skills-landscape-1280.webp": "/static/media/skills-landscape-1280.6e653136bb6ed56b2628.webp",
+    "static/media/health-landscape-1280.webp": "/static/media/health-landscape-1280.6342f3dbe690bef139fd.webp",
+    "static/media/health-portrait-720.webp": "/static/media/health-portrait-720.a1637df8fb1e11cbcfeb.webp",
+    "static/media/skills-portrait-720.webp": "/static/media/skills-portrait-720.5b1f15d52c8cd5def22b.webp",
     "index.html": "/index.html",
-    "main.bfc966c2.css.map": "/static/css/main.bfc966c2.css.map",
-    "main.74b51990.js.map": "/static/js/main.74b51990.js.map"
+    "main.ef5f259c.css.map": "/static/css/main.ef5f259c.css.map",
+    "main.892862b4.js.map": "/static/js/main.892862b4.js.map"
   },
   "entrypoints": [
-    "static/css/main.bfc966c2.css",
-    "static/js/main.74b51990.js"
+    "static/css/main.ef5f259c.css",
+    "static/js/main.892862b4.js"
   ]
 }

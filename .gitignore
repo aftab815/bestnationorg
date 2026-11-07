@@ -18,9 +18,12 @@ bnwo-cpanel-deploy.zip
 .env.*
 
 # Local data & logs
-data/
+/data/
 */logs
 *.log
+
+# Original hero photography (large files; optimized WebPs live in src/assets/hero/)
+/hero-originals/
 
 # Editors & IDEs
 .vs/

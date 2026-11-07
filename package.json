@@ -18,10 +18,12 @@
     "client": "react-scripts start",
     "api": "node server.js",
     "build": "react-scripts build",
+    "optimize:hero": "node scripts/optimizeHeroImages.js",
     "serve-build": "node server.js"
   },
   "devDependencies": {
-    "concurrently": "^9.2.1"
+    "concurrently": "^9.2.1",
+    "sharp": "^0.35.5"
   },
   "browserslist": {
     "production": [

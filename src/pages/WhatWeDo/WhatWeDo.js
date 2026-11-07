@@ -4,7 +4,6 @@ import Stats from '../../components/Stats/Stats';
 import CTA from '../../components/CTA/CTA';
 import Newsletter from '../../components/Newsletter/Newsletter';
 import { corePrograms, focusAreas, accountabilityChain } from '../../data/siteData';
-import wwdHero from '../../assets/hero3.jpeg';
 import './WhatWeDo.css';
 
 const allProjects = [

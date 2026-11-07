@@ -17,13 +17,19 @@ import Programs from './pages/Programs/Programs';
 import Committees from './pages/Committees/Committees';
 import Membership from './pages/Membership/Membership';
 import NewsletterAdmin from './pages/NewsletterAdmin/NewsletterAdmin';
+import { FormModalProvider } from './components/getInvolved/FormModalProvider';
 
 function ScrollManager() {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
   
   useEffect(() => {
-    // Scroll to top on route change
-    window.scrollTo(0, 0);
+    // Support deep links such as /donate#paypro-section; otherwise start at the top.
+    const hashTarget = hash ? document.getElementById(hash.slice(1)) : null;
+    if (hashTarget) {
+      hashTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      window.scrollTo(0, 0);
+    }
 
     // Apply data-animate attribute to common components that should animate
     const animateSelectors = [
@@ -74,37 +80,39 @@ function ScrollManager() {
     });
 
     return () => observer.disconnect();
-  }, [pathname]);
+  }, [pathname, hash]);
 
   return null;
 }
 
 function App() {
   return (
-    <div className="App">
-      <a href="#main-content" className="skip-link">Skip to content</a>
-      <ScrollManager />
-      <TopBar />
-      <Navbar />
-      <NewsTicker />
-      <main id="main-content">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/what-we-do" element={<WhatWeDo />} />
-          <Route path="/programs" element={<Programs />} />
-          <Route path="/parliament" element={<Parliament />} />
-          <Route path="/committees" element={<Committees />} />
-          <Route path="/membership" element={<Membership />} />
-          <Route path="/events" element={<Events />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/donate" element={<Donate />} />
-          <Route path="/newsletter-admin" element={<NewsletterAdmin />} />
-        </Routes>
-      </main>
-      <Footer />
-      <ScrollToTopBtn />
-    </div>
+    <FormModalProvider>
+      <div className="App">
+        <a href="#main-content" className="skip-link">Skip to content</a>
+        <ScrollManager />
+        <TopBar />
+        <Navbar />
+        <NewsTicker />
+        <main id="main-content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/what-we-do" element={<WhatWeDo />} />
+            <Route path="/programs" element={<Programs />} />
+            <Route path="/parliament" element={<Parliament />} />
+            <Route path="/committees" element={<Committees />} />
+            <Route path="/membership" element={<Membership />} />
+            <Route path="/events" element={<Events />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/donate" element={<Donate />} />
+            <Route path="/newsletter-admin" element={<NewsletterAdmin />} />
+          </Routes>
+        </main>
+        <Footer />
+        <ScrollToTopBtn />
+      </div>
+    </FormModalProvider>
   );
 }
 

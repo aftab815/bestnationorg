@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import CTA from '../../components/CTA/CTA';
 import Newsletter from '../../components/Newsletter/Newsletter';
 import { projectCommittees, accountabilityChain } from '../../data/siteData';
-import cmteHero from '../../assets/hero2.jpeg';
 import './Committees.css';
 
 const Committees = () => {

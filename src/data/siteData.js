@@ -1,8 +1,3 @@
-import hero1 from '../assets/hero1.jpeg';
-import hero2 from '../assets/hero2.jpeg';
-import hero3 from '../assets/hero3.jpeg';
-import hero4 from '../assets/hero4.jpeg';
-import hero5 from '../assets/hero5.jpeg';
 import jhangRation from '../assets/hero 3.jpg';
 
 /* Parliament Tier Logos */
@@ -179,49 +174,6 @@ export const focusAreas = [
     icon: "fas fa-briefcase",
     title: "Skills & Opportunities",
     description: "Livelihoods, empowerment, and legal protection for all segments of society through entrepreneurship and vocational training.",
-  },
-];
-
-export const heroSlides = [
-  {
-    id: 1,
-    title: "Activate Pakistan's Compassion Economy",
-    description: "Join BNWO to turn local care into large-scale change with community-led food, health, and education drives.",
-    btn1: { text: "Join the Mission", link: "/membership" },
-    btn2: { text: "Discover Our Story", link: "/about" },
-    bg: hero1,
-  },
-  {
-    id: 2,
-    title: "12 High-Impact Programs, One Purpose",
-    description: "From skill training and literacy to clean water and emergency health care, our welfare programs are built for real community impact.",
-    btn1: { text: "See Programs", link: "/programs" },
-    btn2: { text: "How We Deliver", link: "/what-we-do" },
-    bg: hero2,
-  },
-  {
-    id: 3,
-    title: "7-Tier Governance for Total Accountability",
-    description: "Our unique parliament model and 24 committees ensure every project is transparent, local, and results-focused.",
-    btn1: { text: "Explore Parliament", link: "/parliament" },
-    btn2: { text: "Meet Committees", link: "/committees" },
-    bg: hero3,
-  },
-  {
-    id: 4,
-    title: "Donate with Confidence, See Real Results",
-    description: "Every fund is managed by audited field teams and delivered directly to families, clinics, and schools.",
-    btn1: { text: "Donate Now", link: "/donate" },
-    btn2: { text: "Track Impact", link: "/programs" },
-    bg: hero4,
-  },
-  {
-    id: 5,
-    title: "Join the Movement for a Stronger Nation",
-    description: "Together we create sustainable opportunity, dignity, and support for every community across Pakistan.",
-    btn1: { text: "Become a Partner", link: "/membership" },
-    btn2: { text: "Contact Us", link: "/contact" },
-    bg: hero5,
   },
 ];
 

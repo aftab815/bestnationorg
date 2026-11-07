@@ -2,13 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import CTA from '../../components/CTA/CTA';
 import Newsletter from '../../components/Newsletter/Newsletter';
+import { useFormModal } from '../../components/getInvolved/FormModalProvider';
 import {
   parliamentTiers,
   eligibilityCriteria,
   accountabilityChain,
   registrationFormUrl,
 } from '../../data/siteData';
-import parlHeroImg from '../../assets/hero1.jpeg';
 import worldParliamentImg from '../../assets/world parliament.png';
 import divisionalImg from '../../assets/divisional.png';
 import districtImg from '../../assets/district.png';
@@ -16,6 +16,8 @@ import tehsilImg from '../../assets/tehsil.png';
 import './Parliament.css';
 
 const Parliament = () => {
+  const { openForm } = useFormModal();
+
   return (
     <div className="parliament-page">
       {/* ── Bespoke Modern Parliament Hero ───────────── */}
@@ -454,14 +456,13 @@ const Parliament = () => {
             <Link to="/membership" className="btn-primary">
               View Membership Tiers <i className="fas fa-arrow-right"></i>
             </Link>
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLScTCOHr6lbZqFPfnY826H8ecU0mJ14d12FFlVG-Q6PuLCisjQ/viewform?usp=header"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              type="button"
               className="btn-outline"
+              onClick={() => openForm('volunteer', 'parliament-leadership')}
             >
-              Apply for Leadership <i className="fas fa-external-link-alt"></i>
-            </a>
+              Apply for Leadership <i className="fas fa-external-link-alt" aria-hidden="true"></i>
+            </button>
           </div>
         </div>
       </section>

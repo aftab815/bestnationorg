@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Newsletter from '../../components/Newsletter/Newsletter';
 import { eventsData } from '../../data/siteData';
-import newsHero from '../../assets/hero4.jpeg';
 import './News.css';
 
 const newsData = eventsData.map((event, index) => ({
