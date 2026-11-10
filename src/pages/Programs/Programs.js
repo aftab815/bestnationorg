@@ -41,8 +41,10 @@ const Programs = () => {
             {programs.map((program, index) => (
               <article key={program.id} id={program.id} className="program-card">
                 <span className="program-card__number">{String(index + 1).padStart(2, '0')}</span>
-                <h2 className="program-card__title">{program.name}</h2>
-                {program.summary ? <p className="program-card__summary">{program.summary}</p> : null}
+                <div className="program-card__heading">
+                  <h2 className="program-card__title">{program.name}</h2>
+                  {program.summary ? <p className="program-card__summary">{program.summary}</p> : null}
+                </div>
                 <ul className="program-card__projects">
                   {program.projects.map((project) => (
                     <li key={project.id} className="program-card__project">
