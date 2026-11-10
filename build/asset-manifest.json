@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.19935e5b.css",
-    "main.js": "/static/js/main.c68b35d3.js",
+    "main.css": "/static/css/main.98023ef0.css",
+    "main.js": "/static/js/main.ce6433f1.js",
     "static/media/about-hero.png": "/static/media/about-hero.3b49c468a0b843b0c47e.png",
     "static/media/logo.png": "/static/media/logo.3b5e37cc32b1b6e6c4a9.png",
     "static/media/3.png": "/static/media/3.d504b545d2457b2be43a.png",
@@ -112,11 +112,11 @@
     "static/media/health-portrait-720.webp": "/static/media/health-portrait-720.a1637df8fb1e11cbcfeb.webp",
     "static/media/skills-portrait-720.webp": "/static/media/skills-portrait-720.5b1f15d52c8cd5def22b.webp",
     "index.html": "/index.html",
-    "main.19935e5b.css.map": "/static/css/main.19935e5b.css.map",
-    "main.c68b35d3.js.map": "/static/js/main.c68b35d3.js.map"
+    "main.98023ef0.css.map": "/static/css/main.98023ef0.css.map",
+    "main.ce6433f1.js.map": "/static/js/main.ce6433f1.js.map"
   },
   "entrypoints": [
-    "static/css/main.19935e5b.css",
-    "static/js/main.c68b35d3.js"
+    "static/css/main.98023ef0.css",
+    "static/js/main.ce6433f1.js"
   ]
 }

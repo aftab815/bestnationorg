@@ -72,8 +72,11 @@ const INITIAL_FORM = {
   consent: false,
 };
 
-const BeneficiaryForm = ({ source = 'home-beneficiary', onClose }) => {
-  const [form, setForm] = useState(INITIAL_FORM);
+const BeneficiaryForm = ({ source = 'home-beneficiary', initialValues = {}, onClose }) => {
+  const [form, setForm] = useState(() => ({
+    ...INITIAL_FORM,
+    ...(initialValues || {}),
+  }));
   const [errors, setErrors] = useState({});
   const [formError, setFormError] = useState('');
   const [submitting, setSubmitting] = useState(false);

@@ -23,7 +23,10 @@
  *     familyMembers: number, beneficiaryCount: number,
  *     incomeRange, situation
  *   },
- *   meta: { submittedAt: ISO string, source: string }
+ *   meta: {
+ *     submittedAt: ISO string,
+ *     source: string // e.g. 'home-beneficiary', 'program-page-beneficiary'
+ *   }
  * }
  *
  * Location levels use { id, label, notListed }. When the user picks

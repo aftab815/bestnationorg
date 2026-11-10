@@ -21,7 +21,10 @@
  *     programId, projectId, skills: string[],
  *     availabilityHours: number, availabilityType: 'weekdays'|'weekends'|'flexible'
  *   },
- *   meta: { submittedAt: ISO string, source: string }
+ *   meta: {
+ *     submittedAt: ISO string,
+ *     source: string // e.g. 'home-volunteer', 'cta-volunteer', 'membership-local', 'membership-international', 'parliament-leadership', 'program-page-volunteer'
+ *   }
  * }
  *
  * Location levels use { id, label, notListed }. When the user picks

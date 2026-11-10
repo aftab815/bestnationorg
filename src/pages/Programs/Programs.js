@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import CTA from '../../components/CTA/CTA';
 import Newsletter from '../../components/Newsletter/Newsletter';
 import { getPrograms } from '../../config/programs';
@@ -42,17 +43,36 @@ const Programs = () => {
               <article key={program.id} id={program.id} className="program-card">
                 <span className="program-card__number">{String(index + 1).padStart(2, '0')}</span>
                 <div className="program-card__heading">
-                  <h2 className="program-card__title">{program.name}</h2>
+                  <h2 className="program-card__title">
+                    <Link
+                      to={`/programs/${program.id}`}
+                      className="program-card__title-link"
+                    >
+                      {program.name}
+                    </Link>
+                  </h2>
                   {program.summary ? <p className="program-card__summary">{program.summary}</p> : null}
                 </div>
-                <ul className="program-card__projects">
-                  {program.projects.map((project) => (
-                    <li key={project.id} className="program-card__project">
-                      <span className="program-card__project-marker" aria-hidden="true"></span>
-                      <span>{project.name}</span>
-                    </li>
-                  ))}
-                </ul>
+                <div className="program-card__projects-wrap">
+                  <ul className="program-card__projects">
+                    {program.projects.map((project) => (
+                      <li key={project.id} className="program-card__project">
+                        <span className="program-card__project-marker" aria-hidden="true"></span>
+                        <Link
+                          to={`/programs/${program.id}#${project.id}`}
+                          className="program-card__project-link"
+                          aria-label={`${project.name}, project of ${program.name}`}
+                        >
+                          {project.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="program-card__footer" aria-hidden="true">
+                    <span className="program-card__cta-text">View program</span>
+                    <span className="program-card__cta-arrow">&rarr;</span>
+                  </div>
+                </div>
               </article>
             ))}
           </div>

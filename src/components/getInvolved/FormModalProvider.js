@@ -21,9 +21,17 @@ export const useFormModal = () => {
 export const FormModalProvider = ({ children }) => {
   const [activeForm, setActiveForm] = useState(null);
 
-  const openForm = useCallback((type, source = 'site') => {
+  const openForm = useCallback((type, sourceOrOptions = 'site') => {
     if (!FORM_CONFIG[type]) return;
-    setActiveForm({ type, source });
+    let source = 'site';
+    let initialValues = {};
+    if (typeof sourceOrOptions === 'string') {
+      source = sourceOrOptions;
+    } else if (sourceOrOptions && typeof sourceOrOptions === 'object') {
+      source = sourceOrOptions.source || 'site';
+      initialValues = sourceOrOptions.initialValues || {};
+    }
+    setActiveForm({ type, source, initialValues });
   }, []);
 
   const closeForm = useCallback(() => {
@@ -43,7 +51,11 @@ export const FormModalProvider = ({ children }) => {
       {children}
       {activeForm && ActiveForm && (
         <Modal title={config.title} onClose={closeForm}>
-          <ActiveForm source={activeForm.source} onClose={closeForm} />
+          <ActiveForm
+            source={activeForm.source}
+            initialValues={activeForm.initialValues}
+            onClose={closeForm}
+          />
         </Modal>
       )}
     </FormModalContext.Provider>

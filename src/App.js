@@ -14,6 +14,7 @@ import Contact from './pages/Contact/Contact';
 import Donate from './pages/Donate/Donate';
 import Parliament from './pages/Parliament/Parliament';
 import Programs from './pages/Programs/Programs';
+import ProgramDetail from './pages/ProgramDetail/ProgramDetail';
 import Committees from './pages/Committees/Committees';
 import Membership from './pages/Membership/Membership';
 import NewsletterAdmin from './pages/NewsletterAdmin/NewsletterAdmin';
@@ -100,6 +101,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/what-we-do" element={<WhatWeDo />} />
             <Route path="/programs" element={<Programs />} />
+            <Route path="/programs/:programId" element={<ProgramDetail />} />
             <Route path="/parliament" element={<Parliament />} />
             <Route path="/committees" element={<Committees />} />
             <Route path="/membership" element={<Membership />} />

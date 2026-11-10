@@ -59,8 +59,11 @@ const INITIAL_FORM = {
   message: '',
 };
 
-const VolunteerForm = ({ source = 'home-volunteer', onClose }) => {
-  const [form, setForm] = useState(INITIAL_FORM);
+const VolunteerForm = ({ source = 'home-volunteer', initialValues = {}, onClose }) => {
+  const [form, setForm] = useState(() => ({
+    ...INITIAL_FORM,
+    ...(initialValues || {}),
+  }));
   const [errors, setErrors] = useState({});
   const [formError, setFormError] = useState('');
   const [submitting, setSubmitting] = useState(false);
