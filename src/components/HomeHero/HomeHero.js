@@ -13,20 +13,19 @@ import skillsPortrait720 from '../../assets/hero/skills-portrait-720.webp';
 
 const HERO_CONTENT = {
   title: 'Let’s Pay Back to Pakistan',
-  subtitle: 'Education, health and livelihood for a stronger Pakistan.',
-  // Add another focus area by copying a line below, e.g.
-  // { label: 'Clean Water', icon: 'fas fa-droplet' }
-  focusAreas: [
-    { label: 'Education & Training', icon: 'fas fa-graduation-cap' },
-    { label: 'Health Professional Skills', icon: 'fas fa-stethoscope' },
-  ],
+  subtitle: {
+    lead: 'Education, health and livelihood for a stronger Pakistan. Through ',
+    focusOne: 'Education & Training',
+    middle: ' and ',
+    focusTwo: 'Health Professional Skills',
+    tail: ', we help people build better lives and stronger communities.',
+  },
   primaryCta: { label: 'Donate Now', to: '/donate' },
   secondaryCta: { label: 'Become a Volunteer', source: 'home-hero-volunteer' },
   trustStrip: '7-Tier Governance · 24 Committees · Transparent Impact',
   slides: [
     {
       id: 'education',
-      label: 'Education & Character',
       line: 'Learning that shapes both mind and character.',
       alt: 'Students in blue uniforms reading at wooden desks in a classroom',
       landscape1280: educationLandscape1280,
@@ -35,7 +34,6 @@ const HERO_CONTENT = {
     },
     {
       id: 'health',
-      label: 'Health',
       line: 'Health awareness, dialysis, blood bank and ambulance support.',
       alt: 'Nurse giving an injection to a masked patient',
       landscape1280: healthLandscape1280,
@@ -44,7 +42,6 @@ const HERO_CONTENT = {
     },
     {
       id: 'skills',
-      label: 'Skills & Livelihood',
       line: 'Skills, training and enterprise support for jobs and income.',
       alt: 'Student working at a computer in a school computer lab',
       landscape1280: skillsLandscape1280,
@@ -93,7 +90,6 @@ const useDocumentHidden = () => {
 const HomeHero = () => {
   const { openForm } = useFormModal();
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [userPaused, setUserPaused] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [isFocusWithin, setIsFocusWithin] = useState(false);
   const [slideOneLoaded, setSlideOneLoaded] = useState(false);
@@ -105,7 +101,6 @@ const HomeHero = () => {
 
   const isAutoplayActive =
     !prefersReducedMotion &&
-    !userPaused &&
     !isHovered &&
     !isFocusWithin &&
     !isDocumentHidden &&
@@ -191,6 +186,17 @@ const HomeHero = () => {
     if (event.pointerType === 'mouse') setIsHovered(false);
   };
 
+  const handleKeyDown = (event) => {
+    if (event.altKey || event.ctrlKey || event.metaKey) return;
+    if (event.key === 'ArrowLeft') {
+      event.preventDefault();
+      goToPrevious();
+    } else if (event.key === 'ArrowRight') {
+      event.preventDefault();
+      goToNext();
+    }
+  };
+
   const handleTouchStart = (event) => {
     const touch = event.touches[0];
     touchStart.current = { x: touch.clientX, y: touch.clientY };
@@ -225,6 +231,7 @@ const HomeHero = () => {
         onPointerLeave={handlePointerLeave}
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
+        onKeyDown={handleKeyDown}
       >
         <div className="home-hero__slides" aria-live={isAutoplayActive ? 'off' : 'polite'}>
           {HERO_CONTENT.slides.map((slide, index) => {
@@ -271,15 +278,13 @@ const HomeHero = () => {
             <h1 id="home-hero-title" className="home-hero__title">
               {HERO_CONTENT.title}
             </h1>
-            <p className="home-hero__sub">{HERO_CONTENT.subtitle}</p>
-            <ul className="home-hero__focus" aria-label="Focus areas">
-              {HERO_CONTENT.focusAreas.map((area) => (
-                <li key={area.label} className="home-hero__focus-tag">
-                  <i className={area.icon} aria-hidden="true" />
-                  {area.label}
-                </li>
-              ))}
-            </ul>
+            <p className="home-hero__sub">
+              {HERO_CONTENT.subtitle.lead}
+              <strong>{HERO_CONTENT.subtitle.focusOne}</strong>
+              {HERO_CONTENT.subtitle.middle}
+              <strong>{HERO_CONTENT.subtitle.focusTwo}</strong>
+              {HERO_CONTENT.subtitle.tail}
+            </p>
             <div className="home-hero__actions">
               <Link to={HERO_CONTENT.primaryCta.to} className="hero-btn">
                 {HERO_CONTENT.primaryCta.label}
@@ -302,31 +307,7 @@ const HomeHero = () => {
           </div>
 
           <div className="home-hero__footer">
-            <div className="home-hero__tabs" role="group" aria-label="Choose hero slide">
-              {HERO_CONTENT.slides.map((slide, index) => (
-                <button
-                  key={slide.id}
-                  type="button"
-                  className="home-hero__tab"
-                  aria-pressed={index === currentSlide}
-                  onClick={() => goToSlide(index)}
-                >
-                  {slide.label}
-                </button>
-              ))}
-            </div>
-
             <div className="home-hero__controls">
-              {!prefersReducedMotion && (
-                <button
-                  type="button"
-                  className="home-hero__pause"
-                  aria-label={userPaused ? 'Play slideshow' : 'Pause slideshow'}
-                  onClick={() => setUserPaused((paused) => !paused)}
-                >
-                  {userPaused ? 'Play' : 'Pause'}
-                </button>
-              )}
               <button
                 type="button"
                 className="home-hero__arrow"
