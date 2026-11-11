@@ -1,6 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useFormModal } from '../getInvolved/FormModalProvider';
 import educationLandscape1280 from '../../assets/hero/education-landscape-1280.webp';
 import educationLandscape1920 from '../../assets/hero/education-landscape-1920.webp';
 import educationPortrait720 from '../../assets/hero/education-portrait-720.webp';
@@ -12,7 +11,7 @@ import skillsLandscape1920 from '../../assets/hero/skills-landscape-1920.webp';
 import skillsPortrait720 from '../../assets/hero/skills-portrait-720.webp';
 
 const HERO_CONTENT = {
-  title: 'Let’s Pay Back to Pakistan',
+  title: 'Let\u2019s Pay Back to Pakistan',
   subtitle: {
     lead: 'Education, health and livelihood for a stronger Pakistan. Through ',
     focusOne: 'Education & Training',
@@ -21,32 +20,38 @@ const HERO_CONTENT = {
     tail: ', we help people build better lives and stronger communities.',
   },
   primaryCta: { label: 'Donate Now', to: '/donate' },
-  secondaryCta: { label: 'Become a Volunteer', source: 'home-hero-volunteer' },
-  trustStrip: '7-Tier Governance · 24 Committees · Transparent Impact',
+  secondaryCta: { label: 'View Programs', to: '/programs' },
+  trustStrip: '7-Tier Governance \u00b7 24 Committees \u00b7 Transparent Impact',
   slides: [
     {
       id: 'education',
-      line: 'Learning that shapes both mind and character.',
       alt: 'Students in blue uniforms reading at wooden desks in a classroom',
       landscape1280: educationLandscape1280,
       landscape1920: educationLandscape1920,
       portrait720: educationPortrait720,
+      /* object-position: desktop center 55%, phone center 50% */
+      objDesktop: 'center 55%',
+      objPhone: 'center 50%',
     },
     {
       id: 'health',
-      line: 'Health awareness, dialysis, blood bank and ambulance support.',
       alt: 'Nurse giving an injection to a masked patient',
       landscape1280: healthLandscape1280,
       landscape1920: healthLandscape1920,
       portrait720: healthPortrait720,
+      /* object-position: desktop 35% 25%, phone 35% 30% */
+      objDesktop: '35% 25%',
+      objPhone: '35% 30%',
     },
     {
       id: 'skills',
-      line: 'Skills, training and enterprise support for jobs and income.',
       alt: 'Student working at a computer in a school computer lab',
       landscape1280: skillsLandscape1280,
       landscape1920: skillsLandscape1920,
       portrait720: skillsPortrait720,
+      /* object-position: desktop 35% 30%, phone 35% 30% */
+      objDesktop: '35% 30%',
+      objPhone: '35% 30%',
     },
   ],
 };
@@ -88,7 +93,6 @@ const useDocumentHidden = () => {
 };
 
 const HomeHero = () => {
-  const { openForm } = useFormModal();
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const [isFocusWithin, setIsFocusWithin] = useState(false);
@@ -214,8 +218,6 @@ const HomeHero = () => {
     goToSlide(currentSlide + (deltaX < 0 ? 1 : -1));
   };
 
-  const activeSlide = HERO_CONTENT.slides[currentSlide];
-
   return (
     <>
       <section
@@ -255,13 +257,17 @@ const HomeHero = () => {
                       className="home-hero__img"
                       src={slide.landscape1920}
                       srcSet={`${slide.landscape1280} 1280w, ${slide.landscape1920} 1920w`}
-                      sizes="100vw"
+                      sizes="(max-width: 767px) 100vw, 100vw"
                       width="1920"
                       height="1080"
                       alt={slide.alt}
                       loading="eager"
                       fetchpriority={index === 0 ? 'high' : 'low'}
                       decoding="async"
+                      style={{
+                        '--obj-desktop': slide.objDesktop,
+                        '--obj-phone': slide.objPhone,
+                      }}
                       onLoad={index === 0 ? () => setSlideOneLoaded(true) : undefined}
                     />
                   </picture>
@@ -270,8 +276,6 @@ const HomeHero = () => {
             );
           })}
         </div>
-
-        <div className="home-hero__overlay" aria-hidden="true" />
 
         <div className="home-hero__content">
           <div className="home-hero__copy">
@@ -289,19 +293,8 @@ const HomeHero = () => {
               <Link to={HERO_CONTENT.primaryCta.to} className="hero-btn">
                 {HERO_CONTENT.primaryCta.label}
               </Link>
-              <button
-                type="button"
-                className="hero-btn outline"
-                onClick={() => openForm('volunteer', HERO_CONTENT.secondaryCta.source)}
-              >
+              <Link to={HERO_CONTENT.secondaryCta.to} className="hero-btn hero-btn--programs">
                 {HERO_CONTENT.secondaryCta.label}
-              </button>
-            </div>
-
-            <div className="home-hero__caption" aria-live={isAutoplayActive ? 'off' : 'polite'}>
-              <p className="home-hero__caption-line">{activeSlide.line}</p>
-              <Link className="home-hero__caption-link" to="/programs">
-                View programs
               </Link>
             </div>
           </div>

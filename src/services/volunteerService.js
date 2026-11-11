@@ -23,7 +23,7 @@
  *   },
  *   meta: {
  *     submittedAt: ISO string,
- *     source: string // e.g. 'home-volunteer', 'home-hero-volunteer', 'cta-volunteer', 'membership-local', 'membership-international', 'parliament-leadership', 'program-page-volunteer'
+ *     source: string // e.g. 'home-volunteer', 'cta-volunteer', 'membership-local', 'membership-international', 'parliament-leadership', 'program-page-volunteer'
  *   }
  * }
  *
