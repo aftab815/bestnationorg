@@ -14,9 +14,9 @@ const HERO_CONTENT = {
   title: 'Let\u2019s Pay Back to Pakistan',
   subtitle: {
     lead: 'Education, health and livelihood for a stronger Pakistan. Through ',
-    focusOne: 'Education & Training',
+    focusOne: 'Education & Professional Skills',
     middle: ' and ',
-    focusTwo: 'Health Professional Skills',
+    focusTwo: 'Health Awareness',
     tail: ', we help people build better lives and stronger communities.',
   },
   primaryCta: { label: 'Donate Now', to: '/donate' },
