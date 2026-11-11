@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useFormModal } from '../getInvolved/FormModalProvider';
 import educationLandscape1280 from '../../assets/hero/education-landscape-1280.webp';
 import educationLandscape1920 from '../../assets/hero/education-landscape-1920.webp';
 import educationPortrait720 from '../../assets/hero/education-portrait-720.webp';
@@ -11,12 +12,16 @@ import skillsLandscape1920 from '../../assets/hero/skills-landscape-1920.webp';
 import skillsPortrait720 from '../../assets/hero/skills-portrait-720.webp';
 
 const HERO_CONTENT = {
-  eyebrow: 'COMMUNITY-LED WELFARE | TRANSPARENT IMPACT',
-  title: 'Education, Health & Livelihood for a Stronger Pakistan',
-  subtitle:
-    'Best Nation Welfare Organisation works for character-building education, health care, and skills and jobs for communities across Pakistan.',
+  title: 'Let’s Pay Back to Pakistan',
+  subtitle: 'Education, health and livelihood for a stronger Pakistan.',
+  // Add another focus area by copying a line below, e.g.
+  // { label: 'Clean Water', icon: 'fas fa-droplet' }
+  focusAreas: [
+    { label: 'Education & Training', icon: 'fas fa-graduation-cap' },
+    { label: 'Health Professional Skills', icon: 'fas fa-stethoscope' },
+  ],
   primaryCta: { label: 'Donate Now', to: '/donate' },
-  secondaryCta: { label: 'Get Involved', targetId: 'get-involved' },
+  secondaryCta: { label: 'Become a Volunteer', source: 'home-hero-volunteer' },
   trustStrip: '7-Tier Governance · 24 Committees · Transparent Impact',
   slides: [
     {
@@ -85,16 +90,8 @@ const useDocumentHidden = () => {
   return isDocumentHidden;
 };
 
-const scrollToInvolved = (event) => {
-  const target = document.getElementById(HERO_CONTENT.secondaryCta.targetId);
-  if (!target) return;
-
-  event.preventDefault();
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
-};
-
 const HomeHero = () => {
+  const { openForm } = useFormModal();
   const [currentSlide, setCurrentSlide] = useState(0);
   const [userPaused, setUserPaused] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
@@ -256,7 +253,7 @@ const HomeHero = () => {
                       height="1080"
                       alt={slide.alt}
                       loading="eager"
-                      fetchPriority={index === 0 ? 'high' : 'low'}
+                      fetchpriority={index === 0 ? 'high' : 'low'}
                       decoding="async"
                       onLoad={index === 0 ? () => setSlideOneLoaded(true) : undefined}
                     />
@@ -271,22 +268,29 @@ const HomeHero = () => {
 
         <div className="home-hero__content">
           <div className="home-hero__copy">
-            <span className="home-hero__eyebrow">{HERO_CONTENT.eyebrow}</span>
             <h1 id="home-hero-title" className="home-hero__title">
               {HERO_CONTENT.title}
             </h1>
             <p className="home-hero__sub">{HERO_CONTENT.subtitle}</p>
+            <ul className="home-hero__focus" aria-label="Focus areas">
+              {HERO_CONTENT.focusAreas.map((area) => (
+                <li key={area.label} className="home-hero__focus-tag">
+                  <i className={area.icon} aria-hidden="true" />
+                  {area.label}
+                </li>
+              ))}
+            </ul>
             <div className="home-hero__actions">
               <Link to={HERO_CONTENT.primaryCta.to} className="hero-btn">
                 {HERO_CONTENT.primaryCta.label}
               </Link>
-              <a
-                href={`#${HERO_CONTENT.secondaryCta.targetId}`}
+              <button
+                type="button"
                 className="hero-btn outline"
-                onClick={scrollToInvolved}
+                onClick={() => openForm('volunteer', HERO_CONTENT.secondaryCta.source)}
               >
                 {HERO_CONTENT.secondaryCta.label}
-              </a>
+              </button>
             </div>
 
             <div className="home-hero__caption" aria-live={isAutoplayActive ? 'off' : 'polite'}>
