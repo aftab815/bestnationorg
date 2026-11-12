@@ -9,9 +9,15 @@ import {
   getUnionCouncils,
   NOT_LISTED_VALUE,
 } from '../../data/locations';
+import { getDivisionLabel, sortDivisionsByRegion } from '../../data/regions';
 import { getPrograms, getProjectsForProgram } from '../../config/programs';
 import { submitVolunteer } from '../../services/volunteerService';
-import { resolveLocationValue, resolveProvinceFromDivision, isMissingCustomLocation } from '../../utils/locationPayload';
+import {
+  resolveLocationValue,
+  resolveProvinceFromDivision,
+  resolveRegionFromDivision,
+  isMissingCustomLocation,
+} from '../../utils/locationPayload';
 import {
   digitsOnly,
   formatCell,
@@ -72,9 +78,9 @@ const VolunteerForm = ({ source = 'home-volunteer', initialValues = {}, onClose 
 
   const divisionOptions = useMemo(
     () =>
-      getAllDivisions().map((division) => ({
+      sortDivisionsByRegion(getAllDivisions()).map((division) => ({
         id: division.id,
-        name: `${division.name} (${division.provinceName})`,
+        name: getDivisionLabel(division),
       })),
     []
   );
@@ -240,6 +246,7 @@ const VolunteerForm = ({ source = 'home-volunteer', initialValues = {}, onClose 
       },
       location: {
         province: resolveProvinceFromDivision(form.division),
+        region: resolveRegionFromDivision(form.division),
         division: resolveLocationValue('division', form.division, form.customDivision),
         district: resolveLocationValue('district', form.district, form.customDistrict),
         tehsil: resolveLocationValue('tehsil', form.tehsil, form.customTehsil),

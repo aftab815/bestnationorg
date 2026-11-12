@@ -399,3 +399,499 @@ p { color: var(--slate-600); line-height: 1.75; }.container { max-width: 1240px 
   .program-page__pagination-next { text-align: center; }
   .program-page__pagination-link { max-width: 100%; width: 100%; }
 }
+
+/* Keep the desktop navbar on one line at narrow desktop widths after adding Councils. */
+@media (min-width: 1025px) and (max-width: 1120px) {
+  .nav-menu { gap: 18px; }
+}
+
+/* ── COUNCILS: NESTED DESKTOP NAVIGATION ─────────────── */
+.councils-menu .has-submenu { position: relative; }
+
+.councils-menu .submenu-toggle {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.submenu-toggle__text { flex: 1; min-width: 0; }
+
+.submenu-arrow {
+  flex-shrink: 0;
+  font-size: 0.6rem;
+  color: var(--slate-400);
+  transition: transform var(--transition-fast), color var(--transition-fast);
+}
+
+.has-submenu:hover > .submenu-toggle .submenu-arrow,
+.has-submenu.open > .submenu-toggle .submenu-arrow {
+  color: var(--primary);
+  transform: translateX(2px);
+}
+
+.dropdown-submenu {
+  position: absolute;
+  top: -9px;
+  right: calc(100% - 2px);
+  width: 280px;
+  padding: 8px;
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-top: 3px solid var(--primary);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(10px);
+  transition: all var(--transition-fast);
+  z-index: 1001;
+}
+
+.has-submenu:hover > .dropdown-submenu,
+.has-submenu.open > .dropdown-submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.dropdown-submenu .dropdown-link { width: 100%; }
+
+.councils-menu .submenu-toggle:focus-visible,
+.councils-menu .dropdown-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+/* ── COUNCILS: MOBILE NESTED ACCORDION ───────────────── */
+.mobile-submenu-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  color: var(--slate-800);
+  font-size: 0.86rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.mobile-submenu-toggle:hover,
+.mobile-submenu-toggle.active {
+  background: var(--bg-main);
+  color: var(--primary);
+}
+
+.mobile-submenu-toggle__label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.mobile-submenu-toggle i {
+  flex-shrink: 0;
+  font-size: 0.76rem;
+  color: var(--slate-400);
+}
+
+.mobile-submenu-toggle:focus-visible,
+.mobile-dropdown-header:focus-visible,
+.mobile-nav-item:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+.mobile-sub-menu--nested { margin-left: 12px; }
+
+/* ── COUNCIL PAGES ───────────────────────────────────── */
+.council-page { background: var(--bg-main); }
+
+.council-hero {
+  position: relative;
+  padding: 76px 0 56px;
+  background:
+    radial-gradient(circle at 85% 12%, rgba(0, 117, 255, 0.1), transparent 42%),
+    linear-gradient(180deg, #f8fbff 0%, var(--bg-main) 100%);
+  border-bottom: 1px solid var(--border-light);
+  overflow: hidden;
+}
+
+.council-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 22px;
+  color: var(--slate-500);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.council-breadcrumb a {
+  color: var(--primary);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.council-breadcrumb a:hover { text-decoration: underline; }
+
+.council-breadcrumb__sep { color: var(--slate-400); }
+
+.council-breadcrumb [aria-current="page"] {
+  color: var(--slate-600);
+  font-weight: 600;
+}
+
+.council-hero__kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  padding: 5px 14px;
+  border-radius: var(--radius-full);
+  background: var(--primary-surface);
+  color: var(--primary);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.council-hero h1 {
+  margin: 0 0 14px;
+  color: var(--navy-950);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.council-hero__subtitle {
+  max-width: 760px;
+  margin: 0;
+  color: var(--slate-600);
+  font-size: 1.02rem;
+  line-height: 1.65;
+}
+
+.council-hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.council-hero__meta > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-full);
+  background: #ffffff;
+  color: var(--slate-600);
+  font-size: 0.8rem;
+  font-weight: 600;
+  box-shadow: var(--shadow-sm);
+}
+
+.council-hero__meta strong {
+  color: var(--navy-950);
+  font-weight: 800;
+}
+
+.council-section { padding: 64px 0 88px; }
+
+.council-section-heading { margin-bottom: 28px; }
+
+.council-section-heading__kicker {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: var(--primary);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.council-section-heading h2 {
+  margin: 0 0 8px;
+  color: var(--navy-950);
+  font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+  line-height: 1.2;
+}
+
+.council-section-heading p {
+  margin: 0;
+  color: var(--slate-600);
+  line-height: 1.6;
+}
+
+.council-overview-block + .council-overview-block { margin-top: 56px; }
+
+.council-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.council-grid--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.council-grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.council-grid--tight { margin-top: 20px; }
+
+.council-list-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 84px;
+  padding: 18px;
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  text-decoration: none;
+  transition: all var(--transition);
+}
+
+.council-list-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--primary-border);
+  box-shadow: var(--shadow-lg);
+  text-decoration: none;
+}
+
+.council-list-card__icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: var(--primary-surface);
+  color: var(--primary);
+  font-size: 1rem;
+}
+
+.council-list-card__body { flex: 1; min-width: 0; }
+
+.council-list-card__body h2 {
+  margin: 0 0 3px;
+  color: var(--navy-950);
+  font-size: 0.98rem;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.council-list-card__body p {
+  margin: 0;
+  color: var(--slate-500);
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
+.council-list-card__badge {
+  flex-shrink: 0;
+  padding: 5px 10px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-full);
+  background: var(--bg-main);
+  color: var(--slate-600);
+  font-size: 0.68rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.council-list-card__arrow {
+  flex-shrink: 0;
+  color: var(--slate-300);
+  font-size: 0.75rem;
+  transition: transform var(--transition-fast), color var(--transition-fast);
+}
+
+.council-list-card:hover .council-list-card__arrow {
+  color: var(--primary);
+  transform: translateX(3px);
+}
+
+.council-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 16px;
+  margin-bottom: 28px;
+  padding: 18px;
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.council-filter {
+  display: flex;
+  flex: 0 1 240px;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 210px;
+}
+
+.council-filter span {
+  color: var(--slate-500);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.council-filter select {
+  width: 100%;
+  min-height: 44px;
+  padding: 9px 12px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  background: var(--bg-main);
+  color: var(--navy-950);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.council-filter select:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.council-filter-result {
+  margin: 0 0 10px auto;
+  color: var(--slate-600);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.council-filter-result strong { color: var(--navy-950); }
+
+.council-empty {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 48px 24px;
+  background: #ffffff;
+  border: 1px dashed var(--border-light);
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+
+.council-empty__icon {
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background: var(--primary-surface);
+  color: var(--primary);
+  font-size: 1.4rem;
+}
+
+.council-empty h2 {
+  margin: 0 0 8px;
+  color: var(--navy-950);
+  font-size: 1.35rem;
+}
+
+.council-empty p {
+  margin: 0 0 20px;
+  color: var(--slate-600);
+  line-height: 1.6;
+}
+
+.council-empty p:last-child { margin-bottom: 0; }
+
+.council-event-placeholder {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--primary-surface), #f4f7fb);
+  color: var(--primary);
+  font-size: 2rem;
+}
+
+.council-event-card .event-body p { margin-bottom: 0; }
+
+.council-coming-soon {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 56px 28px;
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+}
+
+.council-coming-soon__icon {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: var(--accent-surface);
+  color: var(--accent);
+  font-size: 1.5rem;
+}
+
+.council-coming-soon__badge {
+  display: inline-block;
+  margin: 14px 0 10px;
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+  background: var(--accent-surface);
+  color: var(--accent);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.council-coming-soon h2 {
+  margin: 0 0 10px;
+  color: var(--navy-950);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+}
+
+.council-coming-soon p {
+  max-width: 520px;
+  margin: 0 auto 24px;
+  color: var(--slate-600);
+  line-height: 1.65;
+}
+
+@media (max-width: 1024px) {
+  .council-grid,
+  .council-grid--3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 640px) {
+  .council-hero { padding: 52px 0 40px; }
+  .council-section { padding: 44px 0 60px; }
+  .council-grid,
+  .council-grid--2,
+  .council-grid--3 { grid-template-columns: 1fr; }
+  .council-grid--tight { margin-top: 14px; }
+  .council-filters { flex-direction: column; align-items: stretch; }
+  .council-filter { flex: 1 1 auto; min-width: 0; }
+  .council-filter-result { margin: 0; text-align: left; }
+  .council-list-card { flex-wrap: wrap; align-items: flex-start; padding: 14px; }
+  .council-list-card__badge { margin-left: 58px; }
+  .council-list-card__arrow { display: none; }
+  .council-list-card__body h2 { font-size: 0.94rem; }
+  .council-coming-soon { padding: 40px 20px; }
+}

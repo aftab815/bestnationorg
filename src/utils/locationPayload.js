@@ -8,6 +8,7 @@ import {
   makeLocationEntry,
   makeNotListedEntry,
 } from '../data/locations';
+import { getRegionForDivision } from '../data/regions';
 
 const FINDERS = {
   division: getDivisionById,
@@ -30,6 +31,12 @@ export function resolveLocationValue(level, value, customText) {
 export function resolveProvinceFromDivision(divisionValue) {
   if (!divisionValue || divisionValue === NOT_LISTED_VALUE) return null;
   return makeLocationEntry(getProvinceByDivisionId(divisionValue));
+}
+
+export function resolveRegionFromDivision(divisionValue) {
+  if (!divisionValue || divisionValue === NOT_LISTED_VALUE) return null;
+  const region = getRegionForDivision(divisionValue);
+  return region ? { id: region.id, label: region.name } : null;
 }
 
 export function isMissingCustomLocation(value, customText) {

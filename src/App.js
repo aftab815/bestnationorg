@@ -18,6 +18,12 @@ import ProgramDetail from './pages/ProgramDetail/ProgramDetail';
 import Committees from './pages/Committees/Committees';
 import Membership from './pages/Membership/Membership';
 import NewsletterAdmin from './pages/NewsletterAdmin/NewsletterAdmin';
+import CouncilsOverview from './pages/Councils/CouncilsOverview';
+import DivisionCouncils from './pages/Councils/DivisionCouncils';
+import DivisionCouncilDetail from './pages/Councils/DivisionCouncilDetail';
+import TehsilCouncils from './pages/Councils/TehsilCouncils';
+import TehsilCouncilDetail from './pages/Councils/TehsilCouncilDetail';
+import CouncilComingSoon from './pages/Councils/CouncilComingSoon';
 import { FormModalProvider } from './components/getInvolved/FormModalProvider';
 
 function ScrollManager() {
@@ -106,6 +112,77 @@ function App() {
             <Route path="/committees" element={<Committees />} />
             <Route path="/membership" element={<Membership />} />
             <Route path="/events" element={<Events />} />
+            <Route path="/councils" element={<CouncilsOverview />} />
+            <Route
+              path="/councils/international/city"
+              element={
+                <CouncilComingSoon
+                  title="City Councils"
+                  kicker="International Councils"
+                  subtitle="City-level councils connecting BNWO communities in major cities."
+                />
+              }
+            />
+            <Route
+              path="/councils/international/state"
+              element={
+                <CouncilComingSoon
+                  title="State Councils"
+                  kicker="International Councils"
+                  subtitle="State-level councils supporting BNWO coordination and outreach."
+                />
+              }
+            />
+            <Route
+              path="/councils/international/world"
+              element={
+                <CouncilComingSoon
+                  title="World Councils"
+                  kicker="International Councils"
+                  subtitle="World-level councils connecting the BNWO network internationally."
+                />
+              }
+            />
+            <Route path="/councils/national/division" element={<DivisionCouncils />} />
+            <Route
+              path="/councils/national/division/:divisionId"
+              element={<DivisionCouncilDetail />}
+            />
+            <Route path="/councils/national/tehsil" element={<TehsilCouncils />} />
+            <Route
+              path="/councils/national/tehsil/:tehsilId"
+              element={<TehsilCouncilDetail />}
+            />
+            <Route
+              path="/councils/national/union"
+              element={
+                <CouncilComingSoon
+                  title="Union Councils"
+                  kicker="National Councils"
+                  subtitle="Union-level councils with women and men council activity."
+                />
+              }
+            />
+            <Route
+              path="/councils/national/union/women"
+              element={
+                <CouncilComingSoon
+                  title="Women Councils"
+                  kicker="Union Councils"
+                  subtitle="Union-level women councils supporting community participation."
+                />
+              }
+            />
+            <Route
+              path="/councils/national/union/men"
+              element={
+                <CouncilComingSoon
+                  title="Men Councils"
+                  kicker="Union Councils"
+                  subtitle="Union-level men councils supporting community participation."
+                />
+              }
+            />
             <Route path="/contact" element={<Contact />} />
             <Route path="/donate" element={<Donate />} />
             <Route path="/newsletter-admin" element={<NewsletterAdmin />} />

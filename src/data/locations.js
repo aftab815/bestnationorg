@@ -1392,6 +1392,21 @@ export const locationsData = {
           ],
         },
         {
+          id: "pk-prov-sindh-div-mirpur-khas-division",
+          name: "Mirpur Khas Division",
+          districts: [],
+        },
+        {
+          id: "pk-prov-sindh-div-larkana-division",
+          name: "Larkana Division",
+          districts: [],
+        },
+        {
+          id: "pk-prov-sindh-div-shaheed-benazirabad-division",
+          name: "Shaheed Benazirabad Division",
+          districts: [],
+        },
+        {
           id: "pk-prov-sindh-div-sukkur-division",
           name: "Sukkur Division",
           districts: [
@@ -1456,6 +1471,21 @@ export const locationsData = {
           ],
         },
         {
+          id: "pk-prov-khyber-pakhtunkhwa-div-kohat-division",
+          name: "Kohat Division",
+          districts: [],
+        },
+        {
+          id: "pk-prov-khyber-pakhtunkhwa-div-bannu-division",
+          name: "Bannu Division",
+          districts: [],
+        },
+        {
+          id: "pk-prov-khyber-pakhtunkhwa-div-dera-ismail-khan-division",
+          name: "Dera Ismail Khan Division",
+          districts: [],
+        },
+        {
           id: "pk-prov-khyber-pakhtunkhwa-div-mardan-division",
           name: "Mardan Division",
           districts: [
@@ -1475,6 +1505,11 @@ export const locationsData = {
               ],
             }
           ],
+        },
+        {
+          id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division",
+          name: "Malakand Division",
+          districts: [],
         },
         {
           id: "pk-prov-khyber-pakhtunkhwa-div-hazara-division",
@@ -1524,6 +1559,51 @@ export const locationsData = {
               ],
             }
           ],
+        },
+        {
+          id: "pk-prov-balochistan-div-pishin-division",
+          name: "Pishin Division",
+          districts: [],
+        },
+        {
+          id: "pk-prov-balochistan-div-sibi-division",
+          name: "Sibi Division",
+          districts: [],
+        },
+        {
+          id: "pk-prov-balochistan-div-naseerabad-division",
+          name: "Naseerabad Division",
+          districts: [],
+        },
+        {
+          id: "pk-prov-balochistan-div-loralai-division",
+          name: "Loralai Division",
+          districts: [],
+        },
+        {
+          id: "pk-prov-balochistan-div-zhob-division",
+          name: "Zhob Division",
+          districts: [],
+        },
+        {
+          id: "pk-prov-balochistan-div-koh-e-sulaiman-division",
+          name: "Koh-e-Sulaiman Division",
+          districts: [],
+        },
+        {
+          id: "pk-prov-balochistan-div-rakhshan-division",
+          name: "Rakhshan Division",
+          districts: [],
+        },
+        {
+          id: "pk-prov-balochistan-div-lasbela-division",
+          name: "Lasbela Division",
+          districts: [],
+        },
+        {
+          id: "pk-prov-balochistan-div-khuzdar-division",
+          name: "Khuzdar Division",
+          districts: [],
         },
         {
           id: "pk-prov-balochistan-div-makran-division",
@@ -1612,6 +1692,11 @@ export const locationsData = {
           ],
         },
         {
+          id: "pk-prov-azad-jammu-and-kashmir-div-poonch-division",
+          name: "Poonch Division",
+          districts: [],
+        },
+        {
           id: "pk-prov-azad-jammu-and-kashmir-div-mirpur-division",
           name: "Mirpur Division",
           districts: [
@@ -1638,6 +1723,16 @@ export const locationsData = {
       id: "pk-prov-gilgit-baltistan",
       name: "Gilgit-Baltistan",
       divisions: [
+        {
+          id: "pk-prov-gilgit-baltistan-div-baltistan-division",
+          name: "Baltistan Division",
+          districts: [],
+        },
+        {
+          id: "pk-prov-gilgit-baltistan-div-diamer-division",
+          name: "Diamer Division",
+          districts: [],
+        },
         {
           id: "pk-prov-gilgit-baltistan-div-gilgit-division",
           name: "Gilgit Division",
