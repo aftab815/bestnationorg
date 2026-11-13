@@ -13,6 +13,16 @@
   box-shadow: 0 4px 20px rgba(6, 27, 22, 0.08);
 }
 
+.navbar-header--transparent {
+  background: transparent !important;
+  border-bottom-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.navbar-header--home-scrolled {
+  box-shadow: 0 4px 20px rgba(6, 27, 22, 0.08);
+}
+
 .navbar {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
