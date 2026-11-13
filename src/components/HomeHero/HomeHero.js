@@ -11,7 +11,8 @@ import skillsLandscape1920 from '../../assets/hero/skills-landscape-1920.webp';
 import skillsPortrait720 from '../../assets/hero/skills-portrait-720.webp';
 
 const HERO_CONTENT = {
-  title: 'Let\u2019s Pay Back to Pakistan',
+  title: 'Let\u2019s Pay Back to ',
+  titleAccent: 'Pakistan',
   subtitle: {
     lead: 'Education, health and livelihood for a stronger Pakistan. Through ',
     focusOne: 'Education & Professional Skills',
@@ -235,52 +236,11 @@ const HomeHero = () => {
         onTouchEnd={handleTouchEnd}
         onKeyDown={handleKeyDown}
       >
-        <div className="home-hero__slides" aria-live={isAutoplayActive ? 'off' : 'polite'}>
-          {HERO_CONTENT.slides.map((slide, index) => {
-            const isActive = index === currentSlide;
-            const shouldRenderImage = index === 0 || remainingSlidesLoaded;
-
-            return (
-              <div
-                key={slide.id}
-                className={`home-hero__slide${isActive ? ' is-active' : ''}`}
-                role="group"
-                aria-roledescription="slide"
-                aria-label={`${index + 1} of ${SLIDE_COUNT}`}
-                aria-hidden={isActive ? undefined : true}
-              >
-                {shouldRenderImage && (
-                  <picture>
-                    <source media="(max-width: 767px)" srcSet={slide.portrait720} />
-                    <img
-                      ref={index === 0 ? firstImageRef : undefined}
-                      className="home-hero__img"
-                      src={slide.landscape1920}
-                      srcSet={`${slide.landscape1280} 1280w, ${slide.landscape1920} 1920w`}
-                      sizes="(max-width: 767px) 100vw, 100vw"
-                      width="1920"
-                      height="1080"
-                      alt={slide.alt}
-                      loading="eager"
-                      fetchpriority={index === 0 ? 'high' : 'low'}
-                      decoding="async"
-                      style={{
-                        '--obj-desktop': slide.objDesktop,
-                        '--obj-phone': slide.objPhone,
-                      }}
-                      onLoad={index === 0 ? () => setSlideOneLoaded(true) : undefined}
-                    />
-                  </picture>
-                )}
-              </div>
-            );
-          })}
-        </div>
-
-        <div className="home-hero__content">
+        <div className="home-hero__inner">
           <div className="home-hero__copy">
             <h1 id="home-hero-title" className="home-hero__title">
               {HERO_CONTENT.title}
+              <span className="home-hero__title-accent">{HERO_CONTENT.titleAccent}</span>
             </h1>
             <p className="home-hero__sub">
               {HERO_CONTENT.subtitle.lead}
@@ -292,16 +252,18 @@ const HomeHero = () => {
             <div className="home-hero__actions">
               <ActionButton
                 to={HERO_CONTENT.primaryCta.to}
-                variant="dark"
+                variant="primary"
                 size="md"
+                icon="fas fa-heart"
                 className="hero-btn"
               >
                 {HERO_CONTENT.primaryCta.label}
               </ActionButton>
               <ActionButton
                 to={HERO_CONTENT.secondaryCta.to}
-                variant="ghost"
+                variant="secondary"
                 size="md"
+                icon="fas fa-arrow-right"
                 className="hero-btn"
               >
                 {HERO_CONTENT.secondaryCta.label}
@@ -309,7 +271,49 @@ const HomeHero = () => {
             </div>
           </div>
 
-          <div className="home-hero__footer">
+          <div className="home-hero__media">
+            <div className="home-hero__slides" aria-live={isAutoplayActive ? 'off' : 'polite'}>
+              {HERO_CONTENT.slides.map((slide, index) => {
+                const isActive = index === currentSlide;
+                const shouldRenderImage = index === 0 || remainingSlidesLoaded;
+
+                return (
+                  <div
+                    key={slide.id}
+                    className={`home-hero__slide${isActive ? ' is-active' : ''}`}
+                    role="group"
+                    aria-roledescription="slide"
+                    aria-label={`${index + 1} of ${SLIDE_COUNT}`}
+                    aria-hidden={isActive ? undefined : true}
+                  >
+                    {shouldRenderImage && (
+                      <picture>
+                        <source media="(max-width: 767px)" srcSet={slide.portrait720} />
+                        <img
+                          ref={index === 0 ? firstImageRef : undefined}
+                          className="home-hero__img"
+                          src={slide.landscape1920}
+                          srcSet={`${slide.landscape1280} 1280w, ${slide.landscape1920} 1920w`}
+                          sizes="(max-width: 767px) 100vw, 100vw"
+                          width="1920"
+                          height="1080"
+                          alt={slide.alt}
+                          loading="eager"
+                          fetchpriority={index === 0 ? 'high' : 'low'}
+                          decoding="async"
+                          style={{
+                            '--obj-desktop': slide.objDesktop,
+                            '--obj-phone': slide.objPhone,
+                          }}
+                          onLoad={index === 0 ? () => setSlideOneLoaded(true) : undefined}
+                        />
+                      </picture>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+
             <div className="home-hero__controls">
               <button
                 type="button"

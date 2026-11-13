@@ -3,7 +3,6 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import TopBar from './components/TopBar/TopBar';
 import Navbar from './components/Navbar/Navbar';
-import NewsTicker from './components/NewsTicker/NewsTicker';
 import Footer from './components/Footer/Footer';
 import ScrollToTopBtn from './components/ScrollToTop/ScrollToTop';
 import Home from './pages/Home/Home';
@@ -100,7 +99,6 @@ function App() {
         <ScrollManager />
         <TopBar />
         <Navbar />
-        <NewsTicker />
         <main id="main-content">
           <Routes>
             <Route path="/" element={<Home />} />
