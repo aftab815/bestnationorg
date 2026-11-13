@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import ActionButton from '../../components/common/ActionButton';
 import CTA from '../../components/CTA/CTA';
 import Newsletter from '../../components/Newsletter/Newsletter';
 import { useFormModal } from '../../components/getInvolved/FormModalProvider';
@@ -53,12 +53,12 @@ const Parliament = () => {
               <span className="tier-pill">Union Council</span>
             </div>
             <div className="parl-hero-actions">
-              <a href="#formation-composition" className="btn-donate">
-                Formation &amp; Composition <i className="fas fa-sitemap"></i>
-              </a>
-              <a href="#office-bearers" className="btn-glass">
-                Bearer Structure <i className="fas fa-user-tie"></i>
-              </a>
+              <ActionButton href="#formation-composition" variant="dark" size="md" icon="fas fa-sitemap">
+                Formation &amp; Composition
+              </ActionButton>
+              <ActionButton href="#office-bearers" variant="ghost" size="md" icon="fas fa-user-tie">
+                Bearer Structure
+              </ActionButton>
             </div>
           </div>
         </div>
@@ -453,16 +453,17 @@ const Parliament = () => {
           <h2>Join Best Nation Parliaments</h2>
           <p>Become a chartered member and shape strategic governance and grassroots impact in your region.</p>
           <div className="parl-join-actions">
-            <Link to="/membership" className="btn-primary">
-              View Membership Tiers <i className="fas fa-arrow-right"></i>
-            </Link>
-            <button
-              type="button"
-              className="btn-outline"
+            <ActionButton to="/membership" variant="ghost" size="md" icon="fas fa-arrow-right">
+              View Membership Tiers
+            </ActionButton>
+            <ActionButton
+              variant="dark"
+              size="md"
+              icon="fas fa-external-link-alt"
               onClick={() => openForm('volunteer', 'parliament-leadership')}
             >
-              Apply for Leadership <i className="fas fa-external-link-alt" aria-hidden="true"></i>
-            </button>
+              Apply for Leadership
+            </ActionButton>
           </div>
         </div>
       </section>

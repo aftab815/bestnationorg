@@ -90,6 +90,7 @@ const Modal = ({ title, onClose, children }) => {
         ref={modalRef}
       >
         <div className="gi-modal__header">
+          <span className="form-modal-tagline">Let’s Pay Back to Pakistan</span>
           <h2 id={titleId} className="gi-modal__title">
             {title}
           </h2>

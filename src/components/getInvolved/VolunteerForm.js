@@ -1,4 +1,5 @@
 import React, { useMemo, useState } from 'react';
+import ActionButton from '../common/ActionButton';
 import FormField from './FormField';
 import LocationSelect from './LocationSelect';
 import SuccessMessage from './SuccessMessage';
@@ -588,21 +589,31 @@ const VolunteerForm = ({ source = 'home-volunteer', initialValues = {}, onClose 
         )}
 
         <div className="gi-actions">
-          <button type="button" className="btn-outline" onClick={onClose} disabled={submitting}>
+          <ActionButton
+            type="button"
+            variant="secondary"
+            size="md"
+            onClick={onClose}
+            disabled={submitting}
+          >
             Cancel
-          </button>
-          <button type="submit" className="btn-primary" disabled={submitting}>
+          </ActionButton>
+          <ActionButton
+            type="submit"
+            variant="primary"
+            size="md"
+            disabled={submitting}
+            icon={submitting ? undefined : 'fas fa-user-plus'}
+          >
             {submitting ? (
               <>
                 <span className="gi-spinner" aria-hidden="true"></span>
                 Submitting...
               </>
             ) : (
-              <>
-                Submit Application <i className="fas fa-user-plus" aria-hidden="true"></i>
-              </>
+              'Submit Application'
             )}
-          </button>
+          </ActionButton>
         </div>
       </div>
     </form>

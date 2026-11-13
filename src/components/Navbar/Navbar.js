@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import ActionButton from '../common/ActionButton';
 import siteLogo from '../../assets/logo.png';
 import './Navbar.css';
 
@@ -401,9 +402,16 @@ const Navbar = () => {
 
             {/* Action Buttons */}
             <div className="navbar-actions">
-              <Link to="/donate" className="nav-donate-btn">
-                <i className="fas fa-heart"></i> Donate
-              </Link>
+              <ActionButton
+                to="/donate"
+                variant="primary"
+                size="sm"
+                icon="fas fa-heart"
+                iconPosition="left"
+                className="nav-donate-btn"
+              >
+                Donate
+              </ActionButton>
 
               {/* Mobile Hamburger Button */}
               <button
@@ -728,9 +736,18 @@ const Navbar = () => {
 
           {/* Drawer Footer Actions */}
           <div className="mobile-drawer-actions">
-            <Link to="/donate" className="btn-donate mobile-donate-btn" onClick={closeMobileMenu}>
-              <i className="fas fa-heart"></i> Donate Now
-            </Link>
+            <ActionButton
+              to="/donate"
+              variant="primary"
+              size="md"
+              icon="fas fa-heart"
+              iconPosition="left"
+              fullWidth
+              className="mobile-donate-btn"
+              onClick={closeMobileMenu}
+            >
+              Donate Now
+            </ActionButton>
             <div className="mobile-compliance-tag">
               <i className="fas fa-shield-alt"></i>
               <span>100% Tax Exempt &bull; SECP Registered</span>

@@ -277,7 +277,7 @@ p { color: var(--slate-600); line-height: 1.75; }.container { max-width: 1240px 
 .program-card { position: relative; display: flex; flex-direction: column; min-width: 0; height: 100%; padding: 24px 22px 20px; border: 1px solid var(--border-light); border-top: 3px solid var(--accent); border-radius: var(--radius-lg); background: var(--bg-surface); box-shadow: var(--shadow-sm); scroll-margin-top: calc(var(--header-navbar-height, 78px) + 12px); transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition); }
 .program-card:hover { transform: translateY(-3px); border-color: var(--accent-border); box-shadow: var(--shadow-md); }
 .program-card:focus-within { outline: 2px solid var(--accent); outline-offset: 3px; }
-.program-card__number { display: inline-flex; align-items: center; justify-content: center; align-self: flex-start; min-width: 34px; height: 28px; padding: 0 9px; border-radius: var(--radius-full); background: var(--accent-surface); color: var(--accent); font-family: var(--font-body); font-size: .68rem; font-weight: 800; letter-spacing: .08em; }
+.program-card__number { display: inline-flex; align-items: center; justify-content: center; align-self: flex-start; min-width: 34px; height: 28px; padding: 0 9px; border-radius: var(--radius-full); background: var(--primary); color: #fff; font-family: var(--font-body); font-size: .68rem; font-weight: 800; letter-spacing: .08em; }
 .program-card__heading { display: flex; flex-direction: column; min-width: 0; margin-top: 12px; }
 .program-card__title { margin: 0; color: var(--navy-950); font-size: clamp(1.08rem, 1.45vw, 1.3rem); line-height: 1.25; overflow-wrap: anywhere; }
 .program-card__title-link { color: inherit; text-decoration: none; }
@@ -894,4 +894,220 @@ p { color: var(--slate-600); line-height: 1.75; }.container { max-width: 1240px 
   .council-list-card__arrow { display: none; }
   .council-list-card__body h2 { font-size: 0.94rem; }
   .council-coming-soon { padding: 40px 20px; }
+}
+
+/* ── FORM MODAL TAGLINE ─────────────────────────────── */
+.gi-modal__header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    "tagline tagline"
+    "title close";
+  align-items: start;
+  column-gap: 18px;
+  row-gap: 10px;
+}
+
+.form-modal-tagline {
+  grid-area: tagline;
+  display: block;
+  margin: 0;
+  color: var(--accent, #b6572d);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.form-modal-tagline::after {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 2px;
+  margin: 7px auto 0;
+  background: var(--accent, #b6572d);
+}
+
+.gi-modal__title { grid-area: title; }
+.gi-modal__close { grid-area: close; }
+
+@media (max-width: 480px) {
+  .form-modal-tagline {
+    font-size: 12px;
+    letter-spacing: 0.12em;
+  }
+}
+
+/* ── REUSABLE ACTION BUTTON ─────────────────────────── */
+.btn-action {
+  --btn-bg: #1f5a4f;
+  --btn-bg-hover: #17463d;
+  --btn-bg-active: #123a32;
+  --btn-text: #ffffff;
+  --btn-border: transparent;
+  --btn-focus: #1f5a4f;
+  --btn-shadow-hover: 0 6px 16px rgba(18, 58, 50, 0.18);
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 9px !important;
+  min-height: 46px !important;
+  padding: 12px 22px !important;
+  border: 1px solid var(--btn-border) !important;
+  border-radius: var(--radius-sm, 8px) !important;
+  background: var(--btn-bg) !important;
+  color: var(--btn-text) !important;
+  box-shadow: none !important;
+  font-family: var(--font-body) !important;
+  font-size: 0.78rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.045em !important;
+  line-height: 1.2 !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease,
+    box-shadow 0.2s ease, transform 0.2s ease !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn-action:hover:not(:disabled):not([aria-disabled="true"]) {
+  background: var(--btn-bg-hover) !important;
+  box-shadow: var(--btn-shadow-hover) !important;
+  transform: translateY(-1px);
+}
+
+.btn-action:active:not(:disabled):not([aria-disabled="true"]) {
+  background: var(--btn-bg-active) !important;
+  box-shadow: 0 2px 6px rgba(18, 58, 50, 0.16) !important;
+  transform: translateY(0);
+}
+
+.btn-action:focus-visible {
+  outline: 3px solid var(--btn-focus) !important;
+  outline-offset: 3px !important;
+}
+
+.btn-action:disabled,
+.btn-action[aria-disabled="true"] {
+  background: #d7e2dd !important;
+  border-color: #c3d3cb !important;
+  color: #4b5f57 !important;
+  box-shadow: none !important;
+  transform: none !important;
+  cursor: not-allowed !important;
+  opacity: 1 !important;
+}
+
+.btn-action__label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+}
+
+.btn-action__icon {
+  flex-shrink: 0;
+}
+
+.btn-action--primary {
+  --btn-bg: #1f5a4f;
+  --btn-bg-hover: #17463d;
+  --btn-bg-active: #123a32;
+  --btn-text: #ffffff;
+  --btn-border: transparent;
+  --btn-focus: #1f5a4f;
+}
+
+.btn-action--dark {
+  --btn-bg: #357f6d;
+  --btn-bg-hover: #2f7a68;
+  --btn-bg-active: #2b6f5f;
+  --btn-text: #ffffff;
+  --btn-border: #9fd0bf;
+  --btn-focus: #d9f0e7;
+  --btn-shadow-hover: 0 6px 18px rgba(0, 0, 0, 0.32);
+}
+
+.btn-action--secondary {
+  --btn-bg: transparent;
+  --btn-bg-hover: #e8f0eb;
+  --btn-bg-active: #d7e2dd;
+  --btn-text: #1f5a4f;
+  --btn-border: #1f5a4f;
+  --btn-focus: #1f5a4f;
+  --btn-shadow-hover: 0 6px 16px rgba(18, 58, 50, 0.12);
+}
+
+.btn-action--ghost {
+  --btn-bg: transparent;
+  --btn-bg-hover: rgba(255, 255, 255, 0.14);
+  --btn-bg-active: rgba(255, 255, 255, 0.22);
+  --btn-text: #ffffff;
+  --btn-border: #9fd0bf;
+  --btn-focus: #d9f0e7;
+  --btn-shadow-hover: 0 6px 18px rgba(0, 0, 0, 0.28);
+}
+
+.btn-action--dark:disabled,
+.btn-action--dark[aria-disabled="true"] {
+  background: #2a4a41 !important;
+  border-color: #3f6a5e !important;
+  color: #b8c9c2 !important;
+}
+
+.btn-action--secondary:disabled,
+.btn-action--secondary[aria-disabled="true"] {
+  background: transparent !important;
+  border-color: #b9cbc2 !important;
+  color: #6f7f79 !important;
+}
+
+.btn-action--ghost:disabled,
+.btn-action--ghost[aria-disabled="true"] {
+  background: transparent !important;
+  border-color: rgba(255, 255, 255, 0.28) !important;
+  color: rgba(255, 255, 255, 0.55) !important;
+}
+
+.btn-action--md {
+  min-height: 46px !important;
+  padding: 12px 22px !important;
+  font-size: 0.78rem !important;
+}
+
+.btn-action--sm {
+  min-height: 40px !important;
+  padding: 9px 16px !important;
+  font-size: 0.72rem !important;
+  letter-spacing: 0.035em !important;
+}
+
+.btn-action--block {
+  width: 100% !important;
+}
+
+/* Navbar uses the same small size as every other compact action. */
+.navbar-actions .nav-donate-btn.btn-action {
+  min-height: 40px !important;
+  padding: 9px 16px !important;
+  font-size: 0.72rem !important;
+}
+
+/* Override the newsletter form's legacy radius rule. */
+.newsletter-form .btn-action {
+  min-height: 46px !important;
+  padding: 12px 22px !important;
+  border-radius: var(--radius-sm, 8px) !important;
+  font-size: 0.78rem !important;
+}
+
+.parl-join-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ActionButton from '../common/ActionButton';
 import { siteInfo, socialLinks } from '../../data/siteData';
 import './Footer.css';
 
@@ -12,7 +13,9 @@ const Footer = () => {
             <p className="footer-cta-kicker">Support the Mission</p>
             <h3>Together, we can create lasting change for families across Pakistan.</h3>
           </div>
-          <Link to="/donate" className="btn-primary">Donate to BNWO</Link>
+          <ActionButton to="/donate" variant="dark" size="md">
+            Donate to BNWO
+          </ActionButton>
         </div>
         <div className="footer-grid">
           <div className="footer-col footer-about">

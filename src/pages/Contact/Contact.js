@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ActionButton from '../../components/common/ActionButton';
 import Newsletter from '../../components/Newsletter/Newsletter';
 import { siteInfo, socialLinks } from '../../data/siteData';
 import contactHero from '../../assets/hero4.jpeg';
@@ -297,9 +298,15 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <button type="submit" className="btn-primary contact-submit-btn">
-                  Send Message <i className="fas fa-paper-plane"></i>
-                </button>
+                <ActionButton
+                  type="submit"
+                  variant="primary"
+                  size="md"
+                  icon="fas fa-paper-plane"
+                  className="contact-submit-btn"
+                >
+                  Send Message
+                </ActionButton>
               </form>
             </div>
 

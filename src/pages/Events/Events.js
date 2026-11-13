@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ActionButton from '../../components/common/ActionButton';
 import CTA from '../../components/CTA/CTA';
 import Newsletter from '../../components/Newsletter/Newsletter';
 import { eventsData } from '../../data/siteData';
@@ -109,19 +110,24 @@ const Events = () => {
                   </div>
                   <p>{e.description}</p>
                   <div className="event-actions">
-                    <button
-                      className="event-view-btn"
+                    <ActionButton
+                      variant="secondary"
+                      size="sm"
+                      icon="fas fa-images"
+                      iconPosition="left"
                       onClick={() => setSelectedEvent(e)}
                     >
-                      <i className="fas fa-images"></i> View Event Details
-                    </button>
+                      View Event Details
+                    </ActionButton>
                     {e.status === 'upcoming' && (
-                      <a
-                        href="/contact"
-                        className="btn-primary event-reg-btn"
+                      <ActionButton
+                        to="/contact"
+                        variant="primary"
+                        size="sm"
+                        icon="fas fa-arrow-right"
                       >
-                        Register Now <i className="fas fa-arrow-right"></i>
-                      </a>
+                        Register Now
+                      </ActionButton>
                     )}
                   </div>
                 </div>

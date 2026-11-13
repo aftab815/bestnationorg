@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
+import ActionButton from '../common/ActionButton';
 import educationLandscape1280 from '../../assets/hero/education-landscape-1280.webp';
 import educationLandscape1920 from '../../assets/hero/education-landscape-1920.webp';
 import educationPortrait720 from '../../assets/hero/education-portrait-720.webp';
@@ -290,12 +290,22 @@ const HomeHero = () => {
               {HERO_CONTENT.subtitle.tail}
             </p>
             <div className="home-hero__actions">
-              <Link to={HERO_CONTENT.primaryCta.to} className="hero-btn">
+              <ActionButton
+                to={HERO_CONTENT.primaryCta.to}
+                variant="dark"
+                size="md"
+                className="hero-btn"
+              >
                 {HERO_CONTENT.primaryCta.label}
-              </Link>
-              <Link to={HERO_CONTENT.secondaryCta.to} className="hero-btn hero-btn--programs">
+              </ActionButton>
+              <ActionButton
+                to={HERO_CONTENT.secondaryCta.to}
+                variant="ghost"
+                size="md"
+                className="hero-btn"
+              >
                 {HERO_CONTENT.secondaryCta.label}
-              </Link>
+              </ActionButton>
             </div>
           </div>
 

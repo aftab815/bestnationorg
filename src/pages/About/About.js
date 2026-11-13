@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import ActionButton from '../../components/common/ActionButton';
 import Stats from '../../components/Stats/Stats';
 import CTA from '../../components/CTA/CTA';
 import Newsletter from '../../components/Newsletter/Newsletter';
@@ -35,12 +35,12 @@ const About = () => {
                 support to underserved communities across Pakistan.
               </p>
               <div className="about-hero-actions">
-                <a href="#executive-summary" className="btn-donate">
-                  Executive Summary <i className="fas fa-file-alt"></i>
-                </a>
-                <Link to="/parliament" className="btn-glass">
-                  7-Tier Parliament <i className="fas fa-landmark"></i>
-                </Link>
+                <ActionButton href="#executive-summary" variant="dark" size="md" icon="fas fa-file-alt">
+                  Executive Summary
+                </ActionButton>
+                <ActionButton to="/parliament" variant="ghost" size="md" icon="fas fa-landmark">
+                  7-Tier Parliament
+                </ActionButton>
               </div>
             </div>
 
@@ -281,12 +281,12 @@ const About = () => {
               </p>
             </div>
             <div className="parliament-cta-actions">
-              <Link to="/parliament" className="btn-primary">
-                Explore Parliaments <i className="fas fa-arrow-right"></i>
-              </Link>
-              <Link to="/committees" className="btn-outline">
-                24 Committees <i className="fas fa-arrow-right"></i>
-              </Link>
+              <ActionButton to="/parliament" variant="dark" size="md" icon="fas fa-arrow-right">
+                Explore Parliaments
+              </ActionButton>
+              <ActionButton to="/committees" variant="ghost" size="md" icon="fas fa-arrow-right">
+                24 Committees
+              </ActionButton>
             </div>
           </div>
         </div>

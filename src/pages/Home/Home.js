@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ActionButton from '../../components/common/ActionButton';
 import HomeHero from '../../components/HomeHero/HomeHero';
 import ServiceCard from '../../components/ServiceCard/ServiceCard';
 import Stats from '../../components/Stats/Stats';
@@ -64,9 +65,9 @@ const Home = () => {
                   </div>
                 ))}
               </div>
-              <Link to="/about" className="btn-primary">
-                Read More About Us <i className="fas fa-arrow-right"></i>
-              </Link>
+              <ActionButton to="/about" variant="primary" size="md" icon="fas fa-arrow-right">
+                Read More About Us
+              </ActionButton>
             </div>
             <div className="about-side">
               <div className="modern-frame-wrapper">
@@ -126,9 +127,9 @@ const Home = () => {
 
         <div className="container">
           <div className="services-cta">
-            <Link to="/programs" className="btn-outline">
-              Explore All 12 Programs <i className="fas fa-arrow-right"></i>
-            </Link>
+            <ActionButton to="/programs" variant="secondary" size="md" icon="fas fa-arrow-right">
+              Explore All 12 Programs
+            </ActionButton>
           </div>
         </div>
       </section>
@@ -175,12 +176,12 @@ const Home = () => {
                 ))}
               </div>
               <div className="parliament-actions">
-                <Link to="/parliament" className="btn-primary">
-                  Explore Governance <i className="fas fa-arrow-right"></i>
-                </Link>
-                <Link to="/membership" className="btn-outline">
-                  Join Membership <i className="fas fa-user-plus"></i>
-                </Link>
+                <ActionButton to="/parliament" variant="primary" size="md" icon="fas fa-arrow-right">
+                  Explore Governance
+                </ActionButton>
+                <ActionButton to="/membership" variant="secondary" size="md" icon="fas fa-user-plus">
+                  Join Membership
+                </ActionButton>
               </div>
             </div>
           </div>
@@ -237,9 +238,15 @@ const Home = () => {
               </div>
               <h3>100% Verifiable</h3>
               <p>Audit reports and field receipts are logged transparently for all parliament members.</p>
-              <Link to="/donate" className="btn-primary" style={{ marginTop: '16px' }}>
-                Support A Cause <i className="fas fa-heart"></i>
-              </Link>
+              <ActionButton
+                to="/donate"
+                variant="primary"
+                size="md"
+                icon="fas fa-heart"
+                style={{ marginTop: '16px' }}
+              >
+                Support A Cause
+              </ActionButton>
             </div>
           </div>
         </div>
@@ -270,9 +277,9 @@ const Home = () => {
                 <span><i className="fas fa-map-marker-alt"></i> {chamberEvent.location}</span>
               </div>
               <p>{chamberEvent.description}</p>
-              <Link to="/events" className="btn-primary">
-                View All Events <i className="fas fa-arrow-right"></i>
-              </Link>
+              <ActionButton to="/events" variant="primary" size="md" icon="fas fa-arrow-right">
+                View All Events
+              </ActionButton>
             </div>
           </article>
         </div>
@@ -294,9 +301,15 @@ const Home = () => {
               </div>
               <h3>Donate Fund</h3>
               <p>Your contribution directly provides food, medical aid, clean water, and education to deserving families.</p>
-              <Link to="/donate" className="btn-primary involved-btn">
-                Donate Now <i className="fas fa-heart" aria-hidden="true"></i>
-              </Link>
+              <ActionButton
+                to="/donate"
+                variant="primary"
+                size="md"
+                icon="fas fa-heart"
+                className="involved-btn"
+              >
+                Donate Now
+              </ActionButton>
             </div>
 
             <div className="involved-card card-volunteer">
@@ -305,13 +318,15 @@ const Home = () => {
               </div>
               <h3>Become a Volunteer</h3>
               <p>Join our 24 project committees or local parliament tier to actively serve your community.</p>
-              <button
-                type="button"
-                className="btn-outline involved-btn"
+              <ActionButton
+                variant="primary"
+                size="md"
+                icon="fas fa-user-plus"
+                className="involved-btn"
                 onClick={() => openForm('volunteer', 'home-volunteer')}
               >
-                Join Volunteers <i className="fas fa-user-plus" aria-hidden="true"></i>
-              </button>
+                Join Volunteers
+              </ActionButton>
             </div>
 
             <div className="involved-card card-partner">
@@ -320,13 +335,15 @@ const Home = () => {
               </div>
               <h3>Beneficiary</h3>
               <p>If you or your family need food, medical, education, or emergency support, apply and our team will verify your case.</p>
-              <button
-                type="button"
-                className="btn-outline involved-btn"
+              <ActionButton
+                variant="primary"
+                size="md"
+                icon="fas fa-hands-helping"
+                className="involved-btn"
                 onClick={() => openForm('beneficiary', 'home-beneficiary')}
               >
-                Apply for Support <i className="fas fa-hands-helping" aria-hidden="true"></i>
-              </button>
+                Apply for Support
+              </ActionButton>
             </div>
           </div>
         </div>

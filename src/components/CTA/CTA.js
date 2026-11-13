@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import ActionButton from '../common/ActionButton';
 import { useFormModal } from '../getInvolved/FormModalProvider';
 import './CTA.css';
 
@@ -17,16 +17,24 @@ const CTA = () => {
             families across Pakistan.
           </p>
           <div className="cta-buttons">
-            <button
-              type="button"
+            <ActionButton
+              variant="dark"
+              size="md"
               className="cta-volunteer-btn"
+              icon="fas fa-hand-holding-heart"
               onClick={() => openForm('volunteer', 'cta-volunteer')}
             >
-              Apply as Volunteer <i className="fas fa-hand-holding-heart" aria-hidden="true"></i>
-            </button>
-            <Link to="/contact" className="cta-contact-btn">
-              Contact Us <i className="fas fa-arrow-right"></i>
-            </Link>
+              Apply as Volunteer
+            </ActionButton>
+            <ActionButton
+              to="/contact"
+              variant="ghost"
+              size="md"
+              className="cta-contact-btn"
+              icon="fas fa-arrow-right"
+            >
+              Contact Us
+            </ActionButton>
           </div>
         </div>
       </div>

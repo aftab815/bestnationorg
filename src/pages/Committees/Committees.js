@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import ActionButton from '../../components/common/ActionButton';
 import CTA from '../../components/CTA/CTA';
 import Newsletter from '../../components/Newsletter/Newsletter';
 import { projectCommittees, accountabilityChain } from '../../data/siteData';
@@ -26,12 +26,12 @@ const Committees = () => {
               replicated across Divisional, District, and Tehsil Parliaments.
             </p>
             <div className="cmte-hero-actions">
-              <a href="#formation-composition" className="btn-donate">
-                Formation &amp; Rules <i className="fas fa-tasks"></i>
-              </a>
-              <a href="#accountability-chain" className="btn-glass">
-                8.3 Reporting Chain <i className="fas fa-project-diagram"></i>
-              </a>
+              <ActionButton href="#formation-composition" variant="dark" size="md" icon="fas fa-tasks">
+                Formation &amp; Rules
+              </ActionButton>
+              <ActionButton href="#accountability-chain" variant="ghost" size="md" icon="fas fa-project-diagram">
+                8.3 Reporting Chain
+              </ActionButton>
             </div>
           </div>
         </div>

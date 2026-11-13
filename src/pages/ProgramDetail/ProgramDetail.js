@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useParams, Link, useLocation } from 'react-router-dom';
+import ActionButton from '../../components/common/ActionButton';
 import { getProgramById, getPrograms } from '../../config/programs';
 import { getProgramDetails, getProjectDetails } from '../../config/projectDetails';
 import { useFormModal } from '../../components/getInvolved/FormModalProvider';
@@ -182,16 +183,19 @@ const ProgramDetail = () => {
                   <div className="program-project__actions">
                     <h3 className="program-project__actions-title">Be part of this project</h3>
                     <div className="program-project__buttons">
-                      <Link
+                      <ActionButton
                         to={`/donate?program=${program.id}&project=${project.id}#paypro-section`}
-                        className="btn btn-primary program-project__action-btn"
+                        variant="primary"
+                        size="md"
+                        className="program-project__action-btn"
                         aria-label={`Donate to ${project.name}`}
                       >
                         Donate
-                      </Link>
-                      <button
-                        type="button"
-                        className="btn btn-secondary program-project__action-btn"
+                      </ActionButton>
+                      <ActionButton
+                        variant="primary"
+                        size="md"
+                        className="program-project__action-btn"
                         onClick={() =>
                           openForm('volunteer', {
                             source: 'program-page-volunteer',
@@ -201,10 +205,11 @@ const ProgramDetail = () => {
                         aria-label={`Volunteer for ${project.name}`}
                       >
                         Volunteer
-                      </button>
-                      <button
-                        type="button"
-                        className="btn btn-outline program-project__action-btn"
+                      </ActionButton>
+                      <ActionButton
+                        variant="primary"
+                        size="md"
+                        className="program-project__action-btn"
                         onClick={() =>
                           openForm('beneficiary', {
                             source: 'program-page-beneficiary',
@@ -214,7 +219,7 @@ const ProgramDetail = () => {
                         aria-label={`Apply for support for ${project.name}`}
                       >
                         Apply for Support
-                      </button>
+                      </ActionButton>
                     </div>
                   </div>
                 </section>

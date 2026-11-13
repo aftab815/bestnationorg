@@ -1,4 +1,5 @@
 import React from 'react';
+import ActionButton from '../../components/common/ActionButton';
 import CTA from '../../components/CTA/CTA';
 import Newsletter from '../../components/Newsletter/Newsletter';
 import { useFormModal } from '../../components/getInvolved/FormModalProvider';
@@ -58,13 +59,15 @@ const Membership = () => {
                   <span className="mem-price-period">Registration Fee</span>
                 </div>
                 <p className="mem-contribution">{tier.contribution}</p>
-                <button
-                  type="button"
-                  className={tier.featured ? 'btn-primary' : 'btn-outline'}
+                <ActionButton
+                  variant="primary"
+                  size="md"
+                  fullWidth
+                  icon="fas fa-arrow-right"
                   onClick={() => openForm('volunteer', 'membership-international')}
                 >
-                  Apply Now <i className="fas fa-arrow-right" aria-hidden="true"></i>
-                </button>
+                  Apply Now
+                </ActionButton>
               </div>
             ))}
           </div>
@@ -91,13 +94,15 @@ const Membership = () => {
                   <span className="mem-price-period">Registration Fee</span>
                 </div>
                 <p className="mem-contribution">{tier.contribution}</p>
-                <button
-                  type="button"
-                  className="btn-outline"
+                <ActionButton
+                  variant="primary"
+                  size="md"
+                  fullWidth
+                  icon="fas fa-arrow-right"
                   onClick={() => openForm('volunteer', 'membership-local')}
                 >
-                  Apply Now <i className="fas fa-arrow-right" aria-hidden="true"></i>
-                </button>
+                  Apply Now
+                </ActionButton>
               </div>
             ))}
           </div>

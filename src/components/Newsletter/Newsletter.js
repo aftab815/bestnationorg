@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ActionButton from '../common/ActionButton';
 import './Newsletter.css';
 
 const Newsletter = () => {
@@ -47,9 +48,9 @@ const Newsletter = () => {
           </div>
           <form className="newsletter-form" onSubmit={handleSubmit}>
             <input type="email" placeholder="Enter your email address" value={email} onChange={(e) => setEmail(e.target.value)} required />
-            <button type="submit" disabled={loading}>
+            <ActionButton type="submit" variant="primary" size="md" disabled={loading}>
               {loading ? 'Submitting...' : 'Subscribe'}
-            </button>
+            </ActionButton>
           </form>
           {status.message ? (
             <p className={"newsletter-status " + status.type} role="status" aria-live="polite">
