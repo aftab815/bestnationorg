@@ -87,7 +87,7 @@ export const DIVISION_REGION_IDS = {
   'pk-prov-balochistan-div-koh-e-sulaiman-division': 'region-12',
   'pk-prov-balochistan-div-rakhshan-division': 'region-12',
   'pk-prov-balochistan-div-lasbela-division': 'region-12',
-  'pk-prov-balochistan-div-khuzdar-division': 'region-12',
+  'pk-prov-balochistan-div-kalat-division': 'region-12',
   'pk-prov-balochistan-div-makran-division': 'region-12',
 };
 

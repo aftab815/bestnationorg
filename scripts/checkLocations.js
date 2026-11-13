@@ -7,7 +7,8 @@ const source = fs.readFileSync(file, 'utf8').replace(/export (const|function)/g,
 const sandbox = {};
 vm.createContext(sandbox);
 vm.runInContext(source + '\nthis.locationsData = locationsData;', sandbox);
-const punjab = sandbox.locationsData.pakistan.find((province) => province.id === 'pk-prov-punjab');
+const pakistan = sandbox.locationsData.pakistan;
+const punjab = pakistan.find((province) => province.id === 'pk-prov-punjab');
 
 console.log('Punjab location hierarchy\n');
 
@@ -44,20 +45,22 @@ function visit(node) {
     if (node[key]) visit(node[key]);
   }
 }
-visit(punjab);
+visit(pakistan);
 
 const duplicateIds = [...idCounts.entries()].filter(([, names]) => names.length > 1);
-console.log(`\nDuplicate ids: ${duplicateIds.length}`);
+console.log(`\nDuplicate ids (whole Pakistan): ${duplicateIds.length}`);
 for (const [id, names] of duplicateIds) {
   console.log(`  ${id} -> ${names.join(', ')}`);
 }
 
 const tehsilLocations = new Map();
-for (const division of punjab.divisions) {
-  for (const district of division.districts) {
-    for (const tehsil of district.tehsils) {
-      if (!tehsilLocations.has(tehsil.id)) tehsilLocations.set(tehsil.id, []);
-      tehsilLocations.get(tehsil.id).push(`${division.name} > ${district.name}`);
+for (const province of pakistan) {
+  for (const division of province.divisions) {
+    for (const district of division.districts) {
+      for (const tehsil of district.tehsils) {
+        if (!tehsilLocations.has(tehsil.id)) tehsilLocations.set(tehsil.id, []);
+        tehsilLocations.get(tehsil.id).push(`${division.name} > ${district.name}`);
+      }
     }
   }
 }

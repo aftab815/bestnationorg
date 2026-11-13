@@ -8,7 +8,7 @@
 export const PROGRAMS = [
   {
     id: 'prog-1',
-    name: 'Islamic Education & Social Welfare Program',
+    name: 'Quran-o-Sunnat Agahi & Dar-Ul-Rehmat Program',
     projects: [
       { id: 'proj-1-a', name: 'Quran & Sunnah Awareness' },
       { id: 'proj-1-b', name: 'Dar-ul-Rehmat' },
@@ -16,7 +16,7 @@ export const PROGRAMS = [
   },
   {
     id: 'prog-2',
-    name: 'Education & Skills Development Program',
+    name: 'IT & Skill Institutes & Literacy Program',
     projects: [
       { id: 'proj-2-a', name: 'IT & Skills' },
       { id: 'proj-2-b', name: 'Literacy Program' },
@@ -24,7 +24,7 @@ export const PROGRAMS = [
   },
   {
     id: 'prog-3',
-    name: 'Parents & Teachers Development Program',
+    name: 'Parents & Teachers Empowerment Training Program',
     projects: [
       { id: 'proj-3-a', name: 'Parents' },
       { id: 'proj-3-b', name: 'Teachers Empowerment and Training Program' },
@@ -32,7 +32,7 @@ export const PROGRAMS = [
   },
   {
     id: 'prog-4',
-    name: 'Agriculture & Livestock Development Program',
+    name: 'Agricultural & Livestock Promotion Training Program',
     projects: [
       { id: 'proj-4-a', name: 'Agricultural Promotion' },
       { id: 'proj-4-b', name: 'Livestock Promotion' },
@@ -40,7 +40,7 @@ export const PROGRAMS = [
   },
   {
     id: 'prog-5',
-    name: 'Healthcare Awareness & Medical Empowerment Program',
+    name: 'Health Awareness & Doctors Empowerment Program',
     projects: [
       { id: 'proj-5-a', name: 'Health Awareness' },
       { id: 'proj-5-b', name: 'Doctors Empowerment' },
@@ -48,7 +48,7 @@ export const PROGRAMS = [
   },
   {
     id: 'prog-6',
-    name: 'Healthcare Services & Emergency Support Program',
+    name: 'Dialysis Centres, Blood Banks & Ambulance Services',
     projects: [
       { id: 'proj-6-a', name: 'Dialysis Centers' },
       { id: 'proj-6-b', name: 'Blood Bank & Ambulance Service' },
@@ -56,7 +56,7 @@ export const PROGRAMS = [
   },
   {
     id: 'prog-7',
-    name: 'Environmental Protection & Clean Water Program',
+    name: 'Green Clean Pakistan & Clean Water Program',
     projects: [
       { id: 'proj-7-a', name: 'Green & Clean Pakistan' },
       { id: 'proj-7-b', name: 'Clean Water' },
@@ -64,7 +64,7 @@ export const PROGRAMS = [
   },
   {
     id: 'prog-8',
-    name: 'Sports & Cultural Development Program',
+    name: 'Sports & Cultural Activities Program',
     projects: [
       { id: 'proj-8-a', name: 'Sports' },
       { id: 'proj-8-b', name: 'Cultural Activities' },
@@ -72,7 +72,7 @@ export const PROGRAMS = [
   },
   {
     id: 'prog-9',
-    name: 'Justice, Legal Aid & Human Rights Program',
+    name: 'Rule of Law Empowerment & Human Rights Legal Support Program',
     projects: [
       { id: 'proj-9-a', name: 'Rule of Law Empowerment' },
       { id: 'proj-9-b', name: 'Human Rights & Legal Support Program' },
@@ -80,7 +80,7 @@ export const PROGRAMS = [
   },
   {
     id: 'prog-10',
-    name: 'Trade & Industrial Development Program',
+    name: 'Traders & Industrialist Empowerment Program',
     projects: [
       { id: 'proj-10-a', name: 'Traders' },
       { id: 'proj-10-b', name: 'Industrialists Empowerment Project' },
@@ -96,7 +96,7 @@ export const PROGRAMS = [
   },
   {
     id: 'prog-12',
-    name: 'Family Welfare & Entrepreneurship Development Program',
+    name: 'Nikah Falahi & SME Program',
     projects: [
       { id: 'proj-12-a', name: 'Nikah Falahi' },
       { id: 'proj-12-b', name: 'SME Program' },

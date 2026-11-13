@@ -1359,6 +1359,198 @@ export const locationsData = {
                   ],
                 }
               ],
+            },
+            {
+              id: "pk-prov-sindh-div-karachi-division-dist-nazimabad-district",
+              name: "Nazimabad District",
+              tehsils: [
+                {
+                  id: "pk-prov-sindh-div-karachi-division-dist-nazimabad-district-teh-gulberg-tehsil",
+                  name: "Gulberg Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-karachi-division-dist-nazimabad-district-teh-liaquatabad-tehsil",
+                  name: "Liaquatabad Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-karachi-division-dist-nazimabad-district-teh-new-karachi-tehsil",
+                  name: "New Karachi Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-karachi-division-dist-nazimabad-district-teh-north-nazimabad-tehsil",
+                  name: "North Nazimabad Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-sindh-div-karachi-division-dist-gulshan-district",
+              name: "Gulshan District",
+              tehsils: [
+                {
+                  id: "pk-prov-sindh-div-karachi-division-dist-gulshan-district-teh-ferozabad-tehsil",
+                  name: "Ferozabad Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-karachi-division-dist-gulshan-district-teh-gulshan-e-iqbal-tehsil",
+                  name: "Gulshan-e-Iqbal Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-karachi-division-dist-gulshan-district-teh-gulzar-e-hijri-tehsil",
+                  name: "Gulzar-e-Hijri Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-karachi-division-dist-gulshan-district-teh-jamshed-town-tehsil",
+                  name: "Jamshed Town Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-karachi-division-dist-gulshan-district-teh-gulshan-town-tehsil",
+                  name: "Gulshan Town Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-sindh-div-karachi-division-dist-orangi-district",
+              name: "Orangi District",
+              tehsils: [
+                {
+                  id: "pk-prov-sindh-div-karachi-division-dist-orangi-district-teh-orangi-town-tehsil",
+                  name: "Orangi Town Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-karachi-division-dist-orangi-district-teh-mominabad-tehsil",
+                  name: "Mominabad Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-sindh-div-karachi-division-dist-karachi-district",
+              name: "Karachi District",
+              tehsils: [
+                {
+                  id: "pk-prov-sindh-div-karachi-division-dist-karachi-district-teh-saddar-tehsil",
+                  name: "Saddar Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-karachi-division-dist-karachi-district-teh-arambagh-tehsil",
+                  name: "Arambagh Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-karachi-division-dist-karachi-district-teh-civil-lines-tehsil",
+                  name: "Civil Lines Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-karachi-division-dist-karachi-district-teh-garden-tehsil",
+                  name: "Garden Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-karachi-division-dist-karachi-district-teh-lyari-tehsil",
+                  name: "Lyari Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-sindh-div-karachi-division-dist-keamari-district",
+              name: "Keamari District",
+              tehsils: [
+                {
+                  id: "pk-prov-sindh-div-karachi-division-dist-keamari-district-teh-keamari-harbour-tehsil",
+                  name: "Keamari (Harbour) Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-karachi-division-dist-keamari-district-teh-baldia-tehsil",
+                  name: "Baldia Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-karachi-division-dist-keamari-district-teh-site-tehsil",
+                  name: "SITE Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-karachi-division-dist-keamari-district-teh-mauripur-tehsil",
+                  name: "Mauripur Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-sindh-div-karachi-division-dist-korangi-district",
+              name: "Korangi District",
+              tehsils: [
+                {
+                  id: "pk-prov-sindh-div-karachi-division-dist-korangi-district-teh-korangi-tehsil",
+                  name: "Korangi Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-karachi-division-dist-korangi-district-teh-landhi-tehsil",
+                  name: "Landhi Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-karachi-division-dist-korangi-district-teh-model-colony-tehsil",
+                  name: "Model Colony Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-karachi-division-dist-korangi-district-teh-shah-faisal-tehsil",
+                  name: "Shah Faisal Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-sindh-div-karachi-division-dist-malir-district",
+              name: "Malir District",
+              tehsils: [
+                {
+                  id: "pk-prov-sindh-div-karachi-division-dist-malir-district-teh-malir-tehsil",
+                  name: "Malir Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-karachi-division-dist-malir-district-teh-gadap-tehsil",
+                  name: "Gadap Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-karachi-division-dist-malir-district-teh-bin-qasim-tehsil",
+                  name: "Bin Qasim Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-karachi-division-dist-malir-district-teh-ibrahim-hyderi-tehsil",
+                  name: "Ibrahim Hyderi Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-karachi-division-dist-malir-district-teh-murad-memon-tehsil",
+                  name: "Murad Memon Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-karachi-division-dist-malir-district-teh-shah-mureed-tehsil",
+                  name: "Shah Mureed Tehsil",
+                  unionCouncils: [],
+                }
+              ],
             }
           ],
         },
@@ -1386,6 +1578,219 @@ export const locationsData = {
                     { id: "pk-prov-sindh-div-hyderabad-division-dist-hyderabad-district-teh-latifabad-tehsil-uc-uc-08-unit-1-6", name: "UC 08 (Unit 1-6)" },
                     { id: "pk-prov-sindh-div-hyderabad-division-dist-hyderabad-district-teh-latifabad-tehsil-uc-uc-09-unit-7-12", name: "UC 09 (Unit 7-12)" }
                   ],
+                },
+                {
+                  id: "pk-prov-sindh-div-hyderabad-division-dist-hyderabad-district-teh-hyderabad-rural-hyderabad-taluka-tehsil",
+                  name: "Hyderabad Rural (Hyderabad Taluka) Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-hyderabad-division-dist-hyderabad-district-teh-qasimabad-tehsil",
+                  name: "Qasimabad Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-sindh-div-hyderabad-division-dist-jamshoro-district",
+              name: "Jamshoro District",
+              tehsils: [
+                {
+                  id: "pk-prov-sindh-div-hyderabad-division-dist-jamshoro-district-teh-kotri-tehsil",
+                  name: "Kotri Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-hyderabad-division-dist-jamshoro-district-teh-sehwan-sharif-tehsil",
+                  name: "Sehwan Sharif Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-hyderabad-division-dist-jamshoro-district-teh-manjhand-tehsil",
+                  name: "Manjhand Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-hyderabad-division-dist-jamshoro-district-teh-thano-bula-khan-tehsil",
+                  name: "Thano Bula Khan Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-sindh-div-hyderabad-division-dist-dadu-district",
+              name: "Dadu District",
+              tehsils: [
+                {
+                  id: "pk-prov-sindh-div-hyderabad-division-dist-dadu-district-teh-dadu-tehsil",
+                  name: "Dadu Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-hyderabad-division-dist-dadu-district-teh-johi-tehsil",
+                  name: "Johi Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-hyderabad-division-dist-dadu-district-teh-khairpur-nathan-shah-tehsil",
+                  name: "Khairpur Nathan Shah Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-hyderabad-division-dist-dadu-district-teh-mehar-tehsil",
+                  name: "Mehar Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-sindh-div-hyderabad-division-dist-badin-district",
+              name: "Badin District",
+              tehsils: [
+                {
+                  id: "pk-prov-sindh-div-hyderabad-division-dist-badin-district-teh-badin-tehsil",
+                  name: "Badin Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-hyderabad-division-dist-badin-district-teh-matli-tehsil",
+                  name: "Matli Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-hyderabad-division-dist-badin-district-teh-shaheed-fazil-rahu-golarchi-tehsil",
+                  name: "Shaheed Fazil Rahu (Golarchi) Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-hyderabad-division-dist-badin-district-teh-talhar-tehsil",
+                  name: "Talhar Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-hyderabad-division-dist-badin-district-teh-tando-bago-tehsil",
+                  name: "Tando Bago Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-sindh-div-hyderabad-division-dist-matiari-district",
+              name: "Matiari District",
+              tehsils: [
+                {
+                  id: "pk-prov-sindh-div-hyderabad-division-dist-matiari-district-teh-hala-tehsil",
+                  name: "Hala Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-hyderabad-division-dist-matiari-district-teh-matiari-tehsil",
+                  name: "Matiari Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-hyderabad-division-dist-matiari-district-teh-saeedabad-tehsil",
+                  name: "Saeedabad Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-sindh-div-hyderabad-division-dist-tando-allahyar-district",
+              name: "Tando Allahyar District",
+              tehsils: [
+                {
+                  id: "pk-prov-sindh-div-hyderabad-division-dist-tando-allahyar-district-teh-chamber-tehsil",
+                  name: "Chamber Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-hyderabad-division-dist-tando-allahyar-district-teh-jhando-mari-tehsil",
+                  name: "Jhando Mari Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-hyderabad-division-dist-tando-allahyar-district-teh-tando-allahyar-tehsil",
+                  name: "Tando Allahyar Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-sindh-div-hyderabad-division-dist-tando-muhammad-khan-district",
+              name: "Tando Muhammad Khan District",
+              tehsils: [
+                {
+                  id: "pk-prov-sindh-div-hyderabad-division-dist-tando-muhammad-khan-district-teh-bulri-shah-karim-tehsil",
+                  name: "Bulri Shah Karim Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-hyderabad-division-dist-tando-muhammad-khan-district-teh-tando-ghulam-hyder-tehsil",
+                  name: "Tando Ghulam Hyder Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-hyderabad-division-dist-tando-muhammad-khan-district-teh-tando-muhammad-khan-tehsil",
+                  name: "Tando Muhammad Khan Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-sindh-div-hyderabad-division-dist-thatta-district",
+              name: "Thatta District",
+              tehsils: [
+                {
+                  id: "pk-prov-sindh-div-hyderabad-division-dist-thatta-district-teh-ghorabari-tehsil",
+                  name: "Ghorabari Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-hyderabad-division-dist-thatta-district-teh-keti-bunder-tehsil",
+                  name: "Keti Bunder Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-hyderabad-division-dist-thatta-district-teh-mirpur-sakro-tehsil",
+                  name: "Mirpur Sakro Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-hyderabad-division-dist-thatta-district-teh-thatta-tehsil",
+                  name: "Thatta Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-sindh-div-hyderabad-division-dist-sujawal-district",
+              name: "Sujawal District",
+              tehsils: [
+                {
+                  id: "pk-prov-sindh-div-hyderabad-division-dist-sujawal-district-teh-jati-tehsil",
+                  name: "Jati Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-hyderabad-division-dist-sujawal-district-teh-kharo-chan-tehsil",
+                  name: "Kharo Chan Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-hyderabad-division-dist-sujawal-district-teh-mirpur-bathoro-tehsil",
+                  name: "Mirpur Bathoro Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-hyderabad-division-dist-sujawal-district-teh-shah-bunder-tehsil",
+                  name: "Shah Bunder Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-hyderabad-division-dist-sujawal-district-teh-sujawal-tehsil",
+                  name: "Sujawal Tehsil",
+                  unionCouncils: [],
                 }
               ],
             }
@@ -1394,17 +1799,278 @@ export const locationsData = {
         {
           id: "pk-prov-sindh-div-mirpur-khas-division",
           name: "Mirpur Khas Division",
-          districts: [],
+          districts: [
+            {
+              id: "pk-prov-sindh-div-mirpur-khas-division-dist-mirpur-khas-district",
+              name: "Mirpur Khas District",
+              tehsils: [
+                {
+                  id: "pk-prov-sindh-div-mirpur-khas-division-dist-mirpur-khas-district-teh-digri-tehsil",
+                  name: "Digri Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-mirpur-khas-division-dist-mirpur-khas-district-teh-hussain-bux-mari-tehsil",
+                  name: "Hussain Bux Mari Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-mirpur-khas-division-dist-mirpur-khas-district-teh-jhuddo-tehsil",
+                  name: "Jhuddo Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-mirpur-khas-division-dist-mirpur-khas-district-teh-kot-ghulam-muhammad-tehsil",
+                  name: "Kot Ghulam Muhammad Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-mirpur-khas-division-dist-mirpur-khas-district-teh-mirpur-khas-tehsil",
+                  name: "Mirpur Khas Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-mirpur-khas-division-dist-mirpur-khas-district-teh-shujaabad-tehsil",
+                  name: "Shujaabad Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-mirpur-khas-division-dist-mirpur-khas-district-teh-sindhri-tehsil",
+                  name: "Sindhri Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-sindh-div-mirpur-khas-division-dist-tharparkar-district",
+              name: "Tharparkar District",
+              tehsils: [
+                {
+                  id: "pk-prov-sindh-div-mirpur-khas-division-dist-tharparkar-district-teh-chachro-tehsil",
+                  name: "Chachro Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-mirpur-khas-division-dist-tharparkar-district-teh-dahli-tehsil",
+                  name: "Dahli Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-mirpur-khas-division-dist-tharparkar-district-teh-diplo-tehsil",
+                  name: "Diplo Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-mirpur-khas-division-dist-tharparkar-district-teh-islamkot-tehsil",
+                  name: "Islamkot Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-mirpur-khas-division-dist-tharparkar-district-teh-kaloi-tehsil",
+                  name: "Kaloi Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-mirpur-khas-division-dist-tharparkar-district-teh-mithi-tehsil",
+                  name: "Mithi Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-mirpur-khas-division-dist-tharparkar-district-teh-nagarparkar-tehsil",
+                  name: "Nagarparkar Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-sindh-div-mirpur-khas-division-dist-umerkot-district",
+              name: "Umerkot District",
+              tehsils: [
+                {
+                  id: "pk-prov-sindh-div-mirpur-khas-division-dist-umerkot-district-teh-kunri-tehsil",
+                  name: "Kunri Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-mirpur-khas-division-dist-umerkot-district-teh-pithoro-tehsil",
+                  name: "Pithoro Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-mirpur-khas-division-dist-umerkot-district-teh-samaro-tehsil",
+                  name: "Samaro Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-mirpur-khas-division-dist-umerkot-district-teh-umerkot-tehsil",
+                  name: "Umerkot Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            }
+          ],
         },
         {
           id: "pk-prov-sindh-div-larkana-division",
           name: "Larkana Division",
-          districts: [],
+          districts: [
+            {
+              id: "pk-prov-sindh-div-larkana-division-dist-larkana-district",
+              name: "Larkana District",
+              tehsils: [
+                {
+                  id: "pk-prov-sindh-div-larkana-division-dist-larkana-district-teh-bakrani-tehsil",
+                  name: "Bakrani Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-larkana-division-dist-larkana-district-teh-dokri-tehsil",
+                  name: "Dokri Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-larkana-division-dist-larkana-district-teh-larkana-tehsil",
+                  name: "Larkana Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-larkana-division-dist-larkana-district-teh-ratodero-tehsil",
+                  name: "Ratodero Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-sindh-div-larkana-division-dist-qamber-shahdadkot-district",
+              name: "Qamber Shahdadkot District",
+              tehsils: [
+                {
+                  id: "pk-prov-sindh-div-larkana-division-dist-qamber-shahdadkot-district-teh-miro-khan-tehsil",
+                  name: "Miro Khan Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-larkana-division-dist-qamber-shahdadkot-district-teh-nasirabad-tehsil",
+                  name: "Nasirabad Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-larkana-division-dist-qamber-shahdadkot-district-teh-qambar-tehsil",
+                  name: "Qambar Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-larkana-division-dist-qamber-shahdadkot-district-teh-qubo-saeed-khan-tehsil",
+                  name: "Qubo Saeed Khan Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-larkana-division-dist-qamber-shahdadkot-district-teh-shahdadkot-tehsil",
+                  name: "Shahdadkot Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-larkana-division-dist-qamber-shahdadkot-district-teh-sijawal-junejo-tehsil",
+                  name: "Sijawal Junejo Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-larkana-division-dist-qamber-shahdadkot-district-teh-warah-tehsil",
+                  name: "Warah Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-sindh-div-larkana-division-dist-shikarpur-district",
+              name: "Shikarpur District",
+              tehsils: [
+                {
+                  id: "pk-prov-sindh-div-larkana-division-dist-shikarpur-district-teh-garhi-yasin-tehsil",
+                  name: "Garhi Yasin Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-larkana-division-dist-shikarpur-district-teh-khanpur-tehsil",
+                  name: "Khanpur Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-larkana-division-dist-shikarpur-district-teh-lakhi-tehsil",
+                  name: "Lakhi Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-larkana-division-dist-shikarpur-district-teh-shikarpur-tehsil",
+                  name: "Shikarpur Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-sindh-div-larkana-division-dist-jacobabad-district",
+              name: "Jacobabad District",
+              tehsils: [
+                {
+                  id: "pk-prov-sindh-div-larkana-division-dist-jacobabad-district-teh-garhi-khairo-tehsil",
+                  name: "Garhi Khairo Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-larkana-division-dist-jacobabad-district-teh-jacobabad-tehsil",
+                  name: "Jacobabad Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-larkana-division-dist-jacobabad-district-teh-thul-tehsil",
+                  name: "Thul Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-sindh-div-larkana-division-dist-kashmore-district",
+              name: "Kashmore District",
+              tehsils: [
+                {
+                  id: "pk-prov-sindh-div-larkana-division-dist-kashmore-district-teh-kandhkot-tehsil",
+                  name: "Kandhkot Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-larkana-division-dist-kashmore-district-teh-kashmore-tehsil",
+                  name: "Kashmore Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-larkana-division-dist-kashmore-district-teh-tangwani-tehsil",
+                  name: "Tangwani Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            }
+          ],
         },
         {
           id: "pk-prov-sindh-div-shaheed-benazirabad-division",
           name: "Shaheed Benazirabad Division",
-          districts: [],
+          districts: [
+            {
+              id: "pk-prov-sindh-div-shaheed-benazirabad-division-dist-shaheed-benazirabad-district",
+              name: "Shaheed Benazirabad District",
+              tehsils: [],
+            },
+            {
+              id: "pk-prov-sindh-div-shaheed-benazirabad-division-dist-naushahro-feroze-district",
+              name: "Naushahro Feroze District",
+              tehsils: [],
+            },
+            {
+              id: "pk-prov-sindh-div-shaheed-benazirabad-division-dist-sanghar-district",
+              name: "Sanghar District",
+              tehsils: [],
+            }
+          ],
         },
         {
           id: "pk-prov-sindh-div-sukkur-division",
@@ -1422,6 +2088,103 @@ export const locationsData = {
                     { id: "pk-prov-sindh-div-sukkur-division-dist-sukkur-district-teh-sukkur-city-tehsil-uc-uc-02-old-sukkur", name: "UC 02 (Old Sukkur)" },
                     { id: "pk-prov-sindh-div-sukkur-division-dist-sukkur-district-teh-sukkur-city-tehsil-uc-uc-03-rohri", name: "UC 03 (Rohri)" }
                   ],
+                },
+                {
+                  id: "pk-prov-sindh-div-sukkur-division-dist-sukkur-district-teh-new-sukkur-tehsil",
+                  name: "New Sukkur Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-sukkur-division-dist-sukkur-district-teh-rohri-tehsil",
+                  name: "Rohri Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-sukkur-division-dist-sukkur-district-teh-saleh-pat-tehsil",
+                  name: "Saleh Pat Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-sukkur-division-dist-sukkur-district-teh-pano-akil-tehsil",
+                  name: "Pano Akil Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-sindh-div-sukkur-division-dist-khairpur-district",
+              name: "Khairpur District",
+              tehsils: [
+                {
+                  id: "pk-prov-sindh-div-sukkur-division-dist-khairpur-district-teh-faiz-ganj-tehsil",
+                  name: "Faiz Ganj Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-sukkur-division-dist-khairpur-district-teh-gambat-tehsil",
+                  name: "Gambat Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-sukkur-division-dist-khairpur-district-teh-khairpur-tehsil",
+                  name: "Khairpur Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-sukkur-division-dist-khairpur-district-teh-kingri-tehsil",
+                  name: "Kingri Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-sukkur-division-dist-khairpur-district-teh-kot-diji-tehsil",
+                  name: "Kot Diji Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-sukkur-division-dist-khairpur-district-teh-nara-tehsil",
+                  name: "Nara Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-sukkur-division-dist-khairpur-district-teh-sobho-dero-tehsil",
+                  name: "Sobho Dero Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-sukkur-division-dist-khairpur-district-teh-thari-mirwah-mirwah-tehsil",
+                  name: "Thari Mirwah (Mirwah) Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-sindh-div-sukkur-division-dist-ghotki-district",
+              name: "Ghotki District",
+              tehsils: [
+                {
+                  id: "pk-prov-sindh-div-sukkur-division-dist-ghotki-district-teh-daharki-tehsil",
+                  name: "Daharki Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-sukkur-division-dist-ghotki-district-teh-ghotki-tehsil",
+                  name: "Ghotki Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-sukkur-division-dist-ghotki-district-teh-khangarh-khanpur-mahar-tehsil",
+                  name: "Khangarh (Khanpur Mahar) Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-sukkur-division-dist-ghotki-district-teh-mirpur-mathelo-tehsil",
+                  name: "Mirpur Mathelo Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-sindh-div-sukkur-division-dist-ghotki-district-teh-ubauro-tehsil",
+                  name: "Ubauro Tehsil",
+                  unionCouncils: [],
                 }
               ],
             }
@@ -1450,6 +2213,36 @@ export const locationsData = {
                     { id: "pk-prov-khyber-pakhtunkhwa-div-peshawar-division-dist-peshawar-district-teh-peshawar-city-tehsil-uc-uc-03-cantt", name: "UC 03 (Cantt)" },
                     { id: "pk-prov-khyber-pakhtunkhwa-div-peshawar-division-dist-peshawar-district-teh-peshawar-city-tehsil-uc-uc-04-city-circular", name: "UC 04 (City Circular)" }
                   ],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-peshawar-division-dist-peshawar-district-teh-badhber-badhaber-tehsil",
+                  name: "Badhber (Badhaber) Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-peshawar-division-dist-peshawar-district-teh-chamkani-tehsil",
+                  name: "Chamkani Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-peshawar-division-dist-peshawar-district-teh-hassan-khel-tehsil",
+                  name: "Hassan Khel Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-peshawar-division-dist-peshawar-district-teh-shah-alam-tehsil",
+                  name: "Shah Alam Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-peshawar-division-dist-peshawar-district-teh-pishtakhara-tehsil",
+                  name: "Pishtakhara Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-peshawar-division-dist-peshawar-district-teh-mathra-tehsil",
+                  name: "Mathra Tehsil",
+                  unionCouncils: [],
                 }
               ],
             },
@@ -1465,6 +2258,104 @@ export const locationsData = {
                     { id: "pk-prov-khyber-pakhtunkhwa-div-peshawar-division-dist-charsadda-district-teh-charsadda-tehsil-uc-uc-02-tangi", name: "UC 02 (Tangi)" },
                     { id: "pk-prov-khyber-pakhtunkhwa-div-peshawar-division-dist-charsadda-district-teh-charsadda-tehsil-uc-uc-03-shabqadar", name: "UC 03 (Shabqadar)" }
                   ],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-peshawar-division-dist-charsadda-district-teh-tangi-tehsil",
+                  name: "Tangi Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-peshawar-division-dist-charsadda-district-teh-shabqadar-tehsil",
+                  name: "Shabqadar Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-khyber-pakhtunkhwa-div-peshawar-division-dist-khyber-district",
+              name: "Khyber District",
+              tehsils: [
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-peshawar-division-dist-khyber-district-teh-bara-tehsil",
+                  name: "Bara Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-peshawar-division-dist-khyber-district-teh-jamrud-tehsil",
+                  name: "Jamrud Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-peshawar-division-dist-khyber-district-teh-landi-kotal-tehsil",
+                  name: "Landi Kotal Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-peshawar-division-dist-khyber-district-teh-mula-gori-tehsil",
+                  name: "Mula Gori Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-khyber-pakhtunkhwa-div-peshawar-division-dist-mohmand-district",
+              name: "Mohmand District",
+              tehsils: [
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-peshawar-division-dist-mohmand-district-teh-ambar-utman-khel-tehsil",
+                  name: "Ambar Utman Khel Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-peshawar-division-dist-mohmand-district-teh-halim-zai-tehsil",
+                  name: "Halim Zai Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-peshawar-division-dist-mohmand-district-teh-pindiali-tehsil",
+                  name: "Pindiali Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-peshawar-division-dist-mohmand-district-teh-pran-ghar-pranghar-tehsil",
+                  name: "Pran Ghar (Pranghar) Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-peshawar-division-dist-mohmand-district-teh-safi-tehsil",
+                  name: "Safi Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-peshawar-division-dist-mohmand-district-teh-upper-mohmand-mohmand-bala-tehsil",
+                  name: "Upper Mohmand (Mohmand Bala) Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-peshawar-division-dist-mohmand-district-teh-yake-ghund-lower-mohmand-tehsil",
+                  name: "Yake Ghund (Lower Mohmand) Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-khyber-pakhtunkhwa-div-peshawar-division-dist-nowshera-district",
+              name: "Nowshera District",
+              tehsils: [
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-peshawar-division-dist-nowshera-district-teh-nowshera-tehsil",
+                  name: "Nowshera Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-peshawar-division-dist-nowshera-district-teh-pabbi-tehsil",
+                  name: "Pabbi Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-peshawar-division-dist-nowshera-district-teh-jehangira-tehsil",
+                  name: "Jehangira Tehsil",
+                  unionCouncils: [],
                 }
               ],
             }
@@ -1473,17 +2364,345 @@ export const locationsData = {
         {
           id: "pk-prov-khyber-pakhtunkhwa-div-kohat-division",
           name: "Kohat Division",
-          districts: [],
+          districts: [
+            {
+              id: "pk-prov-khyber-pakhtunkhwa-div-kohat-division-dist-hangu-and-karak-district",
+              name: "Hangu & Karak District",
+              tehsils: [
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-kohat-division-dist-hangu-and-karak-district-teh-hangu-tehsil",
+                  name: "Hangu Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-kohat-division-dist-hangu-and-karak-district-teh-thall-tehsil",
+                  name: "Thall Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-kohat-division-dist-hangu-and-karak-district-teh-banda-daud-shah-tehsil",
+                  name: "Banda Daud Shah Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-kohat-division-dist-hangu-and-karak-district-teh-karak-tehsil",
+                  name: "Karak Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-kohat-division-dist-hangu-and-karak-district-teh-takht-e-nasrati-tehsil",
+                  name: "Takht-e-Nasrati Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-khyber-pakhtunkhwa-div-kohat-division-dist-kohat-district",
+              name: "Kohat District",
+              tehsils: [
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-kohat-division-dist-kohat-district-teh-kohat-tehsil",
+                  name: "Kohat Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-kohat-division-dist-kohat-district-teh-lachi-tehsil",
+                  name: "Lachi Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-kohat-division-dist-kohat-district-teh-gumbat-tehsil",
+                  name: "Gumbat Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-kohat-division-dist-kohat-district-teh-dara-adam-khel-tehsil",
+                  name: "Dara Adam Khel Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-khyber-pakhtunkhwa-div-kohat-division-dist-kurram-and-orakzai-district",
+              name: "Kurram & Orakzai District",
+              tehsils: [
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-kohat-division-dist-kurram-and-orakzai-district-teh-central-kurram-tehsil",
+                  name: "Central Kurram Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-kohat-division-dist-kurram-and-orakzai-district-teh-lower-kurram-tehsil",
+                  name: "Lower Kurram Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-kohat-division-dist-kurram-and-orakzai-district-teh-upper-kurram-tehsil",
+                  name: "Upper Kurram Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-kohat-division-dist-kurram-and-orakzai-district-teh-central-orakzai-tehsil",
+                  name: "Central Orakzai Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-kohat-division-dist-kurram-and-orakzai-district-teh-ismailzai-ismail-zai-tehsil",
+                  name: "Ismailzai (Ismail Zai) Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-kohat-division-dist-kurram-and-orakzai-district-teh-lower-orakzai-tehsil",
+                  name: "Lower Orakzai Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-kohat-division-dist-kurram-and-orakzai-district-teh-upper-orakzai-tehsil",
+                  name: "Upper Orakzai Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            }
+          ],
         },
         {
           id: "pk-prov-khyber-pakhtunkhwa-div-bannu-division",
           name: "Bannu Division",
-          districts: [],
+          districts: [
+            {
+              id: "pk-prov-khyber-pakhtunkhwa-div-bannu-division-dist-bannu-district",
+              name: "Bannu District",
+              tehsils: [
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-bannu-division-dist-bannu-district-teh-baka-khel-tehsil",
+                  name: "Baka Khel Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-bannu-division-dist-bannu-district-teh-bannu-tehsil",
+                  name: "Bannu Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-bannu-division-dist-bannu-district-teh-domel-tehsil",
+                  name: "Domel Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-bannu-division-dist-bannu-district-teh-kakki-tehsil",
+                  name: "Kakki Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-bannu-division-dist-bannu-district-teh-miryan-tehsil",
+                  name: "Miryan Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-bannu-division-dist-bannu-district-teh-wazir-tehsil",
+                  name: "Wazir Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-khyber-pakhtunkhwa-div-bannu-division-dist-lakki-marwat-district",
+              name: "Lakki Marwat District",
+              tehsils: [
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-bannu-division-dist-lakki-marwat-district-teh-bettani-tehsil",
+                  name: "Bettani Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-bannu-division-dist-lakki-marwat-district-teh-ghazni-khel-tehsil",
+                  name: "Ghazni Khel Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-bannu-division-dist-lakki-marwat-district-teh-lakki-marwat-tehsil",
+                  name: "Lakki Marwat Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-bannu-division-dist-lakki-marwat-district-teh-sarai-naurang-tehsil",
+                  name: "Sarai Naurang Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-khyber-pakhtunkhwa-div-bannu-division-dist-north-waziristan-district",
+              name: "North Waziristan District",
+              tehsils: [
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-bannu-division-dist-north-waziristan-district-teh-datta-khel-tehsil",
+                  name: "Datta Khel Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-bannu-division-dist-north-waziristan-district-teh-dossali-tehsil",
+                  name: "Dossali Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-bannu-division-dist-north-waziristan-district-teh-gharyum-tehsil",
+                  name: "Gharyum Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-bannu-division-dist-north-waziristan-district-teh-ghulam-khan-tehsil",
+                  name: "Ghulam Khan Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-bannu-division-dist-north-waziristan-district-teh-mir-ali-tehsil",
+                  name: "Mir Ali Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-bannu-division-dist-north-waziristan-district-teh-miran-shah-tehsil",
+                  name: "Miran Shah Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-bannu-division-dist-north-waziristan-district-teh-razmak-tehsil",
+                  name: "Razmak Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-bannu-division-dist-north-waziristan-district-teh-shewa-tehsil",
+                  name: "Shewa Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-bannu-division-dist-north-waziristan-district-teh-spinwam-tehsil",
+                  name: "Spinwam Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            }
+          ],
         },
         {
           id: "pk-prov-khyber-pakhtunkhwa-div-dera-ismail-khan-division",
           name: "Dera Ismail Khan Division",
-          districts: [],
+          districts: [
+            {
+              id: "pk-prov-khyber-pakhtunkhwa-div-dera-ismail-khan-division-dist-dera-ismail-khan-district",
+              name: "Dera Ismail Khan District",
+              tehsils: [
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-dera-ismail-khan-division-dist-dera-ismail-khan-district-teh-daraban-tehsil",
+                  name: "Daraban Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-dera-ismail-khan-division-dist-dera-ismail-khan-district-teh-dera-ismail-khan-tehsil",
+                  name: "Dera Ismail Khan Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-dera-ismail-khan-division-dist-dera-ismail-khan-district-teh-kulachi-tehsil",
+                  name: "Kulachi Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-dera-ismail-khan-division-dist-dera-ismail-khan-district-teh-paharpur-tehsil",
+                  name: "Paharpur Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-dera-ismail-khan-division-dist-dera-ismail-khan-district-teh-paroa-tehsil",
+                  name: "Paroa Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-khyber-pakhtunkhwa-div-dera-ismail-khan-division-dist-tank-district",
+              name: "Tank District",
+              tehsils: [
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-dera-ismail-khan-division-dist-tank-district-teh-tank-tehsil",
+                  name: "Tank Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-khyber-pakhtunkhwa-div-dera-ismail-khan-division-dist-south-waziristan-upper-district",
+              name: "South Waziristan Upper District",
+              tehsils: [
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-dera-ismail-khan-division-dist-south-waziristan-upper-district-teh-ladha-tehsil",
+                  name: "Ladha Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-dera-ismail-khan-division-dist-south-waziristan-upper-district-teh-makin-tehsil",
+                  name: "Makin Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-dera-ismail-khan-division-dist-south-waziristan-upper-district-teh-sararogha-tehsil",
+                  name: "Sararogha Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-dera-ismail-khan-division-dist-south-waziristan-upper-district-teh-sarwakai-tehsil",
+                  name: "Sarwakai Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-dera-ismail-khan-division-dist-south-waziristan-upper-district-teh-shaktoi-tehsil",
+                  name: "Shaktoi Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-dera-ismail-khan-division-dist-south-waziristan-upper-district-teh-shawal-tehsil",
+                  name: "Shawal Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-dera-ismail-khan-division-dist-south-waziristan-upper-district-teh-tiarza-tehsil",
+                  name: "Tiarza Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-khyber-pakhtunkhwa-div-dera-ismail-khan-division-dist-south-waziristan-lower-district",
+              name: "South Waziristan Lower District",
+              tehsils: [
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-dera-ismail-khan-division-dist-south-waziristan-lower-district-teh-narowal-tehsil",
+                  name: "Narowal Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-dera-ismail-khan-division-dist-south-waziristan-lower-district-teh-wana-tehsil",
+                  name: "Wana Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-dera-ismail-khan-division-dist-south-waziristan-lower-district-teh-shakai-tehsil",
+                  name: "Shakai Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-dera-ismail-khan-division-dist-south-waziristan-lower-district-teh-toi-khulla-tolkhela-tehsil",
+                  name: "Toi Khulla (Tolkhela) Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-dera-ismail-khan-division-dist-south-waziristan-lower-district-teh-birmal-barmal-tehsil",
+                  name: "Birmal (Barmal) Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            }
+          ],
         },
         {
           id: "pk-prov-khyber-pakhtunkhwa-div-mardan-division",
@@ -1501,15 +2720,315 @@ export const locationsData = {
                     { id: "pk-prov-khyber-pakhtunkhwa-div-mardan-division-dist-mardan-district-teh-mardan-tehsil-uc-uc-02-takht-bhai", name: "UC 02 (Takht Bhai)" },
                     { id: "pk-prov-khyber-pakhtunkhwa-div-mardan-division-dist-mardan-district-teh-mardan-tehsil-uc-uc-03-katlang", name: "UC 03 (Katlang)" }
                   ],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-mardan-division-dist-mardan-district-teh-garhi-kapura-tehsil",
+                  name: "Garhi Kapura Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-mardan-division-dist-mardan-district-teh-katlang-tehsil",
+                  name: "Katlang Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-mardan-division-dist-mardan-district-teh-rustam-tehsil",
+                  name: "Rustam Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-mardan-division-dist-mardan-district-teh-takht-bhai-tehsil",
+                  name: "Takht Bhai Tehsil",
+                  unionCouncils: [],
                 }
               ],
+            },
+            {
+              id: "pk-prov-khyber-pakhtunkhwa-div-mardan-division-dist-swabi-district",
+              name: "Swabi District",
+              tehsils: [],
             }
           ],
         },
         {
           id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division",
           name: "Malakand Division",
-          districts: [],
+          districts: [
+            {
+              id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-swat-district",
+              name: "Swat District",
+              tehsils: [
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-swat-district-teh-babuzai-tehsil",
+                  name: "Babuzai Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-swat-district-teh-bahrain-tehsil",
+                  name: "Bahrain Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-swat-district-teh-barikot-tehsil",
+                  name: "Barikot Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-swat-district-teh-charbagh-tehsil",
+                  name: "Charbagh Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-swat-district-teh-kabal-tehsil",
+                  name: "Kabal Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-swat-district-teh-khwazakhela-tehsil",
+                  name: "Khwazakhela Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-swat-district-teh-matta-tehsil",
+                  name: "Matta Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-malakand-district",
+              name: "Malakand District",
+              tehsils: [
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-malakand-district-teh-swat-ranizai-tehsil",
+                  name: "Swat Ranizai Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-malakand-district-teh-sam-ranizai-tehsil",
+                  name: "Sam Ranizai Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-lower-dir-district",
+              name: "Lower Dir District",
+              tehsils: [
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-lower-dir-district-teh-adenzai-tehsil",
+                  name: "Adenzai Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-lower-dir-district-teh-balambat-tehsil",
+                  name: "Balambat Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-lower-dir-district-teh-khall-tehsil",
+                  name: "Khall Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-lower-dir-district-teh-lal-qilla-maidan-tehsil",
+                  name: "Lal Qilla (Maidan) Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-lower-dir-district-teh-munda-tehsil",
+                  name: "Munda Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-lower-dir-district-teh-samar-bagh-tehsil",
+                  name: "Samar Bagh Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-lower-dir-district-teh-timergara-tehsil",
+                  name: "Timergara Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-upper-dir-district",
+              name: "Upper Dir District",
+              tehsils: [
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-upper-dir-district-teh-barawal-tehsil",
+                  name: "Barawal Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-upper-dir-district-teh-chapar-chaper-tehsil",
+                  name: "Chapar (Chaper) Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-upper-dir-district-teh-dir-tehsil",
+                  name: "Dir Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-upper-dir-district-teh-kalkot-tehsil",
+                  name: "Kalkot Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-upper-dir-district-teh-khal-khall-tehsil",
+                  name: "Khal (Khall) Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-upper-dir-district-teh-wari-tehsil",
+                  name: "Wari Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-chitral-lower-district",
+              name: "Chitral Lower District",
+              tehsils: [
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-chitral-lower-district-teh-chitral-tehsil",
+                  name: "Chitral Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-chitral-lower-district-teh-drosh-tehsil",
+                  name: "Drosh Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-chitral-upper-district",
+              name: "Chitral Upper District",
+              tehsils: [
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-chitral-upper-district-teh-mastuj-tehsil",
+                  name: "Mastuj Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-chitral-upper-district-teh-mulkhow-torkhow-tehsil",
+                  name: "Mulkhow-Torkhow Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-buner-district",
+              name: "Buner District",
+              tehsils: [
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-buner-district-teh-daggar-tehsil",
+                  name: "Daggar Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-buner-district-teh-gadezai-tehsil",
+                  name: "Gadezai Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-buner-district-teh-gagra-tehsil",
+                  name: "Gagra Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-buner-district-teh-chagharzai-tehsil",
+                  name: "Chagharzai Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-buner-district-teh-chamla-tehsil",
+                  name: "Chamla Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-buner-district-teh-totalai-khudu-khel-tehsil",
+                  name: "Totalai (Khudu Khel) Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-shangla-district",
+              name: "Shangla District",
+              tehsils: [
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-shangla-district-teh-alpuri-tehsil",
+                  name: "Alpuri Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-shangla-district-teh-besham-tehsil",
+                  name: "Besham Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-shangla-district-teh-chakesar-tehsil",
+                  name: "Chakesar Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-shangla-district-teh-puran-tehsil",
+                  name: "Puran Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-shangla-district-teh-martung-tehsil",
+                  name: "Martung Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-bajaur-district",
+              name: "Bajaur District",
+              tehsils: [
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-bajaur-district-teh-bar-chamarkand-tehsil",
+                  name: "Bar Chamarkand Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-bajaur-district-teh-barang-tehsil",
+                  name: "Barang Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-bajaur-district-teh-khar-bajaur-tehsil",
+                  name: "Khar Bajaur Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-bajaur-district-teh-mamund-tehsil",
+                  name: "Mamund Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-bajaur-district-teh-nawagai-tehsil",
+                  name: "Nawagai Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-bajaur-district-teh-salarzai-tehsil",
+                  name: "Salarzai Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-malakand-division-dist-bajaur-district-teh-utmankhel-tehsil",
+                  name: "Utmankhel Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            }
+          ],
         },
         {
           id: "pk-prov-khyber-pakhtunkhwa-div-hazara-division",
@@ -1527,6 +3046,161 @@ export const locationsData = {
                     { id: "pk-prov-khyber-pakhtunkhwa-div-hazara-division-dist-abbottabad-district-teh-abbottabad-tehsil-uc-uc-02-havelian", name: "UC 02 (Havelian)" },
                     { id: "pk-prov-khyber-pakhtunkhwa-div-hazara-division-dist-abbottabad-district-teh-abbottabad-tehsil-uc-uc-03-nathiagali", name: "UC 03 (Nathiagali)" }
                   ],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-hazara-division-dist-abbottabad-district-teh-havelian-tehsil",
+                  name: "Havelian Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-hazara-division-dist-abbottabad-district-teh-lora-tehsil",
+                  name: "Lora Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-hazara-division-dist-abbottabad-district-teh-lower-tanawal-tehsil",
+                  name: "Lower Tanawal Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-khyber-pakhtunkhwa-div-hazara-division-dist-battagram-district",
+              name: "Battagram District",
+              tehsils: [
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-hazara-division-dist-battagram-district-teh-battagram-tehsil",
+                  name: "Battagram Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-hazara-division-dist-battagram-district-teh-allai-tehsil",
+                  name: "Allai Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-khyber-pakhtunkhwa-div-hazara-division-dist-haripur-district",
+              name: "Haripur District",
+              tehsils: [
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-hazara-division-dist-haripur-district-teh-haripur-tehsil",
+                  name: "Haripur Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-hazara-division-dist-haripur-district-teh-ghazi-tehsil",
+                  name: "Ghazi Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-hazara-division-dist-haripur-district-teh-khanpur-tehsil",
+                  name: "Khanpur Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-khyber-pakhtunkhwa-div-hazara-division-dist-kolai-palas-and-lower-kohistan-district",
+              name: "Kolai Palas & Lower Kohistan District",
+              tehsils: [
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-hazara-division-dist-kolai-palas-and-lower-kohistan-district-teh-battera-kolai-tehsil",
+                  name: "Battera Kolai Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-hazara-division-dist-kolai-palas-and-lower-kohistan-district-teh-palas-tehsil",
+                  name: "Palas Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-hazara-division-dist-kolai-palas-and-lower-kohistan-district-teh-bankand-ranolia-tehsil",
+                  name: "Bankand / Ranolia Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-hazara-division-dist-kolai-palas-and-lower-kohistan-district-teh-pattan-tehsil",
+                  name: "Pattan Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-khyber-pakhtunkhwa-div-hazara-division-dist-mansehra-district",
+              name: "Mansehra District",
+              tehsils: [
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-hazara-division-dist-mansehra-district-teh-balakot-tehsil",
+                  name: "Balakot Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-hazara-division-dist-mansehra-district-teh-baffa-pakhal-baffa-tehsil",
+                  name: "Baffa Pakhal (Baffa) Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-hazara-division-dist-mansehra-district-teh-darband-tehsil",
+                  name: "Darband Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-hazara-division-dist-mansehra-district-teh-mansehra-tehsil",
+                  name: "Mansehra Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-hazara-division-dist-mansehra-district-teh-oghi-tehsil",
+                  name: "Oghi Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-khyber-pakhtunkhwa-div-hazara-division-dist-torghar-and-upper-kohistan-district",
+              name: "Torghar & Upper Kohistan District",
+              tehsils: [
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-hazara-division-dist-torghar-and-upper-kohistan-district-teh-wazirabad-tehsil",
+                  name: "Wazirabad Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-hazara-division-dist-torghar-and-upper-kohistan-district-teh-daur-maira-tehsil",
+                  name: "Daur Maira Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-hazara-division-dist-torghar-and-upper-kohistan-district-teh-hasanzai-khander-tehsil",
+                  name: "Hasanzai (Khander) Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-hazara-division-dist-torghar-and-upper-kohistan-district-teh-judba-tehsil",
+                  name: "Judba Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-hazara-division-dist-torghar-and-upper-kohistan-district-teh-dassu-tehsil",
+                  name: "Dassu Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-hazara-division-dist-torghar-and-upper-kohistan-district-teh-harban-basha-tehsil",
+                  name: "Harban Basha Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-hazara-division-dist-torghar-and-upper-kohistan-district-teh-kandia-tehsil",
+                  name: "Kandia Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-khyber-pakhtunkhwa-div-hazara-division-dist-torghar-and-upper-kohistan-district-teh-seo-tehsil",
+                  name: "Seo Tehsil",
+                  unionCouncils: [],
                 }
               ],
             }
@@ -1557,53 +3231,1037 @@ export const locationsData = {
                   ],
                 }
               ],
+            },
+            {
+              id: "pk-prov-balochistan-div-quetta-division-dist-quetta-east-district",
+              name: "Quetta East District",
+              tehsils: [
+                {
+                  id: "pk-prov-balochistan-div-quetta-division-dist-quetta-east-district-teh-saddar-tehsil",
+                  name: "Saddar Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-quetta-division-dist-quetta-east-district-teh-city-tehsil",
+                  name: "City Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-quetta-division-dist-quetta-east-district-teh-sariab-tehsil",
+                  name: "Sariab Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-balochistan-div-quetta-division-dist-quetta-west-district",
+              name: "Quetta West District",
+              tehsils: [
+                {
+                  id: "pk-prov-balochistan-div-quetta-division-dist-quetta-west-district-teh-kuchlak-tehsil",
+                  name: "Kuchlak Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-quetta-division-dist-quetta-west-district-teh-brewery-tehsil",
+                  name: "Brewery Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-quetta-division-dist-quetta-west-district-teh-panjpai-tehsil",
+                  name: "Panjpai Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-balochistan-div-quetta-division-dist-mastung-district",
+              name: "Mastung District",
+              tehsils: [
+                {
+                  id: "pk-prov-balochistan-div-quetta-division-dist-mastung-district-teh-dasht-tehsil",
+                  name: "Dasht Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-quetta-division-dist-mastung-district-teh-kardigap-tehsil",
+                  name: "Kardigap Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-quetta-division-dist-mastung-district-teh-khad-koocha-tehsil",
+                  name: "Khad Koocha Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-quetta-division-dist-mastung-district-teh-mastung-tehsil",
+                  name: "Mastung Tehsil",
+                  unionCouncils: [],
+                }
+              ],
             }
           ],
         },
         {
           id: "pk-prov-balochistan-div-pishin-division",
           name: "Pishin Division",
-          districts: [],
+          districts: [
+            {
+              id: "pk-prov-balochistan-div-pishin-division-dist-pishin-district",
+              name: "Pishin District",
+              tehsils: [
+                {
+                  id: "pk-prov-balochistan-div-pishin-division-dist-pishin-district-teh-barshore-tehsil",
+                  name: "Barshore Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-pishin-division-dist-pishin-district-teh-bostan-tehsil",
+                  name: "Bostan Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-pishin-division-dist-pishin-district-teh-hurramzai-tehsil",
+                  name: "Hurramzai Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-pishin-division-dist-pishin-district-teh-pishin-tehsil",
+                  name: "Pishin Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-pishin-division-dist-pishin-district-teh-saranan-tehsil",
+                  name: "Saranan Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-balochistan-div-pishin-division-dist-chaman-district",
+              name: "Chaman District",
+              tehsils: [
+                {
+                  id: "pk-prov-balochistan-div-pishin-division-dist-chaman-district-teh-chaman-city-chaman-tehsil",
+                  name: "Chaman (City Chaman) Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-pishin-division-dist-chaman-district-teh-chaman-saddar-tehsil",
+                  name: "Chaman Saddar Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-balochistan-div-pishin-division-dist-killa-abdullah-district",
+              name: "Killa Abdullah District",
+              tehsils: [
+                {
+                  id: "pk-prov-balochistan-div-pishin-division-dist-killa-abdullah-district-teh-chaman-tehsil",
+                  name: "Chaman Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-pishin-division-dist-killa-abdullah-district-teh-dobandi-tehsil",
+                  name: "Dobandi Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-pishin-division-dist-killa-abdullah-district-teh-gulistan-tehsil",
+                  name: "Gulistan Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-pishin-division-dist-killa-abdullah-district-teh-killa-abdullah-tehsil",
+                  name: "Killa Abdullah Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            }
+          ],
         },
         {
           id: "pk-prov-balochistan-div-sibi-division",
           name: "Sibi Division",
-          districts: [],
+          districts: [
+            {
+              id: "pk-prov-balochistan-div-sibi-division-dist-sibi-district",
+              name: "Sibi District",
+              tehsils: [
+                {
+                  id: "pk-prov-balochistan-div-sibi-division-dist-sibi-district-teh-sibi-tehsil",
+                  name: "Sibi Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-sibi-division-dist-sibi-district-teh-kutmandai-tehsil",
+                  name: "Kutmandai Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-sibi-division-dist-sibi-district-teh-sangan-tehsil",
+                  name: "Sangan Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-sibi-division-dist-sibi-district-teh-lehri-tehsil",
+                  name: "Lehri Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-balochistan-div-sibi-division-dist-dera-bugti-district",
+              name: "Dera Bugti District",
+              tehsils: [
+                {
+                  id: "pk-prov-balochistan-div-sibi-division-dist-dera-bugti-district-teh-dera-bugti-tehsil",
+                  name: "Dera Bugti Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-sibi-division-dist-dera-bugti-district-teh-sui-tehsil",
+                  name: "Sui Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-sibi-division-dist-dera-bugti-district-teh-phelawagh-tehsil",
+                  name: "Phelawagh Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-sibi-division-dist-dera-bugti-district-teh-sangsila-tehsil",
+                  name: "Sangsila Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-balochistan-div-sibi-division-dist-harnai-district",
+              name: "Harnai District",
+              tehsils: [],
+            },
+            {
+              id: "pk-prov-balochistan-div-sibi-division-dist-ziarat-district",
+              name: "Ziarat District",
+              tehsils: [
+                {
+                  id: "pk-prov-balochistan-div-sibi-division-dist-ziarat-district-teh-ziarat-tehsil",
+                  name: "Ziarat Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-sibi-division-dist-ziarat-district-teh-sanjawi-sinjawi-tehsil",
+                  name: "Sanjawi (Sinjawi) Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-balochistan-div-sibi-division-dist-kohlu-district",
+              name: "Kohlu District",
+              tehsils: [
+                {
+                  id: "pk-prov-balochistan-div-sibi-division-dist-kohlu-district-teh-kahan-tehsil",
+                  name: "Kahan Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-sibi-division-dist-kohlu-district-teh-maiwand-tehsil",
+                  name: "Maiwand Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-sibi-division-dist-kohlu-district-teh-tamboo-tehsil",
+                  name: "Tamboo Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-sibi-division-dist-kohlu-district-teh-grisani-tehsil",
+                  name: "Grisani Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-sibi-division-dist-kohlu-district-teh-shaheed-jahangir-abad-tehsil",
+                  name: "Shaheed Jahangir Abad Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            }
+          ],
         },
         {
           id: "pk-prov-balochistan-div-naseerabad-division",
           name: "Naseerabad Division",
-          districts: [],
+          districts: [
+            {
+              id: "pk-prov-balochistan-div-naseerabad-division-dist-naseerabad-district",
+              name: "Naseerabad District",
+              tehsils: [
+                {
+                  id: "pk-prov-balochistan-div-naseerabad-division-dist-naseerabad-district-teh-baba-kot-tehsil",
+                  name: "Baba Kot Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-naseerabad-division-dist-naseerabad-district-teh-chattar-tehsil",
+                  name: "Chattar Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-naseerabad-division-dist-naseerabad-district-teh-dera-murad-jamali-tehsil",
+                  name: "Dera Murad Jamali Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-naseerabad-division-dist-naseerabad-district-teh-tamboo-tehsil",
+                  name: "Tamboo Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-balochistan-div-naseerabad-division-dist-jaffarabad-district",
+              name: "Jaffarabad District",
+              tehsils: [
+                {
+                  id: "pk-prov-balochistan-div-naseerabad-division-dist-jaffarabad-district-teh-dera-allah-yar-tehsil",
+                  name: "Dera Allah Yar Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-naseerabad-division-dist-jaffarabad-district-teh-gandakha-tehsil",
+                  name: "Gandakha Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-balochistan-div-naseerabad-division-dist-sohbatpur-district",
+              name: "Sohbatpur District",
+              tehsils: [
+                {
+                  id: "pk-prov-balochistan-div-naseerabad-division-dist-sohbatpur-district-teh-faridabad-tehsil",
+                  name: "Faridabad Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-naseerabad-division-dist-sohbatpur-district-teh-hairdin-tehsil",
+                  name: "Hairdin Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-naseerabad-division-dist-sohbatpur-district-teh-manjipur-tehsil",
+                  name: "Manjipur Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-naseerabad-division-dist-sohbatpur-district-teh-saeed-muhammad-kanrani-tehsil",
+                  name: "Saeed Muhammad Kanrani Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-naseerabad-division-dist-sohbatpur-district-teh-panhwar-tehsil",
+                  name: "Panhwar Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-naseerabad-division-dist-sohbatpur-district-teh-sohbatpur-tehsil",
+                  name: "Sohbatpur Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-balochistan-div-naseerabad-division-dist-jhal-magsi-district",
+              name: "Jhal Magsi District",
+              tehsils: [
+                {
+                  id: "pk-prov-balochistan-div-naseerabad-division-dist-jhal-magsi-district-teh-jhal-magsi-tehsil",
+                  name: "Jhal Magsi Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-naseerabad-division-dist-jhal-magsi-district-teh-gandawa-tehsil",
+                  name: "Gandawa Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-naseerabad-division-dist-jhal-magsi-district-teh-mirpur-tehsil",
+                  name: "Mirpur Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-balochistan-div-naseerabad-division-dist-kachhi-district",
+              name: "Kachhi District",
+              tehsils: [
+                {
+                  id: "pk-prov-balochistan-div-naseerabad-division-dist-kachhi-district-teh-balanari-tehsil",
+                  name: "Balanari Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-naseerabad-division-dist-kachhi-district-teh-bhag-tehsil",
+                  name: "Bhag Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-naseerabad-division-dist-kachhi-district-teh-dhadar-tehsil",
+                  name: "Dhadar Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-naseerabad-division-dist-kachhi-district-teh-khattan-tehsil",
+                  name: "Khattan Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-naseerabad-division-dist-kachhi-district-teh-mach-tehsil",
+                  name: "Mach Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-naseerabad-division-dist-kachhi-district-teh-sanni-tehsil",
+                  name: "Sanni Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-balochistan-div-naseerabad-division-dist-usta-muhammad-district",
+              name: "Usta Muhammad District",
+              tehsils: [
+                {
+                  id: "pk-prov-balochistan-div-naseerabad-division-dist-usta-muhammad-district-teh-usta-muhammad-tehsil",
+                  name: "Usta Muhammad Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-naseerabad-division-dist-usta-muhammad-district-teh-gandakha-tehsil",
+                  name: "Gandakha Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            }
+          ],
         },
         {
           id: "pk-prov-balochistan-div-loralai-division",
           name: "Loralai Division",
-          districts: [],
+          districts: [
+            {
+              id: "pk-prov-balochistan-div-loralai-division-dist-loralai-district",
+              name: "Loralai District",
+              tehsils: [
+                {
+                  id: "pk-prov-balochistan-div-loralai-division-dist-loralai-district-teh-bori-tehsil",
+                  name: "Bori Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-loralai-division-dist-loralai-district-teh-mekhtar-tehsil",
+                  name: "Mekhtar Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-balochistan-div-loralai-division-dist-duki-district",
+              name: "Duki District",
+              tehsils: [
+                {
+                  id: "pk-prov-balochistan-div-loralai-division-dist-duki-district-teh-duki-tehsil",
+                  name: "Duki Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-loralai-division-dist-duki-district-teh-luni-tehsil",
+                  name: "Luni Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-loralai-division-dist-duki-district-teh-talao-tehsil",
+                  name: "Talao Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-loralai-division-dist-duki-district-teh-thal-chutyali-tehsil",
+                  name: "Thal Chutyali Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-balochistan-div-loralai-division-dist-musakhail-district",
+              name: "Musakhail District",
+              tehsils: [
+                {
+                  id: "pk-prov-balochistan-div-loralai-division-dist-musakhail-district-teh-darug-drug-tehsil",
+                  name: "Darug (Drug) Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-loralai-division-dist-musakhail-district-teh-kingri-tehsil",
+                  name: "Kingri Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-loralai-division-dist-musakhail-district-teh-musakhel-tehsil",
+                  name: "Musakhel Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-loralai-division-dist-musakhail-district-teh-toisar-tehsil",
+                  name: "Toisar Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-balochistan-div-loralai-division-dist-barkhan-district",
+              name: "Barkhan District",
+              tehsils: [
+                {
+                  id: "pk-prov-balochistan-div-loralai-division-dist-barkhan-district-teh-barkhan-tehsil",
+                  name: "Barkhan Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            }
+          ],
         },
         {
           id: "pk-prov-balochistan-div-zhob-division",
           name: "Zhob Division",
-          districts: [],
+          districts: [
+            {
+              id: "pk-prov-balochistan-div-zhob-division-dist-zhob-district",
+              name: "Zhob District",
+              tehsils: [
+                {
+                  id: "pk-prov-balochistan-div-zhob-division-dist-zhob-district-teh-zhob-tehsil",
+                  name: "Zhob Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-zhob-division-dist-zhob-district-teh-ashwat-tehsil",
+                  name: "Ashwat Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-zhob-division-dist-zhob-district-teh-qamar-din-karez-kakar-khurasan-tehsil",
+                  name: "Qamar Din Karez (Kakar Khurasan) Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-zhob-division-dist-zhob-district-teh-sambaza-tehsil",
+                  name: "Sambaza Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-zhob-division-dist-zhob-district-teh-kashatu-tehsil",
+                  name: "Kashatu Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-balochistan-div-zhob-division-dist-killa-saifullah-district",
+              name: "Killa Saifullah District",
+              tehsils: [
+                {
+                  id: "pk-prov-balochistan-div-zhob-division-dist-killa-saifullah-district-teh-killa-saifullah-tehsil",
+                  name: "Killa Saifullah Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-zhob-division-dist-killa-saifullah-district-teh-muslim-bagh-tehsil",
+                  name: "Muslim Bagh Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-zhob-division-dist-killa-saifullah-district-teh-loi-band-tehsil",
+                  name: "Loi Band Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-balochistan-div-zhob-division-dist-sherani-district",
+              name: "Sherani District",
+              tehsils: [
+                {
+                  id: "pk-prov-balochistan-div-zhob-division-dist-sherani-district-teh-sherani-tehsil",
+                  name: "Sherani Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-balochistan-div-zhob-division-dist-musakhel-district",
+              name: "Musakhel District",
+              tehsils: [
+                {
+                  id: "pk-prov-balochistan-div-zhob-division-dist-musakhel-district-teh-musakhel-tehsil",
+                  name: "Musakhel Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-zhob-division-dist-musakhel-district-teh-drug-tehsil",
+                  name: "Drug Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-zhob-division-dist-musakhel-district-teh-kingri-tehsil",
+                  name: "Kingri Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-zhob-division-dist-musakhel-district-teh-toisar-tehsil",
+                  name: "Toisar Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            }
+          ],
         },
         {
           id: "pk-prov-balochistan-div-koh-e-sulaiman-division",
           name: "Koh-e-Sulaiman Division",
-          districts: [],
+          districts: [
+            {
+              id: "pk-prov-balochistan-div-koh-e-sulaiman-division-dist-dera-bugti-district",
+              name: "Dera Bugti District",
+              tehsils: [
+                {
+                  id: "pk-prov-balochistan-div-koh-e-sulaiman-division-dist-dera-bugti-district-teh-qadirabad-phelawagh-tehsil",
+                  name: "Qadirabad (Phelawagh) Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-koh-e-sulaiman-division-dist-dera-bugti-district-teh-chief-ali-muhammad-tehsil",
+                  name: "Chief Ali Muhammad Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-koh-e-sulaiman-division-dist-dera-bugti-district-teh-nabi-dad-tehsil",
+                  name: "Nabi Dad Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-koh-e-sulaiman-division-dist-dera-bugti-district-teh-sar-loop-tehsil",
+                  name: "Sar Loop Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-balochistan-div-koh-e-sulaiman-division-dist-kohlu-district",
+              name: "Kohlu District",
+              tehsils: [
+                {
+                  id: "pk-prov-balochistan-div-koh-e-sulaiman-division-dist-kohlu-district-teh-kahan-tehsil",
+                  name: "Kahan Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-koh-e-sulaiman-division-dist-kohlu-district-teh-kohlu-tehsil",
+                  name: "Kohlu Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-koh-e-sulaiman-division-dist-kohlu-district-teh-maiwand-tehsil",
+                  name: "Maiwand Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-balochistan-div-koh-e-sulaiman-division-dist-barkhan-district",
+              name: "Barkhan District",
+              tehsils: [
+                {
+                  id: "pk-prov-balochistan-div-koh-e-sulaiman-division-dist-barkhan-district-teh-barkhan-tehsil",
+                  name: "Barkhan Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            }
+          ],
         },
         {
           id: "pk-prov-balochistan-div-rakhshan-division",
           name: "Rakhshan Division",
-          districts: [],
+          districts: [
+            {
+              id: "pk-prov-balochistan-div-rakhshan-division-dist-kharan-district",
+              name: "Kharan District",
+              tehsils: [
+                {
+                  id: "pk-prov-balochistan-div-rakhshan-division-dist-kharan-district-teh-kharan-tehsil",
+                  name: "Kharan Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-rakhshan-division-dist-kharan-district-teh-sar-kharan-tehsil",
+                  name: "Sar-Kharan Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-rakhshan-division-dist-kharan-district-teh-tohumulk-tehsil",
+                  name: "Tohumulk Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-rakhshan-division-dist-kharan-district-teh-patkain-tehsil",
+                  name: "Patkain Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-balochistan-div-rakhshan-division-dist-nushki-district",
+              name: "Nushki District",
+              tehsils: [
+                {
+                  id: "pk-prov-balochistan-div-rakhshan-division-dist-nushki-district-teh-nushki-tehsil",
+                  name: "Nushki Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-rakhshan-division-dist-nushki-district-teh-dak-tehsil",
+                  name: "Dak Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-balochistan-div-rakhshan-division-dist-chagai-district",
+              name: "Chagai District",
+              tehsils: [
+                {
+                  id: "pk-prov-balochistan-div-rakhshan-division-dist-chagai-district-teh-dalbandin-tehsil",
+                  name: "Dalbandin Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-rakhshan-division-dist-chagai-district-teh-chagai-tehsil",
+                  name: "Chagai Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-rakhshan-division-dist-chagai-district-teh-nok-kundi-tehsil",
+                  name: "Nok Kundi Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-rakhshan-division-dist-chagai-district-teh-taftan-tehsil",
+                  name: "Taftan Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-rakhshan-division-dist-chagai-district-teh-amuri-tehsil",
+                  name: "Amuri Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-rakhshan-division-dist-chagai-district-teh-chilgazi-tehsil",
+                  name: "Chilgazi Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-rakhshan-division-dist-chagai-district-teh-yakmach-tehsil",
+                  name: "Yakmach Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-balochistan-div-rakhshan-division-dist-washuk-district",
+              name: "Washuk District",
+              tehsils: [
+                {
+                  id: "pk-prov-balochistan-div-rakhshan-division-dist-washuk-district-teh-besima-tehsil",
+                  name: "Besima Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-rakhshan-division-dist-washuk-district-teh-mashkel-tehsil",
+                  name: "Mashkel Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-rakhshan-division-dist-washuk-district-teh-nag-tehsil",
+                  name: "Nag Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-rakhshan-division-dist-washuk-district-teh-shahgori-tehsil",
+                  name: "Shahgori Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            }
+          ],
         },
         {
           id: "pk-prov-balochistan-div-lasbela-division",
           name: "Lasbela Division",
-          districts: [],
+          districts: [
+            {
+              id: "pk-prov-balochistan-div-lasbela-division-dist-lasbela-district",
+              name: "Lasbela District",
+              tehsils: [
+                {
+                  id: "pk-prov-balochistan-div-lasbela-division-dist-lasbela-district-teh-bela-tehsil",
+                  name: "Bela Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-lasbela-division-dist-lasbela-district-teh-kanraj-tehsil",
+                  name: "Kanraj Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-lasbela-division-dist-lasbela-district-teh-lakhra-tehsil",
+                  name: "Lakhra Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-lasbela-division-dist-lasbela-district-teh-liari-tehsil",
+                  name: "Liari Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-lasbela-division-dist-lasbela-district-teh-uthal-tehsil",
+                  name: "Uthal Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-balochistan-div-lasbela-division-dist-hub-district",
+              name: "Hub District",
+              tehsils: [
+                {
+                  id: "pk-prov-balochistan-div-lasbela-division-dist-hub-district-teh-dureji-tehsil",
+                  name: "Dureji Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-lasbela-division-dist-hub-district-teh-gaddani-gadani-tehsil",
+                  name: "Gaddani (Gadani) Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-lasbela-division-dist-hub-district-teh-hub-tehsil",
+                  name: "Hub Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-lasbela-division-dist-hub-district-teh-sakran-tehsil",
+                  name: "Sakran Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-lasbela-division-dist-hub-district-teh-sonmiani-winder-tehsil",
+                  name: "Sonmiani (Winder) Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-balochistan-div-lasbela-division-dist-awaran-district",
+              name: "Awaran District",
+              tehsils: [
+                {
+                  id: "pk-prov-balochistan-div-lasbela-division-dist-awaran-district-teh-awaran-tehsil",
+                  name: "Awaran Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-lasbela-division-dist-awaran-district-teh-gishkore-gishkaur-tehsil",
+                  name: "Gishkore (Gishkaur) Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-lasbela-division-dist-awaran-district-teh-jhal-jhao-tehsil",
+                  name: "Jhal Jhao Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-lasbela-division-dist-awaran-district-teh-korak-jhao-tehsil",
+                  name: "Korak Jhao Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-lasbela-division-dist-awaran-district-teh-mashkai-tehsil",
+                  name: "Mashkai Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            }
+          ],
         },
         {
-          id: "pk-prov-balochistan-div-khuzdar-division",
-          name: "Khuzdar Division",
-          districts: [],
+          id: "pk-prov-balochistan-div-kalat-division",
+          name: "Kalat Division",
+          districts: [
+            {
+              id: "pk-prov-balochistan-div-kalat-division-dist-khuzdar-district",
+              name: "Khuzdar District",
+              tehsils: [
+                {
+                  id: "pk-prov-balochistan-div-kalat-division-dist-khuzdar-district-teh-khuzdar-tehsil",
+                  name: "Khuzdar Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-kalat-division-dist-khuzdar-district-teh-moola-tehsil",
+                  name: "Moola Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-kalat-division-dist-khuzdar-district-teh-nal-tehsil",
+                  name: "Nal Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-kalat-division-dist-khuzdar-district-teh-wadh-tehsil",
+                  name: "Wadh Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-kalat-division-dist-khuzdar-district-teh-zehri-tehsil",
+                  name: "Zehri Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-balochistan-div-kalat-division-dist-kalat-district",
+              name: "Kalat District",
+              tehsils: [
+                {
+                  id: "pk-prov-balochistan-div-kalat-division-dist-kalat-district-teh-kalat-tehsil",
+                  name: "Kalat Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-kalat-division-dist-kalat-district-teh-mangochar-tehsil",
+                  name: "Mangochar Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-kalat-division-dist-kalat-district-teh-gazg-tehsil",
+                  name: "Gazg Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-kalat-division-dist-kalat-district-teh-johan-tehsil",
+                  name: "Johan Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-balochistan-div-kalat-division-dist-mastung-district",
+              name: "Mastung District",
+              tehsils: [
+                {
+                  id: "pk-prov-balochistan-div-kalat-division-dist-mastung-district-teh-dasht-tehsil",
+                  name: "Dasht Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-kalat-division-dist-mastung-district-teh-kardigap-tehsil",
+                  name: "Kardigap Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-kalat-division-dist-mastung-district-teh-mastung-tehsil",
+                  name: "Mastung Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-balochistan-div-kalat-division-dist-awaran-district",
+              name: "Awaran District",
+              tehsils: [
+                {
+                  id: "pk-prov-balochistan-div-kalat-division-dist-awaran-district-teh-awaran-tehsil",
+                  name: "Awaran Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-kalat-division-dist-awaran-district-teh-gishkore-gishkaur-tehsil",
+                  name: "Gishkore (Gishkaur) Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-kalat-division-dist-awaran-district-teh-jhal-jhao-tehsil",
+                  name: "Jhal Jhao Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-kalat-division-dist-awaran-district-teh-korak-jahoo-korak-jhao-tehsil",
+                  name: "Korak Jahoo (Korak Jhao) Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-kalat-division-dist-awaran-district-teh-mashkai-mashkay-tehsil",
+                  name: "Mashkai (Mashkay) Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-balochistan-div-kalat-division-dist-surab-district",
+              name: "Surab District",
+              tehsils: [
+                {
+                  id: "pk-prov-balochistan-div-kalat-division-dist-surab-district-teh-balanari-tehsil",
+                  name: "Balanari Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-kalat-division-dist-surab-district-teh-dasht-e-goran-tehsil",
+                  name: "Dasht-e-Goran Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-kalat-division-dist-surab-district-teh-gidder-tehsil",
+                  name: "Gidder Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-kalat-division-dist-surab-district-teh-shaheed-meharabad-zehri-tehsil",
+                  name: "Shaheed Meharabad Zehri Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-kalat-division-dist-surab-district-teh-surab-tehsil",
+                  name: "Surab Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-balochistan-div-kalat-division-dist-shaheed-sikandarabad-district",
+              name: "Shaheed Sikandarabad District",
+              tehsils: [
+                {
+                  id: "pk-prov-balochistan-div-kalat-division-dist-shaheed-sikandarabad-district-teh-surab-tehsil",
+                  name: "Surab Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            }
+          ],
         },
         {
           id: "pk-prov-balochistan-div-makran-division",
@@ -1621,6 +4279,83 @@ export const locationsData = {
                     { id: "pk-prov-balochistan-div-makran-division-dist-gwadar-district-teh-gwadar-tehsil-uc-uc-02-ormara", name: "UC 02 (Ormara)" },
                     { id: "pk-prov-balochistan-div-makran-division-dist-gwadar-district-teh-gwadar-tehsil-uc-uc-03-pasni", name: "UC 03 (Pasni)" }
                   ],
+                },
+                {
+                  id: "pk-prov-balochistan-div-makran-division-dist-gwadar-district-teh-jiwani-tehsil",
+                  name: "Jiwani Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-makran-division-dist-gwadar-district-teh-ormara-tehsil",
+                  name: "Ormara Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-makran-division-dist-gwadar-district-teh-pasni-tehsil",
+                  name: "Pasni Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-makran-division-dist-gwadar-district-teh-suntsar-tehsil",
+                  name: "Suntsar Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-balochistan-div-makran-division-dist-kech-turbat-district",
+              name: "Kech (Turbat) District",
+              tehsils: [
+                {
+                  id: "pk-prov-balochistan-div-makran-division-dist-kech-turbat-district-teh-turbat-tehsil",
+                  name: "Turbat Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-makran-division-dist-kech-turbat-district-teh-hoshab-tehsil",
+                  name: "Hoshab Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-makran-division-dist-kech-turbat-district-teh-tump-tehsil",
+                  name: "Tump Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-makran-division-dist-kech-turbat-district-teh-buleda-tehsil",
+                  name: "Buleda Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-makran-division-dist-kech-turbat-district-teh-dasht-tehsil",
+                  name: "Dasht Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-balochistan-div-makran-division-dist-panjgur-district",
+              name: "Panjgur District",
+              tehsils: [
+                {
+                  id: "pk-prov-balochistan-div-makran-division-dist-panjgur-district-teh-gowargo-tehsil",
+                  name: "Gowargo Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-makran-division-dist-panjgur-district-teh-gichk-tehsil",
+                  name: "Gichk Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-makran-division-dist-panjgur-district-teh-panjgur-tehsil",
+                  name: "Panjgur Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-balochistan-div-makran-division-dist-panjgur-district-teh-paroom-tehsil",
+                  name: "Paroom Tehsil",
+                  unionCouncils: [],
                 }
               ],
             }
@@ -1686,6 +4421,48 @@ export const locationsData = {
                     { id: "pk-prov-azad-jammu-and-kashmir-div-muzaffarabad-division-dist-muzaffarabad-district-teh-muzaffarabad-tehsil-uc-uc-02-chehla-bandi", name: "UC 02 (Chehla Bandi)" },
                     { id: "pk-prov-azad-jammu-and-kashmir-div-muzaffarabad-division-dist-muzaffarabad-district-teh-muzaffarabad-tehsil-uc-uc-03-pattika", name: "UC 03 (Pattika)" }
                   ],
+                },
+                {
+                  id: "pk-prov-azad-jammu-and-kashmir-div-muzaffarabad-division-dist-muzaffarabad-district-teh-pattika-naseerabad-tehsil",
+                  name: "Pattika (Naseerabad) Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-azad-jammu-and-kashmir-div-muzaffarabad-division-dist-jhelum-valley-district",
+              name: "Jhelum Valley District",
+              tehsils: [
+                {
+                  id: "pk-prov-azad-jammu-and-kashmir-div-muzaffarabad-division-dist-jhelum-valley-district-teh-hattian-bala-tehsil",
+                  name: "Hattian Bala Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-azad-jammu-and-kashmir-div-muzaffarabad-division-dist-jhelum-valley-district-teh-leepa-tehsil",
+                  name: "Leepa Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-azad-jammu-and-kashmir-div-muzaffarabad-division-dist-jhelum-valley-district-teh-chikar-tehsil",
+                  name: "Chikar Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-azad-jammu-and-kashmir-div-muzaffarabad-division-dist-neelum-district",
+              name: "Neelum District",
+              tehsils: [
+                {
+                  id: "pk-prov-azad-jammu-and-kashmir-div-muzaffarabad-division-dist-neelum-district-teh-athmuqam-tehsil",
+                  name: "Athmuqam Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-azad-jammu-and-kashmir-div-muzaffarabad-division-dist-neelum-district-teh-sharda-tehsil",
+                  name: "Sharda Tehsil",
+                  unionCouncils: [],
                 }
               ],
             }
@@ -1694,7 +4471,102 @@ export const locationsData = {
         {
           id: "pk-prov-azad-jammu-and-kashmir-div-poonch-division",
           name: "Poonch Division",
-          districts: [],
+          districts: [
+            {
+              id: "pk-prov-azad-jammu-and-kashmir-div-poonch-division-dist-poonch-district",
+              name: "Poonch District",
+              tehsils: [
+                {
+                  id: "pk-prov-azad-jammu-and-kashmir-div-poonch-division-dist-poonch-district-teh-abbaspur-tehsil",
+                  name: "Abbaspur Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-azad-jammu-and-kashmir-div-poonch-division-dist-poonch-district-teh-hajira-tehsil",
+                  name: "Hajira Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-azad-jammu-and-kashmir-div-poonch-division-dist-poonch-district-teh-rawalakot-tehsil",
+                  name: "Rawalakot Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-azad-jammu-and-kashmir-div-poonch-division-dist-poonch-district-teh-thorar-tehsil",
+                  name: "Thorar Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-azad-jammu-and-kashmir-div-poonch-division-dist-bagh-district",
+              name: "Bagh District",
+              tehsils: [
+                {
+                  id: "pk-prov-azad-jammu-and-kashmir-div-poonch-division-dist-bagh-district-teh-bagh-tehsil",
+                  name: "Bagh Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-azad-jammu-and-kashmir-div-poonch-division-dist-bagh-district-teh-dhirkot-tehsil",
+                  name: "Dhirkot Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-azad-jammu-and-kashmir-div-poonch-division-dist-bagh-district-teh-hari-ghe-tehsil",
+                  name: "Hari Ghe Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-azad-jammu-and-kashmir-div-poonch-division-dist-sudhnoti-pallandri-district",
+              name: "Sudhnoti (Pallandri) District",
+              tehsils: [
+                {
+                  id: "pk-prov-azad-jammu-and-kashmir-div-poonch-division-dist-sudhnoti-pallandri-district-teh-pallandri-tehsil",
+                  name: "Pallandri Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-azad-jammu-and-kashmir-div-poonch-division-dist-sudhnoti-pallandri-district-teh-balouch-tehsil",
+                  name: "Balouch Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-azad-jammu-and-kashmir-div-poonch-division-dist-sudhnoti-pallandri-district-teh-mang-tehsil",
+                  name: "Mang Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-azad-jammu-and-kashmir-div-poonch-division-dist-sudhnoti-pallandri-district-teh-trarkhel-tehsil",
+                  name: "Trarkhel Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-azad-jammu-and-kashmir-div-poonch-division-dist-haveli-district",
+              name: "Haveli District",
+              tehsils: [
+                {
+                  id: "pk-prov-azad-jammu-and-kashmir-div-poonch-division-dist-haveli-district-teh-haveli-tehsil",
+                  name: "Haveli Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-azad-jammu-and-kashmir-div-poonch-division-dist-haveli-district-teh-khurshidabad-tehsil",
+                  name: "Khurshidabad Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-azad-jammu-and-kashmir-div-poonch-division-dist-haveli-district-teh-mumtazabad-tehsil",
+                  name: "Mumtazabad Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            }
+          ],
         },
         {
           id: "pk-prov-azad-jammu-and-kashmir-div-mirpur-division",
@@ -1712,6 +4584,68 @@ export const locationsData = {
                     { id: "pk-prov-azad-jammu-and-kashmir-div-mirpur-division-dist-mirpur-district-teh-mirpur-tehsil-uc-uc-02-sector-f-2", name: "UC 02 (Sector F-2)" },
                     { id: "pk-prov-azad-jammu-and-kashmir-div-mirpur-division-dist-mirpur-district-teh-mirpur-tehsil-uc-uc-03-islamgarh", name: "UC 03 (Islamgarh)" }
                   ],
+                },
+                {
+                  id: "pk-prov-azad-jammu-and-kashmir-div-mirpur-division-dist-mirpur-district-teh-chakswari-tehsil",
+                  name: "Chakswari Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-azad-jammu-and-kashmir-div-mirpur-division-dist-mirpur-district-teh-dadyal-tehsil",
+                  name: "Dadyal Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-azad-jammu-and-kashmir-div-mirpur-division-dist-kotli-district",
+              name: "Kotli District",
+              tehsils: [
+                {
+                  id: "pk-prov-azad-jammu-and-kashmir-div-mirpur-division-dist-kotli-district-teh-kotli-tehsil",
+                  name: "Kotli Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-azad-jammu-and-kashmir-div-mirpur-division-dist-kotli-district-teh-charhoi-tehsil",
+                  name: "Charhoi Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-azad-jammu-and-kashmir-div-mirpur-division-dist-kotli-district-teh-sehnsa-tehsil",
+                  name: "Sehnsa Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-azad-jammu-and-kashmir-div-mirpur-division-dist-kotli-district-teh-fatehpur-thakiala-nakyal-tehsil",
+                  name: "Fatehpur Thakiala (Nakyal) Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-azad-jammu-and-kashmir-div-mirpur-division-dist-kotli-district-teh-khuiratta-tehsil",
+                  name: "Khuiratta Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-azad-jammu-and-kashmir-div-mirpur-division-dist-bhimber-district",
+              name: "Bhimber District",
+              tehsils: [
+                {
+                  id: "pk-prov-azad-jammu-and-kashmir-div-mirpur-division-dist-bhimber-district-teh-barnala-tehsil",
+                  name: "Barnala Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-azad-jammu-and-kashmir-div-mirpur-division-dist-bhimber-district-teh-bhimber-tehsil",
+                  name: "Bhimber Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-azad-jammu-and-kashmir-div-mirpur-division-dist-bhimber-district-teh-samahni-tehsil",
+                  name: "Samahni Tehsil",
+                  unionCouncils: [],
                 }
               ],
             }
@@ -1726,12 +4660,142 @@ export const locationsData = {
         {
           id: "pk-prov-gilgit-baltistan-div-baltistan-division",
           name: "Baltistan Division",
-          districts: [],
+          districts: [
+            {
+              id: "pk-prov-gilgit-baltistan-div-baltistan-division-dist-skardu-district",
+              name: "Skardu District",
+              tehsils: [
+                {
+                  id: "pk-prov-gilgit-baltistan-div-baltistan-division-dist-skardu-district-teh-skardu-tehsil",
+                  name: "Skardu Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-gilgit-baltistan-div-baltistan-division-dist-skardu-district-teh-gamba-tehsil",
+                  name: "Gamba Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-gilgit-baltistan-div-baltistan-division-dist-skardu-district-teh-gultari-tehsil",
+                  name: "Gultari Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-gilgit-baltistan-div-baltistan-division-dist-ghanche-district",
+              name: "Ghanche District",
+              tehsils: [
+                {
+                  id: "pk-prov-gilgit-baltistan-div-baltistan-division-dist-ghanche-district-teh-daghoni-tehsil",
+                  name: "Daghoni Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-gilgit-baltistan-div-baltistan-division-dist-ghanche-district-teh-masherbrum-tehsil",
+                  name: "Masherbrum Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-gilgit-baltistan-div-baltistan-division-dist-ghanche-district-teh-chorbat-tehsil",
+                  name: "Chorbat Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-gilgit-baltistan-div-baltistan-division-dist-ghanche-district-teh-ghowari-tehsil",
+                  name: "Ghowari Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-gilgit-baltistan-div-baltistan-division-dist-ghanche-district-teh-keris-tehsil",
+                  name: "Keris Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-gilgit-baltistan-div-baltistan-division-dist-shigar-district",
+              name: "Shigar District",
+              tehsils: [
+                {
+                  id: "pk-prov-gilgit-baltistan-div-baltistan-division-dist-shigar-district-teh-shigar-tehsil",
+                  name: "Shigar Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-gilgit-baltistan-div-baltistan-division-dist-kharmang-district",
+              name: "Kharmang District",
+              tehsils: [
+                {
+                  id: "pk-prov-gilgit-baltistan-div-baltistan-division-dist-kharmang-district-teh-kharmang-tehsil",
+                  name: "Kharmang Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            }
+          ],
         },
         {
           id: "pk-prov-gilgit-baltistan-div-diamer-division",
           name: "Diamer Division",
-          districts: [],
+          districts: [
+            {
+              id: "pk-prov-gilgit-baltistan-div-diamer-division-dist-astore-district",
+              name: "Astore District",
+              tehsils: [
+                {
+                  id: "pk-prov-gilgit-baltistan-div-diamer-division-dist-astore-district-teh-astore-tehsil",
+                  name: "Astore Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-gilgit-baltistan-div-diamer-division-dist-astore-district-teh-shounter-tehsil",
+                  name: "Shounter Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-gilgit-baltistan-div-diamer-division-dist-diamer-district",
+              name: "Diamer District",
+              tehsils: [
+                {
+                  id: "pk-prov-gilgit-baltistan-div-diamer-division-dist-diamer-district-teh-chilas-tehsil",
+                  name: "Chilas Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-gilgit-baltistan-div-diamer-division-dist-diamer-district-teh-gor-tehsil",
+                  name: "Gor Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-gilgit-baltistan-div-diamer-division-dist-darel-district",
+              name: "Darel District",
+              tehsils: [
+                {
+                  id: "pk-prov-gilgit-baltistan-div-diamer-division-dist-darel-district-teh-darel-tehsil",
+                  name: "Darel Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-gilgit-baltistan-div-diamer-division-dist-tangir-district",
+              name: "Tangir District",
+              tehsils: [
+                {
+                  id: "pk-prov-gilgit-baltistan-div-diamer-division-dist-tangir-district-teh-tangir-tehsil",
+                  name: "Tangir Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            }
+          ],
         },
         {
           id: "pk-prov-gilgit-baltistan-div-gilgit-division",
@@ -1749,6 +4813,68 @@ export const locationsData = {
                     { id: "pk-prov-gilgit-baltistan-div-gilgit-division-dist-gilgit-district-teh-gilgit-tehsil-uc-uc-02-jutial", name: "UC 02 (Jutial)" },
                     { id: "pk-prov-gilgit-baltistan-div-gilgit-division-dist-gilgit-district-teh-gilgit-tehsil-uc-uc-03-danyore", name: "UC 03 (Danyore)" }
                   ],
+                },
+                {
+                  id: "pk-prov-gilgit-baltistan-div-gilgit-division-dist-gilgit-district-teh-danyor-tehsil",
+                  name: "Danyor Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-gilgit-baltistan-div-gilgit-division-dist-gilgit-district-teh-juglot-tehsil",
+                  name: "Juglot Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-gilgit-baltistan-div-gilgit-division-dist-hunza-district",
+              name: "Hunza District",
+              tehsils: [
+                {
+                  id: "pk-prov-gilgit-baltistan-div-gilgit-division-dist-hunza-district-teh-aliabad-tehsil",
+                  name: "Aliabad Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-gilgit-baltistan-div-gilgit-division-dist-hunza-district-teh-gojal-tehsil",
+                  name: "Gojal Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-gilgit-baltistan-div-gilgit-division-dist-hunza-district-teh-shinaki-tehsil",
+                  name: "Shinaki Tehsil",
+                  unionCouncils: [],
+                }
+              ],
+            },
+            {
+              id: "pk-prov-gilgit-baltistan-div-gilgit-division-dist-nagar-district",
+              name: "Nagar District",
+              tehsils: [],
+            },
+            {
+              id: "pk-prov-gilgit-baltistan-div-gilgit-division-dist-ghizer-district",
+              name: "Ghizer District",
+              tehsils: [
+                {
+                  id: "pk-prov-gilgit-baltistan-div-gilgit-division-dist-ghizer-district-teh-ishkoman-tehsil",
+                  name: "Ishkoman Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-gilgit-baltistan-div-gilgit-division-dist-ghizer-district-teh-punial-tehsil",
+                  name: "Punial Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-gilgit-baltistan-div-gilgit-division-dist-ghizer-district-teh-yasin-tehsil",
+                  name: "Yasin Tehsil",
+                  unionCouncils: [],
+                },
+                {
+                  id: "pk-prov-gilgit-baltistan-div-gilgit-division-dist-ghizer-district-teh-gupis-tehsil",
+                  name: "Gupis Tehsil",
+                  unionCouncils: [],
                 }
               ],
             }
