@@ -6,21 +6,14 @@ import './Navbar.css';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [atTop, setAtTop] = useState(
-    () => typeof window === 'undefined' || window.scrollY <= 4
-  );
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [openSubmenus, setOpenSubmenus] = useState({});
   const location = useLocation();
   const isHome = location.pathname === '/';
-  const showTransparentNav = isHome && atTop && !mobileMenuOpen;
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 30);
-      setAtTop(window.scrollY <= 4);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 30);
     handleScroll();
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -31,7 +24,6 @@ const Navbar = () => {
     setActiveDropdown(null);
     setOpenSubmenus({});
     setScrolled(window.scrollY > 30);
-    setAtTop(window.scrollY <= 4);
   }, [location]);
 
   // Lock body scroll when mobile drawer is open
@@ -100,9 +92,9 @@ const Navbar = () => {
   return (
     <>
       <header
-        className={`navbar-header ${scrolled ? 'scrolled' : ''} ${
-          showTransparentNav ? 'navbar-header--transparent' : ''
-        } ${isHome && !atTop ? 'navbar-header--home-scrolled' : ''}`}
+        className={`navbar-header ${scrolled && !isHome ? 'scrolled' : ''} ${
+          isHome ? 'navbar-header--home-solid' : ''
+        }`}
       >
         <div className="container">
           <nav className="navbar">
