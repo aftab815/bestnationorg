@@ -23,6 +23,37 @@
   box-shadow: 0 4px 20px rgba(6, 27, 22, 0.08);
 }
 
+.navbar-header--transparent .logo-title,
+.navbar-header--transparent .logo-subtitle,
+.navbar-header--transparent .nav-link,
+.navbar-header--transparent .dropdown-arrow {
+  color: #ffffff !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7), 0 2px 12px rgba(0, 0, 0, 0.45);
+}
+
+.navbar-header--transparent .nav-link::after {
+  background: #ffffff !important;
+}
+
+.navbar-header--transparent .has-dropdown:hover .dropdown-arrow {
+  color: #ffffff !important;
+}
+
+.navbar-header--transparent .mobile-menu-btn {
+  background: transparent !important;
+  border-color: rgba(255, 255, 255, 0.7) !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7), 0 2px 12px rgba(0, 0, 0, 0.45);
+}
+
+.navbar-header--transparent .mobile-menu-btn:hover,
+.navbar-header--transparent .mobile-menu-btn:active {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-color: #ffffff !important;
+  color: #ffffff !important;
+}
+
 .navbar {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
@@ -63,6 +94,7 @@
   color: var(--navy-950);
   line-height: 1.1;
   letter-spacing: -0.02em;
+  transition: color var(--transition-fast), text-shadow var(--transition-fast);
 }
 
 .logo-subtitle {
@@ -72,6 +104,7 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   margin-top: 2px;
+  transition: color var(--transition-fast), text-shadow var(--transition-fast);
 }
 
 /* Desktop Menu */
@@ -102,7 +135,7 @@
   text-decoration: none;
   cursor: pointer;
   position: relative;
-  transition: color var(--transition-fast);
+  transition: color var(--transition-fast), text-shadow var(--transition-fast);
 }
 
 .nav-link::after {
@@ -115,7 +148,7 @@
   background: var(--primary);
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform var(--transition-fast);
+  transition: transform var(--transition-fast), background-color var(--transition-fast);
 }
 
 .nav-link:hover,
@@ -131,7 +164,8 @@
 .dropdown-arrow {
   font-size: 0.65rem;
   color: var(--slate-400);
-  transition: transform var(--transition-fast);
+  transition: transform var(--transition-fast), color var(--transition-fast),
+    text-shadow var(--transition-fast);
 }
 
 .has-dropdown:hover .dropdown-arrow {
