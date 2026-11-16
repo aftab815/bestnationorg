@@ -314,28 +314,26 @@ const HomeHero = () => {
               })}
             </div>
 
-            <div className="home-hero__controls">
-              <button
-                type="button"
-                className="home-hero__arrow"
-                aria-label="Previous slide"
-                onClick={goToPrevious}
-              >
-                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
-                  <path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </button>
-              <button
-                type="button"
-                className="home-hero__arrow"
-                aria-label="Next slide"
-                onClick={goToNext}
-              >
-                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
-                  <path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </button>
-            </div>
+            <button
+              type="button"
+              className="home-hero__arrow home-hero__arrow--prev"
+              aria-label="Previous slide"
+              onClick={goToPrevious}
+            >
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+                <path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </button>
+            <button
+              type="button"
+              className="home-hero__arrow home-hero__arrow--next"
+              aria-label="Next slide"
+              onClick={goToNext}
+            >
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+                <path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </button>
           </div>
         </div>
       </section>

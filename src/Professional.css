@@ -305,45 +305,56 @@ p { color: var(--slate-600); line-height: 1.75; }.container { max-width: 1240px 
   filter: none;
 }
 
-.home-hero__controls {
-  position: absolute;
-  right: 18px;
-  bottom: 18px;
-  z-index: 3;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
 .home-hero__arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 3;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   padding: 0;
-  border: 1.5px solid var(--primary);
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.94);
-  color: var(--primary);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.9);
   cursor: pointer;
-  box-shadow: var(--shadow-sm);
-  transition: background var(--transition-fast), color var(--transition-fast),
-    border-color var(--transition-fast), transform var(--transition-fast);
+  box-shadow: none;
+  transform: translateY(-50%);
+  -webkit-tap-highlight-color: transparent;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.home-hero__arrow--prev {
+  left: clamp(12px, 1.4vw, 20px);
+}
+
+.home-hero__arrow--next {
+  right: clamp(12px, 1.4vw, 20px);
+}
+
+.home-hero__arrow svg {
+  width: 34px;
+  height: 34px;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.55));
 }
 
 .home-hero__arrow:hover {
-  background: var(--primary);
-  border-color: var(--primary);
   color: #fff;
-  transform: translateY(-1px);
+  transform: translateY(-50%) scale(1.1);
 }
 
-.home-hero__controls button:focus-visible,
+.home-hero__arrow:focus-visible,
 .home-hero__actions a:focus-visible,
 .home-hero__actions button:focus-visible {
-  outline: 3px solid var(--primary);
+  outline: 3px solid #fff;
   outline-offset: 3px;
+}
+
+.home-hero__arrow:focus-visible {
+  color: #fff;
+  border-radius: 6px;
 }
 
 .home-hero-trust {
@@ -396,6 +407,33 @@ p { color: var(--slate-600); line-height: 1.75; }.container { max-width: 1240px 
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+}
+
+@media (min-width: 769px) {
+  .home-hero__inner {
+    padding-left: clamp(44px, 4vw, 64px);
+    padding-right: clamp(44px, 4vw, 64px);
+  }
+}
+
+@media (max-width: 768px) {
+  .home-hero__arrow {
+    top: auto;
+    bottom: 16px;
+    transform: none;
+  }
+
+  .home-hero__arrow--prev { left: 10px; }
+  .home-hero__arrow--next { right: 10px; }
+
+  .home-hero__arrow svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .home-hero__arrow:hover {
+    transform: scale(1.08);
   }
 }
 
