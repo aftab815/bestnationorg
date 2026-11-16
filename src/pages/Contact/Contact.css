@@ -1,7 +1,7 @@
 /* ── BESPOKE CONTACT HERO MODERN ─────────── */
 .contact-hero-modern {
   position: relative;
-  min-height: 480px;
+  min-height: var(--hero-height);
   padding: 96px 0 76px;
   background: var(--navy-950);
   overflow: hidden;

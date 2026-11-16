@@ -1,7 +1,7 @@
 /* ── BESPOKE ABOUT HERO MODERN ──────── */
 .about-hero-modern {
   position: relative;
-  min-height: 520px;
+  min-height: var(--hero-height);
   padding: 100px 0 80px;
   background: var(--navy-950);
   overflow: hidden;

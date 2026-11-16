@@ -1,7 +1,7 @@
 /* ── BESPOKE DONATE HERO MODERN ──────────── */
 .donate-hero-modern {
   position: relative;
-  min-height: 500px;
+  min-height: var(--hero-height);
   padding: 100px 0 80px;
   background: var(--navy-950);
   overflow: hidden;

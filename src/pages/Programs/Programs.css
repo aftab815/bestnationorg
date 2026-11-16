@@ -1,7 +1,7 @@
 /* ── BESPOKE PROGRAMS HERO MODERN ────────── */
 .prog-hero-modern {
   position: relative;
-  min-height: 520px;
+  min-height: var(--hero-height);
   padding: 100px 0 76px;
   background: var(--navy-950);
   overflow: hidden;
