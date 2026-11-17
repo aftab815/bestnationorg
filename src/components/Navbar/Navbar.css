@@ -241,6 +241,69 @@
   box-shadow: 0 6px 16px rgba(233, 177, 74, 0.35);
 }
 
+.navbar-actions .nav-volunteer-btn.btn-action {
+  min-height: 40px !important;
+  padding: 9px 16px !important;
+  gap: 9px !important;
+  border: 2px solid var(--primary) !important;
+  border-radius: var(--radius-full, 999px) !important;
+  background: #ffffff !important;
+  color: var(--primary) !important;
+  font-size: 0.72rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.035em !important;
+  white-space: nowrap;
+}
+
+.navbar-actions .nav-volunteer-btn.btn-action:hover {
+  background: var(--primary-surface) !important;
+  border-color: var(--primary-hover) !important;
+  color: var(--primary-hover) !important;
+}
+
+.navbar-actions .nav-volunteer-btn.btn-action:focus-visible {
+  outline: 3px solid var(--primary) !important;
+  outline-offset: 2px;
+}
+
+.navbar-actions {
+  gap: 10px;
+}
+
+@media (max-width: 1024px) {
+  .navbar-actions .nav-volunteer-btn {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1099px) {
+  .navbar {
+    gap: 18px;
+  }
+
+  .navbar-actions .nav-volunteer-btn.btn-action {
+    padding: 9px 10px !important;
+    letter-spacing: 0.02em !important;
+  }
+}
+
+.mobile-volunteer-btn.btn-action {
+  width: 100%;
+  margin-top: 10px;
+  min-height: 46px;
+  border: 2px solid var(--primary) !important;
+  border-radius: var(--radius-full, 999px) !important;
+  background: #ffffff !important;
+  color: var(--primary) !important;
+  font-size: 0.78rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.035em !important;
+}
+
+.mobile-volunteer-btn.btn-action:hover {
+  background: var(--primary-surface) !important;
+}
+
 /* Mobile Hamburger Button */
 .mobile-menu-btn {
   display: none;

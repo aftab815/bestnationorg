@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import ActionButton from '../common/ActionButton';
+import { useFormModal } from '../getInvolved/FormModalProvider';
 import siteLogo from '../../assets/logo.png';
 import './Navbar.css';
 
 const Navbar = () => {
+  const { openForm } = useFormModal();
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -420,6 +422,17 @@ const Navbar = () => {
                 Donate
               </ActionButton>
 
+              <ActionButton
+                variant="secondary"
+                size="sm"
+                icon="fas fa-hand-holding-heart"
+                iconPosition="left"
+                className="nav-volunteer-btn"
+                onClick={() => openForm('volunteer', 'navbar')}
+              >
+                Volunteer
+              </ActionButton>
+
               {/* Mobile Hamburger Button */}
               <button
                 className="mobile-menu-btn"
@@ -754,6 +767,20 @@ const Navbar = () => {
               onClick={closeMobileMenu}
             >
               Donate Now
+            </ActionButton>
+            <ActionButton
+              variant="secondary"
+              size="md"
+              icon="fas fa-hand-holding-heart"
+              iconPosition="left"
+              fullWidth
+              className="mobile-volunteer-btn"
+              onClick={() => {
+                closeMobileMenu();
+                openForm('volunteer', 'navbar-mobile');
+              }}
+            >
+              Volunteer
             </ActionButton>
             <div className="mobile-compliance-tag">
               <i className="fas fa-shield-alt"></i>

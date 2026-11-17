@@ -216,9 +216,9 @@ const ProgramDetail = () => {
                             initialValues: { programId: program.id, projectId: project.id },
                           })
                         }
-                        aria-label={`Apply for support for ${project.name}`}
+                        aria-label={`Beneficiary application for ${project.name}`}
                       >
-                        Apply for Support
+                        Beneficiary
                       </ActionButton>
                     </div>
                   </div>

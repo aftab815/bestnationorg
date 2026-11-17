@@ -342,7 +342,7 @@ const Home = () => {
                 className="involved-btn"
                 onClick={() => openForm('beneficiary', 'home-beneficiary')}
               >
-                Apply for Support
+                Beneficiary
               </ActionButton>
             </div>
           </div>
