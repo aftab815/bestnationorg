@@ -2,12 +2,10 @@ import React from 'react';
 import ActionButton from '../../components/common/ActionButton';
 import CTA from '../../components/CTA/CTA';
 import Newsletter from '../../components/Newsletter/Newsletter';
-import { useFormModal } from '../../components/getInvolved/FormModalProvider';
 import { membershipTiers } from '../../data/siteData';
 import './Membership.css';
 
 const Membership = () => {
-  const { openForm } = useFormModal();
   const intlTiers = membershipTiers.filter((t) => t.level === 'international');
   const localTiers = membershipTiers.filter((t) => t.level === 'national');
 
@@ -23,7 +21,7 @@ const Membership = () => {
           <div className="mem-hero-content">
             <div className="mem-hero-badge">
               <span className="live-pulse-dot"></span>
-              <span>Prestigious Civic Leadership &bull; 7 Parliament Tiers</span>
+              <span>Prestigious Civic Leadership &bull; 7 Council Tiers</span>
             </div>
             <h1>Membership &amp; Fee Structure</h1>
             <p>
@@ -64,7 +62,6 @@ const Membership = () => {
                   size="md"
                   fullWidth
                   icon="fas fa-arrow-right"
-                  onClick={() => openForm('volunteer', 'membership-international')}
                 >
                   Apply Now
                 </ActionButton>
@@ -82,7 +79,7 @@ const Membership = () => {
             <div className="underline"></div>
             <p>Execution oversight, project delivery, and grassroots community outreach</p>
           </div>
-          <div className="mem-grid">
+          <div className="mem-grid mem-grid--local">
             {localTiers.map((tier) => (
               <div key={tier.id} className="mem-card mem-card--local">
                 <div className="mem-card-header">
@@ -99,7 +96,6 @@ const Membership = () => {
                   size="md"
                   fullWidth
                   icon="fas fa-arrow-right"
-                  onClick={() => openForm('volunteer', 'membership-local')}
                 >
                   Apply Now
                 </ActionButton>
