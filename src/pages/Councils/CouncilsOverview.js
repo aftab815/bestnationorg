@@ -51,13 +51,11 @@ const CouncilsOverview = () => {
                 to="/councils/international/state"
                 title="State Councils"
                 subtitle="Council activity at state level"
-                badge="Coming soon"
               />
               <CouncilListCard
                 to="/councils/international/world"
                 title="World Councils"
                 subtitle="Council activity across the world"
-                badge="Coming soon"
               />
             </div>
           </div>

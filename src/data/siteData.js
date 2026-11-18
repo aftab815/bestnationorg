@@ -295,7 +295,7 @@ export const parliamentTiers = {
   international: [
     {
       id: 1,
-      name: "Best Nation World Parliament",
+      name: "Best Nation World Council",
       level: "International / National",
       minMembers: 120,
       term: "1 Year",
@@ -305,7 +305,7 @@ export const parliamentTiers = {
     },
     {
       id: 2,
-      name: "Best Nation World States Parliament",
+      name: "Best Nation World States Council",
       level: "State / Province",
       minMembers: 120,
       term: "1 Year",
@@ -315,7 +315,7 @@ export const parliamentTiers = {
     },
     {
       id: 3,
-      name: "Best Nation World Cities Parliament",
+      name: "Best Nation World Cities Council",
       level: "City / Metropolitan",
       minMembers: 120,
       term: "1 Year",
@@ -327,7 +327,7 @@ export const parliamentTiers = {
   national: [
     {
       id: 4,
-      name: "Best Nation Divisional Parliament",
+      name: "Best Nation Divisional Council",
       level: "Divisional",
       minMembers: 240,
       term: "1 Year",
@@ -337,7 +337,7 @@ export const parliamentTiers = {
     },
     {
       id: 5,
-      name: "Best Nation District Parliament",
+      name: "Best Nation District Council",
       level: "District",
       minMembers: 240,
       term: "1 Year",
@@ -347,7 +347,7 @@ export const parliamentTiers = {
     },
     {
       id: 6,
-      name: "Best Nation Tehsil Parliament",
+      name: "Best Nation Tehsil Council",
       level: "Tehsil",
       minMembers: 240,
       term: "1 Year",
@@ -378,7 +378,7 @@ export const eligibilityCriteria = [
   "Minimum age of 25 years and a record of good moral character",
   "Demonstrated commitment to voluntary community service or relevant professional expertise",
   "No conflict of interest with BNWO's objectives or affiliated bodies",
-  "Willingness to serve the full term and attend mandatory Parliament sessions and reporting cycles",
+  "Willingness to serve the full term and attend mandatory Council sessions and reporting cycles",
 ];
 
 /* ──────────────────────────────────────────────
@@ -519,14 +519,14 @@ export const membershipTiers = [
 export const accountabilityChain = [
   {
     step: 1,
-    title: "International Parliaments",
+    title: "International Councils",
     subtitle: "Strategy & Fundraising",
     logos: [worldParliamentLogo],
     icon: "fas fa-globe",
   },
   {
     step: 2,
-    title: "Local Parliaments",
+    title: "Local Councils",
     subtitle: "Oversight & Coordination",
     logos: [divisionalLogo, districtLogo, tehsilLogo],
     icon: "fas fa-landmark",
@@ -549,7 +549,7 @@ export const accountabilityChain = [
 export const stats = [
   { id: "stat1", icon: "fas fa-users", target: 12000, label: "Lives Reached" },
   { id: "stat2", icon: "fas fa-project-diagram", target: 12, label: "Core Welfare Programs" },
-  { id: "stat3", icon: "fas fa-landmark", target: 7, label: "Parliament Tiers" },
+  { id: "stat3", icon: "fas fa-landmark", target: 7, label: "Council Tiers" },
   { id: "stat4", icon: "fas fa-tasks", target: 24, label: "Project Committees" },
 ];
 

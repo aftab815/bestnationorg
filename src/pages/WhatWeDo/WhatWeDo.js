@@ -97,7 +97,7 @@ const WhatWeDo = () => {
           <div className="section-title">
             <h2>Our Delivery Approach</h2>
             <div className="underline"></div>
-            <p>Program delivery through the Parliament–Committee accountability chain</p>
+            <p>Program delivery through the Council–Committee accountability chain</p>
           </div>
           <div className="approach-grid">
             {accountabilityChain.map((item) => (

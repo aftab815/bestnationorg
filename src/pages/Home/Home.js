@@ -139,15 +139,15 @@ const Home = () => {
         <div className="container">
           <div className="parliament-grid">
             <div className="parliament-image">
-              <img src={bnwoParlimentImage} alt="Best Nation Parliaments" />
+              <img src={bnwoParlimentImage} alt="Best Nation Councils" />
             </div>
             <div className="parliament-content">
               <span className="section-kicker">Structured Governance</span>
-              <h2>7-Tier Parliament Framework</h2>
+              <h2>7-Tier Council Framework</h2>
               <div className="underline-left"></div>
               <p className="parliament-tagline">Grassroots Leadership & Accountability</p>
               <p className="parliament-description">
-                BNWO operates through a 7-tiered leadership structure — the "Best Nation Parliaments" — ensuring
+                BNWO operates through a 7-tiered leadership structure — the "Best Nation Councils" — ensuring
                 transparent governance from International levels down to local Union Councils, aligned with 24 project committees.
               </p>
               <div className="parliament-chain">
@@ -237,7 +237,7 @@ const Home = () => {
                 <i className="fas fa-check-circle"></i>
               </div>
               <h3>100% Verifiable</h3>
-              <p>Audit reports and field receipts are logged transparently for all parliament members.</p>
+              <p>Audit reports and field receipts are logged transparently for all council members.</p>
               <ActionButton
                 to="/donate"
                 variant="primary"
@@ -317,7 +317,7 @@ const Home = () => {
                 <i className="fas fa-hands-helping"></i>
               </div>
               <h3>Become a Volunteer</h3>
-              <p>Join our 24 project committees or local parliament tier to actively serve your community.</p>
+              <p>Join our 24 project committees or local council tier to actively serve your community.</p>
               <ActionButton
                 variant="primary"
                 size="md"

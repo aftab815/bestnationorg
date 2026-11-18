@@ -23,6 +23,11 @@ import DivisionCouncilDetail from './pages/Councils/DivisionCouncilDetail';
 import TehsilCouncils from './pages/Councils/TehsilCouncils';
 import TehsilCouncilDetail from './pages/Councils/TehsilCouncilDetail';
 import CouncilComingSoon from './pages/Councils/CouncilComingSoon';
+import InternationalCityCouncils from './pages/Councils/InternationalCityCouncils';
+import InternationalStateCouncils from './pages/Councils/InternationalStateCouncils';
+import InternationalStateCouncilDetail from './pages/Councils/InternationalStateCouncilDetail';
+import InternationalWorldCouncils from './pages/Councils/InternationalWorldCouncils';
+import InternationalWorldCouncilDetail from './pages/Councils/InternationalWorldCouncilDetail';
 import { FormModalProvider } from './components/getInvolved/FormModalProvider';
 
 function ScrollManager() {
@@ -113,35 +118,16 @@ function App() {
             <Route path="/membership" element={<Membership />} />
             <Route path="/events" element={<Events />} />
             <Route path="/councils" element={<CouncilsOverview />} />
+            <Route path="/councils/international/city" element={<InternationalCityCouncils />} />
+            <Route path="/councils/international/state" element={<InternationalStateCouncils />} />
             <Route
-              path="/councils/international/city"
-              element={
-                <CouncilComingSoon
-                  title="City Councils"
-                  kicker="International Councils"
-                  subtitle="City-level councils connecting BNWO communities in major cities."
-                />
-              }
+              path="/councils/international/state/:countrySlug/:stateSlug"
+              element={<InternationalStateCouncilDetail />}
             />
+            <Route path="/councils/international/world" element={<InternationalWorldCouncils />} />
             <Route
-              path="/councils/international/state"
-              element={
-                <CouncilComingSoon
-                  title="State Councils"
-                  kicker="International Councils"
-                  subtitle="State-level councils supporting BNWO coordination and outreach."
-                />
-              }
-            />
-            <Route
-              path="/councils/international/world"
-              element={
-                <CouncilComingSoon
-                  title="World Councils"
-                  kicker="International Councils"
-                  subtitle="World-level councils connecting the BNWO network internationally."
-                />
-              }
+              path="/councils/international/world/:countrySlug"
+              element={<InternationalWorldCouncilDetail />}
             />
             <Route path="/councils/national/division" element={<DivisionCouncils />} />
             <Route

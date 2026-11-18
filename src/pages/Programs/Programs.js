@@ -94,7 +94,7 @@ const Programs = () => {
                 <i className="fas fa-search-location"></i>
               </div>
               <h3>1. Field Needs Survey</h3>
-              <p>Union Council Parliaments conduct on-ground surveys to identify genuine beneficiaries and priorities.</p>
+              <p>Union Councils conduct on-ground surveys to identify genuine beneficiaries and priorities.</p>
             </div>
             <div className="framework-card">
               <div className="framework-icon">
@@ -108,7 +108,7 @@ const Programs = () => {
                 <i className="fas fa-shield-alt"></i>
               </div>
               <h3>3. Audit & Reporting</h3>
-              <p>Monthly progress reports and financial audits are submitted to Divisional Parliaments and published.</p>
+              <p>Monthly progress reports and financial audits are submitted to Divisional Councils and published.</p>
             </div>
           </div>
         </div>

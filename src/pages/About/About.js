@@ -39,7 +39,7 @@ const About = () => {
                   Executive Summary
                 </ActionButton>
                 <ActionButton to="/parliament" variant="ghost" size="md" icon="fas fa-landmark">
-                  7-Tier Parliament
+                  7-Tier Council
                 </ActionButton>
               </div>
             </div>
@@ -53,7 +53,7 @@ const About = () => {
                 <div className="metric-grid-mini">
                   <div className="metric-mini-item">
                     <strong>7</strong>
-                    <small>Parliament Tiers</small>
+                    <small>Council Tiers</small>
                   </div>
                   <div className="metric-mini-item">
                     <strong>12</strong>
@@ -103,7 +103,7 @@ const About = () => {
                 </p>
                 <p className="exec-sub-para">
                   The organization operates through a nationwide governance structure of selected and
-                  appointed leadership bodies (&ldquo;Parliaments&rdquo;) at the International, divisional,
+                  appointed leadership bodies (&ldquo;Councils&rdquo;) at the International, divisional,
                   district, tehsil, and union council levels, supported by twelve core welfare programs
                   and a network of twenty-four thematic welfare project committees. This concept note
                   presents BNWO&rsquo;s vision, mission, governance architecture, and program portfolio
@@ -125,7 +125,7 @@ const About = () => {
                 <div className="exec-pillar-icon"><i className="fas fa-sitemap"></i></div>
                 <div>
                   <strong>Governance</strong>
-                  <span>7 Parliament Tiers</span>
+                  <span>7 Council Tiers</span>
                 </div>
               </div>
               <div className="exec-pillar-item">
@@ -168,7 +168,7 @@ const About = () => {
                   <i className="fas fa-check-circle"></i> 100% Transparent Governance
                 </div>
                 <div className="org-highlight-pill">
-                  <i className="fas fa-check-circle"></i> 7-Tier Parliament Model
+                  <i className="fas fa-check-circle"></i> 7-Tier Council Model
                 </div>
                 <div className="org-highlight-pill">
                   <i className="fas fa-check-circle"></i> 24 Specialized Committees
@@ -276,13 +276,13 @@ const About = () => {
             <div className="parliament-cta-text">
               <h2>Explore Our Governance & Committee Network</h2>
               <p>
-                Discover how BNWO operates through transparent 7-tier Parliaments
+                Discover how BNWO operates through transparent 7-tier Councils
                 and 24 thematic Project Committees to ensure local accountability.
               </p>
             </div>
             <div className="parliament-cta-actions">
               <ActionButton to="/parliament" variant="dark" size="md" icon="fas fa-arrow-right">
-                Explore Parliaments
+                Explore Councils
               </ActionButton>
               <ActionButton to="/committees" variant="ghost" size="md" icon="fas fa-arrow-right">
                 24 Committees

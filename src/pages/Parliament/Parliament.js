@@ -23,7 +23,7 @@ const Parliament = () => {
       {/* ── Bespoke Modern Parliament Hero ───────────── */}
       <section className="parl-hero-modern">
         <div className="parl-hero-bg">
-          <img src="https://i.tribune.com.pk/media/images/521840-islamabadnationalassemblyinterior-1363464536/521840-islamabadnationalassemblyinterior-1363464536.jpg" alt="Best Nation Parliaments" />
+          <img src="https://i.tribune.com.pk/media/images/521840-islamabadnationalassemblyinterior-1363464536/521840-islamabadnationalassemblyinterior-1363464536.jpg" alt="Best Nation Councils" />
           <div className="parl-hero-overlay"></div>
         </div>
         <div className="container">
@@ -32,7 +32,7 @@ const Parliament = () => {
               <span className="live-pulse-dot"></span>
               <span>Constitutional 7-Tier Governance System</span>
             </div>
-            <h1>Best Nation Parliaments</h1>
+            <h1>7-Tier Council Structure</h1>
             <p>
               A structured, multi-tier democratic welfare governance model extending from the global Pakistani diaspora
               down to grassroots Union Councils across all provinces.
@@ -81,15 +81,15 @@ const Parliament = () => {
             <div className="formation-pillar-card formation-card--international">
               <div className="formation-card-header">
                 <div className="formation-icon-wrap formation-icon-wrap--logo">
-                  <img src={worldParliamentImg} alt="World Parliament Emblem" className="formation-tier-logo-img" />
+                  <img src={worldParliamentImg} alt="World Council Emblem" className="formation-tier-logo-img" />
                 </div>
                 <div>
                   <span className="formation-tier-tag">Top-Tier Governance</span>
-                  <h3>International-Level Parliaments</h3>
+                  <h3>International-Level Councils</h3>
                 </div>
               </div>
               <p className="formation-subhead">
-                World Parliament &bull; World States Parliament &bull; World Cities Parliament
+                World Council &bull; World States Council &bull; World Cities Council
               </p>
               <div className="formation-body-text">
                 <p>
@@ -108,17 +108,17 @@ const Parliament = () => {
             <div className="formation-pillar-card formation-card--local">
               <div className="formation-card-header">
                 <div className="formation-icon-wrap formation-icon-wrap--local-group">
-                  <img src={divisionalImg} alt="Divisional Parliament" title="Divisional Parliament" className="formation-local-logo" />
-                  <img src={districtImg} alt="District Parliament" title="District Parliament" className="formation-local-logo" />
-                  <img src={tehsilImg} alt="Tehsil Parliament" title="Tehsil Parliament" className="formation-local-logo" />
+                  <img src={divisionalImg} alt="Divisional Council" title="Divisional Council" className="formation-local-logo" />
+                  <img src={districtImg} alt="District Council" title="District Council" className="formation-local-logo" />
+                  <img src={tehsilImg} alt="Tehsil Council" title="Tehsil Council" className="formation-local-logo" />
                 </div>
                 <div>
                   <span className="formation-tier-tag">Grassroots Execution</span>
-                  <h3>Local-Level Parliaments</h3>
+                  <h3>Local-Level Councils</h3>
                 </div>
               </div>
               <p className="formation-subhead">
-                Divisional &bull; District &bull; Tehsil Parliaments
+                Divisional &bull; District &bull; Tehsil Councils
               </p>
               <div className="formation-body-text">
                 <p>
@@ -152,7 +152,7 @@ const Parliament = () => {
             <h2>Core Office-Bearers Structure</h2>
             <div className="underline"></div>
             <p>
-              Every Parliament, regardless of tier, is composed of the following core office-bearers, supplemented by tier-specific portfolios:
+              Every Council, regardless of tier, is composed of the following core office-bearers, supplemented by tier-specific portfolios:
             </p>
           </div>
 
@@ -213,7 +213,7 @@ const Parliament = () => {
               </div>
               <div className="bearer-content">
                 <h3>Committee Convenors</h3>
-                <p>Heads of the relevant thematic Project Committees operating actively under that Parliament.</p>
+                <p>Heads of the relevant thematic Project Committees operating actively under that Council.</p>
               </div>
             </div>
           </div>
@@ -347,7 +347,7 @@ const Parliament = () => {
               <span className="section-kicker">Requirements</span>
               <h2>Eligibility Criteria for Office-Bearers</h2>
               <div className="underline-left"></div>
-              <p>Candidates must meet rigorous standards of service and character to hold office in any Parliament tier.</p>
+              <p>Candidates must meet rigorous standards of service and character to hold office in any Council tier.</p>
             </div>
             <div className="eligibility-list">
               {eligibilityCriteria.map((item, i) => (
@@ -374,7 +374,7 @@ const Parliament = () => {
               <i className="fas fa-file-pdf"></i>
               <span>Official Document</span>
             </div>
-            <h2>Parliament Membership<br /><span>Registration Form</span></h2>
+            <h2>Council Membership<br /><span>Registration Form</span></h2>
             <p>Download, fill, and submit your application to join BNWO's structured governance network</p>
           </div>
 
@@ -450,7 +450,7 @@ const Parliament = () => {
       {/* ── Join CTA ───────────────────── */}
       <section className="parl-join">
         <div className="container" style={{ textAlign: 'center' }}>
-          <h2>Join Best Nation Parliaments</h2>
+          <h2>Join Best Nation Councils</h2>
           <p>Become a chartered member and shape strategic governance and grassroots impact in your region.</p>
           <div className="parl-join-actions">
             <ActionButton to="/membership" variant="ghost" size="md" icon="fas fa-arrow-right">

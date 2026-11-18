@@ -31,7 +31,7 @@ const Events = () => {
             <h1>BNWO Events &amp; Seminars</h1>
             <p>
               Explore our past and upcoming community welfare drives, institutional partnerships,
-              and parliamentary coordination assemblies across Pakistan.
+              and council coordination assemblies across Pakistan.
             </p>
             <div className="events-hero-filter-tabs">
               <button

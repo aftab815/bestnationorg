@@ -139,7 +139,7 @@ const Navbar = () => {
                     <Link to="/parliament" className="dropdown-link">
                       <div className="dropdown-icon dropdown-icon--blue"><i className="fas fa-landmark"></i></div>
                       <div>
-                        <strong>7-Tier Parliament</strong>
+                        <strong>7-Tier Council</strong>
                         <small>World to local tiers</small>
                       </div>
                     </Link>
@@ -277,7 +277,7 @@ const Navbar = () => {
                           </div>
                           <span className="submenu-toggle__text">
                             <strong>State Councils</strong>
-                            <small>Coming soon</small>
+                            <small>States &amp; provinces</small>
                           </span>
                         </Link>
                       </li>
@@ -288,7 +288,7 @@ const Navbar = () => {
                           </div>
                           <span className="submenu-toggle__text">
                             <strong>World Councils</strong>
-                            <small>Coming soon</small>
+                            <small>Countries worldwide</small>
                           </span>
                         </Link>
                       </li>
@@ -531,8 +531,8 @@ const Navbar = () => {
                 <ul className="mobile-sub-menu">
                   <li>
                     <Link to="/parliament" onClick={closeMobileMenu} className={isActive('/parliament') ? 'active' : ''}>
-                      <img src={siteLogo} alt="Parliament" className="mobile-sub-logo-thumb" />
-                      <span>7-Tier Parliament</span>
+                      <img src={siteLogo} alt="Council" className="mobile-sub-logo-thumb" />
+                      <span>7-Tier Council</span>
                     </Link>
                   </li>
                   <li>

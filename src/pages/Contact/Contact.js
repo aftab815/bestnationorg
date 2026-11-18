@@ -118,9 +118,9 @@ const Contact = () => {
                 <p className="leadership-lead-para">
                   <strong>Best Nation Welfare Organization (BNWO)</strong> is led by a national Chairman
                   supported by a network of international, divisional, district, tehsil, and union council
-                  leadership across all Parliament tiers. The Chairman’s office holds overall responsibility
+                  leadership across all Council tiers. The Chairman’s office holds overall responsibility
                   for strategic direction, partnerships, and organizational integrity, while committee and
-                  parliament leadership at each level is responsible for local program design, delivery, and
+                  council leadership at each level is responsible for local program design, delivery, and
                   monitoring.
                 </p>
                 <p className="leadership-sub-para">
@@ -141,7 +141,7 @@ const Contact = () => {
                 <div className="leadership-pill-item">
                   <i className="fas fa-sitemap"></i>
                   <div>
-                    <strong>7-Tier Parliament Leadership</strong>
+                    <strong>7-Tier Council Leadership</strong>
                     <span>Decentralized Oversight &amp; Audit</span>
                   </div>
                 </div>
@@ -273,7 +273,7 @@ const Contact = () => {
                       >
                         <option value="">Select a subject</option>
                         <option value="general">General Inquiry</option>
-                        <option value="membership">Parliament Membership</option>
+                        <option value="membership">Council Membership</option>
                         <option value="volunteer">Volunteering & Committees</option>
                         <option value="partnership">Corporate Partnership</option>
                         <option value="donation">Donation Support</option>
@@ -362,8 +362,8 @@ const Contact = () => {
           </div>
           <div className="faq-grid">
             <FaqItem
-              question="How can I become a BNWO Parliament member?"
-              answer="You can apply for membership through our Parliament Membership form (available on the Membership page) or contact us directly. Membership fees vary depending on the tier (World, Divisional, District, Tehsil, or UC Parliament)."
+              question="How can I become a BNWO Council member?"
+              answer="You can apply for membership through our Council Membership form (available on the Membership page) or contact us directly. Membership fees vary depending on the tier (World, Divisional, District, Tehsil, or UC Council)."
             />
             <FaqItem
               question="Are there membership contribution fees?"
@@ -379,7 +379,7 @@ const Contact = () => {
             />
             <FaqItem
               question="How is BNWO structured for accountability?"
-              answer="BNWO operates through a 7-tier Parliament structure from World Parliament down to Union Council, supported by 24 thematic project committees delivering 12 core welfare programs under strict audit oversight."
+              answer="BNWO operates through a 7-tier Council structure from World Council down to Union Council, supported by 24 thematic project committees delivering 12 core welfare programs under strict audit oversight."
             />
           </div>
         </div>
