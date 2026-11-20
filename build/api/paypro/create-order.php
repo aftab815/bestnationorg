@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/env.php';
 header("Content-Type: application/json; charset=UTF-8");
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: POST, OPTIONS");
@@ -16,11 +17,11 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 // PayPro Credentials (Default from configuration)
-$clientId = getenv("PAYPRO_CLIENT_ID") ?: "ClbWdIcE5bfvgKX";
-$clientSecret = getenv("PAYPRO_CLIENT_SECRET") ?: "RVQU2zlPto8fz9I";
-$merchantId = getenv("PAYPRO_MERCHANT_ID") ?: "Best_Welfare";
-$baseUrl = rtrim(getenv("PAYPRO_BASE_URL") ?: "https://api.paypro.com.pk", "/");
-$fallbackUrl = getenv("PAYPRO_HOSTED_URL") ?: "https://billing.paypro.com.pk/donation/best-nation-welfare-organization/";
+$clientId = paypro_env("PAYPRO_CLIENT_ID");
+$clientSecret = paypro_env("PAYPRO_CLIENT_SECRET");
+$merchantId = paypro_env("PAYPRO_MERCHANT_ID");
+$baseUrl = rtrim(paypro_env("PAYPRO_BASE_URL") ?: "https://api.paypro.com.pk", "/");
+$fallbackUrl = paypro_env("PAYPRO_HOSTED_URL") ?: "https://billing.paypro.com.pk/donation/best-nation-welfare-organization/";
 
 // Read incoming JSON body
 $rawInput = file_get_contents("php://input");
@@ -53,6 +54,17 @@ if (empty($donorName)) {
 if (!filter_var($donorEmail, FILTER_VALIDATE_EMAIL)) {
     http_response_code(400);
     echo json_encode(["ok" => false, "message" => "A valid email address is required."]);
+    exit();
+}
+
+if (empty($clientId) || empty($clientSecret) || empty($merchantId)) {
+    http_response_code(200);
+    echo json_encode([
+        "ok" => false,
+        "configured" => false,
+        "message" => "PayPro credentials (PAYPRO_CLIENT_ID, PAYPRO_CLIENT_SECRET, PAYPRO_MERCHANT_ID) are not configured in .env yet.",
+        "fallbackUrl" => $fallbackUrl
+    ]);
     exit();
 }
 
