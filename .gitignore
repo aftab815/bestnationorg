@@ -16,6 +16,7 @@ bnwo-cpanel-deploy.zip
 # Env
 .env
 .env.*
+!.env.example
 
 # Local data & logs
 /data/
