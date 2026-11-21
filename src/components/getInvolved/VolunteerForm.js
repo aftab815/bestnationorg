@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useRef, useState } from 'react';
 import ActionButton from '../common/ActionButton';
 import FormField from './FormField';
 import LocationSelect from './LocationSelect';
@@ -12,13 +12,9 @@ import {
 } from '../../data/locations';
 import { getDivisionLabel, sortDivisionsByRegion } from '../../data/regions';
 import { getPrograms, getProjectsForProgram } from '../../config/programs';
-import { submitVolunteer } from '../../services/volunteerService';
-import {
-  resolveLocationValue,
-  resolveProvinceFromDivision,
-  resolveRegionFromDivision,
-  isMissingCustomLocation,
-} from '../../utils/locationPayload';
+import { buildVolunteerPayload, submitVolunteer } from '../../services/volunteerService';
+import { fieldErrorsFrom, submissionKey } from '../../services/formApi';
+import { isMissingCustomLocation } from '../../utils/locationPayload';
 import {
   digitsOnly,
   formatCell,
@@ -66,7 +62,7 @@ const INITIAL_FORM = {
   message: '',
 };
 
-const VolunteerForm = ({ source = 'home-volunteer', initialValues = {}, onClose }) => {
+const VolunteerForm = ({ initialValues = {}, onClose }) => {
   const [form, setForm] = useState(() => ({
     ...INITIAL_FORM,
     ...(initialValues || {}),
@@ -76,6 +72,7 @@ const VolunteerForm = ({ source = 'home-volunteer', initialValues = {}, onClose 
   const [submitting, setSubmitting] = useState(false);
   const [result, setResult] = useState(null);
   const [honeypot, setHoneypot] = useState('');
+  const submissionRef = useRef({ signature: '', key: '' });
 
   const divisionOptions = useMemo(
     () =>
@@ -227,51 +224,25 @@ const VolunteerForm = ({ source = 'home-volunteer', initialValues = {}, onClose 
     event.preventDefault();
     if (submitting) return;
 
-    if (honeypot.trim()) return;
-
     const nextErrors = validate();
     setErrors(nextErrors);
     if (Object.keys(nextErrors).length > 0) return;
 
-    const payload = {
-      formType: 'volunteer',
-      person: {
-        fullName: form.fullName.trim(),
-        gender: form.gender,
-        age: Number(form.age),
-        cell: form.cell.trim(),
-        email: form.email.trim(),
-        cnic: form.cnic.trim(),
-        profession: form.profession.trim(),
-        message: form.message.trim(),
-      },
-      location: {
-        province: resolveProvinceFromDivision(form.division),
-        region: resolveRegionFromDivision(form.division),
-        division: resolveLocationValue('division', form.division, form.customDivision),
-        district: resolveLocationValue('district', form.district, form.customDistrict),
-        tehsil: resolveLocationValue('tehsil', form.tehsil, form.customTehsil),
-        uc: resolveLocationValue('uc', form.uc, form.customUc),
-      },
-      participation: {
-        programId: form.programId,
-        projectId: form.projectId,
-        skills: form.skills,
-        availabilityHours: Number(form.availabilityHours),
-        availabilityType: form.availabilityType,
-      },
-      meta: {
-        submittedAt: new Date().toISOString(),
-        source,
-      },
-    };
+    const payload = buildVolunteerPayload(form, honeypot);
+    const idempotencyKey = submissionKey(submissionRef, JSON.stringify(payload));
 
     setSubmitting(true);
     setFormError('');
     try {
-      const submission = await submitVolunteer(payload);
+      const submission = await submitVolunteer(payload, idempotencyKey);
       setResult(submission);
     } catch (error) {
+      const fieldErrors = fieldErrorsFrom(error);
+      if (error?.code === 'invalid_cnic') fieldErrors.cnic = error.message;
+      if (error?.code === 'invalid_phone') fieldErrors.cell = error.message;
+      if (Object.keys(fieldErrors).length > 0) {
+        setErrors((previous) => ({ ...previous, ...fieldErrors }));
+      }
       setFormError(error?.message || 'We could not submit your application. Please try again.');
     } finally {
       setSubmitting(false);

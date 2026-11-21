@@ -1,7 +1,13 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import ActionButton from '../../components/common/ActionButton';
 import Newsletter from '../../components/Newsletter/Newsletter';
 import { siteInfo, socialLinks } from '../../data/siteData';
+import {
+  CONTACT_SUBJECTS,
+  buildContactPayload,
+  submitContact,
+} from '../../services/contactService';
+import { submissionKey } from '../../services/formApi';
 import contactHero from '../../assets/hero4.jpeg';
 import './Contact.css';
 
@@ -33,15 +39,37 @@ const Contact = () => {
     message: '',
   });
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+  const [honeypot, setHoneypot] = useState('');
+  const submissionRef = useRef({ signature: '', key: '' });
 
   const handleChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
-    setTimeout(() => setSubmitted(false), 4000);
+    if (submitting) return;
+
+    const payload = buildContactPayload(formData, honeypot);
+    const idempotencyKey = submissionKey(submissionRef, JSON.stringify(payload));
+
+    setSubmitting(true);
+    setSubmitted(false);
+    setErrorMessage('');
+    try {
+      await submitContact(payload, idempotencyKey);
+      setSubmitted(true);
+      setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+      setHoneypot('');
+      setTimeout(() => setSubmitted(false), 4000);
+    } catch (error) {
+      setErrorMessage(
+        error?.message || 'Your message could not be sent. Please try again.',
+      );
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -215,7 +243,34 @@ const Contact = () => {
                 </div>
               )}
 
+              {errorMessage && (
+                <div className="error-message" role="alert">
+                  <i className="fas fa-exclamation-circle"></i>
+                  <span>{errorMessage}</span>
+                </div>
+              )}
+
               <form onSubmit={handleSubmit} className="contact-form">
+                <div
+                  aria-hidden="true"
+                  style={{
+                    position: 'absolute',
+                    left: '-9999px',
+                    width: '1px',
+                    height: '1px',
+                    overflow: 'hidden',
+                  }}
+                >
+                  <label htmlFor="contact-website">Website</label>
+                  <input
+                    id="contact-website"
+                    type="text"
+                    tabIndex="-1"
+                    autoComplete="off"
+                    value={honeypot}
+                    onChange={(event) => setHoneypot(event.target.value)}
+                  />
+                </div>
                 <div className="form-row">
                   <div className="form-group">
                     <label>Full Name *</label>
@@ -272,12 +327,11 @@ const Contact = () => {
                         required
                       >
                         <option value="">Select a subject</option>
-                        <option value="general">General Inquiry</option>
-                        <option value="membership">Council Membership</option>
-                        <option value="volunteer">Volunteering & Committees</option>
-                        <option value="partnership">Corporate Partnership</option>
-                        <option value="donation">Donation Support</option>
-                        <option value="other">Other</option>
+                        {CONTACT_SUBJECTS.map((subject) => (
+                          <option key={subject.value} value={subject.value}>
+                            {subject.label}
+                          </option>
+                        ))}
                       </select>
                     </div>
                   </div>
@@ -304,8 +358,9 @@ const Contact = () => {
                   size="md"
                   icon="fas fa-paper-plane"
                   className="contact-submit-btn"
+                  disabled={submitting}
                 >
-                  Send Message
+                  {submitting ? 'Sending...' : 'Send Message'}
                 </ActionButton>
               </form>
             </div>

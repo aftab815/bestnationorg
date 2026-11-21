@@ -6,6 +6,7 @@ const Newsletter = () => {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState({ type: '', message: '' });
   const [loading, setLoading] = useState(false);
+  const [honeypot, setHoneypot] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -18,7 +19,7 @@ const Newsletter = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, honeypot }),
       });
 
       const data = await response.json();
@@ -47,6 +48,26 @@ const Newsletter = () => {
             <p>Get the latest updates, news, and resources delivered to your inbox</p>
           </div>
           <form className="newsletter-form" onSubmit={handleSubmit}>
+            <div
+              aria-hidden="true"
+              style={{
+                position: 'absolute',
+                left: '-9999px',
+                width: '1px',
+                height: '1px',
+                overflow: 'hidden',
+              }}
+            >
+              <label htmlFor="newsletter-website">Website</label>
+              <input
+                id="newsletter-website"
+                type="text"
+                tabIndex="-1"
+                autoComplete="off"
+                value={honeypot}
+                onChange={(event) => setHoneypot(event.target.value)}
+              />
+            </div>
             <input type="email" placeholder="Enter your email address" value={email} onChange={(e) => setEmail(e.target.value)} required />
             <ActionButton type="submit" variant="primary" size="md" disabled={loading}>
               {loading ? 'Submitting...' : 'Subscribe'}

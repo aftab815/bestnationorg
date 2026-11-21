@@ -1,17 +1,16 @@
 /**
- * Central API configuration for the form submission services.
+ * Central API configuration for the website -> CRM form submissions.
  *
- * Set REACT_APP_API_BASE_URL in .env when the CRM API is ready.
- * Example: REACT_APP_API_BASE_URL=https://api.bestnationorg.com
- *
- * The endpoints below are the intended CRM routes. They are intentionally unused
- * for now because the forms are frontend-only and submit to mock services.
+ * Set REACT_APP_API_BASE_URL in .env (for example http://localhost:8000).
  */
+
 export const API_BASE_URL = (process.env.REACT_APP_API_BASE_URL || '').replace(/\/+$/, '');
 
 export const API_ENDPOINTS = {
-  volunteers: '/volunteers',
-  beneficiaries: '/beneficiaries',
+  volunteers: '/api/v1/public/volunteers',
+  beneficiaries: '/api/v1/public/beneficiaries',
+  contact: '/api/v1/public/contact',
+  newsletter: '/api/v1/public/newsletter/subscribe',
 };
 
 export function buildApiUrl(endpoint) {

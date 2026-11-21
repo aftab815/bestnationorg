@@ -13,6 +13,31 @@ const dataDir = path.join(__dirname, "data");
 const subscribersFile = path.join(dataDir, "newsletter-subscribers.json");
 const donationsFile = path.join(dataDir, "paypro-donations.json");
 
+const crmApiBaseUrl = String(process.env.CRM_API_BASE_URL || "").replace(/\/+$/, "");
+
+function forwardNewsletterToCrm(email, honeypot) {
+  if (!crmApiBaseUrl || typeof fetch !== "function") return;
+  try {
+    const controller = typeof AbortController === "function" ? new AbortController() : null;
+    const timer = controller ? setTimeout(() => controller.abort(), 4000) : null;
+    const options = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, honeypot }),
+    };
+    if (controller) options.signal = controller.signal;
+    fetch(`${crmApiBaseUrl}/api/v1/public/newsletter/subscribe`, options)
+      .catch(() => {
+        console.error("CRM newsletter forward failed.");
+      })
+      .finally(() => {
+        if (timer) clearTimeout(timer);
+      });
+  } catch {
+    console.error("CRM newsletter forward failed.");
+  }
+}
+
 app.use(express.json());
 
 app.use(express.static(buildDir));
@@ -145,6 +170,7 @@ function getMailerConfig() {
 
 app.post("/api/newsletter/subscribe", (req, res) => {
   const email = String(req.body?.email || "").trim().toLowerCase();
+  const honeypot = String(req.body?.honeypot || "").trim();
   const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
   if (!isEmailValid) {
@@ -155,6 +181,7 @@ app.post("/api/newsletter/subscribe", (req, res) => {
   const alreadyExists = subscribers.some((entry) => entry.email === email);
 
   if (alreadyExists) {
+    forwardNewsletterToCrm(email, honeypot);
     return res.status(200).json({ message: "This email is already subscribed." });
   }
 
@@ -164,6 +191,7 @@ app.post("/api/newsletter/subscribe", (req, res) => {
   });
 
   writeSubscribers(subscribers);
+  forwardNewsletterToCrm(email, honeypot);
 
   return res.status(201).json({ message: "Thanks for subscribing to BNWO updates." });
 });

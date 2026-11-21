@@ -1,65 +1,47 @@
-/**
- * Volunteer application service.
- *
- * TODO: Replace the mock below with a real POST to the CRM API when it is ready.
- * Future endpoint: POST {REACT_APP_API_BASE_URL}/volunteers (see src/config/api.js).
- *
- * PAYLOAD CONTRACT
- * {
- *   formType: 'volunteer',
- *   person: {
- *     fullName, gender, age: number, cell, email, cnic, profession, message
- *   },
- *   location: {
- *     province: { id: string|null, label: string, notListed: boolean } | null,
- *     division: { id: string|null, label: string, notListed: boolean },
- *     district: { id: string|null, label: string, notListed: boolean },
- *     tehsil: { id: string|null, label: string, notListed: boolean },
- *     uc: { id: string|null, label: string, notListed: boolean } | null
- *   },
- *   participation: {
- *     programId, projectId, skills: string[],
- *     availabilityHours: number, availabilityType: 'weekdays'|'weekends'|'flexible'
- *   },
- *   meta: {
- *     submittedAt: ISO string,
- *     source: string // e.g. 'home-volunteer', 'cta-volunteer', 'membership-local', 'membership-international', 'parliament-leadership', 'program-page-volunteer'
- *   }
- * }
- *
- * Location levels use { id, label, notListed }. When the user picks
- * "My area is not listed", id is null, label contains the typed text, and
- * notListed is true. Optional levels that were left blank are null.
- *
- * SUCCESS RESPONSE
- * { ok: true, formType: 'volunteer', referenceId: string, submittedAt: ISO string }
- *
- * ERROR RESPONSE (when the real API is connected)
- * The service should reject with an Error carrying { code, message } so the form can
- * display an inline error without losing the user's typed data.
- */
+import { getProgramById, getProjectById } from '../config/programs';
+import { resolveLocationValue } from '../utils/locationPayload';
+import { digitsOnly } from '../utils/validation';
+import { postPublicForm } from './formApi';
 
-const MOCK_DELAY_MS = 900;
-
-function createReferenceId() {
-  const stamp = Date.now().toString(36).toUpperCase();
-  const random = Math.random().toString(36).slice(2, 6).toUpperCase();
-  return `BNWO-VOL-${stamp}-${random}`;
-}
-
-function delay(ms) {
-  return new Promise((resolve) => {
-    setTimeout(resolve, ms);
-  });
-}
-
-export async function submitVolunteer(payload) {
-  await delay(MOCK_DELAY_MS);
+export function buildVolunteerPayload(form, honeypot) {
+  const program = getProgramById(form.programId);
+  const project = getProjectById(form.programId, form.projectId);
 
   return {
+    fullName: form.fullName.trim(),
+    gender: form.gender,
+    age: Number(form.age),
+    cell: digitsOnly(form.cell),
+    email: form.email.trim(),
+    cnic: digitsOnly(form.cnic),
+    division: resolveLocationValue('division', form.division, form.customDivision),
+    district: resolveLocationValue('district', form.district, form.customDistrict),
+    tehsil: resolveLocationValue('tehsil', form.tehsil, form.customTehsil),
+    uc: resolveLocationValue('uc', form.uc, form.customUc),
+    customDivision: form.customDivision.trim(),
+    customDistrict: form.customDistrict.trim(),
+    customTehsil: form.customTehsil.trim(),
+    customUc: form.customUc.trim(),
+    programId: form.programId,
+    programName: program ? program.name : '',
+    projectId: form.projectId,
+    projectName: project ? project.name : '',
+    skills: form.skills,
+    availabilityHours: Number(form.availabilityHours),
+    availabilityType: form.availabilityType,
+    profession: form.profession.trim(),
+    message: form.message.trim(),
+    honeypot: String(honeypot || '').trim(),
+  };
+}
+
+export async function submitVolunteer(payload, idempotencyKey) {
+  const data = await postPublicForm('/api/v1/public/volunteers', payload, idempotencyKey);
+  return {
     ok: true,
-    formType: payload?.formType || 'volunteer',
-    referenceId: createReferenceId(),
-    submittedAt: new Date().toISOString(),
+    formType: 'volunteer',
+    referenceId: data.reference_no,
+    referenceNo: data.reference_no,
+    message: data.message,
   };
 }

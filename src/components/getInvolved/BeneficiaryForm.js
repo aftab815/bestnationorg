@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useRef, useState } from 'react';
 import ActionButton from '../common/ActionButton';
 import FormField from './FormField';
 import LocationSelect from './LocationSelect';
@@ -12,13 +12,9 @@ import {
 } from '../../data/locations';
 import { getDivisionLabel, sortDivisionsByRegion } from '../../data/regions';
 import { getPrograms, getProjectsForProgram } from '../../config/programs';
-import { submitBeneficiary } from '../../services/beneficiaryService';
-import {
-  resolveLocationValue,
-  resolveProvinceFromDivision,
-  resolveRegionFromDivision,
-  isMissingCustomLocation,
-} from '../../utils/locationPayload';
+import { buildBeneficiaryPayload, submitBeneficiary } from '../../services/beneficiaryService';
+import { fieldErrorsFrom, submissionKey } from '../../services/formApi';
+import { isMissingCustomLocation } from '../../utils/locationPayload';
 import {
   digitsOnly,
   formatCell,
@@ -79,7 +75,7 @@ const INITIAL_FORM = {
   consent: false,
 };
 
-const BeneficiaryForm = ({ source = 'home-beneficiary', initialValues = {}, onClose }) => {
+const BeneficiaryForm = ({ initialValues = {}, onClose }) => {
   const [form, setForm] = useState(() => ({
     ...INITIAL_FORM,
     ...(initialValues || {}),
@@ -89,6 +85,7 @@ const BeneficiaryForm = ({ source = 'home-beneficiary', initialValues = {}, onCl
   const [submitting, setSubmitting] = useState(false);
   const [result, setResult] = useState(null);
   const [honeypot, setHoneypot] = useState('');
+  const submissionRef = useRef({ signature: '', key: '' });
 
   const divisionOptions = useMemo(
     () =>
@@ -236,55 +233,25 @@ const BeneficiaryForm = ({ source = 'home-beneficiary', initialValues = {}, onCl
     event.preventDefault();
     if (submitting) return;
 
-    if (honeypot.trim()) return;
-
     const nextErrors = validate();
     setErrors(nextErrors);
     if (Object.keys(nextErrors).length > 0) return;
 
-    const payload = {
-      formType: 'beneficiary',
-      person: {
-        fullName: form.fullName.trim(),
-        guardianName: form.guardianName.trim(),
-        cnic: form.cnic.trim(),
-        gender: form.gender,
-        age: Number(form.age),
-        cell: form.cell.trim(),
-        alternativeContact: form.alternativeContact.trim(),
-        address: form.address.trim(),
-        consent: form.consent,
-      },
-      location: {
-        province: resolveProvinceFromDivision(form.division),
-        region: resolveRegionFromDivision(form.division),
-        division: resolveLocationValue('division', form.division, form.customDivision),
-        district: resolveLocationValue('district', form.district, form.customDistrict),
-        tehsil: resolveLocationValue('tehsil', form.tehsil, form.customTehsil),
-        uc: resolveLocationValue('uc', form.uc, form.customUc),
-      },
-      participation: {
-        programId: form.programId,
-        projectId: form.projectId,
-        helpType: form.helpType,
-        helpDetails: form.helpDetails.trim(),
-        familyMembers: Number(form.familyMembers),
-        beneficiaryCount: Number(form.beneficiaryCount),
-        incomeRange: form.incomeRange,
-        situation: form.situation.trim(),
-      },
-      meta: {
-        submittedAt: new Date().toISOString(),
-        source,
-      },
-    };
+    const payload = buildBeneficiaryPayload(form, honeypot);
+    const idempotencyKey = submissionKey(submissionRef, JSON.stringify(payload));
 
     setSubmitting(true);
     setFormError('');
     try {
-      const submission = await submitBeneficiary(payload);
+      const submission = await submitBeneficiary(payload, idempotencyKey);
       setResult(submission);
     } catch (error) {
+      const fieldErrors = fieldErrorsFrom(error);
+      if (error?.code === 'invalid_cnic') fieldErrors.cnic = error.message;
+      if (error?.code === 'invalid_phone') fieldErrors.cell = error.message;
+      if (Object.keys(fieldErrors).length > 0) {
+        setErrors((previous) => ({ ...previous, ...fieldErrors }));
+      }
       setFormError(error?.message || 'We could not submit your application. Please try again.');
     } finally {
       setSubmitting(false);
