@@ -1,0 +1,111 @@
+.intl-council-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.intl-council-tab {
+  min-height: 38px;
+  padding: 8px 14px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-full);
+  background: #ffffff;
+  color: var(--slate-600);
+  font-family: var(--font-body);
+  font-size: 0.76rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background var(--transition-fast), border-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.intl-council-tab:hover {
+  border-color: var(--primary-border);
+  color: var(--primary);
+}
+
+.intl-council-tab.active,
+.intl-council-tab[aria-selected='true'] {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: #ffffff;
+}
+
+.intl-council-tab:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.intl-council-filters .intl-council-search {
+  flex: 1 1 320px;
+}
+
+.intl-council-filters .council-filter input {
+  width: 100%;
+  min-height: 44px;
+  padding: 9px 12px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  background: var(--bg-main);
+  color: var(--navy-950);
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.intl-council-filters .council-filter input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.intl-council-group + .intl-council-group {
+  margin-top: 36px;
+}
+
+.intl-council-group-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.intl-council-group-heading h2 {
+  margin: 0;
+  color: var(--navy-950);
+  font-size: 1.2rem;
+}
+
+.intl-council-group-heading span {
+  color: var(--slate-500);
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.intl-council-more {
+  margin-top: 28px;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .intl-council-tabs {
+    gap: 6px;
+  }
+
+  .intl-council-tab {
+    padding: 7px 12px;
+    font-size: 0.72rem;
+  }
+
+  .intl-council-filters .intl-council-search {
+    flex: 1 1 auto;
+  }
+
+  .intl-council-group + .intl-council-group {
+    margin-top: 28px;
+  }
+}

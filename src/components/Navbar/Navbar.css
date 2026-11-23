@@ -9,18 +9,23 @@
   transition: all var(--transition-fast);
 }
 
-.navbar-header.scrolled {
+.navbar-header.scrolled,
+.navbar-header--home-solid {
   box-shadow: 0 4px 20px rgba(6, 27, 22, 0.08);
 }
 
 .navbar {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
   align-items: center;
-  justify-content: space-between;
   min-height: 76px;
   padding: 8px 0;
   gap: 28px;
 }
+
+.navbar-logo { grid-column: 1; justify-self: start; }
+.nav-menu { grid-column: 2; justify-self: center; }
+.navbar-actions { grid-column: 3; justify-self: end; }
 
 /* Logo */
 .navbar-logo {
@@ -83,7 +88,7 @@
   padding: 8px 0;
   color: var(--slate-700);
   font-size: 0.8rem;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: 0.02em;
   text-decoration: none;
   cursor: pointer;
@@ -97,8 +102,8 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 2.5px;
-  background: var(--accent);
+  height: 2px;
+  background: var(--primary);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform var(--transition-fast);
@@ -260,6 +265,69 @@
   background: var(--accent-hover);
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(233, 177, 74, 0.35);
+}
+
+.navbar-actions .nav-volunteer-btn.btn-action {
+  min-height: 40px !important;
+  padding: 9px 16px !important;
+  gap: 9px !important;
+  border: 2px solid var(--primary) !important;
+  border-radius: var(--radius-full, 999px) !important;
+  background: #ffffff !important;
+  color: var(--primary) !important;
+  font-size: 0.72rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.035em !important;
+  white-space: nowrap;
+}
+
+.navbar-actions .nav-volunteer-btn.btn-action:hover {
+  background: var(--primary-surface) !important;
+  border-color: var(--primary-hover) !important;
+  color: var(--primary-hover) !important;
+}
+
+.navbar-actions .nav-volunteer-btn.btn-action:focus-visible {
+  outline: 3px solid var(--primary) !important;
+  outline-offset: 2px;
+}
+
+.navbar-actions {
+  gap: 10px;
+}
+
+@media (max-width: 1024px) {
+  .navbar-actions .nav-volunteer-btn {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1099px) {
+  .navbar {
+    gap: 18px;
+  }
+
+  .navbar-actions .nav-volunteer-btn.btn-action {
+    padding: 9px 10px !important;
+    letter-spacing: 0.02em !important;
+  }
+}
+
+.mobile-volunteer-btn.btn-action {
+  width: 100%;
+  margin-top: 10px;
+  min-height: 46px;
+  border: 2px solid var(--primary) !important;
+  border-radius: var(--radius-full, 999px) !important;
+  background: #ffffff !important;
+  color: var(--primary) !important;
+  font-size: 0.78rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.035em !important;
+}
+
+.mobile-volunteer-btn.btn-action:hover {
+  background: var(--primary-surface) !important;
 }
 
 /* Mobile Hamburger Button */

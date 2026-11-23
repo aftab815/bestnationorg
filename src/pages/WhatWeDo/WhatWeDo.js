@@ -1,10 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import ActionButton from '../../components/common/ActionButton';
 import Stats from '../../components/Stats/Stats';
 import CTA from '../../components/CTA/CTA';
 import Newsletter from '../../components/Newsletter/Newsletter';
 import { corePrograms, focusAreas, accountabilityChain } from '../../data/siteData';
-import wwdHero from '../../assets/hero3.jpeg';
 import './WhatWeDo.css';
 
 const allProjects = [
@@ -34,12 +33,12 @@ const WhatWeDo = () => {
               building resilient communities, emergency medical care, and poverty-alleviation channels across Pakistan.
             </p>
             <div className="wwd-hero-actions">
-              <a href="#focus-areas" className="btn-donate">
-                Explore Focus Areas <i className="fas fa-arrow-down"></i>
-              </a>
-              <Link to="/programs" className="btn-glass">
-                12 Core Programs <i className="fas fa-hand-holding-heart"></i>
-              </Link>
+              <ActionButton href="#focus-areas" variant="dark" size="md" icon="fas fa-arrow-down">
+                Explore Focus Areas
+              </ActionButton>
+              <ActionButton to="/programs" variant="ghost" size="md" icon="fas fa-hand-holding-heart">
+                12 Core Programs
+              </ActionButton>
             </div>
           </div>
         </div>
@@ -85,9 +84,9 @@ const WhatWeDo = () => {
             ))}
           </div>
           <div style={{ textAlign: 'center', marginTop: '40px' }}>
-            <Link to="/programs" className="btn-primary" style={{ background: 'white', color: 'var(--primary-dark)' }}>
-              View Detailed Programs <i className="fas fa-arrow-right"></i>
-            </Link>
+            <ActionButton to="/programs" variant="dark" size="md" icon="fas fa-arrow-right">
+              View Detailed Programs
+            </ActionButton>
           </div>
         </div>
       </section>
@@ -98,7 +97,7 @@ const WhatWeDo = () => {
           <div className="section-title">
             <h2>Our Delivery Approach</h2>
             <div className="underline"></div>
-            <p>Program delivery through the Parliament–Committee accountability chain</p>
+            <p>Program delivery through the Council–Committee accountability chain</p>
           </div>
           <div className="approach-grid">
             {accountabilityChain.map((item) => (

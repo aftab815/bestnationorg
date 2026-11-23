@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import ActionButton from '../../components/common/ActionButton';
 import CTA from '../../components/CTA/CTA';
 import Newsletter from '../../components/Newsletter/Newsletter';
 import { eventsData } from '../../data/siteData';
@@ -31,7 +31,7 @@ const Events = () => {
             <h1>BNWO Events &amp; Seminars</h1>
             <p>
               Explore our past and upcoming community welfare drives, institutional partnerships,
-              and parliamentary coordination assemblies across Pakistan.
+              and council coordination assemblies across Pakistan.
             </p>
             <div className="events-hero-filter-tabs">
               <button
@@ -110,17 +110,26 @@ const Events = () => {
                   </div>
                   <p>{e.description}</p>
                   <div className="event-actions">
-                    <button
-                      className="event-view-btn"
+                    <ActionButton
+                      variant="secondary"
+                      size="sm"
+                      icon="fas fa-images"
+                      iconPosition="left"
                       onClick={() => setSelectedEvent(e)}
                     >
-                      <i className="fas fa-images"></i> View Event Details
-                    </button>
-                    {e.status === 'upcoming' && (
-                      <Link to="/join" className="btn-primary event-reg-btn">
-                        Register Now <i className="fas fa-arrow-right"></i>
-                      </Link>
-                    )}
+                      View Event Details
+                    </ActionButton>
+                      {e.status === 'upcoming' && (
+                      <ActionButton
+                        to="/join"
+                        variant="primary"
+                        size="sm"
+                        icon="fas fa-arrow-right"
+                        className="event-reg-btn"
+                      >
+                        Register Now
+                      </ActionButton>
+                      )}
                   </div>
                 </div>
               </div>

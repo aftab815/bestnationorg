@@ -1,8 +1,3 @@
-import hero1 from '../assets/hero1.jpeg';
-import hero2 from '../assets/hero2.jpeg';
-import hero3 from '../assets/hero3.jpeg';
-import hero4 from '../assets/hero4.jpeg';
-import hero5 from '../assets/hero5.jpeg';
 import jhangRation from '../assets/hero 3.jpg';
 
 /* Parliament Tier Logos */
@@ -182,49 +177,6 @@ export const focusAreas = [
   },
 ];
 
-export const heroSlides = [
-  {
-    id: 1,
-    title: "Activate Pakistan's Compassion Economy",
-    description: "Join BNWO to turn local care into large-scale change with community-led food, health, and education drives.",
-    btn1: { text: "Join the Mission", link: "/membership" },
-    btn2: { text: "Discover Our Story", link: "/about" },
-    bg: hero1,
-  },
-  {
-    id: 2,
-    title: "12 High-Impact Programs, One Purpose",
-    description: "From skill training and literacy to clean water and emergency health care, our welfare programs are built for real community impact.",
-    btn1: { text: "See Programs", link: "/programs" },
-    btn2: { text: "How We Deliver", link: "/what-we-do" },
-    bg: hero2,
-  },
-  {
-    id: 3,
-    title: "7-Tier Governance for Total Accountability",
-    description: "Our unique parliament model and 24 committees ensure every project is transparent, local, and results-focused.",
-    btn1: { text: "Explore Parliament", link: "/parliament" },
-    btn2: { text: "Meet Committees", link: "/committees" },
-    bg: hero3,
-  },
-  {
-    id: 4,
-    title: "Donate with Confidence, See Real Results",
-    description: "Every fund is managed by audited field teams and delivered directly to families, clinics, and schools.",
-    btn1: { text: "Donate Now", link: "/donate" },
-    btn2: { text: "Track Impact", link: "/programs" },
-    bg: hero4,
-  },
-  {
-    id: 5,
-    title: "Join the Movement for a Stronger Nation",
-    description: "Together we create sustainable opportunity, dignity, and support for every community across Pakistan.",
-    btn1: { text: "Become a Partner", link: "/membership" },
-    btn2: { text: "Contact Us", link: "/contact" },
-    bg: hero5,
-  },
-];
-
 /* ──────────────────────────────────────────────
    12 CORE WELFARE PROGRAMS (from Concept Note)
    ────────────────────────────────────────────── */
@@ -343,7 +295,7 @@ export const parliamentTiers = {
   international: [
     {
       id: 1,
-      name: "Best Nation World Parliament",
+      name: "Best Nation World Council",
       level: "International / National",
       minMembers: 120,
       term: "1 Year",
@@ -353,7 +305,7 @@ export const parliamentTiers = {
     },
     {
       id: 2,
-      name: "Best Nation World States Parliament",
+      name: "Best Nation World States Council",
       level: "State / Province",
       minMembers: 120,
       term: "1 Year",
@@ -363,7 +315,7 @@ export const parliamentTiers = {
     },
     {
       id: 3,
-      name: "Best Nation World Cities Parliament",
+      name: "Best Nation World Cities Council",
       level: "City / Metropolitan",
       minMembers: 120,
       term: "1 Year",
@@ -375,7 +327,7 @@ export const parliamentTiers = {
   national: [
     {
       id: 4,
-      name: "Best Nation Divisional Parliament",
+      name: "Best Nation Divisional Council",
       level: "Divisional",
       minMembers: 240,
       term: "1 Year",
@@ -385,7 +337,7 @@ export const parliamentTiers = {
     },
     {
       id: 5,
-      name: "Best Nation District Parliament",
+      name: "Best Nation District Council",
       level: "District",
       minMembers: 240,
       term: "1 Year",
@@ -395,7 +347,7 @@ export const parliamentTiers = {
     },
     {
       id: 6,
-      name: "Best Nation Tehsil Parliament",
+      name: "Best Nation Tehsil Council",
       level: "Tehsil",
       minMembers: 240,
       term: "1 Year",
@@ -426,7 +378,7 @@ export const eligibilityCriteria = [
   "Minimum age of 25 years and a record of good moral character",
   "Demonstrated commitment to voluntary community service or relevant professional expertise",
   "No conflict of interest with BNWO's objectives or affiliated bodies",
-  "Willingness to serve the full term and attend mandatory Parliament sessions and reporting cycles",
+  "Willingness to serve the full term and attend mandatory Council sessions and reporting cycles",
 ];
 
 /* ──────────────────────────────────────────────
@@ -501,25 +453,25 @@ export const allCommitteesList = projectCommittees.flatMap((c) =>
 export const membershipTiers = [
   {
     id: 1,
-    tier: "World Parliament",
+    tier: "World Council",
     role: "Member",
-    fee: "$300",
+    fee: "$100",
     currency: "USD",
     contribution: "National strategy, MOUs & flagship fundraising",
     level: "international",
   },
   {
     id: 2,
-    tier: "World States Parliament",
+    tier: "World States Council",
     role: "Member",
-    fee: "$200",
+    fee: "$100",
     currency: "USD",
     contribution: "Provincial fundraising & strategic alignment",
     level: "international",
   },
   {
     id: 3,
-    tier: "World Cities Parliament",
+    tier: "World Cities Council",
     role: "Member",
     fee: "$100",
     currency: "USD",
@@ -528,7 +480,7 @@ export const membershipTiers = [
   },
   {
     id: 4,
-    tier: "Divisional Parliament",
+    tier: "Divisional Council",
     role: "Member",
     fee: "PKR 5,000",
     currency: "PKR",
@@ -537,7 +489,7 @@ export const membershipTiers = [
   },
   {
     id: 5,
-    tier: "District Parliament",
+    tier: "District Council",
     role: "Member",
     fee: "PKR 5,000",
     currency: "PKR",
@@ -546,11 +498,20 @@ export const membershipTiers = [
   },
   {
     id: 6,
-    tier: "Tehsil Parliament",
+    tier: "Tehsil Council",
     role: "Member",
     fee: "PKR 5,000",
     currency: "PKR",
     contribution: "Tehsil-level project delivery",
+    level: "national",
+  },
+  {
+    id: 7,
+    tier: "Union Council",
+    role: "Member",
+    fee: "PKR 2,000",
+    currency: "PKR",
+    contribution: "Union Council-level community delivery",
     level: "national",
   },
 ];
@@ -558,14 +519,14 @@ export const membershipTiers = [
 export const accountabilityChain = [
   {
     step: 1,
-    title: "International Parliaments",
+    title: "International Councils",
     subtitle: "Strategy & Fundraising",
     logos: [worldParliamentLogo],
     icon: "fas fa-globe",
   },
   {
     step: 2,
-    title: "Local Parliaments",
+    title: "Local Councils",
     subtitle: "Oversight & Coordination",
     logos: [divisionalLogo, districtLogo, tehsilLogo],
     icon: "fas fa-landmark",
@@ -588,7 +549,7 @@ export const accountabilityChain = [
 export const stats = [
   { id: "stat1", icon: "fas fa-users", target: 12000, label: "Lives Reached" },
   { id: "stat2", icon: "fas fa-project-diagram", target: 12, label: "Core Welfare Programs" },
-  { id: "stat3", icon: "fas fa-landmark", target: 7, label: "Parliament Tiers" },
+  { id: "stat3", icon: "fas fa-landmark", target: 7, label: "Council Tiers" },
   { id: "stat4", icon: "fas fa-tasks", target: 24, label: "Project Committees" },
 ];
 

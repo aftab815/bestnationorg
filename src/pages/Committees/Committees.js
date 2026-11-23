@@ -1,9 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import ActionButton from '../../components/common/ActionButton';
 import CTA from '../../components/CTA/CTA';
 import Newsletter from '../../components/Newsletter/Newsletter';
 import { projectCommittees, accountabilityChain } from '../../data/siteData';
-import cmteHero from '../../assets/hero2.jpeg';
 import './Committees.css';
 
 const Committees = () => {
@@ -24,15 +23,15 @@ const Committees = () => {
             <h1>Thematic Project Committees</h1>
             <p>
               The direct execution and technical delivery arm of BNWO &mdash; specialized committees
-              replicated across Divisional, District, and Tehsil Parliaments.
+              replicated across Divisional, District, and Tehsil Councils.
             </p>
             <div className="cmte-hero-actions">
-              <a href="#formation-composition" className="btn-donate">
-                Formation &amp; Rules <i className="fas fa-tasks"></i>
-              </a>
-              <a href="#accountability-chain" className="btn-glass">
-                8.3 Reporting Chain <i className="fas fa-project-diagram"></i>
-              </a>
+              <ActionButton href="#formation-composition" variant="dark" size="md" icon="fas fa-tasks">
+                Formation &amp; Rules
+              </ActionButton>
+              <ActionButton href="#accountability-chain" variant="ghost" size="md" icon="fas fa-project-diagram">
+                8.3 Reporting Chain
+              </ActionButton>
             </div>
           </div>
         </div>
@@ -45,7 +44,7 @@ const Committees = () => {
             <span className="section-kicker accent">Operational Charter</span>
             <h2>Committees Formation &amp; Composition</h2>
             <div className="underline"></div>
-            <p>The operational framework governing every thematic committee across all local Parliament tiers</p>
+            <p>The operational framework governing every thematic committee across all local Council tiers</p>
           </div>
 
           <div className="cmte-rules-grid">
@@ -55,7 +54,7 @@ const Committees = () => {
               <h3>Local Tier Subordination</h3>
               <p>
                 Each Committee is formed under, and reports directly to, the <strong>Divisional, District,
-                or Tehsil Parliament</strong> of its area &mdash; the same committee structure is systematically
+                or Tehsil Council</strong> of its area &mdash; the same committee structure is systematically
                 replicated at every local tier.
               </p>
             </div>
@@ -65,7 +64,7 @@ const Committees = () => {
               <div className="cmte-rule-icon"><i className="fas fa-user-md"></i></div>
               <h3>Professional Convenorship</h3>
               <p>
-                Committees are chaired by a <strong>Convenor appointed by the respective Parliament&rsquo;s Chairman</strong>,
+                Committees are chaired by a <strong>Convenor appointed by the respective Council&rsquo;s Chairman</strong>,
                 typically a subject-matter volunteer or professional (e.g. a doctor for Doctors Empowerment, an
                 Ulema scholar for Quran Sunnah Agahi, a lawyer for Legal Support).
               </p>
@@ -84,10 +83,10 @@ const Committees = () => {
             <div className="cmte-rule-card">
               <div className="cmte-rule-num">04</div>
               <div className="cmte-rule-icon"><i className="fas fa-check-double"></i></div>
-              <h3>Formal Parliament Endorsement</h3>
+              <h3>Formal Council Endorsement</h3>
               <p>
                 A Committee becomes officially active once its <strong>Convenor and at least five members</strong> are
-                confirmed, vetted, and formally endorsed by the respective local Parliament.
+                confirmed, vetted, and formally endorsed by the respective local Council.
               </p>
             </div>
           </div>
@@ -103,9 +102,9 @@ const Committees = () => {
               <h2>8.3 Reporting &amp; Accountability</h2>
               <div className="underline-left"></div>
               <p className="reporting-lead-text">
-                Committees submit progress reports to their local Parliament on a <strong>monthly basis</strong>, which are
+                Committees submit progress reports to their local Council on a <strong>monthly basis</strong>, which are
                 consolidated and escalated <strong>quarterly</strong> to the Divisional and, where relevant, World Cities/States
-                Parliament for strategic visibility and donor reporting. This creates a single accountability chain:
+                Council for strategic visibility and donor reporting. This creates a single accountability chain:
               </p>
             </div>
 
@@ -114,7 +113,7 @@ const Committees = () => {
               <div className="single-chain-step">
                 <div className="chain-badge-tag">Stage 1</div>
                 <div className="chain-step-icon"><i className="fas fa-globe"></i></div>
-                <h4>International Parliaments</h4>
+                <h4>International Councils</h4>
                 <span className="chain-step-role">Strategy &amp; Fundraising</span>
                 <p>Strategic decision-making, global MOUs, and flagship financing.</p>
               </div>
@@ -126,9 +125,9 @@ const Committees = () => {
               <div className="single-chain-step">
                 <div className="chain-badge-tag">Stage 2</div>
                 <div className="chain-step-icon"><i className="fas fa-landmark"></i></div>
-                <h4>Regional &amp; Local Parliaments</h4>
+                <h4>Regional &amp; Local Councils</h4>
                 <span className="chain-step-role">Governance &amp; Oversight</span>
-                <p>Divisional, District, Tehsil &amp; UC Parliaments monitoring progress.</p>
+                <p>Divisional, District, Tehsil &amp; Union Councils monitoring progress.</p>
               </div>
 
               <div className="chain-arrow-divider">
@@ -161,7 +160,7 @@ const Committees = () => {
               <p>
                 <strong>Accountability Guarantee:</strong> This structure keeps strategic decision-making and fundraising
                 concentrated at the international level, while ensuring every rupee raised is translated into monitored,
-                locally accountable action through the Parliament-Committee chain.
+                locally accountable action through the Council–Committee chain.
               </p>
             </div>
           </div>
@@ -238,7 +237,7 @@ const Committees = () => {
               <div className="underline-left"></div>
               <p>
                 Every committee integrates local subject-matter experts with elected
-                Parliament leadership to guarantee technical rigor, audit transparency, and community trust.
+                Council leadership to guarantee technical rigor, audit transparency, and community trust.
               </p>
               <div className="formation-highlights">
                 <div className="formation-pill">
@@ -256,8 +255,8 @@ const Committees = () => {
                   <span className="formation-step">Step 01</span>
                   <div className="formation-icon"><i className="fas fa-landmark"></i></div>
                 </div>
-                <h3>Chartered Under Parliament</h3>
-                <p>Reports directly to the local Divisional, District, Tehsil, or UC Parliament.</p>
+                <h3>Chartered Under Council</h3>
+                <p>Reports directly to the local Divisional, District, Tehsil, or Union Council.</p>
               </div>
               <div className="formation-card">
                 <div className="formation-card-bar"></div>

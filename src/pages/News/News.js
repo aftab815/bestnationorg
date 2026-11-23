@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Newsletter from '../../components/Newsletter/Newsletter';
 import { eventsData } from '../../data/siteData';
-import newsHero from '../../assets/hero4.jpeg';
 import './News.css';
 
 const newsData = eventsData.map((event, index) => ({
@@ -54,7 +53,7 @@ const News = () => {
             </div>
             <h1>Latest News &amp; Updates</h1>
             <p>
-              Stay informed with official dispatches, MoU signings, parliamentary activations,
+              Stay informed with official dispatches, MoU signings, council activations,
               and community uplift dispatches from across Pakistan.
             </p>
           </div>

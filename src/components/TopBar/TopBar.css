@@ -55,7 +55,7 @@
 }
 
 .top-slogan-badge i {
-  color: #d8aa94;
+  color: #F5C998;
   font-size: 0.65rem;
 }
 
@@ -87,12 +87,12 @@
 }
 
 .live-pulse-dot--urgent {
-  background: #e8895e;
+  background: #F5A04F;
 }
 
 .top-appeal-badge strong {
   flex-shrink: 0;
-  color: #f2b59d;
+  color: #F8D3A8;
   font-weight: 800;
   letter-spacing: 0.04em;
   text-transform: uppercase;

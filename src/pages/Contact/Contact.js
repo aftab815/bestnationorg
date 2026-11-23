@@ -1,6 +1,13 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
+import ActionButton from '../../components/common/ActionButton';
 import Newsletter from '../../components/Newsletter/Newsletter';
 import { siteInfo, socialLinks } from '../../data/siteData';
+import {
+  CONTACT_SUBJECTS,
+  buildContactPayload,
+  submitContact,
+} from '../../services/contactService';
+import { submissionKey } from '../../services/formApi';
 import contactHero from '../../assets/hero4.jpeg';
 import './Contact.css';
 
@@ -32,15 +39,37 @@ const Contact = () => {
     message: '',
   });
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+  const [honeypot, setHoneypot] = useState('');
+  const submissionRef = useRef({ signature: '', key: '' });
 
   const handleChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
-    setTimeout(() => setSubmitted(false), 4000);
+    if (submitting) return;
+
+    const payload = buildContactPayload(formData, honeypot);
+    const idempotencyKey = submissionKey(submissionRef, JSON.stringify(payload));
+
+    setSubmitting(true);
+    setSubmitted(false);
+    setErrorMessage('');
+    try {
+      await submitContact(payload, idempotencyKey);
+      setSubmitted(true);
+      setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+      setHoneypot('');
+      setTimeout(() => setSubmitted(false), 4000);
+    } catch (error) {
+      setErrorMessage(
+        error?.message || 'Your message could not be sent. Please try again.',
+      );
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -117,9 +146,9 @@ const Contact = () => {
                 <p className="leadership-lead-para">
                   <strong>Best Nation Welfare Organization (BNWO)</strong> is led by a national Chairman
                   supported by a network of international, divisional, district, tehsil, and union council
-                  leadership across all Parliament tiers. The Chairman’s office holds overall responsibility
+                  leadership across all Council tiers. The Chairman’s office holds overall responsibility
                   for strategic direction, partnerships, and organizational integrity, while committee and
-                  parliament leadership at each level is responsible for local program design, delivery, and
+                  council leadership at each level is responsible for local program design, delivery, and
                   monitoring.
                 </p>
                 <p className="leadership-sub-para">
@@ -140,7 +169,7 @@ const Contact = () => {
                 <div className="leadership-pill-item">
                   <i className="fas fa-sitemap"></i>
                   <div>
-                    <strong>7-Tier Parliament Leadership</strong>
+                    <strong>7-Tier Council Leadership</strong>
                     <span>Decentralized Oversight &amp; Audit</span>
                   </div>
                 </div>
@@ -214,7 +243,34 @@ const Contact = () => {
                 </div>
               )}
 
+              {errorMessage && (
+                <div className="error-message" role="alert">
+                  <i className="fas fa-exclamation-circle"></i>
+                  <span>{errorMessage}</span>
+                </div>
+              )}
+
               <form onSubmit={handleSubmit} className="contact-form">
+                <div
+                  aria-hidden="true"
+                  style={{
+                    position: 'absolute',
+                    left: '-9999px',
+                    width: '1px',
+                    height: '1px',
+                    overflow: 'hidden',
+                  }}
+                >
+                  <label htmlFor="contact-website">Website</label>
+                  <input
+                    id="contact-website"
+                    type="text"
+                    tabIndex="-1"
+                    autoComplete="off"
+                    value={honeypot}
+                    onChange={(event) => setHoneypot(event.target.value)}
+                  />
+                </div>
                 <div className="form-row">
                   <div className="form-group">
                     <label>Full Name *</label>
@@ -271,12 +327,11 @@ const Contact = () => {
                         required
                       >
                         <option value="">Select a subject</option>
-                        <option value="general">General Inquiry</option>
-                        <option value="membership">Parliament Membership</option>
-                        <option value="volunteer">Volunteering & Committees</option>
-                        <option value="partnership">Corporate Partnership</option>
-                        <option value="donation">Donation Support</option>
-                        <option value="other">Other</option>
+                        {CONTACT_SUBJECTS.map((subject) => (
+                          <option key={subject.value} value={subject.value}>
+                            {subject.label}
+                          </option>
+                        ))}
                       </select>
                     </div>
                   </div>
@@ -297,9 +352,16 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <button type="submit" className="btn-primary contact-submit-btn">
-                  Send Message <i className="fas fa-paper-plane"></i>
-                </button>
+                <ActionButton
+                  type="submit"
+                  variant="primary"
+                  size="md"
+                  icon="fas fa-paper-plane"
+                  className="contact-submit-btn"
+                  disabled={submitting}
+                >
+                  {submitting ? 'Sending...' : 'Send Message'}
+                </ActionButton>
               </form>
             </div>
 
@@ -355,8 +417,8 @@ const Contact = () => {
           </div>
           <div className="faq-grid">
             <FaqItem
-              question="How can I become a BNWO Parliament member?"
-              answer="You can apply for membership through our Parliament Membership form (available on the Membership page) or contact us directly. Membership fees vary depending on the tier (World, Divisional, District, Tehsil, or UC Parliament)."
+              question="How can I become a BNWO Council member?"
+              answer="You can apply for membership through our Council Membership form (available on the Membership page) or contact us directly. Membership fees vary depending on the tier (World, Divisional, District, Tehsil, or UC Council)."
             />
             <FaqItem
               question="Are there membership contribution fees?"
@@ -372,7 +434,7 @@ const Contact = () => {
             />
             <FaqItem
               question="How is BNWO structured for accountability?"
-              answer="BNWO operates through a 7-tier Parliament structure from World Parliament down to Union Council, supported by 24 thematic project committees delivering 12 core welfare programs under strict audit oversight."
+              answer="BNWO operates through a 7-tier Council structure from World Council down to Union Council, supported by 24 thematic project committees delivering 12 core welfare programs under strict audit oversight."
             />
           </div>
         </div>

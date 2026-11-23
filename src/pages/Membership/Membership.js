@@ -1,9 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import ActionButton from '../../components/common/ActionButton';
 import CTA from '../../components/CTA/CTA';
 import Newsletter from '../../components/Newsletter/Newsletter';
 import { membershipTiers } from '../../data/siteData';
-import memHero from '../../assets/hero1.jpeg';
 import './Membership.css';
 
 const Membership = () => {
@@ -22,7 +21,7 @@ const Membership = () => {
           <div className="mem-hero-content">
             <div className="mem-hero-badge">
               <span className="live-pulse-dot"></span>
-              <span>Prestigious Civic Leadership &bull; 7 Parliament Tiers</span>
+              <span>Prestigious Civic Leadership &bull; 7 Council Tiers</span>
             </div>
             <h1>Membership &amp; Fee Structure</h1>
             <p>
@@ -58,9 +57,15 @@ const Membership = () => {
                   <span className="mem-price-period">Registration Fee</span>
                 </div>
                 <p className="mem-contribution">{tier.contribution}</p>
-                <Link to="/join" className={tier.featured ? 'btn-primary' : 'btn-outline'}>
-                  Apply Now <i className="fas fa-arrow-right"></i>
-                </Link>
+                <ActionButton
+                  to="/join"
+                  variant={tier.featured ? 'primary' : 'ghost'}
+                  size="md"
+                  fullWidth
+                  icon="fas fa-arrow-right"
+                >
+                  Apply Now
+                </ActionButton>
               </div>
             ))}
           </div>
@@ -75,7 +80,7 @@ const Membership = () => {
             <div className="underline"></div>
             <p>Execution oversight, project delivery, and grassroots community outreach</p>
           </div>
-          <div className="mem-grid">
+          <div className="mem-grid mem-grid--local">
             {localTiers.map((tier) => (
               <div key={tier.id} className="mem-card mem-card--local">
                 <div className="mem-card-header">
@@ -87,9 +92,15 @@ const Membership = () => {
                   <span className="mem-price-period">Registration Fee</span>
                 </div>
                 <p className="mem-contribution">{tier.contribution}</p>
-                <Link to="/join" className="btn-outline">
-                  Apply Now <i className="fas fa-arrow-right"></i>
-                </Link>
+                <ActionButton
+                  to="/join"
+                  variant="ghost"
+                  size="md"
+                  fullWidth
+                  icon="fas fa-arrow-right"
+                >
+                  Apply Now
+                </ActionButton>
               </div>
             ))}
           </div>

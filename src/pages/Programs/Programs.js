@@ -1,23 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import CTA from '../../components/CTA/CTA';
 import Newsletter from '../../components/Newsletter/Newsletter';
-import { corePrograms } from '../../data/siteData';
-import programsHero from '../../assets/hero5.jpeg';
+import { getPrograms } from '../../config/programs';
 import './Programs.css';
 
-const categories = [
-  { key: 'trainingEducation', title: 'Training & Education', icon: 'fas fa-graduation-cap', color: '#0284C7', count: '4 Programs' },
-  { key: 'healthFacilities', title: 'Health Awareness & Facilities', icon: 'fas fa-heartbeat', color: '#EC4899', count: '4 Programs' },
-  { key: 'humanRights', title: 'Human Rights & Social Welfare', icon: 'fas fa-balance-scale', color: '#F59E0B', count: '4 Programs' },
-];
-
 const Programs = () => {
-  const [activeTab, setActiveTab] = useState('all');
-
-  const filteredCategories = activeTab === 'all'
-    ? categories
-    : categories.filter((cat) => cat.key === activeTab);
+  const programs = getPrograms();
+  const programCount = programs.length;
+  const projectCount = programs.reduce((total, program) => total + program.projects.length, 0);
 
   return (
     <div className="programs-page">
@@ -31,147 +22,62 @@ const Programs = () => {
           <div className="prog-hero-content">
             <div className="prog-hero-badge">
               <span className="live-pulse-dot"></span>
-              <span>12 Flagship Welfare Programs &bull; Nationwide Impact</span>
+              <span>Structured Welfare Delivery</span>
             </div>
             <h1>BNWO Core Welfare Programs</h1>
             <p>
-              Delivering structured, sustainable social transformation across Education, Healthcare,
-              and Human Rights &mdash; executed locally through our 24 Project Committees.
+              Delivering structured, sustainable social transformation through our programs and their projects.
             </p>
-
-            {/* Quick Hero Interactive Filter Tabs */}
-            <div className="prog-hero-tabs">
-              <button
-                className={`prog-hero-tab ${activeTab === 'all' ? 'active' : ''}`}
-                onClick={() => setActiveTab('all')}
-              >
-                <i className="fas fa-th-large"></i> All Programs (12)
-              </button>
-              <button
-                className={`prog-hero-tab ${activeTab === 'trainingEducation' ? 'active' : ''}`}
-                onClick={() => setActiveTab('trainingEducation')}
-              >
-                <i className="fas fa-graduation-cap"></i> Education &amp; Skills (4)
-              </button>
-              <button
-                className={`prog-hero-tab ${activeTab === 'healthFacilities' ? 'active' : ''}`}
-                onClick={() => setActiveTab('healthFacilities')}
-              >
-                <i className="fas fa-heartbeat"></i> Health &amp; Medical (4)
-              </button>
-              <button
-                className={`prog-hero-tab ${activeTab === 'humanRights' ? 'active' : ''}`}
-                onClick={() => setActiveTab('humanRights')}
-              >
-                <i className="fas fa-balance-scale"></i> Human Rights (4)
-              </button>
-            </div>
           </div>
         </div>
       </section>
 
-      {/* ── Impact Stats Bar ────────────────────────── */}
-      <section className="prog-stats-bar">
+      {/* ── Programs & Projects Grid ───────────────── */}
+      <section className="programs-catalogue" aria-label="All programs and their projects">
         <div className="container">
-          <div className="prog-stats-grid">
-            <div className="prog-stat-item">
-              <strong>12</strong>
-              <span>Core Programs</span>
-            </div>
-            <div className="prog-stat-item">
-              <strong>3</strong>
-              <span>Thematic Pillars</span>
-            </div>
-            <div className="prog-stat-item">
-              <strong>100%</strong>
-              <span>Audit Backed</span>
-            </div>
-            <div className="prog-stat-item">
-              <strong>24</strong>
-              <span>Project Committees</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Category Filter Pills Bar ─────────────── */}
-      <section className="prog-filter-sec">
-        <div className="container">
-          <div className="prog-filter-pills">
-            <button
-              className={`prog-filter-btn ${activeTab === 'all' ? 'active' : ''}`}
-              onClick={() => setActiveTab('all')}
-            >
-              <i className="fas fa-th-large"></i> All 12 Programs
-            </button>
-            {categories.map((cat) => (
-              <button
-                key={cat.key}
-                className={`prog-filter-btn ${activeTab === cat.key ? 'active' : ''}`}
-                onClick={() => setActiveTab(cat.key)}
-                style={
-                  activeTab === cat.key
-                    ? { background: cat.color, color: '#FFFFFF', borderColor: cat.color }
-                    : {}
-                }
-              >
-                <i className={cat.icon}></i> {cat.title}
-              </button>
+          <p className="programs-intro">
+            {programCount} Programs &middot; {projectCount} Projects
+          </p>
+          <div className="programs-grid">
+            {programs.map((program, index) => (
+              <article key={program.id} id={program.id} className="program-card">
+                <span className="program-card__number">{String(index + 1).padStart(2, '0')}</span>
+                <div className="program-card__heading">
+                  <h2 className="program-card__title">
+                    <Link
+                      to={`/programs/${program.id}`}
+                      className="program-card__title-link"
+                    >
+                      {program.name}
+                    </Link>
+                  </h2>
+                  {program.summary ? <p className="program-card__summary">{program.summary}</p> : null}
+                </div>
+                <div className="program-card__projects-wrap">
+                  <ul className="program-card__projects">
+                    {program.projects.map((project) => (
+                      <li key={project.id} className="program-card__project">
+                        <span className="program-card__project-marker" aria-hidden="true"></span>
+                        <Link
+                          to={`/programs/${program.id}#${project.id}`}
+                          className="program-card__project-link"
+                          aria-label={`${project.name}, project of ${program.name}`}
+                        >
+                          {project.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="program-card__footer" aria-hidden="true">
+                    <span className="program-card__cta-text">View program</span>
+                    <span className="program-card__cta-arrow">&rarr;</span>
+                  </div>
+                </div>
+              </article>
             ))}
           </div>
         </div>
       </section>
-
-      {/* ── Program Categories Showcase ─────────────────── */}
-      {filteredCategories.map((cat) => (
-        <section key={cat.key} className="prog-category">
-          <div className="container">
-            <div className="prog-cat-header">
-              <div className="prog-cat-icon" style={{ background: cat.color }}>
-                <i className={cat.icon}></i>
-              </div>
-              <h2>{cat.title}</h2>
-              <span className="prog-cat-pill" style={{ color: cat.color, borderColor: cat.color, background: `${cat.color}15` }}>
-                {cat.count}
-              </span>
-              <div className="underline"></div>
-            </div>
-            <div className="prog-grid">
-              {corePrograms[cat.key].map((prog) => (
-                <div
-                  key={prog.id}
-                  className="prog-card"
-                  style={{ backgroundImage: `url(${prog.bgImage})` }}
-                >
-                  <div
-                    className="prog-card__overlay"
-                    style={{
-                      background: `linear-gradient(180deg, rgba(15, 23, 42, 0.2) 0%, rgba(15, 23, 42, 0.65) 40%, ${cat.color}EA 100%)`,
-                    }}
-                  ></div>
-                  <div className="prog-card__content">
-                    <div className="prog-card__top">
-                      <span className="prog-number">Program 0{prog.id}</span>
-                      <div className="prog-badge-icon">
-                        <i className={prog.icon}></i>
-                      </div>
-                    </div>
-                    <div className="prog-card__body">
-                      <h3>{prog.title}</h3>
-                      <p>{prog.description}</p>
-                    </div>
-                    <div className="prog-card__footer">
-                      <span className="prog-action-link">
-                        Impact & Outreach <i className="fas fa-arrow-right"></i>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      ))}
 
       {/* ── Delivery Framework Section ────────────────────── */}
       <section className="prog-framework">
@@ -188,7 +94,7 @@ const Programs = () => {
                 <i className="fas fa-search-location"></i>
               </div>
               <h3>1. Field Needs Survey</h3>
-              <p>Union Council Parliaments conduct on-ground surveys to identify genuine beneficiaries and priorities.</p>
+              <p>Union Councils conduct on-ground surveys to identify genuine beneficiaries and priorities.</p>
             </div>
             <div className="framework-card">
               <div className="framework-icon">
@@ -202,7 +108,7 @@ const Programs = () => {
                 <i className="fas fa-shield-alt"></i>
               </div>
               <h3>3. Audit & Reporting</h3>
-              <p>Monthly progress reports and financial audits are submitted to Divisional Parliaments and published.</p>
+              <p>Monthly progress reports and financial audits are submitted to Divisional Councils and published.</p>
             </div>
           </div>
         </div>

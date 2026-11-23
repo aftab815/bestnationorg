@@ -1,7 +1,7 @@
 /* ── BESPOKE CONTACT HERO MODERN ─────────── */
 .contact-hero-modern {
   position: relative;
-  min-height: 480px;
+  min-height: var(--hero-height);
   padding: 96px 0 76px;
   background: var(--navy-950);
   overflow: hidden;
@@ -19,7 +19,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: saturate(0.8) contrast(1.05);
+  filter: none;
   transform: scale(1.03);
   transition: transform 6s ease;
 }
@@ -31,7 +31,7 @@
 .contact-hero-modern .contact-hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(96deg, rgba(6, 27, 22, 0.95) 0%, rgba(8, 38, 31, 0.88) 55%, rgba(6, 24, 20, 0.5) 100%);
+  background: var(--hero-shade-left);
   z-index: 1;
 }
 
@@ -363,6 +363,20 @@
   border: 1px solid #6ee7b7;
   border-radius: var(--radius-md);
   color: #065f46;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.error-message {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  background: #fef2f2;
+  border: 1px solid #fca5a5;
+  border-radius: var(--radius-md);
+  color: #991b1b;
   font-size: 0.9rem;
   font-weight: 700;
   margin-bottom: 24px;

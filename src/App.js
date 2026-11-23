@@ -3,7 +3,6 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import TopBar from './components/TopBar/TopBar';
 import Navbar from './components/Navbar/Navbar';
-import NewsTicker from './components/NewsTicker/NewsTicker';
 import Footer from './components/Footer/Footer';
 import ScrollToTopBtn from './components/ScrollToTop/ScrollToTop';
 import Home from './pages/Home/Home';
@@ -14,17 +13,35 @@ import Contact from './pages/Contact/Contact';
 import Donate from './pages/Donate/Donate';
 import Parliament from './pages/Parliament/Parliament';
 import Programs from './pages/Programs/Programs';
+import ProgramDetail from './pages/ProgramDetail/ProgramDetail';
 import Committees from './pages/Committees/Committees';
 import Membership from './pages/Membership/Membership';
 import Join from './pages/Join/Join';
 import NewsletterAdmin from './pages/NewsletterAdmin/NewsletterAdmin';
+import CouncilsOverview from './pages/Councils/CouncilsOverview';
+import DivisionCouncils from './pages/Councils/DivisionCouncils';
+import DivisionCouncilDetail from './pages/Councils/DivisionCouncilDetail';
+import TehsilCouncils from './pages/Councils/TehsilCouncils';
+import TehsilCouncilDetail from './pages/Councils/TehsilCouncilDetail';
+import CouncilComingSoon from './pages/Councils/CouncilComingSoon';
+import InternationalCityCouncils from './pages/Councils/InternationalCityCouncils';
+import InternationalStateCouncils from './pages/Councils/InternationalStateCouncils';
+import InternationalStateCouncilDetail from './pages/Councils/InternationalStateCouncilDetail';
+import InternationalWorldCouncils from './pages/Councils/InternationalWorldCouncils';
+import InternationalWorldCouncilDetail from './pages/Councils/InternationalWorldCouncilDetail';
+import { FormModalProvider } from './components/getInvolved/FormModalProvider';
 
 function ScrollManager() {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
   
   useEffect(() => {
-    // Scroll to top on route change
-    window.scrollTo(0, 0);
+    // Support deep links such as /donate#paypro-section; otherwise start at the top.
+    const hashTarget = hash ? document.getElementById(hash.slice(1)) : null;
+    if (hashTarget) {
+      hashTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      window.scrollTo(0, 0);
+    }
 
     // Apply data-animate attribute to common components that should animate
     const animateSelectors = [
@@ -75,39 +92,95 @@ function ScrollManager() {
     });
 
     return () => observer.disconnect();
-  }, [pathname]);
+  }, [pathname, hash]);
 
   return null;
 }
 
 function App() {
+
+
   return (
-    <div className="App">
-      <a href="#main-content" className="skip-link">Skip to content</a>
-      <ScrollManager />
-      <TopBar />
-      <Navbar />
-      <NewsTicker />
-      <main id="main-content">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/what-we-do" element={<WhatWeDo />} />
-          <Route path="/programs" element={<Programs />} />
-          <Route path="/parliament" element={<Parliament />} />
-          <Route path="/committees" element={<Committees />} />
-          <Route path="/membership" element={<Membership />} />
-          <Route path="/join" element={<Join />} />
-          <Route path="/register" element={<Join />} />
-          <Route path="/events" element={<Events />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/donate" element={<Donate />} />
-          <Route path="/newsletter-admin" element={<NewsletterAdmin />} />
-        </Routes>
-      </main>
-      <Footer />
-      <ScrollToTopBtn />
-    </div>
+    <FormModalProvider>
+      <div className="App">
+        <a href="#main-content" className="skip-link">Skip to content</a>
+        <ScrollManager />
+        <TopBar />
+        <Navbar />
+        <main id="main-content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/what-we-do" element={<WhatWeDo />} />
+            <Route path="/programs" element={<Programs />} />
+            <Route path="/programs/:programId" element={<ProgramDetail />} />
+            <Route path="/parliament" element={<Parliament />} />
+            <Route path="/committees" element={<Committees />} />
+            <Route path="/membership" element={<Membership />} />
+            <Route path="/join" element={<Join />} />
+            <Route path="/register" element={<Join />} />
+            <Route path="/events" element={<Events />} />
+            <Route path="/councils" element={<CouncilsOverview />} />
+            <Route path="/councils/international/city" element={<InternationalCityCouncils />} />
+            <Route path="/councils/international/state" element={<InternationalStateCouncils />} />
+            <Route
+              path="/councils/international/state/:countrySlug/:stateSlug"
+              element={<InternationalStateCouncilDetail />}
+            />
+            <Route path="/councils/international/world" element={<InternationalWorldCouncils />} />
+            <Route
+              path="/councils/international/world/:countrySlug"
+              element={<InternationalWorldCouncilDetail />}
+            />
+            <Route path="/councils/national/division" element={<DivisionCouncils />} />
+            <Route
+              path="/councils/national/division/:divisionId"
+              element={<DivisionCouncilDetail />}
+            />
+            <Route path="/councils/national/tehsil" element={<TehsilCouncils />} />
+            <Route
+              path="/councils/national/tehsil/:tehsilId"
+              element={<TehsilCouncilDetail />}
+            />
+            <Route
+              path="/councils/national/union"
+              element={
+                <CouncilComingSoon
+                  title="Union Councils"
+                  kicker="National Councils"
+                  subtitle="Union-level councils with women and men council activity."
+                />
+              }
+            />
+            <Route
+              path="/councils/national/union/women"
+              element={
+                <CouncilComingSoon
+                  title="Women Councils"
+                  kicker="Union Councils"
+                  subtitle="Union-level women councils supporting community participation."
+                />
+              }
+            />
+            <Route
+              path="/councils/national/union/men"
+              element={
+                <CouncilComingSoon
+                  title="Men Councils"
+                  kicker="Union Councils"
+                  subtitle="Union-level men councils supporting community participation."
+                />
+              }
+            />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/donate" element={<Donate />} />
+            <Route path="/newsletter-admin" element={<NewsletterAdmin />} />
+          </Routes>
+        </main>
+        <Footer />
+        <ScrollToTopBtn />
+      </div>
+    </FormModalProvider>
   );
 }
 

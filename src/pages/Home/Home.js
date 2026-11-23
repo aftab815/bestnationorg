@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import HeroSlider from '../../components/HeroSlider/HeroSlider';
+import ActionButton from '../../components/common/ActionButton';
+import HomeHero from '../../components/HomeHero/HomeHero';
 import ServiceCard from '../../components/ServiceCard/ServiceCard';
 import Stats from '../../components/Stats/Stats';
 import CTA from '../../components/CTA/CTA';
 import Newsletter from '../../components/Newsletter/Newsletter';
 import Partners from '../../components/Partners/Partners';
+import { useFormModal } from '../../components/getInvolved/FormModalProvider';
 import {
   visionStatement,
   focusAreas,
@@ -21,9 +23,11 @@ const chamberEvent =
   eventsData.find((e) => e.title.toLowerCase().includes('chamber')) || eventsData[0];
 
 const Home = () => {
+  const { openForm } = useFormModal();
+
   return (
     <div className="home-page">
-      <HeroSlider />
+      <HomeHero />
 
       {/* ── Motto Banner ──────────────────── */}
       <section className="home-motto">
@@ -61,9 +65,9 @@ const Home = () => {
                   </div>
                 ))}
               </div>
-              <Link to="/about" className="btn-primary">
-                Read More About Us <i className="fas fa-arrow-right"></i>
-              </Link>
+              <ActionButton to="/about" variant="primary" size="md" icon="fas fa-arrow-right">
+                Read More About Us
+              </ActionButton>
             </div>
             <div className="about-side">
               <div className="modern-frame-wrapper">
@@ -123,9 +127,9 @@ const Home = () => {
 
         <div className="container">
           <div className="services-cta">
-            <Link to="/programs" className="btn-outline">
-              Explore All 12 Programs <i className="fas fa-arrow-right"></i>
-            </Link>
+            <ActionButton to="/programs" variant="secondary" size="md" icon="fas fa-arrow-right">
+              Explore All 12 Programs
+            </ActionButton>
           </div>
         </div>
       </section>
@@ -135,15 +139,15 @@ const Home = () => {
         <div className="container">
           <div className="parliament-grid">
             <div className="parliament-image">
-              <img src={bnwoParlimentImage} alt="Best Nation Parliaments" />
+              <img src={bnwoParlimentImage} alt="Best Nation Councils" />
             </div>
             <div className="parliament-content">
               <span className="section-kicker">Structured Governance</span>
-              <h2>7-Tier Parliament Framework</h2>
+              <h2>7-Tier Council Framework</h2>
               <div className="underline-left"></div>
               <p className="parliament-tagline">Grassroots Leadership & Accountability</p>
               <p className="parliament-description">
-                BNWO operates through a 7-tiered leadership structure — the "Best Nation Parliaments" — ensuring
+                BNWO operates through a 7-tiered leadership structure — the "Best Nation Councils" — ensuring
                 transparent governance from International levels down to local Union Councils, aligned with 24 project committees.
               </p>
               <div className="parliament-chain">
@@ -172,12 +176,12 @@ const Home = () => {
                 ))}
               </div>
               <div className="parliament-actions">
-                <Link to="/parliament" className="btn-primary">
-                  Explore Governance <i className="fas fa-arrow-right"></i>
-                </Link>
-                <Link to="/membership" className="btn-outline">
-                  Join Membership <i className="fas fa-user-plus"></i>
-                </Link>
+                <ActionButton to="/parliament" variant="primary" size="md" icon="fas fa-arrow-right">
+                  Explore Governance
+                </ActionButton>
+                <ActionButton to="/membership" variant="secondary" size="md" icon="fas fa-user-plus">
+                  Join Membership
+                </ActionButton>
               </div>
             </div>
           </div>
@@ -233,10 +237,16 @@ const Home = () => {
                 <i className="fas fa-check-circle"></i>
               </div>
               <h3>100% Verifiable</h3>
-              <p>Audit reports and field receipts are logged transparently for all parliament members.</p>
-              <Link to="/donate" className="btn-primary" style={{ marginTop: '16px' }}>
-                Support A Cause <i className="fas fa-heart"></i>
-              </Link>
+              <p>Audit reports and field receipts are logged transparently for all council members.</p>
+              <ActionButton
+                to="/donate"
+                variant="primary"
+                size="md"
+                icon="fas fa-heart"
+                style={{ marginTop: '16px' }}
+              >
+                Support A Cause
+              </ActionButton>
             </div>
           </div>
         </div>
@@ -267,16 +277,16 @@ const Home = () => {
                 <span><i className="fas fa-map-marker-alt"></i> {chamberEvent.location}</span>
               </div>
               <p>{chamberEvent.description}</p>
-              <Link to="/events" className="btn-primary">
-                View All Events <i className="fas fa-arrow-right"></i>
-              </Link>
+              <ActionButton to="/events" variant="primary" size="md" icon="fas fa-arrow-right">
+                View All Events
+              </ActionButton>
             </div>
           </article>
         </div>
       </section>
 
       {/* ── 3 Get Involved CTA Cards ──────────── */}
-      <section className="home-involved">
+      <section className="home-involved" id="get-involved">
         <div className="container">
           <div className="section-title">
             <span className="section-kicker">Get Involved</span>
@@ -291,9 +301,15 @@ const Home = () => {
               </div>
               <h3>Donate Fund</h3>
               <p>Your contribution directly provides food, medical aid, clean water, and education to deserving families.</p>
-              <Link to="/donate" className="btn-primary">
-                Donate Now <i className="fas fa-heart"></i>
-              </Link>
+              <ActionButton
+                to="/donate"
+                variant="primary"
+                size="md"
+                icon="fas fa-heart"
+                className="involved-btn"
+              >
+                Donate Now
+              </ActionButton>
             </div>
 
             <div className="involved-card card-volunteer">
@@ -301,21 +317,33 @@ const Home = () => {
                 <i className="fas fa-hands-helping"></i>
               </div>
               <h3>Become a Volunteer</h3>
-              <p>Join our 24 project committees or local parliament tier to actively serve your community.</p>
-              <Link to="/contact" className="btn-outline">
-                Join Volunteers <i className="fas fa-user-plus"></i>
-              </Link>
+              <p>Join our 24 project committees or local council tier to actively serve your community.</p>
+              <ActionButton
+                variant="primary"
+                size="md"
+                icon="fas fa-user-plus"
+                className="involved-btn"
+                onClick={() => openForm('volunteer', 'home-volunteer')}
+              >
+                Join Volunteers
+              </ActionButton>
             </div>
 
             <div className="involved-card card-partner">
               <div className="involved-icon">
                 <i className="fas fa-handshake"></i>
               </div>
-              <h3>Partner With Us</h3>
-              <p>Corporate organisations and institutions can collaborate with BNWO for CSR initiatives.</p>
-              <Link to="/contact" className="btn-outline">
-                Become a Partner <i className="fas fa-building"></i>
-              </Link>
+              <h3>Beneficiary</h3>
+              <p>If you or your family need food, medical, education, or emergency support, apply and our team will verify your case.</p>
+              <ActionButton
+                variant="primary"
+                size="md"
+                icon="fas fa-hands-helping"
+                className="involved-btn"
+                onClick={() => openForm('beneficiary', 'home-beneficiary')}
+              >
+                Beneficiary
+              </ActionButton>
             </div>
           </div>
         </div>
