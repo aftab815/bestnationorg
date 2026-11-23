@@ -412,17 +412,6 @@ const Navbar = () => {
             {/* Action Buttons */}
             <div className="navbar-actions">
               <ActionButton
-                to="/join"
-                variant="secondary"
-                size="sm"
-                icon="fas fa-user-plus"
-                iconPosition="left"
-                className="nav-join-btn"
-              >
-                Join BNWO
-              </ActionButton>
-
-              <ActionButton
                 to="/donate"
                 variant="primary"
                 size="sm"
@@ -767,18 +756,6 @@ const Navbar = () => {
 
           {/* Drawer Footer Actions */}
           <div className="mobile-drawer-actions">
-            <ActionButton
-              to="/join"
-              variant="secondary"
-              size="md"
-              icon="fas fa-user-plus"
-              iconPosition="left"
-              fullWidth
-              className="mobile-join-btn"
-              onClick={closeMobileMenu}
-            >
-              Join BNWO / Register
-            </ActionButton>
             <ActionButton
               to="/donate"
               variant="primary"

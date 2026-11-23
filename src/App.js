@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import TopBar from './components/TopBar/TopBar';
 import Navbar from './components/Navbar/Navbar';
@@ -16,7 +16,6 @@ import Programs from './pages/Programs/Programs';
 import ProgramDetail from './pages/ProgramDetail/ProgramDetail';
 import Committees from './pages/Committees/Committees';
 import Membership from './pages/Membership/Membership';
-import Join from './pages/Join/Join';
 import NewsletterAdmin from './pages/NewsletterAdmin/NewsletterAdmin';
 import CouncilsOverview from './pages/Councils/CouncilsOverview';
 import DivisionCouncils from './pages/Councils/DivisionCouncils';
@@ -117,8 +116,8 @@ function App() {
             <Route path="/parliament" element={<Parliament />} />
             <Route path="/committees" element={<Committees />} />
             <Route path="/membership" element={<Membership />} />
-            <Route path="/join" element={<Join />} />
-            <Route path="/register" element={<Join />} />
+            <Route path="/join" element={<Navigate to="/" replace />} />
+            <Route path="/register" element={<Navigate to="/" replace />} />
             <Route path="/events" element={<Events />} />
             <Route path="/councils" element={<CouncilsOverview />} />
             <Route path="/councils/international/city" element={<InternationalCityCouncils />} />
