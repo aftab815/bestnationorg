@@ -1411,3 +1411,47 @@ p { color: var(--slate-600); line-height: 1.75; }.container { max-width: 1240px 
   justify-content: center;
   gap: 12px;
 }
+
+/* Orange buttons (theme accent) */
+.btn-action--primary {
+  --btn-bg: var(--accent);
+  --btn-bg-hover: var(--accent-hover);
+  --btn-bg-active: #B85F12;
+  --btn-focus: var(--accent-hover);
+  --btn-shadow-hover: 0 6px 16px rgba(217, 118, 26, 0.22);
+}
+
+.btn-action--dark {
+  --btn-bg: var(--accent);
+  --btn-bg-hover: var(--accent-hover);
+  --btn-bg-active: #B85F12;
+  --btn-focus: var(--accent-hover);
+  --btn-border: var(--accent);
+}
+
+.btn-action:active:not(:disabled):not([aria-disabled="true"]) {
+  box-shadow: 0 2px 6px rgba(217, 118, 26, 0.16) !important;
+}
+
+.btn-primary {
+  background: var(--accent) !important;
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover) !important;
+}
+
+.btn-primary:focus-visible {
+  outline: 3px solid var(--accent-hover) !important;
+  outline-offset: 3px !important;
+}
+
+.scroll-top-btn {
+  background: var(--accent) !important;
+  box-shadow: 0 4px 16px rgba(242, 140, 40, 0.4) !important;
+}
+
+.scroll-top-btn:hover {
+  background: var(--accent-hover) !important;
+  box-shadow: 0 6px 24px rgba(217, 118, 26, 0.5) !important;
+}
