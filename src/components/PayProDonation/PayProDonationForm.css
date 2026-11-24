@@ -736,6 +736,53 @@
 }
 
 /* ── Responsive ──────────────────────────────────────────────────────────── */
+
+/* Card Payment Note */
+.paypro-card-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  max-width: 540px;
+  margin: 0 auto 24px;
+  padding: 16px 20px;
+  background: linear-gradient(135deg, #eff6ff 0%, #f0f9ff 100%);
+  border: 1.5px solid #bfdbfe;
+  border-radius: var(--radius-lg);
+  text-align: left;
+  font-size: 0.88rem;
+  color: #1e3a5f;
+  line-height: 1.55;
+}
+
+.paypro-card-note i {
+  font-size: 1.3rem;
+  color: #2563eb;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.paypro-card-note p {
+  margin: 0;
+  color: #1e3a5f;
+}
+
+.paypro-card-note strong {
+  color: #1e40af;
+}
+
+.paypro-card-note em {
+  font-weight: 600;
+  font-style: normal;
+  color: #1e40af;
+}
+
+/* Result Alert (error shown inside result view) */
+.paypro-alert.result-alert {
+  max-width: 540px;
+  margin: 0 auto 20px;
+  text-align: left;
+}
+
 @media (max-width: 768px) {
   .paypro-form-header {
     padding: 20px 24px;
@@ -759,4 +806,8 @@
     flex-direction: column;
     gap: 8px;
   }
+  .paypro-card-note {
+    max-width: 100%;
+  }
 }
+
