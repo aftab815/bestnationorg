@@ -65,7 +65,7 @@ export function fieldErrorsFrom(error) {
     const parts = location.filter(
       (part) => typeof part === 'string' && !['body', 'query', 'path'].includes(part),
     );
-    const field = locationField(parts[parts.length - 1]);
+    const field = locationField(parts[0]);
     if (field && !errors[field]) {
       errors[field] = detail?.message || 'Invalid value';
     }
